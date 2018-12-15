@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">MNCH</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nextSection">Next Section</string>
+    <string name="end_interview">End Interview</string>
+    <string name="numberhint">Number</string>
+
+    <string name="rshint01"> Maternal Health Register (Both PHC &amp; SHC) </string>
+    <string name="rs01"> Number of ANC – 1 visit </string>
+    <string name="rs02"> Number of ANC Revisits (2/3/4 or more) </string>
+    <string name="rs03"> ANC-1 women with Hb 10 g/dl </string>
+    <string name="rs04"> Number of PNC-1 visits </string>
+    <string name="rs05"> Number of PNC-2 visits </string>
+    <string name="rs06"> Women given TT-2 vaccination (advice) </string>
+    <string name="rs07"> Total New Cases OB/GYN </string>
+    <string name="rs08"> Referred Cases attended (OB/GYN) </string>
+    <string name="rs09"> Normal Vaginal Delivery </string>
+    <string name="rs10"> Assisted Vaginal Deliveries </string>
+    <string name="rs11"> Cesarean Sections </string>
+    <string name="rs12"> Postpartum Hemorrhage </string>
+    <string name="rs13"> Pre-Eclampsia/ Eclampsia </string>
+    <string name="rs14"> Prolonged Obstructed Labors </string>
+    <string name="rs15"> Puerperal Sepsis </string>
+    <string name="rs16"> Rupture Uterus </string>
+    <string name="rs17"> Maternal Mortality </string>
+    <string name="rs18"> Number of live births in the facility </string>
+    <string name="rs19"> Number of live births with LBW </string>
+    <string name="rs20"> Number of stillbirths in the facility </string>
+    <string name="rs21"> Number of newborns with birth asphyxia </string>
+    <string name="rs22"> Number of newborn successfully resuscitated </string>
+    <string name="rs23"> Number of women provided misoprostol after delivery </string>
+    <string name="rs24"> Number of newborns to whom chlorhexadine gel is applied to umbilical stumps </string>
+    <string name="rs25"> Prematurity (no. of pre-term births) </string>
+    <string name="rs26"> Birth trauma </string>
+    <string name="rs27"> Number of Infant deaths (1 -11 months) </string>
+    <string name="rs28"> Number of child deaths (1 to 4 years) </string>
+    <string name="rs29"> Number of neonatal deaths (28 days) </string>
+    <string name="rs30"> Number of Pneumonia cases/ ARI 5 years (OPD) </string>
+    <string name="rs31"> Number of Pneumonia cases/ARI 5 years (Indoor) </string>
+    <string name="rs32"> Deaths due to Pneumonia cases/ ARI 5 years (Indoor) </string>
+    <string name="rs33"> Number of Diarrhea cases 5 years (OPD) </string>
+    <string name="rs34"> Number of Diarrhea cases 5 years (Indoor) </string>
+    <string name="rs35"> Deaths due to Diarrhea among5 years (Indoor) </string>
+    <string name="rs36"> Number of ultrasounds for ANC </string>
+    <string name="rs37"> Total General OPD (1-11months) </string>
+    <string name="rs38"> Total General OPD (1-4 years) </string>
+    <string name="rs39"> Follow up cases (Child Health 0-5yr) </string>
+    <string name="rs40"> Referred Cases attended (Pediatrics) </string>
+
+</resources>

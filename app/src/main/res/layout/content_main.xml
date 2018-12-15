@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="edu.aku.ramshasaeed.mnch.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.ramshasaeed.mnch.MainActivity" />
+
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+    <TextView
+        android:id="@+id/lblsummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/green"
+        android:text="SUMMARY"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="16sp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@id/lblsummary"
+        android:padding="5dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:id="@+id/dashboardTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </HorizontalScrollView>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
+</layout>
