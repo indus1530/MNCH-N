@@ -7,10 +7,22 @@
     <color name="colorSecondaryDark">#cab350</color>
     <color name="colorSecondaryLight">#ffffb0</color>
 
+    <color name="colorAccent">#FF4081</color>
 
     <color name="green">#4caf50</color>
     <color name="white">#ffffff</color>
     <color name="dullWhileOverlay">#99d6d6d6</color>
     <color name="gray">#757575</color>
+
+
+    <color name="red">#ffff0000</color>
+    <color name="ticker_red">#80ff0000</color>
+    <!--Coppied-->
+    <color name="black_overlay">#66000000</color>
+    <color name="selectedBlue">#2b3581</color>
+    <color name="black">#ff000000</color>
+    <color name="grayOverlay">#7f7f7f7f</color>
+
+    <color name="dullWhile">#d6d6d6</color>
 
 </resources>

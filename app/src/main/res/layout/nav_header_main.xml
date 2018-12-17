@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="edu.aku.ramshasaeed.mnch.MainActivity">
+    tools:context="edu.aku.ramshasaeed.mnch.activities.MainActivity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.MainActivity" />
+            type="edu.aku.ramshasaeed.mnch.activities.MainActivity" />
 
     </data>
 

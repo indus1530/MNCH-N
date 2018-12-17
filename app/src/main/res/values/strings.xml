@@ -11,6 +11,14 @@
     <string name="end_interview">End Interview</string>
     <string name="numberhint">Number</string>
 
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+
     <string name="rshint01"> Maternal Health Register (Both PHC &amp; SHC) </string>
     <string name="rs01"> Number of ANC – 1 visit </string>
     <string name="rs02"> Number of ANC Revisits (2/3/4 or more) </string>

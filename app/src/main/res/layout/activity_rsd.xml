@@ -37,6 +37,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -61,6 +62,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -84,6 +86,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -107,6 +110,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -130,6 +134,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -153,6 +158,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs06"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -176,6 +182,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs07"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -199,6 +206,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs08"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -222,6 +230,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs09"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -245,6 +254,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -291,6 +301,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -314,6 +325,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -337,6 +349,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -360,6 +373,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -383,6 +397,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -406,6 +421,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -429,6 +445,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -452,6 +469,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs19"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -475,6 +493,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs20"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -498,6 +517,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs21"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -522,6 +542,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs22"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -545,6 +566,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs23"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -568,6 +590,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs24"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -591,6 +614,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -614,6 +638,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs26"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -637,6 +662,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs27"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -660,6 +686,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs28"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -683,6 +710,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs29"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -706,6 +734,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -729,6 +758,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs31"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -752,6 +782,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs32"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -775,6 +806,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs33"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -798,6 +830,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs34"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -821,6 +854,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs35"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -844,6 +878,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs36"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -867,6 +902,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs37"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -890,6 +926,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs38"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -913,6 +950,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs39"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -936,6 +974,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs40"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
