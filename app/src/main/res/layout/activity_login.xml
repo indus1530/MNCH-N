@@ -118,7 +118,7 @@
                             android:paddingStart="4dp"
                             android:paddingEnd="4dp"
                             android:singleLine="true"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="18sp">
 
                             <requestFocus />
@@ -151,7 +151,7 @@
                                 android:paddingStart="4dp"
                                 android:paddingEnd="4dp"
                                 android:singleLine="true"
-                                android:textColor="@color/white"
+                                android:textColor="@color/black"
                                 android:textSize="18sp" />
 
                             <Button
