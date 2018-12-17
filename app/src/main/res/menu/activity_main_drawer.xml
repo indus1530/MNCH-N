@@ -6,11 +6,11 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@android:drawable/ic_menu_recent_history"
             android:title="Health Facility Assessment" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@android:drawable/ic_menu_directions"
             android:title="Routine Service Delivery" />
         <item
             android:id="@+id/nav_slideshow"
