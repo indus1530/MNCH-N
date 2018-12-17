@@ -58,6 +58,8 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
+import edu.aku.ramshasaeed.mnch.core.DatabaseHelper;
+import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -106,15 +108,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         try {
             long installedOn = this
                     .getPackageManager()
-                    .getPackageInfo("com.example.hassannaqvi.leaps_scaleup", 0)
+                    .getPackageInfo("edu.aku.ramshasaeed.mnch", 0)
                     .lastUpdateTime;
             Integer versionCode = this
                     .getPackageManager()
-                    .getPackageInfo("com.example.hassannaqvi.leaps_scaleup", 0)
+                    .getPackageInfo("edu.aku.ramshasaeed.mnch", 0)
                     .versionCode;
             String versionName = this
                     .getPackageManager()
-                    .getPackageInfo("com.example.hassannaqvi.leaps_scaleup", 0)
+                    .getPackageInfo("edu.aku.ramshasaeed.mnch", 0)
                     .versionName;
 //            bi.txtinstalldate.setText("Ver. " + versionName + "." + String.valueOf(versionCode) + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
 //
@@ -168,7 +170,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         bi.emailSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //attemptLogin();
+                attemptLogin();
             }
         });
 
@@ -523,51 +525,52 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-//    private void attemptLogin() {
-//        if (mAuthTask != null) {
-//            return;
-//        }
-//
-//        // Reset errors.
-//        bi.email.setError(null);
-//        bi.password.setError(null);
-//
-//        // Store values at the time of the login attempt.
-//        String email = bi.email.getText().toString();
-//        String password = bi.password.getText().toString();
-//
-//        boolean cancel = false;
-//        View focusView = null;
-//
-//        // Check for a valid password, if the user entered one.
-//        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-//            bi.password.setError(getString(R.string.error_invalid_password));
-//            focusView = bi.password;
-//            cancel = true;
-//        }
-//
-//        // Check for a valid email address.
-//        if (TextUtils.isEmpty(email)) {
-//            bi.email.setError(getString(R.string.error_field_required));
-//            focusView = bi.email;
-//            cancel = true;
-//        }
-//
-//
-//        if (cancel) {
-//            // There was an error; don't attempt login and focus the first
-//            // form field with an error.
-//            focusView.requestFocus();
-//        } else {
-//            // Show a progress spinner, and kick off a background task to
-//            // perform the user login attempt.
-//            showProgress(true);
-//            mAuthTask = new UserLoginTask(email, password);
-//            mAuthTask.execute((Void) null);
-//
-//
-//        }
-//    }
+    private void attemptLogin() {
+        if (mAuthTask != null) {
+            return;
+        }
+
+        // Reset errors.
+        bi.email.setError(null);
+        bi.password.setError(null);
+
+        // Store values at the time of the login attempt.
+        String email = bi.email.getText().toString();
+        String password = bi.password.getText().toString();
+
+        boolean cancel = false;
+        View focusView = null;
+
+        // Check for a valid password, if the user entered one.
+        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+            bi.password.setError(getString(R.string.error_invalid_password));
+            focusView = bi.password;
+            cancel = true;
+        }
+
+        // Check for a valid email address.
+        if (TextUtils.isEmpty(email)) {
+            bi.email.setError(getString(R.string.error_field_required));
+            focusView = bi.email;
+            cancel = true;
+        }
+
+
+        if (cancel) {
+            // There was an error; don't attempt login and focus the first
+            // form field with an error.
+            focusView.requestFocus();
+        } else {
+            // Show a progress spinner, and kick off a background task to
+            // perform the user login attempt.
+            showProgress(true);
+
+            mAuthTask = new UserLoginTask(email, password);
+            mAuthTask.execute((Void) null);
+
+
+        }
+    }
 
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
@@ -582,38 +585,38 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 //    /**
 //     * Shows the progress UI and hides the login form.
 //     */
-//    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
-//    private void showProgress(final boolean show) {
-//        // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
-//        // for very easy animations. If available, use these APIs to fade-in
-//        // the progress spinner.
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
-//            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
-//
-//            bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
-//            bi.loginForm.animate().setDuration(shortAnimTime).alpha(
-//                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
-//                @Override
-//                public void onAnimationEnd(Animator animation) {
-//                    bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
-//                }
-//            });
-//
-//            bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
-//            bi.loginProgress.animate().setDuration(shortAnimTime).alpha(
-//                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
-//                @Override
-//                public void onAnimationEnd(Animator animation) {
-//                    bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
-//                }
-//            });
-//        } else {
-//            // The ViewPropertyAnimator APIs are not available, so simply show
-//            // and hide the relevant UI components.
-//            bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
-//            bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
-//        }
-//    }
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
+    private void showProgress(final boolean show) {
+        // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
+        // for very easy animations. If available, use these APIs to fade-in
+        // the progress spinner.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
+            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+
+            bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
+            bi.loginForm.animate().setDuration(shortAnimTime).alpha(
+                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
+                }
+            });
+
+            bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
+            bi.loginProgress.animate().setDuration(shortAnimTime).alpha(
+                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
+                }
+            });
+        } else {
+            // The ViewPropertyAnimator APIs are not available, so simply show
+            // and hide the relevant UI components.
+            bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
+            bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
+        }
+    }
 
     @Override
     public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
@@ -718,63 +721,54 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         @Override
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
-           // showProgress(false);
+            showProgress(false);
+
 
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 
-//            try {
-//
-//                if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-//                    if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
-//                            (new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "login").execute(mEmail, mPassword).get() != null) ||
-//                            (mEmail.equals("test1234") && mPassword.equals("test1234"))
-//                            || (mEmail.equals("test12345") && mPassword.equals("test12345"))) {
-//                        MainApp.userName = mEmail;
-//                        MainApp.admin = mEmail.contains("@");
-//
-//                        finish();
-//
-//                        Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
-//                        startActivity(iLogin);
-//
-//                    } else {
-//                        bi.password.setError(getString(R.string.error_incorrect_password));
-//                        bi.password.requestFocus();
-//                        Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
-//                    }
-//                } else {
-//                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-//                            LoginActivity.this);
-//                    alertDialogBuilder
-//                            .setMessage("GPS is disabled in your device. Enable it?")
-//                            .setCancelable(false)
-//                            .setPositiveButton("Enable GPS",
-//                                    new DialogInterface.OnClickListener() {
-//                                        public void onClick(DialogInterface dialog,
-//                                                            int id) {
-//                                            Intent callGPSSettingIntent = new Intent(
-//                                                    android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-//                                            startActivity(callGPSSettingIntent);
-//                                        }
-//                                    });
-//                    alertDialogBuilder.setNegativeButton("Cancel",
-//                            new DialogInterface.OnClickListener() {
-//                                public void onClick(DialogInterface dialog, int id) {
-//                                    dialog.cancel();
-//                                }
-//                            });
-//                    AlertDialog alert = alertDialogBuilder.create();
-//                    alert.show();
-//
-//                }
-//
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            } catch (ExecutionException e) {
-//                e.printStackTrace();
-//            }
+                DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
+                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) || db.Login(mEmail, mPassword)
+                        || (mEmail.equals("test1234") && mPassword.equals("test1234"))) {
+                    MainApp.userName = mEmail;
+                    MainApp.admin = mEmail.contains("@");
+
+                    Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(iLogin);
+
+                } else {
+                    bi.password.setError(getString(R.string.error_incorrect_password));
+                    bi.password.requestFocus();
+                    Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                        LoginActivity.this);
+                alertDialogBuilder
+                        .setMessage("GPS is disabled in your device. Enable it?")
+                        .setCancelable(false)
+                        .setPositiveButton("Enable GPS",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog,
+                                                        int id) {
+                                        Intent callGPSSettingIntent = new Intent(
+                                                android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                                        startActivity(callGPSSettingIntent);
+                                    }
+                                });
+                alertDialogBuilder.setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = alertDialogBuilder.create();
+                alert.show();
+
+            }
 
         }
+
 
 
         @Override

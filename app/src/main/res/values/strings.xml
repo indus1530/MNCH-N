@@ -9,7 +9,22 @@
 
     <string name="nextSection">Next Section</string>
     <string name="end_interview">End Interview</string>
+    <string name="endForm">End Form</string>
     <string name="numberhint">Number</string>
+
+    <string name="hf_district">District</string>
+    <string name="hf_tehsil">Tehsil</string>
+    <string name="hf_uc">Union Council</string>
+    <string name="hf_uen">Facility Name</string>
+    <string name="hf_consent">Is Consent form Signed</string>
+    <string name="check">Check</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="istatus">Interview Results</string>
+    <string name="istatusa">Complete</string>
+    <string name="istatusb">Incomplete</string>
+
+
 
     <string name="action_sign_in_short">Sign in</string>
     <string name="dummy_button">Dummy Button</string>

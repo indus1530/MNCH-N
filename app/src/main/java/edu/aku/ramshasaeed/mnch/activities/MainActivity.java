@@ -1,5 +1,7 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
+import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,16 +16,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import edu.aku.ramshasaeed.mnch.R;
+import edu.aku.ramshasaeed.mnch.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    ActivityMainBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        bi= DataBindingUtil.setContentView(this,R.layout.activity_main);
+        bi.setCallback(this);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -73,17 +81,17 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_hfa) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_rsd) {
+            startActivity(new Intent(MainActivity.this,RSDInfoActivity.class));
+        } else if (id == R.id.nav_q_mnch) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_dhmt) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_sync) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_opendb) {
 
         }
 

@@ -15,6 +15,7 @@ public class RSDActivity extends AppCompatActivity {
     //Routine Service Delivery
     ActivityRsdBinding bi;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

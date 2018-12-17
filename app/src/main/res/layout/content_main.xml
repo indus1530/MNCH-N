@@ -5,21 +5,10 @@
     tools:context="edu.aku.ramshasaeed.mnch.activities.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <data>
-
-        <import type="android.view.View" />
-
-        <variable
-            name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.MainActivity" />
-
-    </data>
-
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-
     >
 
     <TextView

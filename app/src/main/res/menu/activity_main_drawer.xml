@@ -5,19 +5,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_hfa"
             android:icon="@android:drawable/ic_menu_recent_history"
             android:title="Health Facility Assessment" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_rsd"
             android:icon="@android:drawable/ic_menu_directions"
             android:title="Routine Service Delivery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_q_mnch"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Quality of MNCH" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_dhmt"
             android:icon="@drawable/ic_menu_manage"
             android:title="DHMT Monitoring" />
     </group>
@@ -25,11 +25,11 @@
     <item android:title="Other Tools">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_sync"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Sync Data" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_opendb"
                 android:icon="@drawable/ic_menu_send"
                 android:title="Open Database Manager" />
         </menu>
