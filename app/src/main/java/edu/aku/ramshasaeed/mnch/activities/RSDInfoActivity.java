@@ -27,6 +27,8 @@ public class RSDInfoActivity extends AppCompatActivity {
         bi.fldGrphfUen.setVisibility(View.VISIBLE);
 
 
+      /*  bi.hf_district.setAdapter();
+        bi.hf_tehsil.setAdapter();*/
     }
 
 
