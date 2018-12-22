@@ -18,24 +18,17 @@ import android.databinding.DataBindingUtil;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.Handler;
 import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -44,25 +37,20 @@ import android.widget.Toast;
 
 import org.json.JSONArray;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.lang.annotation.Target;
-import java.nio.channels.FileChannel;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
-import edu.aku.ramshasaeed.mnch.core.DatabaseHelper;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
+import edu.aku.ramshasaeed.mnch.data.AppDatabase;
+import edu.aku.ramshasaeed.mnch.data.DAO.GetFncDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityLoginBinding;
+import edu.aku.ramshasaeed.mnch.get.db.GetIndDBData;
 
 public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+    public static AppDatabase db;
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -93,7 +81,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
 
-    //public static AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,7 +127,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
            // loadIMEI();
 
         }
-
+        db = AppDatabase.getDatabase(getApplicationContext());
 
         bi.password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -723,48 +710,58 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             mAuthTask = null;
             showProgress(false);
 
-
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-            if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 
-                DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
-                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) || db.Login(mEmail, mPassword)
-                        || (mEmail.equals("test1234") && mPassword.equals("test1234"))) {
-                    MainApp.userName = mEmail;
-                    MainApp.admin = mEmail.contains("@");
+            try {
 
-                    Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(iLogin);
+                if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                    if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
+                            (new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "login").execute(mEmail, mPassword).get() != null) ||
+                            (mEmail.equals("test1234") && mPassword.equals("test1234"))
+                            || (mEmail.equals("test12345") && mPassword.equals("test12345"))) {
+                        MainApp.userName = mEmail;
+                        MainApp.admin = mEmail.contains("@");
 
+                        finish();
+
+                        Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(iLogin);
+
+                    } else {
+                        bi.password.setError(getString(R.string.error_incorrect_password));
+                        bi.password.requestFocus();
+                        Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
+                    }
                 } else {
-                    bi.password.setError(getString(R.string.error_incorrect_password));
-                    bi.password.requestFocus();
-                    Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
-                }
-            } else {
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                        LoginActivity.this);
-                alertDialogBuilder
-                        .setMessage("GPS is disabled in your device. Enable it?")
-                        .setCancelable(false)
-                        .setPositiveButton("Enable GPS",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog,
-                                                        int id) {
-                                        Intent callGPSSettingIntent = new Intent(
-                                                android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                                        startActivity(callGPSSettingIntent);
-                                    }
-                                });
-                alertDialogBuilder.setNegativeButton("Cancel",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-                AlertDialog alert = alertDialogBuilder.create();
-                alert.show();
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                            LoginActivity.this);
+                    alertDialogBuilder
+                            .setMessage("GPS is disabled in your device. Enable it?")
+                            .setCancelable(false)
+                            .setPositiveButton("Enable GPS",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog,
+                                                            int id) {
+                                            Intent callGPSSettingIntent = new Intent(
+                                                    android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                                            startActivity(callGPSSettingIntent);
+                                        }
+                                    });
+                    alertDialogBuilder.setNegativeButton("Cancel",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+                    AlertDialog alert = alertDialogBuilder.create();
+                    alert.show();
 
+                }
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
             }
 
         }

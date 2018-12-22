@@ -25,11 +25,14 @@ import java.util.Date;
 
 public class MainApp extends Application {
 
-    public static final String _IP = "43.245.131.159"; // PHP server
+    public static final String AppName = "mnch"; // Must be without space
+    public static final String _IP = "10.1.42.30"; // PHP server
+//    public static final String _IP = "43.245.131.159"; // PHP server
 //    public static final String _IP = "f49461"; // Test PHP server
     public static final Integer _PORT = 8080; // Port - with colon (:)
-    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/kmc/api/";
-    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/kmc/app/app-debug.apk";
+//    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/uen_mnch/api/";
+    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_mnch/api/";
+    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/uen_mnch/app/app-debug.apk";
 
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
@@ -63,9 +66,9 @@ public class MainApp extends Application {
     public static String versionName;
     public static String IMEI;
 
-    public static String talukaCode = "0000";
+    public static String DistrictCode = "0000";
+    public static String tehsilCode = "0000";
     public static String ucCode;
-    public static String villageCode;
     public static String resName;
     public static String wSerialNo;
     public static String wName;
@@ -73,7 +76,10 @@ public class MainApp extends Application {
 
 
     protected static LocationManager locationManager;
-
+    public static String getTagName(Context mContext) {
+        SharedPreferences sharedPref = mContext.getSharedPreferences("tagName", MODE_PRIVATE);
+        return sharedPref.getString("tagName", null);
+    }
     public static Calendar getCalendarDate(String value) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         Calendar calendar = Calendar.getInstance();

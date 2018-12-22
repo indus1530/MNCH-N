@@ -11,11 +11,17 @@ import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
+import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
+import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityEndingBinding;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
+
+import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
+import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
 public class EndingActivity extends AppCompatActivity {
     ActivityEndingBinding bi;
@@ -79,32 +85,24 @@ public class EndingActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 //       Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
-
-     /*   MainApp.fc.setIstatus(bi.istatusa.isChecked() ? "1"
-                : bi.istatusb.isChecked() ? "2"
-                : "0");*/
-
-//        MainApp.fc.setIstatus88x(istatus88x.getText().toString());
-//        MainApp.fc.setEndingdatetime(dtToday);
-
+        fc.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : "0");
+        fc.setEndtime(dtToday);
 
         Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
     }
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = new DatabaseHelper(this);
+        try {
+            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao","updateForm").get();
+            return longID == 1;
 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
-        int updcount = db.updateEnding();
-
-        if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
-            return true;
-        } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-            return false;
-        }*/
-        return true;
+        return false;
     }
 
     private boolean formValidation() {
