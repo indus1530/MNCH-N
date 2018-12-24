@@ -34,6 +34,8 @@ public class RSDActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd);
         bi.setCallback(this);
+        this.setTitle("Routine Service Delivery");
+
 
     }
 
@@ -47,12 +49,7 @@ public class RSDActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-
-                finish();
-                startActivity(new Intent(RSDActivity.this, EndingActivity.class));
-
-//                startActivity(new Intent(this, SectionA2Activity.class));
-                //startActivity(new Intent(this, MainActivity.class));
+                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -60,24 +57,15 @@ public class RSDActivity extends AppCompatActivity {
         }
     }
     public void BtnEnd() {
+        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
 
     }
     private boolean UpdateDB() {
 
         try {
 
-            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "insertForm").get();
-
-            if (longID != 0) {
-                fc.setId(longID.intValue());
-                fc.setUid(MainApp.deviceId + fc.getId());
-
-                longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
-                return longID == 1;
-
-            } else {
-                return false;
-            }
+            Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+            return longID == 1;
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -89,6 +77,7 @@ public class RSDActivity extends AppCompatActivity {
 
     }
     public boolean formValidation() {
+
         if (!validatorClass.EmptyTextBox(this, bi.rs01, getString(R.string.rs01))) {
             return false;
         }
@@ -248,7 +237,6 @@ public class RSDActivity extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.rs40, getString(R.string.rs40))) {
             return false;
         }
-
 
 
         return true;

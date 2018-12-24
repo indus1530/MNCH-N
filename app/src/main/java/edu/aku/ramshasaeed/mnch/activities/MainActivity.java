@@ -30,14 +30,23 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
+import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.core.CONSTANTS;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
+import edu.aku.ramshasaeed.mnch.data.DAO.GetFncDAO;
+import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityMainBinding;
+import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
 import edu.aku.ramshasaeed.mnch.get.server.GetAllData;
+import edu.aku.ramshasaeed.mnch.sync.SyncAllData;
+import im.dino.dbinspector.activities.DbInspectorActivity;
+
+import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -45,6 +54,8 @@ public class MainActivity extends AppCompatActivity
     SharedPreferences.Editor editor;
     SharedPreferences sharedPref;
     String DirectoryName;
+    private boolean updata = false;
+    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,7 +118,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_dhmt) {
 
         } else if (id == R.id.nav_upload) {
-
+            uploadData();
 
         }else if (id == R.id.nav_download) {
             //TODO implement
@@ -122,7 +133,8 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
             }
         } else if (id == R.id.nav_opendb) {
-
+            Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
+            startActivity(dbmanager);
         }
 
 
@@ -252,4 +264,50 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
+    public void uploadData() {
+
+        if (!updata) {
+            updata = true;
+
+            // Require permissions INTERNET & ACCESS_NETWORK_STATE
+            ConnectivityManager connMgr = (ConnectivityManager)
+                    getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+            if (networkInfo != null && networkInfo.isConnected()) {
+
+//            new SyncDevice(this).execute();
+                Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+
+//                Upload Form
+                Collection collection1 = null;
+                try {
+                    collection1 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                new SyncAllData(
+                        this,
+                        "Forms",
+                        "updateSyncedForms",
+                        Forms.class,
+                        MainApp._HOST_URL + CONSTANTS.URL_FORMS, collection1
+                ).execute();
+
+                SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = syncPref.edit();
+
+                editor.putString("LastUpSyncServer", dtToday);
+
+                editor.apply();
+
+            } else {
+                Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
+            }
+            updata = false;
+        }
+
+    }
+
 }

@@ -122,8 +122,7 @@
                             android:layout_weight="1"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789-"
                             android:hint="@string/hf_uen"
-                            android:inputType="textCapCharacters"
-                            android:maxLength="5" />
+                            android:inputType="textCapCharacters" />
 
                         <Button
                             android:id="@+id/BtnCheck"

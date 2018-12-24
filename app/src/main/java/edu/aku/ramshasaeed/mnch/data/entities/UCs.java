@@ -66,8 +66,8 @@ public class UCs {
 
     public UCs Sync(JSONObject jsonObjectCls) throws JSONException {
 
-        this.UCs_code = jsonObjectCls.getString("UCs_code");
-        this.UCs_name = jsonObjectCls.getString("UCs_name");
+        this.UCs_code = jsonObjectCls.getString("hf_uc_code");
+        this.UCs_name = jsonObjectCls.getString("hf_uc_name");
         this.tehsil_code = jsonObjectCls.getString("hf_tehsil_code");
         this.uen_code = jsonObjectCls.getString("hf_uen_code");
         return this;

@@ -14,10 +14,13 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 
 /**
  * Created by hassan.naqvi on 11/30/2016.
@@ -183,6 +186,34 @@ public class MainApp extends Application {
         }
         return provider1.equals(provider2);
     }
+    public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+        alertDialogBuilder
+                .setMessage("Do you want to Exit??")
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                                int id) {
+                                activity.finish();
+                                Intent end_intent = new Intent(context, EndActivityClass);
+                                end_intent.putExtra("complete", complete);
+                                end_intent.putExtra("typeFlag", objectData.getClass().equals(Forms.class));
+                                end_intent.putExtra("fc_data", (Serializable) objectData);
+                                context.startActivity(end_intent);
+                            }
+                        });
+        alertDialogBuilder.setNegativeButton("No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
+    }
+
 
     public class GPSLocationListener implements LocationListener {
         public void onLocationChanged(Location location) {

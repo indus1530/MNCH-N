@@ -101,8 +101,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">5dp</item>
         <item name="android:layout_marginBottom">5dp</item>
-        <item name="cardCornerRadius">7dp</item>
-        <item name="cardElevation">3dp</item>
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">1dp</item>
     </style>
 
     <style name="linerlayout_view">
@@ -126,8 +126,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
-        <item name="android:background">@color/colorSecondaryLight</item>
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:background">@color/colorSecondary</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
         <item name="android:padding">2dp</item>
 

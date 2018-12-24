@@ -92,4 +92,6 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
 
         return curData;
     }
+
+
 }

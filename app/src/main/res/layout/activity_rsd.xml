@@ -277,6 +277,7 @@ tools:context=".activities.RSDActivity">
                         style="@style/textViewCenterGravity"
                         android:text="@string/rshint01" />
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/rs11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

@@ -61,9 +61,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     }
 
     private void tempVisible(final Context context) {
-        bi.fldGrphfDistrict.setVisibility(View.VISIBLE);
-        bi.fldGrphfTehsil.setVisibility(View.VISIBLE);
-        bi.fldGrphfUen.setVisibility(View.VISIBLE);
+
 
         districtNames = new ArrayList<>();
         districtCodes = new ArrayList<>();
@@ -124,7 +122,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                     if (tehsils != null) {
                         for (Tehsil t : tehsils) {
                             tehsilNames.add(t.getTehsil_name());
-                            tehsilCodes.add(t.getDistrict_code());
+                            tehsilCodes.add(t.getTehsil_code());
                         }
                         // Creating adapter for spinner
                         ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<>(context,
@@ -251,7 +249,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
+        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
     }
 
     public void BtnCheck() {
