@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -58,6 +59,14 @@ public class RSDInfoActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         tempVisible(this);
+        bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(bi.hfConsenta.isChecked()){
+
+                }
+            }
+        });
     }
 
     private void tempVisible(final Context context) {

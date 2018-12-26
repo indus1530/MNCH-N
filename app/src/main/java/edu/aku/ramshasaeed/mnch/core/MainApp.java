@@ -187,10 +187,17 @@ public class MainApp extends Application {
         return provider1.equals(provider2);
     }
     public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
+        String message = "";
+
+        if(complete)
+            message = "Do you want to Finish?";
+        else
+            message = "Do you want to Exit?";
+
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 context);
         alertDialogBuilder
-                .setMessage("Do you want to Exit??")
+                .setMessage(message)
                 .setCancelable(false)
                 .setPositiveButton("Yes",
                         new DialogInterface.OnClickListener() {

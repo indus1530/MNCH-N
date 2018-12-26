@@ -33,6 +33,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".activities.RSDActivity"
             android:theme="@style/AppTheme1"
@@ -46,7 +47,9 @@
         <activity android:name=".activities.LoginActivity"
             >
         </activity>
-        <activity android:name=".activities.MainActivity"/>
+        <activity android:name=".activities.MainActivity">
+
+        </activity>
         <activity android:name=".activities.EndingActivity"/>
     </application>
 
