@@ -32,6 +32,7 @@ import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.data.DAO.GetFncDAO;
 import edu.aku.ramshasaeed.mnch.data.entities.District;
+import edu.aku.ramshasaeed.mnch.data.entities.Facility_provider;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.UCs;
@@ -46,8 +47,8 @@ import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class RSDInfoActivity extends AppCompatActivity {
     ActivityRsdinfoBinding bi;
-    public List<String> districtNames, tehsilNames, UCsName, wName;
-    public List<String> districtCodes,tehsilCodes, UCsCodes, wSno;
+    public List<String> districtNames, tehsilNames, UCsName, facility_name;
+    public List<String> districtCodes,tehsilCodes, UCsCodes, facility_code;
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
 
@@ -63,7 +64,9 @@ public class RSDInfoActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if(bi.hfConsenta.isChecked()){
-
+                    bi.btnNext.setVisibility(VISIBLE);
+                }else{
+                    bi.btnNext.setVisibility(GONE);
                 }
             }
         });
@@ -229,6 +232,65 @@ public class RSDInfoActivity extends AppCompatActivity {
 
             }
         });
+        bi.hfUc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                MainApp.facilityProviderCode = UCsCodes.get(position);
+
+                facility_code = new ArrayList<>();
+                facility_name = new ArrayList<>();
+
+
+                facility_code.add("....");
+                facility_name.add("....");
+
+
+                Collection<Facility_provider> facility_provider = null;
+                try {
+                    facility_provider = (Collection<Facility_provider>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider").execute(MainApp.facilityProviderCode).get();
+
+                    if (facility_provider != null) {
+                        for (Facility_provider fp : facility_provider) {
+                            facility_name.add(fp.getProvider_name());
+                            facility_code.add(fp.getProvider_code());
+                        }
+                        // Creating adapter for spinner
+                        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(context,
+                                android.R.layout.simple_spinner_dropdown_item, facility_name);
+
+                        // Drop down layout style - list view with radio button
+                        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+                        // attaching data adapter to spinner
+                        bi.hfFacilityProvider.setAdapter(dataAdapter);
+                        if (position == 0) {
+                            bi.fldGrphfUc.setVisibility(GONE);
+
+                        } else {
+                            bi.fldGrphfUc.setVisibility(VISIBLE);
+
+                        }
+
+                    } else {
+//                        Toast.makeText(this, "Tehsils not found!!", Toast.LENGTH_SHORT).show();
+                        bi.fldGrphfUc.setVisibility(GONE);
+                    }
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                bi.fldGrphfUc.setVisibility(GONE);
+
+            }
+        });
 
 
     }
@@ -261,10 +323,6 @@ public class RSDInfoActivity extends AppCompatActivity {
         MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
     }
 
-    public void BtnCheck() {
-
-    }
-
     public boolean formValidation() {
         if (!validatorClass.EmptySpinner(this, bi.hfDistrict, getString(R.string.hf_district))) {
             return false;
@@ -275,9 +333,10 @@ public class RSDInfoActivity extends AppCompatActivity {
         if (!validatorClass.EmptySpinner(this, bi.hfUc, getString(R.string.hf_uc))) {
             return false;
         }
-        if (!validatorClass.EmptyTextBox(this, bi.hfUen, getString(R.string.hf_uen))) {
+        if (!validatorClass.EmptySpinner(this, bi.hfFacilityProvider, getString(R.string.hf_uen))) {
             return false;
         }
+
         if (!validatorClass.EmptyRadioButton(this, bi.hfConsent, bi.hfConsenta, getString(R.string.hf_consent))) {
             return false;
         }
@@ -304,7 +363,7 @@ public class RSDInfoActivity extends AppCompatActivity {
         f01.put("district_code",MainApp.DistrictCode);
         f01.put("tehsil_code", MainApp.tehsilCode);
         f01.put("uc_code", MainApp.ucCode);
-        f01.put("uen_name", bi.hfUen.getText().toString());
+        f01.put("facility_provider_code", MainApp.facilityProviderCode);
         f01.put("rs_consent",  bi.hfConsenta.isChecked() ? "1"
                 : bi.hfConsentb.isChecked() ? "2"
                 : "0");

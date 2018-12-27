@@ -167,6 +167,8 @@ public class MainActivity extends AppCompatActivity
                     new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();
                     Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();
+                    Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_FACILITY_PROVIDER).execute();
                 }
             });
 

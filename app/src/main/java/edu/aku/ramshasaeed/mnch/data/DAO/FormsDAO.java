@@ -9,6 +9,7 @@ import android.arch.persistence.room.Update;
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 import edu.aku.ramshasaeed.mnch.data.AppDatabase.Sub_DBConnection;
 import edu.aku.ramshasaeed.mnch.data.entities.District;
+import edu.aku.ramshasaeed.mnch.data.entities.Facility_provider;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.UCs;
@@ -40,6 +41,8 @@ public interface FormsDAO {
 
     @Insert
     Long insertUCs(UCs ucs);
+    @Insert
+    Long insertFacilityProvider(Facility_provider facility_provider);
 
     @Query("DELETE from " + AppDatabase.Sub_DBConnection.TABLE_USERS)
     int deleteUsers();
@@ -52,6 +55,9 @@ public interface FormsDAO {
 
     @Query("DELETE from " + Sub_DBConnection.TABLE_UCs)
     int deleteUcs();
+
+    @Query("DELETE from " + Sub_DBConnection.TABLE_FACILITY_PROVIDER)
+    int deleteFacilityProvider();
 
 
     /*Update methods after upload on server*/

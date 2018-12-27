@@ -72,6 +72,7 @@ public class MainApp extends Application {
     public static String DistrictCode = "0000";
     public static String tehsilCode = "0000";
     public static String ucCode;
+    public static String facilityProviderCode;
     public static String resName;
     public static String wSerialNo;
     public static String wName;

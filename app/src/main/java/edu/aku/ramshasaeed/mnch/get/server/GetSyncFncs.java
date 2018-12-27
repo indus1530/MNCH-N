@@ -7,6 +7,7 @@ import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
 import edu.aku.ramshasaeed.mnch.RMOperations.syncOperations;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.data.entities.District;
+import edu.aku.ramshasaeed.mnch.data.entities.Facility_provider;
 import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.UCs;
 import edu.aku.ramshasaeed.mnch.data.entities.Users;
@@ -56,7 +57,7 @@ public abstract class GetSyncFncs {
     }
     public static void syncTehsil(JSONArray clusterList) {
 
-        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteDistrict");
+        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteTehsil");
 
         try {
             JSONArray jsonArray = clusterList;
@@ -75,7 +76,7 @@ public abstract class GetSyncFncs {
     }
     public static void syncUCs(JSONArray clusterList) {
 
-        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUCs");
+        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUcs");
 
         try {
             JSONArray jsonArray = clusterList;
@@ -86,6 +87,25 @@ public abstract class GetSyncFncs {
                 uCs.Sync(jsonObjectUser);
 
                 new crudOperations(db, uCs).execute(FormsDAO.class.getName(), "formsDao", "insertUCs").get();
+            }
+            db.close();
+
+        } catch (Exception e) {
+        }
+    }
+    public static void syncFacilityProvider(JSONArray dataList) {
+
+        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteFacilityProvider");
+
+        try {
+            JSONArray jsonArray = dataList;
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObjectdata = jsonArray.getJSONObject(i);
+
+                Facility_provider facility_provider = new Facility_provider();
+                facility_provider.Sync(jsonObjectdata);
+
+                new crudOperations(db, facility_provider).execute(FormsDAO.class.getName(), "formsDao", "insertFacilityProvider").get();
             }
             db.close();
 

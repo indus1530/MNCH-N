@@ -101,6 +101,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "UCs":
                             GetSyncFncs.syncUCs(jsonArray);
                             break;
+                        case "FacilityProvider":
+                            GetSyncFncs.syncFacilityProvider(jsonArray);
+                            break;
                     }
 
                     pd.setMessage("Received: " + jsonArray.length());
