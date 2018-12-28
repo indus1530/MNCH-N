@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="edu.aku.ramshasaeed.mnch">
     <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
 
@@ -36,15 +37,17 @@
         </activity>
         <activity android:name=".activities.RSDActivity"
             android:theme="@style/AppTheme1"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"/>
+        <activity android:name="im.dino.dbinspector.activities.DbInspectorActivity">
+            <intent-filter tools:node="removeAll">
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity android:name=".activities.RSDInfoActivity"
             android:theme="@style/AppTheme1"
-            android:screenOrientation="portrait">
-
-
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".activities.LoginActivity"
             >

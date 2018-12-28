@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">MNCH</string>
+    <string name="app_name">QOC - UEN</string>
+    <string name="module_one">MNCH</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">MNCH</string>
@@ -20,6 +21,7 @@
     <string name="check">Check</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="msing">Missing</string>
     <string name="istatus">Interview Results</string>
     <string name="istatusa">Complete</string>
     <string name="istatusb">Incomplete</string>
@@ -35,12 +37,23 @@
     <string name="error_incorrect_password">This password is incorrect</string>
 
     <string name="rshint01"> Maternal Health Register (Both PHC &amp; SHC) </string>
+    <string name="rshint02"> Secondary healthcare facilities- ob/gyn OPD register  </string>
+    <string name="rshint03"> Obstetric Register (both PHC &amp; SHC) </string>
+    <string name="rshint04"> Obstetric Register (SHC) </string>
+    <string name="rshint05"> Both- Obstetric Register(Remarks column)</string>
+    <string name="rshint06"> Indoor Register (SHC)</string>
+    <string name="rshint07"> OPD register-PHC (pediatrics OPD register for SHC) </string>
+    <string name="rshint08"> Point where maternal services are provided </string>
+    <string name="rshint09"> OPD register PHC OPD register pediatrics for SHC</string>
+    <string name="rshint10"> PHC OPD register OPD register pediatrics for SHC</string>
+    <string name="rshint11"> SHC- pediatrics OPD register</string>
+
     <string name="rs01"> Number of ANC – 1 visit </string>
     <string name="rs02"> Number of ANC Revisits (2/3/4 or more) </string>
     <string name="rs03"> ANC-1 women with Hb 10 g/dl </string>
     <string name="rs04"> Number of PNC-1 visits </string>
     <string name="rs05"> Number of PNC-2 visits </string>
-    <string name="rs06"> Women given TT-2 vaccination (advice) </string>
+    <string name="rs06"> Women given TT-2 vaccination </string>
     <string name="rs07"> Total New Cases OB/GYN </string>
     <string name="rs08"> Referred Cases attended (OB/GYN) </string>
     <string name="rs09"> Normal Vaginal Delivery </string>
@@ -75,5 +88,6 @@
     <string name="rs38"> Total General OPD (1-4 years) </string>
     <string name="rs39"> Follow up cases (Child Health 0-5yr) </string>
     <string name="rs40"> Referred Cases attended (Pediatrics) </string>
+    <string name="rsrem"> Remarks </string>
 
 </resources>

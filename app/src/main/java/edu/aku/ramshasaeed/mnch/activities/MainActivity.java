@@ -110,12 +110,14 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_hfa) {
-            // Handle the camera action
+            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_rsd) {
             startActivity(new Intent(MainActivity.this,RSDInfoActivity.class));
         } else if (id == R.id.nav_q_mnch) {
+            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_dhmt) {
+            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_upload) {
             uploadData();
