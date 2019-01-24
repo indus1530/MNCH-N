@@ -67,6 +67,7 @@
                 <TableRow>
 
                     <TextView
+                        android:id="@+id/form_id"
                         android:gravity="start"
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
@@ -74,12 +75,14 @@
                         android:text="1\n2\n3" />
 
                     <TextView
+                        android:id="@+id/complete_status"
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
                         android:gravity="center"
                         android:text="Complete\nIncomplete \nComplete" />
 
                     <TextView
+                        android:id="@+id/sync_status"
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
                         android:paddingEnd="5dp"

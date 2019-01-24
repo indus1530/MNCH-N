@@ -99,8 +99,8 @@
         <item name="android:background">@color/dullWhileOverlay</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">5dp</item>
-        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
         <item name="cardCornerRadius">2dp</item>
         <item name="cardElevation">1dp</item>
     </style>
@@ -111,33 +111,33 @@
         <item name="android:orientation">vertical</item>
     </style>
     <style name="textViewstartAlignGravity">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
         <item name="android:background">@color/colorPrimaryDark</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">start</item>
-        <item name="android:padding">6dp</item>
+        <item name="android:padding">10dp</item>
 
     </style>
     <style name="textViewCenterGravity">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">24sp</item>
         <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
         <item name="android:background">@color/colorSecondary</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
         <item name="android:padding">2dp</item>
+        <item name="android:layout_marginTop">5dp</item>
 
     </style>
 
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">10dp</item>
         <item name="android:background">@drawable/et_style</item>
         <item name="android:alpha">0.8</item>
         <item name="android:textColorHint">@color/gray</item>

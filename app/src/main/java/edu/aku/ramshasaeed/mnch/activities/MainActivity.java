@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity
         dbBackup();
 
         bi.navView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override

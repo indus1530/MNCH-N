@@ -71,8 +71,6 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
 
                             curData = (Collection<?>) fnClass.getDeclaredMethod(method2.getName(), params)
                                     .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db), fnNames);
-
-
                             break;
                         }
                     }
