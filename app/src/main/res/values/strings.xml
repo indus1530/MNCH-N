@@ -28,7 +28,6 @@
     <string name="istatusb">Incomplete</string>
 
 
-
     <string name="action_sign_in_short">Sign in</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="prompt_password">Password</string>
@@ -85,5 +84,287 @@
     <string name="rs39"> Number of Diarrhea cases &lt;5 years (Indoor)</string>
     <string name="rs40"> Deaths due to Diarrhea among  &lt;5 years (Indoor)</string>
     <string name="rsrem"> Remarks </string>
+
+    <string name="qa01">Water &amp; Sanitation</string>
+    <string name="qa0101">Clean Drinking Water</string>
+    <string name="qa0101a">Availability</string>
+    <string name="qa0101b">Functionality</string>
+    <string name="qa0101c">Action Plan</string>
+    <string name="qa07a">Available</string>
+    <string name="qa07b">Useable</string>
+    <string name="qa08b">Maintained</string>
+
+    <string name="qa0102">Main Source of Water for Labor Rooms, Toilets and Theaters. 24/7 (Main Source)</string>
+    <string name="qa0103">Alternative Source of Water in case of Main Source is Non Functional</string>
+    <string name="qa0104">Hand Washing /Hygiene Facility in Waiting Area, Labor Rooms, OPDs, Toilets and Theaters.</string>
+    <string name="qa0105">Incinerator or Incineration Pit</string>
+    <string name="qa0106">Waste Disposal Bins for Dry Waste</string>
+    <string name="qa0107">Waste Disposal Bins for Wet Waste</string>
+    <string name="qa0108">Autoclave</string>
+    <string name="qa0109">Boiler</string>
+
+
+    <string name="qa02">Electricity</string>
+
+    <string name="nadnt">NA/Don\'t know</string>
+    <string name="qa0201">Electricity Main Source for OPDs, Waiting Area, Labor Rooms, Toilets and Theaters.</string>
+    <string name="qa0202">Electricity Alternative Source (Generator) for OPDs, Waiting Area, Labor Rooms, Toilets and Theaters.</string>
+    <string name="qa03">Referrals</string>
+    <string name="qa0301">Ambulance 24/7</string>
+    <string name="qa0302">Alternative Patient Transportation Mechanism</string>
+    <string name="qa0303">Emergency Contacts List of District</string>
+    <string name="qa0304">Contact List of Near By CEmONC Centers</string>
+    <string name="qa0305">Communications with Tertiary Care Centers</string>
+
+    <string name="qa04">Equipment’s &amp; Supplies</string>
+    <string name="qa0401">Supplies &amp; Equipment’s for, Routine OPD &amp; IPD Care  (General Items and Furniture)</string>
+    <string name="qa0402">Supplies  Equipment’s for, Infection Prevention.</string>
+    <string name="qa0403">Supplies  Equipment’s for, Maternal Health.</string>
+    <string name="qa0404">Supplies  Equipment’s for, Neonatal &amp; Child Health</string>
+
+
+    <string name="qa05">Blood Bank &amp; Laboratory</string>
+    <string name="qa0501">Laboratory within Premises for baseline biomarkers (CBC, Blood Group &amp; RH factor, Hepatitis B &amp; C, Urine DR)</string>
+    <string name="qa0502">Communications with Peripheral Laboratories</string>
+    <string name="qa0503">24 Hour Blood Bank Services</string>
+    <string name="qa0504">Communications with Peripheral 24 Hour Blood Bank Services</string>
+
+
+    <string name="qa06">Staff / HR</string>
+    <string name="qa0601">24/7 On Call Gynecologist / Obstetrician &amp; Pediatrician</string>
+    <string name="qa0602">24/7 On Call Anesthetist</string>
+    <string name="qa0603">24/7 On Call OT Technician</string>
+    <string name="qa0604">Trained Medical Officers (OB/GYN &amp; PEADS)</string>
+    <string name="qa0605">Trained Staff Nurses, Midwives, Nurse Aids (OB/GYN &amp; PEADS)</string>
+    <string name="qa0606">Lab Technician </string>
+    <string name="qa0607">Pharmacist </string>
+    <string name="qa0608">Support Staff / Sweeper </string>
+
+
+    <string name="qa07">Essential Drugs</string>
+    <string name="qa0701">Separate Area for storage of Essential drugs</string>
+    <string name="qa0702">Availability of essential drugs (3 Months Supplies)</string>
+    <string name="qa0703">Injection Normal Saline/ Ringer lactate</string>
+    <string name="qa0704">Injection Amoxicillin</string>
+    <string name="qa0705">Injection Metronidazole</string>
+    <string name="qa0706">Injection Gentamicin</string>
+    <string name="qa0707">Dispersible Tablets Amoxicillin</string>
+    <string name="qa0708">Syrup &amp; Capsules Amoxicillin</string>
+    <string name="qa0709">Injection Syntocinon (Oxytocin) with maintained cold chain</string>
+    <string name="qa0710">Tablet Misoprostol 200mgm </string>
+    <string name="qa0711">Injection Magnesium Sulphate </string>
+    <string name="qa0712">Injection Calcium Gluconate </string>
+    <string name="qa0713">7.1% Chlorhexadine gel </string>
+    <string name="qa0714">ORS Packets </string>
+    <string name="qa0715">Syrup &amp; Tablets of Zinc </string>
+    <string name="qa0716">Syrup &amp; Tablets of Paracetamol </string>
+    <string name="qa0717">Inhaled Bronchodilator (Salbutamol) </string>
+    <string name="qa0718">Injection Dexamethasone </string>
+    <string name="qa0719">Tablet Ferrous Sulphate (Iron) </string>
+    <string name="qa0720">Tablet of Chewable Calcium </string>
+    <string name="qa0721">Silver Nitrate Eye Drops </string>
+
+
+    <string name="qa08">Data Recording Tools &amp; IEC Material</string>
+    <string name="qa0801">OPD Data Registers</string>
+    <string name="qa0802">Admission &amp; Discharge Data Register</string>
+    <string name="qa0803">DHIS &amp; PPMIS Data Registers</string>
+    <string name="qa0804">IEC Material / Job Aids related to MNCH</string>
+    <string name="qa0805">Partograph in Labor Rooms.</string>
+    <string name="qb01"><![CDATA[Supplies & Instruments (For General Items and Furniture)]]></string>
+    <string name="qbb">Functional</string>
+    <string name="qb0101">Office table</string>
+    <string name="qb0102"> Office chair </string>
+    <string name="qb0103"> Examination Table </string>
+    <string name="qb0104"> Cabinet, for drugs / instruments </string>
+    <string name="qb0105"> Patient stool (Revolving) </string>
+    <string name="qb0106"> waiting bench for high volume facilities </string>
+    <string name="qb0107"> Wall Clock </string>
+    <string name="qb0108"> Screen/curtain for privacy </string>
+    <string name="qb0109"> Instrument Trolley with two trays </string>
+    <string name="qb0110"> Delivery table </string>
+    <string name="qb0111"> IV Infusion Stand, </string>
+    <string name="qb0112"> Emergency standby light </string>
+    <string name="qb0113"> Refrigerator (for facility providing Immunization &amp; Maternal services) </string>
+    <string name="qb0114"> Mobile examination light </string>
+    <string name="qb0115"> BP Apparatus- functional (at least one per service site) </string>
+    <string name="qb0116"> Stethoscope - functional(at least one per service site) </string>
+    <string name="qb0117"> Safety Box for used syringes / needles </string>
+    <string name="qb0118"> Adult Weighing scale </string>
+    <string name="qb0119"> Thermometer, clinical, 35-42°C </string>
+    <string name="qb0120"> Patients drape </string>
+
+    <string name="qb02"> Supplies &amp; Instruments (For Infection Prevention) </string>
+    <string name="qb0201"> Apron </string>
+    <string name="qb0202"> Plastic /Macintosh Draw Sheet, 90 x 180 cm </string>
+    <string name="qb0203"> Brush to clean Instrument </string>
+    <string name="qb0204"> Two separate Tub or Bucket with Lid for Chlorine &amp; Detergent Water </string>
+    <string name="qb0205"> Stand for chlorine buckets or tubs </string>
+    <string name="qb0206"> Utility gloves (pair) </string>
+    <string name="qb0207"> Close toed Cut Shoes </string>
+    <string name="qb0208"> Plastic sheets to cover waste bins </string>
+    <string name="qb0209"> Goggles/face shield </string>
+    <string name="qb0210"> Mops </string>
+    <string name="qb0211"> Hand sanitizer </string>
+    <string name="qb0212"> Chlorine solution (3-5L) </string>
+    <string name="qb0213"> Measuring Jug (1L) </string>
+
+    <string name="qb03"> Supplies &amp; Instruments (For Maternal Health) </string>
+    <string name="qb0301"> Instrument Tray 300 x 200 x 30 mm </string>
+    <string name="qb0302"> Feto-scope Aluminum </string>
+    <string name="qb0303"> Stainless steel bowl 600ml </string>
+    <string name="qb0304"> Angular Episiotomy Scissors, 145 mm </string>
+    <string name="qb0305"> Cord clamps stainless steel </string>
+    <string name="qb0306"> Scissors for cutting the cord </string>
+    <string name="qb0307"> Cylindrical Drum, diameter, 150 mm,250 mm </string>
+    <string name="qb0308"> Mayo-Hegar Straight Needle Holder, 180 mm </string>
+    <string name="qb0309"> Standard Straight Tissue Forceps, 145 mm </string>
+    <string name="qb0310"> Sponge holding forceps </string>
+    <string name="qb0311"> Deaver Scissors, 140 mm </string>
+    <string name="qb0312"> Tooth tissue forceps </string>
+    <string name="qb0313"> Plain tissue forceps </string>
+    <string name="qb0314"> Blunt Scissor </string>
+    <string name="qb0315"> Measuring Tape </string>
+    <string name="qb0316"> Stainless steel kidney Basin </string>
+    <string name="qb0317"> Vacuum extractor (for assisted delivery) </string>
+    <string name="qb0318"> Double-ended, Sims Vaginal medium size/Cusco’s Vaginal Speculum medium size </string>
+    <string name="qb0319"> Stainless steel Kidney Basin, 825 ml </string>
+    <string name="qb0320"> Straight Artery Forceps 140 mm </string>
+    <string name="qb0321"> Sponge holder/straight Artery Forceps, 140 mm </string>
+    <string name="qb0322"> Stainless steel Bowl, 600 ml </string>
+
+
+    <string name="qb04"> Supplies &amp; Instruments (For Neonatal &amp; Child Health) </string>
+    <string name="qb0401"> Weighing scale </string>
+    <string name="qb0402"> One Jug (1L), 6 Cups(50 ml), 6 cups ( 100 ml), 12 Spoon(5ml ) </string>
+    <string name="qb0403"> 2 Chair for ORT Corner </string>
+    <string name="qb0404"> ARI Timer </string>
+    <string name="qb0405"> Thermometer </string>
+    <string name="qb0406"> Instrument tray with drawer to store items </string>
+    <string name="qb0407"> Nebulizer Machine </string>
+    <string name="qb0408"> Pulse Oximeter </string>
+    <string name="qb0409"> Cord cutting Scissor </string>
+    <string name="qb0410"> Cord ties or clamps </string>
+    <string name="qb0411"> Ventilation area (table) </string>
+    <string name="qb0412"> Cotton cloth (2 Pieces)for baby dry </string>
+    <string name="qb0413"> Baby stethoscope </string>
+
+    <string name="qc0101">Greets the woman and respond her nicely on asking questions</string>
+    <string name="qc01">Respectful Maternal Care</string>
+
+    <string name="qc02">Recommended FANC Visits</string>
+    <string name="qc0201"><![CDATA[WHO-recommended schedule of ANC visits: 1st visit: <16 weeks, 2nd visit: 24–28 weeks, 3rd visit: 30–32 weeks, 4th visit: 36–38 weeks]]></string>
+
+    <string name="qc03"><![CDATA[Screened & Describe Women for Danger Signs during Pregnancy]]></string>
+    <string name="qc0301">Convulsions/loss of consciousness, 2. Severe Headache, 3. Blurred Vision, 4. Respiratory Difficulty, 5. Fever, 6. Severe Abdominal Pain, 7. Vaginal Bleeding</string>
+
+    <string name="qc04">Obstetric Examination</string>
+    <string name="qc0401">Measures vital signs (blood pressure, temperature, pulse and respiration)</string>
+    <string name="qc0402">Breast examination</string>
+    <string name="qc0403">Measures fundal height (after 12 weeks)</string>
+    <string name="qc0404">Listens to fetal heart sounds (after 20 weeks)</string>
+    <string name="qc0405">Determines fetal lie and presentation (after 36 weeks)</string>
+    <string name="qc0406"><![CDATA[Calculate & Document the EDD according to LMP or By First Early Scan.]]></string>
+
+    <string name="qc05">Request Laboratory Investigations</string>
+    <string name="qc0501"><![CDATA[Routine investigation (blood group and Rh factor, complete blood count, blood glucose, urine analysis for proteinuria, hepatitis B, & hepatitis C)]]></string>
+    <string name="qc0502"><![CDATA[Specific investigation if needed (Pre Eclampsia Profile (Urea, Creatanine, Uric Acid & LFTs), HIV & Syphilis and ultrasound)]]></string>
+
+    <string name="qc06">Immunization</string>
+    <string name="qc0601">Verifies  tetanus toxoid vaccine to all pregnant women</string>
+
+    <string name="qc07">Prescribe Haematonics</string>
+    <string name="qc0701">Iron folic acid and calcium supplement prescribed to women</string>
+
+    <string name="qc08"><![CDATA[ompulsory Assessment during Labor & Delivery]]></string>
+    <string name="qc0801">Fetal heart rate (every hourly)</string>
+    <string name="qc0802">Labor progress: cervical dilatation (every 4hourly)</string>
+    <string name="qc0803">Strength and frequency of contractions (every hourly)</string>
+    <string name="qc0804">Oxytocin, if used (every hourly)</string>
+    <string name="qc0805">Maternal pulse and blood pressure (every hourly)</string>
+    <string name="qc0806">Give uterotonics within one minute after the baby is born. (Oxytocin OR Misoprostol)</string>
+    <string name="qc0807">Maintained Partograph and Delivery Notes on Record Sheets</string>
+
+    <string name="qc09">Immediate Newborn Care</string>
+    <string name="qc0901">Thoroughly dries baby, stimulates baby and covers baby’s head immediately</string>
+    <string name="qc0902">Places baby on mother’s chest in skin-to-skin contact</string>
+    <string name="qc0903">Assesses breathing</string>
+    <string name="qc0904">Ventilate Baby through Bag &amp; Mask (If Needed)</string>
+    <string name="qc0905">Delays cord cutting until pulsation stops (2–3 minutes)</string>
+    <string name="qc0906">Applies CHX to the cord stump and encourage the mother to continue application for 7 days.</string>
+    <string name="qc0907">Encourages mother to start breastfeeding within one hour of delivery</string>
+    <string name="qc0908">Delays bating to newborn (24 hours)</string>
+    <string name="qc10"><![CDATA[Diagnosis & Management of PPROM/PROM/SROM]]></string>
+    <string name="qc1001">Administered appropriate prophylactic antibiotics to women with rupture of membrane</string>
+    <string name="qc1002"><![CDATA[Administered antibiotics to women with early signs of infection (temp > 38 degrees C or foul-smelling vaginal discharge)]]></string>
+
+    <string name="qc11"><![CDATA[Diagnosis & Management of PPH]]></string>
+    <string name="qc1101">Causes of PPH identified and managed properly and documented.</string>
+    <string name="qc1102">Administers oxytocin 20 IU in 1L of IV fluid at 60 drops/minute and then continue on 40 drops/minute. IV fluid limit is 2-3 Liters.</string>
+    <string name="qc1103">Administered 04 Tablets of Misoprostol (800mcg) Sub Lingual or Per Rectally.</string>
+    <string name="qc1104">Do not administered more than 3 liters containing Oxytocin, Also Not give as an IV Bolos.</string>
+
+    <string name="qc12"><![CDATA[Diagnosis & Management of Pre Eclampsia / Eclampsia]]></string>
+    <string name="qc1201">Pre Eclampsia identified and managed properly and documented.</string>
+    <string name="qc1202">Anti-hypertensive (Nifidipine or Hydralazine) and anti convulsant (Magnesium Sulphate) medication for pre-Eclampsia/Eclampsia administered and documented.</string>
+    <string name="qc1203">Monitor following signs: 1. Level of consciousness/ Convulsions, 2. Severe Headache, 3. Blurred Vision, 4. Difficulty in Breathing and Respiratory rate, 5. Vital Signs, 6. Tendon Reflux, 7. Urine Output (Amount and Proteinuria)</string>
+    <string name="qc13"><![CDATA[Routine Post Natal Examination of Mother & Newborn]]></string>
+    <string name="qc1301">Greets the woman and respond her nicely on asking questions. Provider had complete newborn examination.</string>
+    <string name="qc1302">Encourages the mother to breastfeed exclusively, and Counsels the mother and family member on the importance of completing child immunizations according to schedule</string>
+    <string name="qc14"><![CDATA[Screened & Describe Women for Danger Signs of Newborn]]></string>
+    <string name="qc1401">Screened and Demonstrates about Danger Signs of Newborn: 1. lethargic or unconscious, 2. convulsions, 3. vomiting, 4. not able to suck properly, 5. difficulty in breathing, 6. very cold or warm on touch, and 7. oozing from Umbilical Stump.</string>
+    <string name="qc15">Recommended Post Natal Visits</string>
+    <string name="qc1501">WHO-recommended schedule of PNC visits: 1st visit: 24 hours after birth, 2nd visit: 3rd day after birth, 3rd visit: 7-14th day after birth, 4th visit: at six weeks</string>
+    <string name="qc16"><![CDATA[Screened & Describe Women for Danger Signs after delivery]]></string>
+    <string name="qc1601">Convulsions/loss of consciousness, 2. Severe Headache, 3. Blurred Vision, 4. Respiratory Difficulty, 5. Fever, 6. Severe Abdominal Pain, 7. Severe Vaginal Bleeding,  and 8. Foul Smelling Vaginal Discharge</string>
+
+    <string name="qc17">Cesarean Section</string>
+    <string name="qc1701">Indication for Cesarean Section and time decision for surgery was documented</string>
+    <string name="qc1704"><![CDATA[Lab results (Hb%, Platelets, Blood Group RH factor, Hepatitis B & C, ) Attached or documented.]]></string>
+    <string name="qc1702">Written Informed consent was signed and attached</string>
+    <string name="qc1703">IV Antibiotics for prophylaxis was given and documented</string>
+    <string name="qc1705">Blood is arranged and cross matched before surgery</string>
+    <string name="qc1706">Gives utero tonic, delays cord clamping 1 -3 minutes, clamps and cuts cord, delivers placenta using controlled cord traction, and ensures adequate uterine tone.</string>
+    <string name="qc1707">Ensure immediate newborn care is provided.</string>
+    <string name="qc1708">Completes Operative Note, Post-Op Orders, and ensures safe transfer to recovery area.</string>
+    <string name="qc1709">Monitors and ensures proper post-operative course, Post-Partum Family Planning, Post Natal Counseling, Immunization of Newborn, Exclusive Breast Feeding and discharge.</string>
+
+    <string name="qc18">Blood Transfusion Administration</string>
+    <string name="qc1801">Indication for blood transfusion and blood components;  includes Hb%, WBC, Platelets results</string>
+    <string name="qc1802">Informed consent is properly signed and attached.</string>
+    <string name="qc1803">Patient’s blood Group type (ABO and RhD) verified and documented</string>
+    <string name="qc1804">Time of  transfusion started, infusion rate, and time of transfusion completed was documented</string>
+    <string name="qc1805">Patient\'s General appearance, Temperature, Blood Pressure, Pulse, Respiratory Rate, Fluid balance and signs of transfusion reaction like rash, fever, restlessness, worsening hypotension and/or tachycardia were checked and documented during following time period</string>
+    <string name="qc1806">1. Pre-transfusion (At Start)</string>
+    <string name="qc1807">2. During Transfusion (After 15 minutes of transfusion, then hourly until transfusion completed)</string>
+    <string name="qc1808">3. Post-transfusion (After Complete Transfusion)</string>
+
+    <string name="qc19"><![CDATA[Diagnosis & Management of cough or difficulty in breathing]]></string>
+    <string name="qc1901">Respectful Child Care and Greets</string>
+    <string name="qc1902">Assess child presenting with cough and/or difficult breathing</string>
+    <string name="qc1903">Classifies the child as per protocol</string>
+    <string name="qc1904">Treats/refers the child as per protocol</string>
+    <string name="qc1905">Provides counseling on medication and home care</string>
+
+    <string name="qc20"><![CDATA[Diagnosis & Management of diarrhea]]></string>
+    <string name="qc2001">Assess diarrhea and dehydration in sick child.</string>
+    <string name="qc2002">Classifies diarrhea and dehydration in sick child</string>
+    <string name="qc2003">Treats diarrhea as per protocol</string>
+    <string name="qc2004">Counsels caregiver on four rules of home treatment</string>
+
+    <string name="qc21">Infection Prevention at different sites of Clinic / Maternity Home / Hospital</string>
+    <string name="qc2101">OPD Room</string>
+    <string name="qc2102">Delivery room</string>
+    <string name="qc2103">Postpartum room</string>
+    <string name="qc2104">Procedure room</string>
+    <string name="qc2105">Washing area for used instruments/sterilization and HLD processing area</string>
+    <string name="qc2106">Proper disposable area for medical waste, sharps and needles handling</string>
+
+    <string name="qc22">Linkages Between Facilities</string>
+    <string name="qc2201">Facility has a system of linkages in place for referring women/child in case of complication to THQ/DHQ or Tertiary care hospitals.</string>
+
+    <string name="qc23"><![CDATA[Referral from Community & Facilities]]></string>
+    <string name="qc2301">Check and verify by record from OPD register or slips in referral boxes</string>
+
 
 </resources>
