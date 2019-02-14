@@ -13,9 +13,9 @@
             android:icon="@android:drawable/ic_menu_directions"
             android:title="Routine Service Delivery" />
         <item
-            android:id="@+id/nav_q_mnch"
+            android:id="@+id/navQOC"
             android:icon="@android:drawable/ic_menu_agenda"
-            android:title="Quality of MNCH" />
+            android:title="QOC - Quality of Care" />
         <item
             android:id="@+id/nav_dhmt"
             android:icon="@android:drawable/ic_menu_preferences"
