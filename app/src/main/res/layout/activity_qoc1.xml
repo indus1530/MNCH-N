@@ -10,6 +10,7 @@
         <variable
             name="callback"
             type="edu.aku.ramshasaeed.mnch.activities.Qoc1" />
+
     </data>
 
     <ScrollView
@@ -18,6 +19,7 @@
         android:background="@color/dullWhile">
 
         <LinearLayout
+            android:id="@+id/llqoc1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -155,7 +157,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0101aa.checked ? View.VISIBLE : View.INVISIBLE }'>
 
                             <RadioButton
                                 android:id="@+id/qa0101ba"
@@ -176,6 +179,14 @@
 
                     </LinearLayout>
 
+
+                    <LinearLayout
+                        android:id="@+id/qa0101cll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qa0101aa.checked ? View.VISIBLE : View.GONE  }'>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -190,7 +201,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:lines="3" />
+                        android:lines="3"
+                        android:text='@{!qa0101aa.checked ?  "":qa0101c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -321,7 +335,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0102aa.checked ? View.VISIBLE : View.INVISIBLE }'>
 
                             <RadioButton
                                 android:id="@+id/qa0102ba"
@@ -342,6 +357,14 @@
 
                     </LinearLayout>
 
+
+                <LinearLayout
+                    android:id="@+id/qa0102cll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility='@{qa0102aa.checked ? View.VISIBLE : View.GONE  }'>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -355,7 +378,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:lines="3" />
+                        android:lines="3"
+                        android:text='@{!qa0102aa.checked ?  "":qa0102c.getText.toString }'/>
+
+                </LinearLayout>
 
                 </LinearLayout>
 
@@ -487,7 +513,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0103aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0103ba"
@@ -508,6 +535,13 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/qa0103cll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qa0103aa.checked ? View.VISIBLE : View.GONE}'>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -521,7 +555,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:lines="3" />
+                        android:lines="3"
+                        android:text='@{!qa0103aa.checked ?  "":qa0103c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -653,7 +690,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0104aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0104ba"
@@ -674,6 +712,13 @@
 
                     </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/qa0104cll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility='@{qa0104aa.checked ? View.VISIBLE : View.GONE}'>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -687,8 +732,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:lines="3" />
-
+                        android:lines="3"
+                        android:text='@{!qa0104aa.checked ?  "" : qa0104c.getText.toString }'/>
+                
+                </LinearLayout>
+                
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -818,7 +866,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0105aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0105ba"
@@ -839,6 +888,14 @@
 
                     </LinearLayout>
 
+
+                <LinearLayout
+                    android:id="@+id/qa0105cll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility='@{qa0105aa.checked ? View.VISIBLE : View.GONE}'>
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -852,12 +909,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
-                        android:lines="3" />
+                        android:lines="3"
+                        android:text='@{!qa0105aa.checked ?  "" : qa0105c.getText.toString }'/>
+
+                </LinearLayout>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-
+            
             <!--qa0106-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -875,6 +935,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -945,7 +1006,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -983,7 +1043,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0106aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0106ba"
@@ -1004,20 +1065,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0106cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0106aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0106c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0106c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0106aa.checked ?  "" : qa0106c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -1040,6 +1112,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -1110,7 +1183,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -1148,7 +1220,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0107aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0107ba"
@@ -1169,20 +1242,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0107cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0107aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0107c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0107c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0107aa.checked ?  "" : qa0107c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -1205,6 +1289,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -1275,7 +1360,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -1313,7 +1397,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0108aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0108ba"
@@ -1334,20 +1419,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0108cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0108aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0108c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0108c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0108aa.checked ?  "" : qa0108c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -1370,6 +1466,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -1440,7 +1537,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -1478,7 +1574,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0109aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0109ba"
@@ -1499,20 +1596,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0109cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0109aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0109c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0109c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0109aa.checked ?  "" : qa0109c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -1540,6 +1648,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -1610,7 +1719,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -1648,7 +1756,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0201aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0201ba"
@@ -1669,21 +1778,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0201cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0201aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0201c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0201c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0201aa.checked ?  "" : qa0201c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -1706,6 +1825,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -1776,7 +1896,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -1814,7 +1933,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0202aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0202ba"
@@ -1835,21 +1955,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0202cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0202aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0202c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0202c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0202aa.checked ?  "" : qa0202c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -1877,6 +2007,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -1947,7 +2078,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -1985,7 +2115,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0301aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0301ba"
@@ -2006,21 +2137,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0301cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0301aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0301c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0301c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0301aa.checked ?  "" : qa0301c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -2043,6 +2184,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -2113,7 +2255,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -2151,7 +2292,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0302aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0302ba"
@@ -2172,21 +2314,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0302cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0302aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0302c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0302c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0302aa.checked ?  "" : qa0302c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -2209,6 +2361,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -2279,7 +2432,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -2317,7 +2469,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0303aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0303ba"
@@ -2338,21 +2491,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0303cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0303aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0303c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0303c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0303aa.checked ?  "" : qa0303c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -2375,6 +2538,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -2445,7 +2609,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -2483,7 +2646,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0304aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0304ba"
@@ -2504,21 +2668,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0304cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0304aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0304c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0304c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0304aa.checked ?  "" : qa0304c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -2541,6 +2715,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -2611,7 +2786,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -2649,7 +2823,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0305aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0305ba"
@@ -2670,21 +2845,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0305cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0305aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0305c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0305c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0305aa.checked ?  "" : qa0305c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -2712,6 +2897,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -2782,7 +2968,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -2820,7 +3005,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0401aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0401ba"
@@ -2841,21 +3027,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0401cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0401aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0401c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0401c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0401aa.checked ?  "" : qa0401c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -2878,6 +3074,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -2948,7 +3145,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -2986,7 +3182,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0402aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0402ba"
@@ -3007,21 +3204,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0402cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0402aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0402c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0402c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0402aa.checked ?  "" : qa0402c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -3044,6 +3251,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -3114,7 +3322,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -3152,7 +3359,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0403aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0403ba"
@@ -3173,21 +3381,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0403cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0403aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0403c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0403c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0403aa.checked ?  "" : qa0403c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -3210,6 +3428,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -3280,7 +3499,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -3318,7 +3536,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0404aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0404ba"
@@ -3339,21 +3558,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0404cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0404aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0404c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0404c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0404aa.checked ?  "" : qa0404c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -3381,6 +3610,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -3451,7 +3681,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -3489,7 +3718,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0501aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0501ba"
@@ -3510,21 +3740,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0501cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0501aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0501c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0501c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0501aa.checked ?  "" : qa0501c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -3547,6 +3787,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -3617,7 +3858,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -3655,7 +3895,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0502aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0502ba"
@@ -3676,21 +3917,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0502cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0502aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0502c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0502c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0502aa.checked ?  "" : qa0502c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -3713,6 +3964,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -3783,7 +4035,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -3821,7 +4072,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0503aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0503ba"
@@ -3842,21 +4094,31 @@
 
                     </LinearLayout>
 
-                    <TextView
+
+                    <LinearLayout
+                        android:id="@+id/qa0503cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0503aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
 
-                    <EditText
-                        android:id="@+id/qa0503c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
+                        <EditText
+                            android:id="@+id/qa0503c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0503aa.checked ?  "" : qa0503c.getText.toString }'/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
@@ -3879,6 +4141,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:elevation="1dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -3949,7 +4212,6 @@
                                 android:gravity="center"
                                 android:text="@string/nadnt"
                                 android:textColor="@color/black" />
-
 
                         </LinearLayout>
 
@@ -3987,7 +4249,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:gravity="center"
-                            android:padding="5sp">
+                            android:padding="5sp"
+                            android:visibility='@{qa0504aa.checked ? View.VISIBLE : View.INVISIBLE}'>
 
                             <RadioButton
                                 android:id="@+id/qa0504ba"
@@ -4008,524 +4271,31 @@
 
                     </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
-
-
-                    <EditText
-                        android:id="@+id/qa0504c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/qa06" />
-
-            <!--qa0601-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimaryDark"
-                        android:elevation="1dp"
-                        android:padding="5sp"
-                        android:text="@string/qa0601"
-                        android:textSize="23sp" />
 
                     <LinearLayout
+                        android:id="@+id/qa0504cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical"
+                        android:visibility='@{qa0504aa.checked ? View.VISIBLE : View.GONE}'>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="3"
                             android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp" />
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
-                        <TextView
+
+                        <EditText
+                            android:id="@+id/qa0504c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:text="@string/qa0101a" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:text="@string/qa0101b" />
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0504aa.checked ?  "" : qa0504c.getText.toString }'/>
 
                     </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="3"
-                            android:background="@color/white"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/nadnt"
-                                android:textColor="@color/black" />
-
-
-                        </LinearLayout>
-
-                        <RadioGroup
-                            android:id="@+id/qa0601a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="3"
-                            android:gravity="center_horizontal"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qa0601aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/qa0601ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0601a97"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                        </RadioGroup>
-
-
-                        <RadioGroup
-                            android:id="@+id/qa0601b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qa0601ba"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0601bb"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0601b98"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
-
-
-                    <EditText
-                        android:id="@+id/qa0601c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--qa0602-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimaryDark"
-                        android:elevation="1dp"
-                        android:padding="5sp"
-                        android:text="@string/qa0602"
-                        android:textSize="23sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:text="@string/qa0101a" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:text="@string/qa0101b" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="3"
-                            android:background="@color/white"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/nadnt"
-                                android:textColor="@color/black" />
-
-
-                        </LinearLayout>
-
-                        <RadioGroup
-                            android:id="@+id/qa0602a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="3"
-                            android:gravity="center_horizontal"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qa0602aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/qa0602ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0602a97"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                        </RadioGroup>
-
-
-                        <RadioGroup
-                            android:id="@+id/qa0602b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qa0602ba"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0602bb"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0602b98"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
-
-
-                    <EditText
-                        android:id="@+id/qa0602c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--qa0603-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/colorPrimaryDark"
-                        android:elevation="1dp"
-                        android:padding="5sp"
-                        android:text="@string/qa0603"
-                        android:textSize="23sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:text="@string/qa0101a" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:background="@color/colorPrimary"
-                            android:elevation="1dp"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:text="@string/qa0101b" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-
-                            android:layout_weight="3"
-                            android:background="@color/white"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/nadnt"
-                                android:textColor="@color/black" />
-
-
-                        </LinearLayout>
-
-                        <RadioGroup
-                            android:id="@+id/qa0603a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="3"
-                            android:gravity="center_horizontal"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qa0603aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center" />
-
-                            <RadioButton
-                                android:id="@+id/qa0603ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0603a97"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                        </RadioGroup>
-
-
-                        <RadioGroup
-                            android:id="@+id/qa0603b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qa0603ba"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0603bb"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                            <RadioButton
-                                android:id="@+id/qa0603b98"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp" />
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
-
-
-                    <EditText
-                        android:id="@+id/qa0603c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3" />
 
                 </LinearLayout>
 

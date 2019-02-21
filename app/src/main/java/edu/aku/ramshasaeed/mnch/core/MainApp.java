@@ -74,6 +74,7 @@ public class MainApp extends Application {
     public static String ucCode;
     public static String facilityProviderCode;
     public static String resName;
+    public static String preFix;
     public static String wSerialNo;
     public static String wName;
     public static String DeviceURL = "devices.php";
@@ -84,6 +85,7 @@ public class MainApp extends Application {
         SharedPreferences sharedPref = mContext.getSharedPreferences("tagName", MODE_PRIVATE);
         return sharedPref.getString("tagName", null);
     }
+
     public static Calendar getCalendarDate(String value) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         Calendar calendar = Calendar.getInstance();
@@ -97,6 +99,7 @@ public class MainApp extends Application {
         }
         return calendar;
     }
+
 
     @Override
     public void onCreate() {

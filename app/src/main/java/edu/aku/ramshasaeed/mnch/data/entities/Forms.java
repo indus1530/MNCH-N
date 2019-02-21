@@ -39,6 +39,7 @@ public class Forms implements Serializable {
     private String istatus88x = ""; // Interview Status
     private String shfa = "";     // Health Facility Assesment Section
     private String srsd = "";     // Routine Service Delivery Section
+    private String sqoc1 = "";     // Quality of Care
     private String sinfo = "";     // Info Activity
     private String starttime = "";
     private String endtime = "";
@@ -65,6 +66,7 @@ public class Forms implements Serializable {
         this.istatus88x = forms.istatus88x;
         this.shfa = forms.shfa;
         this.srsd = forms.srsd;
+        this.sqoc1 = forms.sqoc1;
         this.sinfo = forms.sinfo;
         this.starttime = forms.starttime;
         this.endtime = forms.endtime;
@@ -162,6 +164,15 @@ public class Forms implements Serializable {
 
     public void setSrsd(String srsd) {
         this.srsd = srsd;
+    }
+
+
+    public String getSqoc1() {
+        return sqoc1;
+    }
+
+    public void setSqoc1(String sqoc1) {
+        this.sqoc1 = sqoc1;
     }
 
     public String getSinfo() {
@@ -299,6 +310,9 @@ public class Forms implements Serializable {
         }
         if (!this.sinfo.equals("")) {
             json.put("sinfo", this.sinfo.equals("") ? JSONObject.NULL : new JSONObject(this.sinfo));
+        }
+        if (!this.sqoc1.equals("")) {
+            json.put("sqoc1", this.sqoc1.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc1));
         }
 
 

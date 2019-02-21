@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">MNCH</string>
-    <string name="nav_header_subtitle"></string>
+    <string name="nav_header_subtitle">xyz</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -94,6 +94,7 @@
     <string name="qa07a">Available</string>
     <string name="qa07b">Useable</string>
     <string name="qa08b">Maintained</string>
+    <string name="qb01b">Functional</string>
 
     <string name="qa0102">Main Source of Water for Labor Rooms, Toilets and Theaters. 24/7 (Main Source)</string>
     <string name="qa0103">Alternative Source of Water in case of Main Source is Non Functional</string>
@@ -173,7 +174,7 @@
     <string name="qa0804">IEC Material / Job Aids related to MNCH</string>
     <string name="qa0805">Partograph in Labor Rooms.</string>
     <string name="qb01"><![CDATA[Supplies & Instruments (For General Items and Furniture)]]></string>
-    <string name="qbb">Functional</string>
+
     <string name="qb0101">Office table</string>
     <string name="qb0102"> Office chair </string>
     <string name="qb0103"> Examination Table </string>

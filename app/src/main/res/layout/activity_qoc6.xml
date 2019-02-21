@@ -19,6 +19,7 @@
         android:background="@color/dullWhile">
 
         <LinearLayout
+            android:id="@+id/llqoc6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -26,6 +27,1071 @@
             android:animateLayoutChanges="true"
             android:background="@color/dullWhile"
             android:orientation="vertical">
+
+
+            <!--qb0408-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:elevation="1dp"
+                        android:padding="5sp"
+                        android:text="@string/qb0408"
+                        android:textSize="23sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qa07a" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qb01b" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="3"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nadnt"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/qb0408a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="3"
+                            android:gravity="center_horizontal"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qb0408aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:gravity="center" />
+
+                            <RadioButton
+                                android:id="@+id/qb0408ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0408a97"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+
+                        <RadioGroup
+                            android:id="@+id/qb0408b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:visibility='@{qb0408aa.checked ? View.VISIBLE : View.INVISIBLE}'>
+
+                            <RadioButton
+                                android:id="@+id/qb0408ba"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0408bb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0408b98"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/qb0408cll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qb0408aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
+
+
+                        <EditText
+                            android:id="@+id/qb0408c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qb0408aa.checked ?  "" : qb0408c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qb0409-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:elevation="1dp"
+                        android:padding="5sp"
+                        android:text="@string/qb0409"
+                        android:textSize="23sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qa07a" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qb01b" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="3"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nadnt"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/qb0409a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="3"
+                            android:gravity="center_horizontal"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qb0409aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:gravity="center" />
+
+                            <RadioButton
+                                android:id="@+id/qb0409ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0409a97"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+
+                        <RadioGroup
+                            android:id="@+id/qb0409b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:visibility='@{qb0409aa.checked ? View.VISIBLE : View.INVISIBLE}'>
+
+                            <RadioButton
+                                android:id="@+id/qb0409ba"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0409bb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0409b98"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/qb0409cll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qb0409aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
+
+
+                        <EditText
+                            android:id="@+id/qb0409c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qb0409aa.checked ?  "" : qb0409c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qb0410-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:elevation="1dp"
+                        android:padding="5sp"
+                        android:text="@string/qb0410"
+                        android:textSize="23sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qa07a" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qb01b" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="3"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nadnt"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/qb0410a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="3"
+                            android:gravity="center_horizontal"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qb0410aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:gravity="center" />
+
+                            <RadioButton
+                                android:id="@+id/qb0410ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0410a97"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+
+                        <RadioGroup
+                            android:id="@+id/qb0410b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:visibility='@{qb0410aa.checked ? View.VISIBLE : View.INVISIBLE}'>
+
+                            <RadioButton
+                                android:id="@+id/qb0410ba"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0410bb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0410b98"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/qb0410cll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qb0410aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
+
+
+                        <EditText
+                            android:id="@+id/qb0410c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qb0410aa.checked ?  "" : qb0410c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qb0411-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:elevation="1dp"
+                        android:padding="5sp"
+                        android:text="@string/qb0411"
+                        android:textSize="23sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qa07a" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qb01b" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="3"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nadnt"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/qb0411a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="3"
+                            android:gravity="center_horizontal"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qb0411aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:gravity="center" />
+
+                            <RadioButton
+                                android:id="@+id/qb0411ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0411a97"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+
+                        <RadioGroup
+                            android:id="@+id/qb0411b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:visibility='@{qb0411aa.checked ? View.VISIBLE : View.INVISIBLE}'>
+
+                            <RadioButton
+                                android:id="@+id/qb0411ba"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0411bb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0411b98"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/qb0411cll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qb0411aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
+
+
+                        <EditText
+                            android:id="@+id/qb0411c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qb0411aa.checked ?  "" : qb0411c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qb0412-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:elevation="1dp"
+                        android:padding="5sp"
+                        android:text="@string/qb0412"
+                        android:textSize="23sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qa07a" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qb01b" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="3"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nadnt"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/qb0412a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="3"
+                            android:gravity="center_horizontal"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qb0412aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:gravity="center" />
+
+                            <RadioButton
+                                android:id="@+id/qb0412ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0412a97"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+
+                        <RadioGroup
+                            android:id="@+id/qb0412b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:visibility='@{qb0412aa.checked ? View.VISIBLE : View.INVISIBLE}'>
+
+                            <RadioButton
+                                android:id="@+id/qb0412ba"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0412bb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0412b98"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/qb0412cll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qb0412aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
+
+
+                        <EditText
+                            android:id="@+id/qb0412c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qb0412aa.checked ?  "" : qb0412c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qb0413-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:elevation="1dp"
+                        android:padding="5sp"
+                        android:text="@string/qb0413"
+                        android:textSize="23sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qa07a" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="@color/colorPrimary"
+                            android:elevation="1dp"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="@string/qb01b" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+
+                            android:layout_weight="3"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nadnt"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/qb0413a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="3"
+                            android:gravity="center_horizontal"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qb0413aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"
+                                android:gravity="center" />
+
+                            <RadioButton
+                                android:id="@+id/qb0413ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0413a97"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+
+                        <RadioGroup
+                            android:id="@+id/qb0413b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:visibility='@{qb0413aa.checked ? View.VISIBLE : View.INVISIBLE}'>
+
+                            <RadioButton
+                                android:id="@+id/qb0413ba"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0413bb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                            <RadioButton
+                                android:id="@+id/qb0413b98"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/qb0413cll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qb0413aa.checked ? View.VISIBLE : View.GONE}'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
+
+
+                        <EditText
+                            android:id="@+id/qb0413c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qb0413aa.checked ?  "" : qb0413c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
 
 
             <TextView

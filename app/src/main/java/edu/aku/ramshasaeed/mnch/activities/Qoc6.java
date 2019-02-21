@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -21,7 +22,7 @@ import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
-public class Qoc6 extends AppCompatActivity {
+public class Qoc6 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
     ActivityQoc6Binding bi;
 
@@ -31,27 +32,32 @@ public class Qoc6 extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc6);
         bi.setCallback(this);
         this.setTitle("Quality of Care 06");
+
+        events_call();
     }
 
 
     public void BtnContinue() {
-        /*if (formValidation()) {
+        if (formValidation()) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (UpdateDB()) {
+            /*if (UpdateDB()) {
                 Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
+
+                finish();
+                startActivity(new Intent(Qoc6.this, Qoc7.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
-        }*/
+            }*/
+        }
 
-        startActivity(new Intent(Qoc6.this, Qoc7.class));
         finish();
+        startActivity(new Intent(Qoc6.this, Qoc7.class));
+
     }
 
 
@@ -81,14 +87,7 @@ public class Qoc6 extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        /*if (!bi.rs0199.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs01, getString(R.string.rs01))) {
-                return false;
-            }
-        }*/
-
-
-        return true;
+        return validatorClass.EmptyCheckingContainer(this, bi.llqoc6);
     }
 
     private void SaveDraft() throws JSONException {
@@ -104,5 +103,63 @@ public class Qoc6 extends AppCompatActivity {
 
         fc.setSrsd(String.valueOf(f01));*/
 
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+        if (!bi.qb0408aa.isChecked()){
+            bi.qb0408b.clearCheck();
+            bi.qb0408c.setEnabled(false);
+        } else {
+            bi.qb0408c.setEnabled(true);
+        }
+
+        if (!bi.qb0409aa.isChecked()){
+            bi.qb0409b.clearCheck();
+            bi.qb0409c.setEnabled(false);
+        } else {
+            bi.qb0409c.setEnabled(true);
+        }
+
+        if (!bi.qb0410aa.isChecked()){
+            bi.qb0410b.clearCheck();
+            bi.qb0410c.setEnabled(false);
+        } else {
+            bi.qb0410c.setEnabled(true);
+        }
+
+        if (!bi.qb0411aa.isChecked()){
+            bi.qb0411b.clearCheck();
+            bi.qb0411c.setEnabled(false);
+        } else {
+            bi.qb0411c.setEnabled(true);
+        }
+
+        if (!bi.qb0412aa.isChecked()){
+            bi.qb0412b.clearCheck();
+            bi.qb0412c.setEnabled(false);
+        } else {
+            bi.qb0412c.setEnabled(true);
+        }
+
+        if (!bi.qb0413aa.isChecked()){
+            bi.qb0413b.clearCheck();
+            bi.qb0413c.setEnabled(false);
+        } else {
+            bi.qb0413c.setEnabled(true);
+        }
+
+    }
+
+
+    void events_call() {
+        
+        bi.qb0408a.setOnCheckedChangeListener(this);
+        bi.qb0409a.setOnCheckedChangeListener(this);
+        bi.qb0410a.setOnCheckedChangeListener(this);
+        bi.qb0411a.setOnCheckedChangeListener(this);
+        bi.qb0412a.setOnCheckedChangeListener(this);
+        bi.qb0413a.setOnCheckedChangeListener(this);
     }
 }

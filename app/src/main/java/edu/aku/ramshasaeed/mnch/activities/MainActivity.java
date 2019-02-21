@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_hfa) {
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_rsd) {
-            startActivity(new Intent(MainActivity.this,RSDInfoActivity.class));
+            startActivity(new Intent(MainActivity.this, RSDInfoActivity.class));
         } else if (id == R.id.navQOC) {
 //            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, Qoc1.class));
