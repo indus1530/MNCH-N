@@ -104,7 +104,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
     private void SaveDraft() throws JSONException {
 
-        /*JSONObject qoc1 = new JSONObject();
+        JSONObject qoc1 = new JSONObject();
         
         qoc1.put("qa0101a", bi.qa0101aa.isChecked() ? "1" : bi.qa0101ab.isChecked() ? "2" : bi.qa0101a97.isChecked() ? "97" : "0");
         qoc1.put("qa0101b", bi.qa0101ba.isChecked() ? "1" : bi.qa0101bb.isChecked() ? "2" : bi.qa0101b98.isChecked() ? "98" : "0");
@@ -209,23 +209,10 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         qoc1.put("qa0504c", bi.qa0504c.getText().toString().trim().length() > 0 ? bi.qa0504c.getText().toString() : "0");
 
 
-
-        qoc1.put("qa0601a", bi.qa0601aa.isChecked() ? "1" : bi.qa0601ab.isChecked() ? "2" : bi.qa0601a97.isChecked() ? "97" : "0");
-        qoc1.put("qa0601b", bi.qa0601ba.isChecked() ? "1" : bi.qa0601bb.isChecked() ? "2" : bi.qa0601b98.isChecked() ? "98" : "0");
-        qoc1.put("qa0601c", bi.qa0601c.getText().toString().trim().length() > 0 ? bi.qa0601c.getText().toString() : "0");
-
-        qoc1.put("qa0602a", bi.qa0602aa.isChecked() ? "1" : bi.qa0602ab.isChecked() ? "2" : bi.qa0602a97.isChecked() ? "97" : "0");
-        qoc1.put("qa0602b", bi.qa0602ba.isChecked() ? "1" : bi.qa0602bb.isChecked() ? "2" : bi.qa0602b98.isChecked() ? "98" : "0");
-        qoc1.put("qa0602c", bi.qa0602c.getText().toString().trim().length() > 0 ? bi.qa0602c.getText().toString() : "0");
-
-        qoc1.put("qa0603a", bi.qa0603aa.isChecked() ? "1" : bi.qa0603ab.isChecked() ? "2" : bi.qa0603a97.isChecked() ? "97" : "0");
-        qoc1.put("qa0603b", bi.qa0603ba.isChecked() ? "1" : bi.qa0603bb.isChecked() ? "2" : bi.qa0603b98.isChecked() ? "98" : "0");
-        qoc1.put("qa0603c", bi.qa0603c.getText().toString().trim().length() > 0 ? bi.qa0603c.getText().toString() : "0");*/
-
-
         /*preFix.equals("QOC");
-        JSONObject json_qoc1 = GeneratorClass.getContainerJSON(bi.llqoc1, true, preFix);
-        fc.setSqoc1(String.valueOf(json_qoc1));*/
+        JSONObject json_qoc1 = GeneratorClass.getContainerJSON(bi.llqoc1, true, preFix);*/
+
+        fc.setSqoc1(String.valueOf(qoc1));
 
     }
 

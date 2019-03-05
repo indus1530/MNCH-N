@@ -35,7 +35,7 @@ public class Qoc7 extends AppCompatActivity {
 
 
     public void BtnContinue() {
-        /*if (formValidation()) {
+        if (formValidation()) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -43,15 +43,17 @@ public class Qoc7 extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
+//                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
+                finish();
+                startActivity(new Intent(Qoc7.this, Qoc8.class));
+
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
-        }*/
+        }
 
-        startActivity(new Intent(Qoc7.this, Qoc8.class));
-        finish();
+
     }
 
 
@@ -63,7 +65,7 @@ public class Qoc7 extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        try {
+        /*try {
 
             Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
@@ -72,23 +74,16 @@ public class Qoc7 extends AppCompatActivity {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
-        }
+        }*/
 
-        return false;
+        return true;
 
     }
 
 
     public boolean formValidation() {
 
-        /*if (!bi.rs0199.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs01, getString(R.string.rs01))) {
-                return false;
-            }
-        }*/
-
-
-        return true;
+        return validatorClass.EmptyCheckingContainer(this, bi.llqoc7);
     }
 
     private void SaveDraft() throws JSONException {

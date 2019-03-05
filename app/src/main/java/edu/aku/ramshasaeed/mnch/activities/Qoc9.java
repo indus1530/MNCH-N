@@ -50,7 +50,7 @@ public class Qoc9 extends AppCompatActivity {
             }
         }*/
 
-        startActivity(new Intent(Qoc9.this, EndingActivity.class));
+        startActivity(new Intent(Qoc9.this, MainActivity.class));
         finish();
     }
 
