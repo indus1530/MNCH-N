@@ -56,19 +56,20 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            /*if (UpdateDB()) {
+            if (UpdateDB()) {
                 Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
 
-                finish();
-                startActivity(new Intent(Qoc1.this, Qoc2.class));
+
+                startActivity(new Intent(this, Qoc2.class));
+                //finish();
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }*/
+            }
         }
 
-        startActivity(new Intent(Qoc1.this, Qoc2.class));
-        finish();
+        /*startActivity(new Intent(Qoc1.this, Qoc2.class));
+        finish();*/
 
     }
 
@@ -97,7 +98,8 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
     public boolean formValidation() {
 
-        return validatorClass.EmptyCheckingContainer(this, bi.llqoc1);
+        validatorClass.EmptyCheckingContainer(this, bi.llqoc1);
+        return false;
     }
 
 

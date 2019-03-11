@@ -400,6 +400,7 @@ public class RSDInfoActivity extends AppCompatActivity {
         }
 
     }
+
     private boolean UpdateDB() {
 
         try {
