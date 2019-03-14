@@ -2,14 +2,9 @@ package edu.aku.ramshasaeed.mnch.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Html;
-import android.view.View;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -17,18 +12,15 @@ import org.json.JSONObject;
 
 import java.util.concurrent.ExecutionException;
 
-import edu.aku.ramshasaeed.mnch.JSON.GeneratorClass;
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityQoc1Binding;
-import edu.aku.ramshasaeed.mnch.validation.ClearClass;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
-import static edu.aku.ramshasaeed.mnch.core.MainApp.preFix;
 
 
 
@@ -42,10 +34,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc1);
         bi.setCallback(this);
         this.setTitle("Quality of Care 01");
-
         events_call();
-
-
     }
 
 
@@ -54,7 +43,6 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
             try {
                 SaveDraft();
                 if (UpdateDB()) {
-                    //MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
                     startActivity(new Intent(this, Qoc2.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
@@ -65,12 +53,9 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         }
     }
 
-
     public void BtnEnd() {
         MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
-
     }
-
 
     private boolean UpdateDB() {
         try {
@@ -87,14 +72,11 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
     }
 
-
     public boolean formValidation() {
 
         validatorClass.EmptyCheckingContainer(this, bi.llqoc1);
         return false;
     }
-
-
 
     private void SaveDraft() throws JSONException {
 

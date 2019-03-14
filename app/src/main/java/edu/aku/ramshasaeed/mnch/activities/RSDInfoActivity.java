@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
@@ -21,14 +21,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
-import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.data.DAO.GetFncDAO;
 import edu.aku.ramshasaeed.mnch.data.entities.District;
@@ -36,9 +34,8 @@ import edu.aku.ramshasaeed.mnch.data.entities.Facility_provider;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.UCs;
-import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
-import edu.aku.ramshasaeed.mnch.get.db.GetIndDBData;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsdinfoBinding;
+import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 
 import static android.view.View.GONE;
@@ -48,7 +45,7 @@ import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 public class RSDInfoActivity extends AppCompatActivity {
     ActivityRsdinfoBinding bi;
     public List<String> districtNames, tehsilNames, UCsName, facility_name;
-    public List<String> districtCodes,tehsilCodes, UCsCodes, facility_code;
+    public List<String> districtCodes, tehsilCodes, UCsCodes, facility_code;
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
     String type;
@@ -61,16 +58,15 @@ public class RSDInfoActivity extends AppCompatActivity {
         bi.setCallback(this);
         this.setTitle(R.string.module_one);
 
-        Intent gettype = getIntent();
-        type = gettype.getExtras().getString("type");
+        type = getIntent().getStringExtra("type");
 
         tempVisible(this);
         bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if(bi.hfConsenta.isChecked()){
+                if (bi.hfConsenta.isChecked()) {
                     bi.btnNext.setVisibility(VISIBLE);
-                }else{
+                } else {
                     bi.btnNext.setVisibility(GONE);
                 }
             }
@@ -115,8 +111,6 @@ public class RSDInfoActivity extends AppCompatActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-
-
 
 
         bi.hfDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -310,18 +304,9 @@ public class RSDInfoActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
 
-                if (type.contains("qoc")){
-                    finish();
-                    startActivity(new Intent(RSDInfoActivity.this, Qoc1.class));
-                }else if (type.contains("rsd")){
-                    finish();
-                    startActivity(new Intent(RSDInfoActivity.this, RSDActivity.class));
-                }
-
-//                startActivity(new Intent(this, SectionA2Activity.class));
-                //startActivity(new Intent(this, MainActivity.class));
+                finish();
+                startActivity(new Intent(RSDInfoActivity.this, type.equals("qoc") ? Qoc1.class : RSDActivity.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -347,12 +332,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             return false;
         }
 
-        if (!validatorClass.EmptyRadioButton(this, bi.hfConsent, bi.hfConsenta, getString(R.string.hf_consent))) {
-            return false;
-        }
-
-
-        return true;
+        return validatorClass.EmptyRadioButton(this, bi.hfConsent, bi.hfConsenta, getString(R.string.hf_consent));
     }
 
     private void SaveDraft() throws JSONException {
@@ -370,11 +350,11 @@ public class RSDInfoActivity extends AppCompatActivity {
 
 
         JSONObject f01 = new JSONObject();
-        f01.put("district_code",MainApp.DistrictCode);
+        f01.put("district_code", MainApp.DistrictCode);
         f01.put("tehsil_code", MainApp.tehsilCode);
         f01.put("uc_code", MainApp.ucCode);
         f01.put("facility_provider_code", MainApp.facilityProviderCode);
-        f01.put("rs_consent",  bi.hfConsenta.isChecked() ? "1"
+        f01.put("rs_consent", bi.hfConsenta.isChecked() ? "1"
                 : bi.hfConsentb.isChecked() ? "2"
                 : "0");
         fc.setSinfo(String.valueOf(f01));
