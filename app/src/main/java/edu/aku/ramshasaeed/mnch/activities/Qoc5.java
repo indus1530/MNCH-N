@@ -38,27 +38,18 @@ public class Qoc5 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
 
     public void BtnContinue() {
-
         if (formValidation()) {
             try {
                 SaveDraft();
+                if (UpdateDB()) {
+                    startActivity(new Intent(this, Qoc6.class));
+                } else {
+                    Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            /*if (UpdateDB()) {
-                Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-
-                finish();
-                startActivity(new Intent(Qoc5.this, Qoc6.class));
-
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }*/
         }
-
-        finish();
-        startActivity(new Intent(Qoc5.this, Qoc6.class));
-
     }
 
 

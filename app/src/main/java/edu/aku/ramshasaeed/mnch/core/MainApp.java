@@ -190,6 +190,8 @@ public class MainApp extends Application {
         }
         return provider1.equals(provider2);
     }
+
+
     public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
         String message = "";
 

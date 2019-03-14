@@ -51,6 +51,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     public List<String> districtCodes,tehsilCodes, UCsCodes, facility_code;
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
+    String type;
 
 
     @Override
@@ -59,6 +60,9 @@ public class RSDInfoActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsdinfo);
         bi.setCallback(this);
         this.setTitle(R.string.module_one);
+
+        Intent gettype = getIntent();
+        type = gettype.getExtras().getString("type");
 
         tempVisible(this);
         bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -308,8 +312,13 @@ public class RSDInfoActivity extends AppCompatActivity {
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
 
-                finish();
-                startActivity(new Intent(RSDInfoActivity.this, RSDActivity.class));
+                if (type.contains("qoc")){
+                    finish();
+                    startActivity(new Intent(RSDInfoActivity.this, Qoc1.class));
+                }else if (type.contains("rsd")){
+                    finish();
+                    startActivity(new Intent(RSDInfoActivity.this, RSDActivity.class));
+                }
 
 //                startActivity(new Intent(this, SectionA2Activity.class));
                 //startActivity(new Intent(this, MainActivity.class));
@@ -371,6 +380,7 @@ public class RSDInfoActivity extends AppCompatActivity {
         fc.setSinfo(String.valueOf(f01));
 
     }
+
     public void setGPS(Forms fc) {
         SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
         try {

@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity
     String DirectoryName;
     private boolean updata = false;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    String type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,10 +114,16 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_hfa) {
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_rsd) {
-            startActivity(new Intent(MainActivity.this, RSDInfoActivity.class));
-        } else if (id == R.id.navQOC) {
+            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
+            i.putExtra("type","rsd");
+            startActivity(i);
+        } else if (id == R.id.navQOC ) {
 //            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, Qoc1.class));
+
+            //startActivity(new Intent(MainActivity.this, RSDInfoActivity.class));
+            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
+            i.putExtra("type","qoc");
+            startActivity(i);
 
         } else if (id == R.id.nav_dhmt) {
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();

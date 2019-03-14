@@ -38,22 +38,15 @@ public class Qoc7 extends AppCompatActivity {
         if (formValidation()) {
             try {
                 SaveDraft();
+                if (UpdateDB()) {
+                    startActivity(new Intent(this, Qoc8.class));
+                } else {
+                    Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (UpdateDB()) {
-                Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-//                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
-                finish();
-                startActivity(new Intent(Qoc7.this, Qoc8.class));
-
-
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
         }
-
-
     }
 
 
@@ -65,7 +58,7 @@ public class Qoc7 extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        /*try {
+        try {
 
             Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
@@ -74,7 +67,7 @@ public class Qoc7 extends AppCompatActivity {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
-        }*/
+        }
 
         return true;
 

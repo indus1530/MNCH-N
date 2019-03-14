@@ -35,23 +35,18 @@ public class Qoc9 extends AppCompatActivity {
 
 
     public void BtnContinue() {
-        /*if (formValidation()) {
+        if (formValidation()) {
             try {
                 SaveDraft();
+                if (UpdateDB()) {
+                    startActivity(new Intent(this, MainActivity.class));
+                } else {
+                    Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (UpdateDB()) {
-                Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
-
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
-        }*/
-
-        startActivity(new Intent(Qoc9.this, MainActivity.class));
-        finish();
+        }
     }
 
 
@@ -81,14 +76,7 @@ public class Qoc9 extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        /*if (!bi.rs0199.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs01, getString(R.string.rs01))) {
-                return false;
-            }
-        }*/
-
-
-        return true;
+        return validatorClass.EmptyCheckingContainer(this, bi.llqoc9);
     }
 
     private void SaveDraft() throws JSONException {
