@@ -64,9 +64,9 @@ public class RSDInfoActivity extends AppCompatActivity {
         bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (bi.hfConsenta.isChecked()) {
+                if(bi.hfConsenta.isChecked()){
                     bi.btnNext.setVisibility(VISIBLE);
-                } else {
+                }else{
                     bi.btnNext.setVisibility(GONE);
                 }
             }
@@ -86,7 +86,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             districts = (Collection<District>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getAllDistricts").execute().get();
 
             if (districts != null) {
-                Toast.makeText(this, "District ID validate..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "District ID validate...", Toast.LENGTH_SHORT).show();
                 for (District d : districts) {
                     districtNames.add(d.getDistrict_name());
                     districtCodes.add(d.getDistrict_code());
@@ -114,6 +114,70 @@ public class RSDInfoActivity extends AppCompatActivity {
 
 
         bi.hfDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                MainApp.DistrictCode = districtCodes.get(position);
+
+                facility_code = new ArrayList<>();
+                facility_name = new ArrayList<>();
+                tehsilNames = new ArrayList<>();
+                UCsName = new ArrayList<>();
+
+
+                facility_code.add("....");
+                facility_name.add("....");
+                UCsName.add("....");
+
+
+                Collection<Facility_provider> facility_provider = null;
+                try {
+                    facility_provider = (Collection<Facility_provider>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider").execute(MainApp.DistrictCode).get();
+
+                    if (facility_provider != null) {
+                        for (Facility_provider fp : facility_provider) {
+                            facility_name.add(fp.getHf_name());
+                            facility_code.add(fp.getHf_uen_code());
+                            tehsilNames.add(fp.getHf_tehsil());
+                            UCsName.add(fp.getHf_uc());
+                        }
+                        // Creating adapter for spinner
+                        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(context,
+                                android.R.layout.simple_spinner_dropdown_item, facility_name);
+
+                        // Drop down layout style - list view with radio button
+                        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+                        // attaching data adapter to spinner
+                        bi.hfFacilityProvider.setAdapter(dataAdapter);
+                        if (position == 0) {
+                            bi.fldGrphfUc.setVisibility(GONE);
+
+                        } else {
+                            bi.fldGrphfUc.setVisibility(VISIBLE);
+
+                        }
+
+                    } else {
+//                        Toast.makeText(this, "Tehsils not found!!", Toast.LENGTH_SHORT).show();
+                        bi.fldGrphfUc.setVisibility(GONE);
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                bi.fldGrphfUc.setVisibility(GONE);
+
+            }
+        });
+
+        /* bi.hfDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 MainApp.DistrictCode = districtCodes.get(position);
@@ -290,6 +354,20 @@ public class RSDInfoActivity extends AppCompatActivity {
 
             }
         });
+*/
+        bi.hfFacilityProvider.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                MainApp.facilityProviderCode = facility_code.get(position);
+                MainApp.tehsilCode = tehsilNames.get(position);
+                MainApp.ucCode = UCsName.get(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
 
     }
@@ -322,12 +400,12 @@ public class RSDInfoActivity extends AppCompatActivity {
         if (!validatorClass.EmptySpinner(this, bi.hfDistrict, getString(R.string.hf_district))) {
             return false;
         }
-        if (!validatorClass.EmptySpinner(this, bi.hfTehsil, getString(R.string.hf_tehsil))) {
+       /* if (!validatorClass.EmptySpinner(this, bi.hfTehsil, getString(R.string.hf_tehsil))) {
             return false;
         }
         if (!validatorClass.EmptySpinner(this, bi.hfUc, getString(R.string.hf_uc))) {
             return false;
-        }
+        }*/
         if (!validatorClass.EmptySpinner(this, bi.hfFacilityProvider, getString(R.string.hf_uen))) {
             return false;
         }

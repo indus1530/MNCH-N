@@ -57,7 +57,7 @@
                 android:popupBackground="#d6d6d6"
                 android:prompt="@string/hf_district" />
 
-            <LinearLayout
+        <!--    <LinearLayout
                 android:id="@+id/fldGrphf_district"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,9 +79,9 @@
                     android:layout_marginTop="10dp"
                     android:background="@color/colorSecondaryLight"
                     android:popupBackground="#d6d6d6"
-                    android:prompt="@string/hf_tehsil" />
+                    android:prompt="@string/hf_tehsil" />-->
 
-                <LinearLayout
+             <!--   <LinearLayout
                     android:id="@+id/fldGrphf_tehsil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -106,7 +106,8 @@
                         android:prompt="@string/hf_uc" />
 
 
-                    <LinearLayout
+-->
+            <LinearLayout
                         android:id="@+id/fldGrphf_uc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -211,9 +212,9 @@
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
+                <!--</LinearLayout>-->
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
 
         </LinearLayout>
     </ScrollView>

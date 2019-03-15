@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -35,6 +37,213 @@ public class RSDActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd);
         bi.setCallback(this);
         this.setTitle("Routine Service Delivery");
+
+        bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs2297.isChecked()) {
+                    bi.rs2297.setChecked(false);
+                }
+                if (b) {
+                    bi.rs22.setVisibility(View.GONE);
+                    bi.rs22.setText(null);
+                } else {
+                    bi.rs22.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs2297.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs2299.isChecked()) {
+                    bi.rs2299.setChecked(false);
+                }
+                if (b) {
+                    bi.rs22.setVisibility(View.GONE);
+                    bi.rs22.setText(null);
+                } else {
+                    bi.rs22.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3599.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3597.isChecked()) {
+                    bi.rs3597.setChecked(false);
+                }
+                if (b) {
+                    bi.rs35.setVisibility(View.GONE);
+                    bi.rs35.setText(null);
+                } else {
+                    bi.rs35.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3599.isChecked()) {
+                    bi.rs3599.setChecked(false);
+                }
+                if (b) {
+                    bi.rs35.setVisibility(View.GONE);
+                    bi.rs35.setText(null);
+                } else {
+                    bi.rs35.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        bi.rs3699.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3697.isChecked()) {
+                    bi.rs3697.setChecked(false);
+                }
+                if (b) {
+                    bi.rs36.setVisibility(View.GONE);
+                    bi.rs36.setText(null);
+                } else {
+                    bi.rs36.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3697.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3699.isChecked()) {
+                    bi.rs3699.setChecked(false);
+                }
+                if (b) {
+                    bi.rs36.setVisibility(View.GONE);
+                    bi.rs36.setText(null);
+                } else {
+                    bi.rs36.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3799.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3797.isChecked()) {
+                    bi.rs3797.setChecked(false);
+                }
+                if (b) {
+                    bi.rs37.setVisibility(View.GONE);
+                    bi.rs37.setText(null);
+                } else {
+                    bi.rs37.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3799.isChecked()) {
+                    bi.rs3799.setChecked(false);
+                }
+                if (b) {
+                    bi.rs37.setVisibility(View.GONE);
+                    bi.rs37.setText(null);
+                } else {
+                    bi.rs37.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        bi.rs3899.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3897.isChecked()) {
+                    bi.rs3897.setChecked(false);
+                }
+                if (b) {
+                    bi.rs38.setVisibility(View.GONE);
+                    bi.rs38.setText(null);
+                } else {
+                    bi.rs38.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3897.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3899.isChecked()) {
+                    bi.rs3899.setChecked(false);
+                }
+                if (b) {
+                    bi.rs38.setVisibility(View.GONE);
+                    bi.rs38.setText(null);
+                } else {
+                    bi.rs38.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        bi.rs3999.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3997.isChecked()) {
+                    bi.rs3997.setChecked(false);
+                }
+                if (b) {
+                    bi.rs39.setVisibility(View.GONE);
+                    bi.rs39.setText(null);
+                } else {
+                    bi.rs39.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3997.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3999.isChecked()) {
+                    bi.rs3999.setChecked(false);
+                }
+                if (b) {
+                    bi.rs39.setVisibility(View.GONE);
+                    bi.rs39.setText(null);
+                } else {
+                    bi.rs39.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs4099.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs4097.isChecked()) {
+                    bi.rs4097.setChecked(false);
+                }
+                if (b) {
+                    bi.rs40.setVisibility(View.GONE);
+                    bi.rs40.setText(null);
+                } else {
+                    bi.rs40.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs4097.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs4099.isChecked()) {
+                    bi.rs4099.setChecked(false);
+                }
+                if (b) {
+                    bi.rs40.setVisibility(View.GONE);
+                    bi.rs40.setText(null);
+                } else {
+                    bi.rs40.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
 
     }
@@ -211,9 +420,7 @@ public class RSDActivity extends AppCompatActivity {
                 return false;
             }
         }
-        if (!bi.rs2299.isChecked()) {
-
-
+        if (!bi.rs2299.isChecked() && !bi.rs2297.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.rs22, getString(R.string.rs22))) {
                 return false;
             }
@@ -294,40 +501,38 @@ public class RSDActivity extends AppCompatActivity {
                 return false;
             }
         }
-        if (!bi.rs3599.isChecked()) {
-
-
+        if (!bi.rs3599.isChecked() && !bi.rs3597.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.rs35, getString(R.string.rs35))) {
                 return false;
             }
         }
-        if (!bi.rs3699.isChecked()) {
+        if (!bi.rs3699.isChecked()  && !bi.rs3697.isChecked()) {
 
             if (!validatorClass.EmptyTextBox(this, bi.rs36, getString(R.string.rs36))) {
                 return false;
             }
         }
-        if (!bi.rs3799.isChecked()) {
+        if (!bi.rs3799.isChecked()  && !bi.rs3797.isChecked()) {
 
 
             if (!validatorClass.EmptyTextBox(this, bi.rs37, getString(R.string.rs37))) {
                 return false;
             }
         }
-        if (!bi.rs3899.isChecked()) {
+        if (!bi.rs3899.isChecked()  && !bi.rs3897.isChecked()) {
 
 
             if (!validatorClass.EmptyTextBox(this, bi.rs38, getString(R.string.rs38))) {
                 return false;
             }
         }
-        if (!bi.rs3999.isChecked()) {
+        if (!bi.rs3999.isChecked()  && !bi.rs3997.isChecked()) {
 
             if (!validatorClass.EmptyTextBox(this, bi.rs39, getString(R.string.rs39))) {
                 return false;
             }
         }
-        if (!bi.rs4099.isChecked()) {
+        if (!bi.rs4099.isChecked()  && !bi.rs4097.isChecked()) {
 
             if (!validatorClass.EmptyTextBox(this, bi.rs40, getString(R.string.rs40))) {
                 return false;
@@ -366,7 +571,7 @@ public class RSDActivity extends AppCompatActivity {
         f01.put("rs20", bi.rs2099.isChecked() ? "99" : bi.rs20.getText().toString());
 
         f01.put("rs21", bi.rs2199.isChecked() ? "99" : bi.rs21.getText().toString());
-        f01.put("rs22", bi.rs2299.isChecked() ? "99" : bi.rs22.getText().toString());
+        f01.put("rs22", bi.rs2299.isChecked() ? "99" : bi.rs2297.isChecked() ? "97" : bi.rs22.getText().toString());
         f01.put("rs23", bi.rs2399.isChecked() ? "99" : bi.rs23.getText().toString());
         f01.put("rs24", bi.rs2499.isChecked() ? "99" : bi.rs24.getText().toString());
         f01.put("rs25", bi.rs2599.isChecked() ? "99" : bi.rs25.getText().toString());
@@ -379,12 +584,12 @@ public class RSDActivity extends AppCompatActivity {
         f01.put("rs32", bi.rs3299.isChecked() ? "99" : bi.rs32.getText().toString());
         f01.put("rs33", bi.rs3399.isChecked() ? "99" : bi.rs33.getText().toString());
         f01.put("rs34", bi.rs3499.isChecked() ? "99" : bi.rs34.getText().toString());
-        f01.put("rs35", bi.rs3599.isChecked() ? "99" : bi.rs35.getText().toString());
-        f01.put("rs36", bi.rs3699.isChecked() ? "99" : bi.rs36.getText().toString());
-        f01.put("rs37", bi.rs3799.isChecked() ? "99" : bi.rs37.getText().toString());
-        f01.put("rs38", bi.rs3899.isChecked() ? "99" : bi.rs38.getText().toString());
-        f01.put("rs39", bi.rs3999.isChecked() ? "99" : bi.rs39.getText().toString());
-        f01.put("rs40", bi.rs4099.isChecked() ? "99" : bi.rs40.getText().toString());
+        f01.put("rs35", bi.rs3599.isChecked() ? "99" : bi.rs3597.isChecked() ? "97" : bi.rs35.getText().toString());
+        f01.put("rs36", bi.rs3699.isChecked() ? "99" : bi.rs3697.isChecked() ? "97" : bi.rs36.getText().toString());
+        f01.put("rs37", bi.rs3799.isChecked() ? "99" : bi.rs3797.isChecked() ? "97" : bi.rs37.getText().toString());
+        f01.put("rs38", bi.rs3899.isChecked() ? "99" : bi.rs3897.isChecked() ? "97" : bi.rs38.getText().toString());
+        f01.put("rs39", bi.rs3999.isChecked() ? "99" : bi.rs3997.isChecked() ? "97" : bi.rs39.getText().toString());
+        f01.put("rs40", bi.rs4099.isChecked() ? "99" : bi.rs4097.isChecked() ? "97" : bi.rs40.getText().toString());
 
         f01.put("rsrem", bi.rsrem.getText().toString());
 

@@ -36,7 +36,7 @@ public class Forms implements Serializable {
     private String uen = ""; */
     private String username = ""; // Interviewer
     private String istatus = ""; // Interview Status
-    private String istatus88x = ""; // Interview Status
+    private String istatus96x = ""; // Interview Status
     private String shfa = "";     // Health Facility Assesment Section
     private String srsd = "";     // Routine Service Delivery Section
     private String sqoc1 = "";     // Quality of Care
@@ -63,7 +63,7 @@ public class Forms implements Serializable {
         this.formType = forms.formType;
         this.username = forms.username;
         this.istatus = forms.istatus;
-        this.istatus88x = forms.istatus88x;
+        this.istatus96x = forms.istatus96x;
         this.shfa = forms.shfa;
         this.srsd = forms.srsd;
         this.sqoc1 = forms.sqoc1;
@@ -142,12 +142,12 @@ public class Forms implements Serializable {
         this.istatus = istatus;
     }
 
-    public String getIstatus88x() {
-        return istatus88x;
+    public String getIstatus96x() {
+        return istatus96x;
     }
 
-    public void setIstatus88x(String istatus88x) {
-        this.istatus88x = istatus88x;
+    public void setIstatus96x(String istatus96x) {
+        this.istatus96x = istatus96x;
     }
 
     public String getShfa() {
@@ -291,6 +291,8 @@ public class Forms implements Serializable {
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
+        json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
+        json.put("istatus96x", this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
         json.put("starttime", this.starttime == null ? JSONObject.NULL : this.starttime);
         json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
         json.put("gpsLat", this.gpsLat == null ? JSONObject.NULL : this.gpsLat);

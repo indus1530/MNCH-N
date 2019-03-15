@@ -49,8 +49,8 @@ public class District {
 
     public District Sync(JSONObject jsonObjectCls) throws JSONException {
 
-        this.district_code = jsonObjectCls.getString("hf_district_code");
-        this.district_name = jsonObjectCls.getString("hf_district_name");
+        this.district_code = jsonObjectCls.getString("district_code");
+        this.district_name = jsonObjectCls.getString("district_name");
         return this;
     }
 }

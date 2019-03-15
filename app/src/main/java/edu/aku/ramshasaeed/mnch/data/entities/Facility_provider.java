@@ -16,9 +16,16 @@ public class Facility_provider {
     private int id;
 
     @ColumnInfo
-    private String provider_code = "";
+    private String hf_dhis = "";
+    private String hf_district_code = "";
+    private String hf_tehsil = "";
+    private String hf_uc = "";
+    private String hf_name = "";
+    private String hf_name_govt = "";
+    private String hf_uen_code = "";
+  /*  private String provider_code = "";
     private String provider_name = "";
-    private String uc_code = "";
+    private String uc_code = "";*/
 
     public Facility_provider() {
     }
@@ -31,35 +38,78 @@ public class Facility_provider {
         this.id = id;
     }
 
-    public String getProvider_code() {
-        return provider_code;
+    public String getHf_dhis() {
+        return hf_dhis;
     }
 
-    public void setProvider_code(String provider_code) {
-        this.provider_code = provider_code;
+    public void setHf_dhis(String hf_dhis) {
+        this.hf_dhis = hf_dhis;
     }
 
-    public String getProvider_name() {
-        return provider_name;
+    public String getHf_district_code() {
+        return hf_district_code;
     }
 
-    public void setProvider_name(String provider_name) {
-        this.provider_name = provider_name;
+    public void setHf_district_code(String hf_district_code) {
+        this.hf_district_code = hf_district_code;
     }
 
-    public String getUc_code() {
-        return uc_code;
+    public String getHf_tehsil() {
+        return hf_tehsil;
     }
 
-    public void setUc_code(String uc_code) {
-        this.uc_code = uc_code;
+    public void setHf_tehsil(String hf_tehsil) {
+        this.hf_tehsil = hf_tehsil;
+    }
+
+    public String getHf_uc() {
+        return hf_uc;
+    }
+
+    public void setHf_uc(String hf_uc) {
+        this.hf_uc = hf_uc;
+    }
+
+    public String getHf_name() {
+        return hf_name;
+    }
+
+    public void setHf_name(String hf_name) {
+        this.hf_name = hf_name;
+    }
+
+    public String getHf_name_govt() {
+        return hf_name_govt;
+    }
+
+    public void setHf_name_govt(String hf_name_govt) {
+        this.hf_name_govt = hf_name_govt;
+    }
+
+    public String getHf_uen_code() {
+        return hf_uen_code;
+    }
+
+    public void setHf_uen_code(String hf_uen_code) {
+        this.hf_uen_code = hf_uen_code;
     }
 
     public Facility_provider Sync(JSONObject jsonObjectCls) throws JSONException {
+       /* "hf_dhis": 999,
+                "hf_district_code": 113,
+                "hf_tehsil": "Khanpur",
+                "hf_uc": "71-B",
+                "hf_name": "Fasiel Hospital",
+                "hf_name_govt": "NULL",
+                "hf_uen_code": 1132222*/
+        this.hf_dhis = jsonObjectCls.getString("hf_dhis");
+        this.hf_district_code =jsonObjectCls.getString("hf_district_code");
+        this.hf_tehsil = jsonObjectCls.getString("hf_tehsil");
+        this.hf_uc = jsonObjectCls.getString("hf_uc");
+        this.hf_name = jsonObjectCls.getString("hf_name");
+        this.hf_name_govt = jsonObjectCls.getString("hf_name_govt");
+        this.hf_uen_code = jsonObjectCls.getString("hf_uen_code");
 
-        this.provider_code = jsonObjectCls.getString("hf_provider_code");
-        this.provider_name = jsonObjectCls.getString("hf_provider_name");
-        this.uc_code = jsonObjectCls.getString("hf_uc_code");
         return this;
     }
 }

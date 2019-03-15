@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi= DataBindingUtil.setContentView(this,R.layout.activity_main);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
         setSupportActionBar(bi.appbarmain.toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -69,9 +69,89 @@ public class MainActivity extends AppCompatActivity
         bi.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         dbBackup();
+        displayFormsStatus();
 
         bi.navView.setNavigationItemSelectedListener(this);
 
+    }
+
+    private void displayFormsStatus() {
+        Collection<Forms> todaysForms = null;
+//        Collection<Forms> unsyncedForms = null;
+        try {
+//            unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
+            todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute(dtToday).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
+    /*    rSumText += "TODAY'S RECORDS SUMMARY\r\n";
+
+        rSumText += "=======================\r\n";
+        rSumText += "\r\n";
+        rSumText += "Total Forms Today: " + todaysForms.size() + "\r\n";
+        rSumText += "\r\n";*/
+        String formID = "", completestatus = "", syncedStatus = "";
+        if (todaysForms.size() > 0) {
+//            rSumText += "\tFORMS' LIST: \r\n";
+            String iStatus;
+//            rSumText += "--------------------------------------------------\r\n";
+//            rSumText += "[ Form_ID ] \t[Form Status] \t[Sync Status]----------\r\n";
+//            rSumText += "--------------------------------------------------\r\n";
+            for (Forms fc : todaysForms) {
+                if (fc.getIstatus() != null) {
+                    switch (fc.getIstatus()) {
+                        case "1":
+                            iStatus = "\tComplete";
+                            break;
+                        case "2":
+                            iStatus = "\tIncomplete";
+                            break;
+                        case "3":
+                            iStatus = "\tRefused";
+                            break;
+                        case "4":
+                            iStatus = "\tRefused";
+                            break;
+                        default:
+                            iStatus = "\tN/A";
+                    }
+                } else {
+                    iStatus = "\tN/A";
+                }
+                formID = formID + "\n"+fc.getId();
+                completestatus = completestatus + "\n"+iStatus;
+                syncedStatus = syncedStatus + "\n"+fc.getSynced() == null ? "Not Synced" : "Synced";
+              /*  rSumText += fc.getId();
+
+                rSumText += " " + iStatus + " ";
+
+                rSumText += (fc.getSynced() == null ? "\t\tNot Synced" : "\t\tSynced");
+                rSumText += "\r\n";
+                rSumText += "--------------------------------------------------\r\n";*/
+            }
+        }
+//        Setting Text in  UI
+        bi.appbarmain.contentmain.formId.setText(formID);
+        bi.appbarmain.contentmain.completeStatus.setText(completestatus);
+        bi.appbarmain.contentmain.syncStatus.setText(syncedStatus);
+
+/*
+        SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
+       rSumText += "Last Data Download: \t" + syncPref.getString("LastDownSyncServer", "Never Updated");
+        rSumText += "\r\n";
+        rSumText += "Last Data Upload: \t" + syncPref.getString("LastUpSyncServer", "Never Synced");
+        rSumText += "\r\n";
+        rSumText += "\r\n";
+        rSumText += "Unsynced Forms: \t" + unsyncedForms.size();
+        rSumText += "\r\n";
+
+        Log.d(TAG, "onCreate: " + rSumText);
+        mainBinding.recordSummary.setText(rSumText);
+        */
     }
 
     @Override
@@ -131,7 +211,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_upload) {
             uploadData();
 
-        }else if (id == R.id.nav_download) {
+        } else if (id == R.id.nav_download) {
             //TODO implement
 
             // Require permissions INTERNET & ACCESS_NETWORK_STATE
@@ -152,7 +232,6 @@ public class MainActivity extends AppCompatActivity
         bi.drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 
     public class syncData extends AsyncTask<String, String, String> {
@@ -179,7 +258,7 @@ public class MainActivity extends AppCompatActivity
                     Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();
                     Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_FACILITY_PROVIDER).execute();
+                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
                 }
             });
 
@@ -202,6 +281,7 @@ public class MainActivity extends AppCompatActivity
             }, 1200);
         }
     }
+
     public void dbBackup() {
 
         sharedPref = getSharedPreferences("uen_mnch", MODE_PRIVATE);
@@ -277,6 +357,7 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
+
     public void uploadData() {
 
         if (!updata) {

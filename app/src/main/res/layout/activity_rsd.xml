@@ -1203,8 +1203,7 @@
                                 android:layout_marginRight="2dp"
                                 android:layout_marginLeft="2dp"
                                 android:gravity="center"
-                                android:text='@{rs2299.checked ?  "":rs22.getText.toString }'
-                                android:visibility='@{rs2299.checked ? View.GONE : View.VISIBLE }' />
+                                 />
 
                             <CheckBox
                                 android:id="@+id/rs2299"
@@ -1215,7 +1214,9 @@
                                 android:layout_gravity="center"
                                 android:gravity="center"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp"
+
+                                />
                             <CheckBox
                                 android:id="@+id/rs2297"
                                 android:layout_width="match_parent"
@@ -1225,7 +1226,9 @@
                                 android:layout_gravity="center"
                                 android:gravity="center"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp"
+
+                               />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -1911,8 +1914,7 @@
                                 android:layout_marginRight="2dp"
                                 android:layout_marginLeft="2dp"
                                 android:gravity="center"
-                                android:text='@{rs3599.checked ?  "":rs35.getText.toString }'
-                                android:visibility='@{rs3599.checked ? View.GONE : View.VISIBLE }' />
+                               />
 
                             <CheckBox
                                 android:id="@+id/rs3599"
@@ -1975,8 +1977,7 @@
                                 android:layout_marginRight="2dp"
                                 android:layout_marginLeft="2dp"
                                 android:gravity="center"
-                                android:text='@{rs3699.checked ?  "":rs36.getText.toString }'
-                                android:visibility='@{rs3699.checked ? View.GONE : View.VISIBLE }' />
+                               />
 
                             <CheckBox
                                 android:id="@+id/rs3699"
@@ -2044,8 +2045,7 @@
                                 android:layout_marginRight="2dp"
                                 android:layout_marginLeft="2dp"
                                 android:gravity="center"
-                                android:text='@{rs3799.checked || rs3797.checked ?  "":rs37.getText.toString }'
-                                android:visibility='@{rs3799.checked || rs3797.checked ? View.GONE : View.VISIBLE }' />
+                                 />
 
                             <CheckBox
                                 android:id="@+id/rs3799"
@@ -2055,7 +2055,7 @@
                                 android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
                                 android:gravity="center"
-                                android:checked='@{rs3797.checked ? false:true, default = false}'
+
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                             <CheckBox
@@ -2067,7 +2067,6 @@
                                 android:layout_gravity="center"
                                 android:gravity="center"
                                 android:textColor="@color/gray"
-                                android:checked='@{rs3799.checked ? false:true,  default = false}'
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -2109,8 +2108,7 @@
                                 android:layout_marginRight="2dp"
                                 android:layout_marginLeft="2dp"
                                 android:gravity="center"
-                                android:text='@{rs3899.checked ?  "":rs38.getText.toString }'
-                                android:visibility='@{rs3899.checked ? View.GONE : View.VISIBLE }' />
+                                />
 
                             <CheckBox
                                 android:id="@+id/rs3899"
@@ -2172,8 +2170,7 @@
                                 android:layout_marginRight="2dp"
                                 android:layout_marginLeft="2dp"
                                 android:gravity="center"
-                                android:text='@{rs3999.checked ?  "":rs39.getText.toString }'
-                                android:visibility='@{rs3999.checked ? View.GONE : View.VISIBLE }' />
+                            />
 
                             <CheckBox
                                 android:id="@+id/rs3999"
@@ -2234,9 +2231,7 @@
                                 android:maxLength="4"
                                 android:layout_marginRight="2dp"
                                 android:layout_marginLeft="2dp"
-                                android:gravity="center"
-                                android:text='@{rs4099.checked ?  "":rs40.getText.toString }'
-                                android:visibility='@{rs4099.checked ? View.GONE : View.VISIBLE }' />
+                                android:gravity="center"/>
 
                             <CheckBox
                                 android:id="@+id/rs4099"
