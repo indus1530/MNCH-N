@@ -270,6 +270,151 @@ public class Qoc6 extends AppCompatActivity implements RadioGroup.OnCheckedChang
             bi.qb0413c.setEnabled(true);
         }
 
+
+        if (!bi.qc0101aa.isChecked()){
+            bi.qc0101b.clearCheck();
+            bi.qc0101c.setEnabled(true);
+        } else {
+            bi.qc0101c.setEnabled(false);
+        }
+
+        if (!bi.qc0201aa.isChecked()){
+            bi.qc0201b.clearCheck();
+            bi.qc0201c.setEnabled(true);
+        } else {
+            bi.qc0201c.setEnabled(false);
+        }
+
+        if (!bi.qc0301aa.isChecked()){
+            bi.qc0301b.clearCheck();
+            bi.qc0301c.setEnabled(true);
+        } else {
+            bi.qc0301c.setEnabled(false);
+        }
+
+        if (!bi.qc0401aa.isChecked()){
+            bi.qc0401b.clearCheck();
+            bi.qc0401c.setEnabled(true);
+        } else {
+            bi.qc0401c.setEnabled(false);
+        }
+
+        if (!bi.qc0402aa.isChecked()){
+            bi.qc0402b.clearCheck();
+            bi.qc0402c.setEnabled(true);
+        } else {
+            bi.qc0402c.setEnabled(false);
+        }
+
+        if (!bi.qc0403aa.isChecked()){
+            bi.qc0403b.clearCheck();
+            bi.qc0403c.setEnabled(true);
+        } else {
+            bi.qc0403c.setEnabled(false);
+        }
+
+        if (!bi.qc0404aa.isChecked()){
+            bi.qc0404b.clearCheck();
+            bi.qc0404c.setEnabled(true);
+        } else {
+            bi.qc0404c.setEnabled(false);
+        }
+
+        if (!bi.qc0405aa.isChecked()){
+            bi.qc0405b.clearCheck();
+            bi.qc0405c.setEnabled(true);
+        } else {
+            bi.qc0405c.setEnabled(false);
+        }
+
+        if (!bi.qc0406aa.isChecked()){
+            bi.qc0406b.clearCheck();
+            bi.qc0406c.setEnabled(true);
+        } else {
+            bi.qc0406c.setEnabled(false);
+        }
+
+
+        if (!bi.qc0501aa.isChecked()){
+            bi.qc0501b.clearCheck();
+            bi.qc0501c.setEnabled(true);
+        } else {
+            bi.qc0501c.setEnabled(false);
+        }
+
+        if (!bi.qc0502aa.isChecked()){
+            bi.qc0502b.clearCheck();
+            bi.qc0502c.setEnabled(true);
+        } else {
+            bi.qc0502c.setEnabled(false);
+        }
+
+
+        if (!bi.qc0601aa.isChecked()){
+            bi.qc0601b.clearCheck();
+            bi.qc0601c.setEnabled(true);
+        } else {
+            bi.qc0601c.setEnabled(false);
+        }
+
+
+        if (!bi.qc0701aa.isChecked()){
+            bi.qc0701b.clearCheck();
+            bi.qc0701c.setEnabled(true);
+        } else {
+            bi.qc0701c.setEnabled(false);
+        }
+
+
+        if (!bi.qc0801aa.isChecked()){
+            bi.qc0801b.clearCheck();
+            bi.qc0801c.setEnabled(true);
+        } else {
+            bi.qc0801c.setEnabled(false);
+        }
+
+        if (!bi.qc0802aa.isChecked()){
+            bi.qc0802b.clearCheck();
+            bi.qc0802c.setEnabled(true);
+        } else {
+            bi.qc0802c.setEnabled(false);
+        }
+
+        if (!bi.qc0803aa.isChecked()){
+            bi.qc0803b.clearCheck();
+            bi.qc0803c.setEnabled(true);
+        } else {
+            bi.qc0803c.setEnabled(false);
+        }
+
+        if (!bi.qc0804aa.isChecked()){
+            bi.qc0804b.clearCheck();
+            bi.qc0804c.setEnabled(true);
+        } else {
+            bi.qc0804c.setEnabled(false);
+        }
+
+        if (!bi.qc0805aa.isChecked()){
+            bi.qc0805b.clearCheck();
+            bi.qc0805c.setEnabled(true);
+        } else {
+            bi.qc0805c.setEnabled(false);
+        }
+
+        if (!bi.qc0806aa.isChecked()){
+            bi.qc0806b.clearCheck();
+            bi.qc0806c.setEnabled(true);
+        } else {
+            bi.qc0806c.setEnabled(false);
+        }
+
+        if (!bi.qc0807aa.isChecked()){
+            bi.qc0807b.clearCheck();
+            bi.qc0807c.setEnabled(true);
+        } else {
+            bi.qc0807c.setEnabled(false);
+        }
+
     }
 
 
@@ -281,5 +426,33 @@ public class Qoc6 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         bi.qb0411a.setOnCheckedChangeListener(this);
         bi.qb0412a.setOnCheckedChangeListener(this);
         bi.qb0413a.setOnCheckedChangeListener(this);
+
+        bi.qc0101a.setOnCheckedChangeListener(this);
+
+        bi.qc0201a.setOnCheckedChangeListener(this);
+
+        bi.qc0301a.setOnCheckedChangeListener(this);
+
+        bi.qc0401a.setOnCheckedChangeListener(this);
+        bi.qc0402a.setOnCheckedChangeListener(this);
+        bi.qc0403a.setOnCheckedChangeListener(this);
+        bi.qc0404a.setOnCheckedChangeListener(this);
+        bi.qc0405a.setOnCheckedChangeListener(this);
+        bi.qc0406a.setOnCheckedChangeListener(this);
+
+        bi.qc0501a.setOnCheckedChangeListener(this);
+        bi.qc0502a.setOnCheckedChangeListener(this);
+
+        bi.qc0601a.setOnCheckedChangeListener(this);
+
+        bi.qc0701a.setOnCheckedChangeListener(this);
+
+        bi.qc0801a.setOnCheckedChangeListener(this);
+        bi.qc0802a.setOnCheckedChangeListener(this);
+        bi.qc0803a.setOnCheckedChangeListener(this);
+        bi.qc0804a.setOnCheckedChangeListener(this);
+        bi.qc0805a.setOnCheckedChangeListener(this);
+        bi.qc0806a.setOnCheckedChangeListener(this);
+        bi.qc0807a.setOnCheckedChangeListener(this);
     }
 }

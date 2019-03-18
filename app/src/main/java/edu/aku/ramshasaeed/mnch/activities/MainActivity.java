@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity
     String DirectoryName;
     private boolean updata = false;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
-    String type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
