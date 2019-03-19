@@ -221,7 +221,7 @@ public class Qoc6 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         qoc6.put("qc0807d", bi.qc0807d.getText().toString().trim().length() > 0 ? bi.qc0807d.getText().toString() : "0");
         
 
-        fc.setSqoc1(String.valueOf(qoc6));
+        fc.setSqoc6(String.valueOf(qoc6));
 
     }
 

@@ -4306,7 +4306,8 @@
                     android:layout_weight="1"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/endForm"
-                    android:textColor="@android:color/holo_red_light"
+                    android:textColor="@color/white"
+                    android:background="@android:color/holo_red_light"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -4318,7 +4319,8 @@
                     android:layout_weight="1"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection"
-                    android:textColor="@android:color/holo_green_light"
+                    android:textColor="@color/white"
+                    android:background="@android:color/holo_green_light"
                     android:textSize="24sp" />
 
             </LinearLayout>
@@ -4326,4 +4328,5 @@
         </LinearLayout>
 
     </ScrollView>
+
 </layout>
