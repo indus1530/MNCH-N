@@ -17,6 +17,7 @@ import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityQoc1Binding;
+import edu.aku.ramshasaeed.mnch.validation.ExRunnable;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
@@ -39,7 +40,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
 
     public void BtnContinue() {
-        if (formValidation()) {
+        if (!formValidation()) {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
@@ -77,6 +78,9 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         validatorClass.EmptyCheckingContainer(this, bi.llqoc1);
         return false;
     }
+
+
+
 
     private void SaveDraft() throws JSONException {
 

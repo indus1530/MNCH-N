@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -21,7 +22,7 @@ import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
-public class Qoc8 extends AppCompatActivity {
+public class Qoc8 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
     ActivityQoc8Binding bi;
 
@@ -31,6 +32,7 @@ public class Qoc8 extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc8);
         bi.setCallback(this);
         this.setTitle("Quality of Care 08");
+        events_call();
     }
 
 
@@ -223,4 +225,229 @@ public class Qoc8 extends AppCompatActivity {
         fc.setSqoc1(String.valueOf(qoc8));
 
     }
+
+    @Override
+    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+        if (!bi.qc1701aa.isChecked()){
+            bi.qc1701b.clearCheck();
+            bi.qc1701c.setEnabled(true);
+        } else {
+            bi.qc1701c.setEnabled(false);
+        }
+
+        if (!bi.qc1702aa.isChecked()){
+            bi.qc1702b.clearCheck();
+            bi.qc1702c.setEnabled(true);
+        } else {
+            bi.qc1702c.setEnabled(false);
+        }
+
+        if (!bi.qc1703aa.isChecked()){
+            bi.qc1703b.clearCheck();
+            bi.qc1703c.setEnabled(true);
+        } else {
+            bi.qc1703c.setEnabled(false);
+        }
+
+        if (!bi.qc1704aa.isChecked()){
+            bi.qc1704b.clearCheck();
+            bi.qc1704c.setEnabled(true);
+        } else {
+            bi.qc1704c.setEnabled(false);
+        }
+
+        if (!bi.qc1705aa.isChecked()){
+            bi.qc1705b.clearCheck();
+            bi.qc1705c.setEnabled(true);
+        } else {
+            bi.qc1705c.setEnabled(false);
+        }
+
+        if (!bi.qc1706aa.isChecked()){
+            bi.qc1706b.clearCheck();
+            bi.qc1706c.setEnabled(true);
+        } else {
+            bi.qc1706c.setEnabled(false);
+        }
+
+        if (!bi.qc1707aa.isChecked()){
+            bi.qc1707b.clearCheck();
+            bi.qc1707c.setEnabled(true);
+        } else {
+            bi.qc1707c.setEnabled(false);
+        }
+
+        if (!bi.qc1708aa.isChecked()){
+            bi.qc1708b.clearCheck();
+            bi.qc1708c.setEnabled(true);
+        } else {
+            bi.qc1708c.setEnabled(false);
+        }
+
+        if (!bi.qc1709aa.isChecked()){
+            bi.qc1709b.clearCheck();
+            bi.qc1709c.setEnabled(true);
+        } else {
+            bi.qc1709c.setEnabled(false);
+        }
+
+
+        if (!bi.qc1801aa.isChecked()){
+            bi.qc1801b.clearCheck();
+            bi.qc1801c.setEnabled(true);
+        } else {
+            bi.qc1801c.setEnabled(false);
+        }
+
+        if (!bi.qc1802aa.isChecked()){
+            bi.qc1802b.clearCheck();
+            bi.qc1802c.setEnabled(true);
+        } else {
+            bi.qc1802c.setEnabled(false);
+        }
+
+        if (!bi.qc1803aa.isChecked()){
+            bi.qc1803b.clearCheck();
+            bi.qc1803c.setEnabled(true);
+        } else {
+            bi.qc1803c.setEnabled(false);
+        }
+
+        if (!bi.qc1804aa.isChecked()){
+            bi.qc1804b.clearCheck();
+            bi.qc1804c.setEnabled(true);
+        } else {
+            bi.qc1804c.setEnabled(false);
+        }
+
+        if (!bi.qc1805aa.isChecked()){
+            bi.qc1805b.clearCheck();
+            bi.qc1805c.setEnabled(true);
+        } else {
+            bi.qc1805c.setEnabled(false);
+        }
+
+        if (!bi.qc1806aa.isChecked()){
+            bi.qc1806b.clearCheck();
+            bi.qc1806c.setEnabled(true);
+        } else {
+            bi.qc1806c.setEnabled(false);
+        }
+
+        if (!bi.qc1807aa.isChecked()){
+            bi.qc1807b.clearCheck();
+            bi.qc1807c.setEnabled(true);
+        } else {
+            bi.qc1807c.setEnabled(false);
+        }
+
+        if (!bi.qc1808aa.isChecked()){
+            bi.qc1808b.clearCheck();
+            bi.qc1808c.setEnabled(true);
+        } else {
+            bi.qc1808c.setEnabled(false);
+        }
+
+
+        if (!bi.qc1901aa.isChecked()){
+            bi.qc1901b.clearCheck();
+            bi.qc1901c.setEnabled(true);
+        } else {
+            bi.qc1901c.setEnabled(false);
+        }
+
+        if (!bi.qc1902aa.isChecked()){
+            bi.qc1902b.clearCheck();
+            bi.qc1902c.setEnabled(true);
+        } else {
+            bi.qc1902c.setEnabled(false);
+        }
+
+        if (!bi.qc1903aa.isChecked()){
+            bi.qc1903b.clearCheck();
+            bi.qc1903c.setEnabled(true);
+        } else {
+            bi.qc1903c.setEnabled(false);
+        }
+
+        if (!bi.qc1904aa.isChecked()){
+            bi.qc1904b.clearCheck();
+            bi.qc1904c.setEnabled(true);
+        } else {
+            bi.qc1904c.setEnabled(false);
+        }
+
+        if (!bi.qc1905aa.isChecked()){
+            bi.qc1905b.clearCheck();
+            bi.qc1905c.setEnabled(true);
+        } else {
+            bi.qc1905c.setEnabled(false);
+        }
+
+
+        if (!bi.qc2001aa.isChecked()){
+            bi.qc2001b.clearCheck();
+            bi.qc2001c.setEnabled(true);
+        } else {
+            bi.qc2001c.setEnabled(false);
+        }
+
+        if (!bi.qc2002aa.isChecked()){
+            bi.qc2002b.clearCheck();
+            bi.qc2002c.setEnabled(true);
+        } else {
+            bi.qc2002c.setEnabled(false);
+        }
+
+        if (!bi.qc2003aa.isChecked()){
+            bi.qc2003b.clearCheck();
+            bi.qc2003c.setEnabled(true);
+        } else {
+            bi.qc2003c.setEnabled(false);
+        }
+
+        if (!bi.qc2004aa.isChecked()){
+            bi.qc2004b.clearCheck();
+            bi.qc2004c.setEnabled(true);
+        } else {
+            bi.qc2004c.setEnabled(false);
+        }
+
+    }
+
+    void events_call() {
+
+        bi.qc1701a.setOnCheckedChangeListener(this);
+        bi.qc1702a.setOnCheckedChangeListener(this);
+        bi.qc1703a.setOnCheckedChangeListener(this);
+        bi.qc1704a.setOnCheckedChangeListener(this);
+        bi.qc1705a.setOnCheckedChangeListener(this);
+        bi.qc1706a.setOnCheckedChangeListener(this);
+        bi.qc1707a.setOnCheckedChangeListener(this);
+        bi.qc1708a.setOnCheckedChangeListener(this);
+        bi.qc1709a.setOnCheckedChangeListener(this);
+
+        bi.qc1801a.setOnCheckedChangeListener(this);
+        bi.qc1802a.setOnCheckedChangeListener(this);
+        bi.qc1803a.setOnCheckedChangeListener(this);
+        bi.qc1804a.setOnCheckedChangeListener(this);
+        bi.qc1805a.setOnCheckedChangeListener(this);
+        bi.qc1806a.setOnCheckedChangeListener(this);
+        bi.qc1807a.setOnCheckedChangeListener(this);
+        bi.qc1808a.setOnCheckedChangeListener(this);
+
+        bi.qc1901a.setOnCheckedChangeListener(this);
+        bi.qc1902a.setOnCheckedChangeListener(this);
+        bi.qc1903a.setOnCheckedChangeListener(this);
+        bi.qc1904a.setOnCheckedChangeListener(this);
+        bi.qc1905a.setOnCheckedChangeListener(this);
+
+        bi.qc2001a.setOnCheckedChangeListener(this);
+        bi.qc2002a.setOnCheckedChangeListener(this);
+        bi.qc2003a.setOnCheckedChangeListener(this);
+        bi.qc2004a.setOnCheckedChangeListener(this);
+
+    }
+
 }

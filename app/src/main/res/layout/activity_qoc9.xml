@@ -47,43 +47,6 @@
                         android:text="@string/qc2101"
                         android:elevation="1dp"/>
 
-
-                    <!--<LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="horizontal">
-
-                               <TextView
-                                   android:layout_height="wrap_content"
-                                   android:layout_width="match_parent"
-                                   android:gravity="center"
-                                   android:padding="5sp"
-                                   android:layout_weight="3"
-                                   android:elevation="1dp"
-                                   android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="YES"
-                                        android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="NO"
-                                        android:background="@color/colorPrimary" />
-
-                                </LinearLayout>-->
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -113,38 +76,7 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
-                            <!--<TextView
-                                  android:layout_width="match_parent"
-                                  android:layout_height="55dp"
-                                  android:background="@color/white"
-                                  android:gravity="center"
-                                  android:text="Medical Records"
-                                  android:textColor="@color/black" />-->
-
                         </LinearLayout>
-
-                        <!--<RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>-->
 
 
                         <RadioGroup
@@ -218,7 +150,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc2101ab.checked ? View.VISIBLE : View.GONE  }'>
+                        android:visibility='@{qc2101ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -232,7 +164,8 @@
                             android:id="@+id/qc2101c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"/>
+                            android:inputType="text"
+                            android:text='@{qc2101aa.checked ?  "" : qc2101c.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -250,7 +183,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:text='@{qc2101aa.checked || qc2101ab.checked ?  "" : qc2101d.getText.toString }'/>
 
                 </LinearLayout>
 
@@ -269,43 +203,6 @@
                         android:textSize="23sp"
                         android:text="@string/qc2102"
                         android:elevation="1dp"/>
-
-
-                    <!--<LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="horizontal">
-
-                               <TextView
-                                   android:layout_height="wrap_content"
-                                   android:layout_width="match_parent"
-                                   android:gravity="center"
-                                   android:padding="5sp"
-                                   android:layout_weight="3"
-                                   android:elevation="1dp"
-                                   android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="YES"
-                                        android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="NO"
-                                        android:background="@color/colorPrimary" />
-
-                                </LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -336,38 +233,7 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
-                            <!--<TextView
-                                  android:layout_width="match_parent"
-                                  android:layout_height="55dp"
-                                  android:background="@color/white"
-                                  android:gravity="center"
-                                  android:text="Medical Records"
-                                  android:textColor="@color/black" />-->
-
                         </LinearLayout>
-
-                        <!--<RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>-->
 
 
                         <RadioGroup
@@ -455,7 +321,8 @@
                             android:id="@+id/qc2102c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"/>
+                            android:inputType="text"
+                            android:text='@{qc2102aa.checked ?  "" : qc2102c.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -473,7 +340,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:text='@{qc2102aa.checked || qc2102ab.checked ?  "" : qc2102d.getText.toString }'/>
 
                 </LinearLayout>
 
@@ -492,43 +360,6 @@
                         android:textSize="23sp"
                         android:text="@string/qc2103"
                         android:elevation="1dp"/>
-
-
-                    <!--<LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="horizontal">
-
-                               <TextView
-                                   android:layout_height="wrap_content"
-                                   android:layout_width="match_parent"
-                                   android:gravity="center"
-                                   android:padding="5sp"
-                                   android:layout_weight="3"
-                                   android:elevation="1dp"
-                                   android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="YES"
-                                        android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="NO"
-                                        android:background="@color/colorPrimary" />
-
-                                </LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -559,38 +390,7 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
-                            <!--<TextView
-                                  android:layout_width="match_parent"
-                                  android:layout_height="55dp"
-                                  android:background="@color/white"
-                                  android:gravity="center"
-                                  android:text="Medical Records"
-                                  android:textColor="@color/black" />-->
-
                         </LinearLayout>
-
-                        <!--<RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>-->
 
 
                         <RadioGroup
@@ -678,7 +478,8 @@
                             android:id="@+id/qc2103c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"/>
+                            android:inputType="text"
+                            android:text='@{qc2103aa.checked ?  "" : qc2103c.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -696,7 +497,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:text='@{qc2103aa.checked || qc2103ab.checked ?  "" : qc2103d.getText.toString }'/>
 
                 </LinearLayout>
 
@@ -715,43 +517,6 @@
                         android:textSize="23sp"
                         android:text="@string/qc2104"
                         android:elevation="1dp"/>
-
-
-                    <!--<LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="horizontal">
-
-                               <TextView
-                                   android:layout_height="wrap_content"
-                                   android:layout_width="match_parent"
-                                   android:gravity="center"
-                                   android:padding="5sp"
-                                   android:layout_weight="3"
-                                   android:elevation="1dp"
-                                   android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="YES"
-                                        android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="NO"
-                                        android:background="@color/colorPrimary" />
-
-                                </LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -782,38 +547,7 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
-                            <!--<TextView
-                                  android:layout_width="match_parent"
-                                  android:layout_height="55dp"
-                                  android:background="@color/white"
-                                  android:gravity="center"
-                                  android:text="Medical Records"
-                                  android:textColor="@color/black" />-->
-
                         </LinearLayout>
-
-                        <!--<RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>-->
 
 
                         <RadioGroup
@@ -901,7 +635,8 @@
                             android:id="@+id/qc2104c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"/>
+                            android:inputType="text"
+                            android:text='@{qc2104aa.checked ?  "" : qc2104c.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -919,7 +654,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:text='@{qc2104aa.checked || qc2104ab.checked ?  "" : qc2104d.getText.toString }'/>
 
                 </LinearLayout>
 
@@ -938,43 +674,6 @@
                         android:textSize="23sp"
                         android:text="@string/qc2105"
                         android:elevation="1dp"/>
-
-
-                    <!--<LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="horizontal">
-
-                               <TextView
-                                   android:layout_height="wrap_content"
-                                   android:layout_width="match_parent"
-                                   android:gravity="center"
-                                   android:padding="5sp"
-                                   android:layout_weight="3"
-                                   android:elevation="1dp"
-                                   android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="YES"
-                                        android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="NO"
-                                        android:background="@color/colorPrimary" />
-
-                                </LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1005,38 +704,7 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
-                            <!--<TextView
-                                  android:layout_width="match_parent"
-                                  android:layout_height="55dp"
-                                  android:background="@color/white"
-                                  android:gravity="center"
-                                  android:text="Medical Records"
-                                  android:textColor="@color/black" />-->
-
                         </LinearLayout>
-
-                        <!--<RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>-->
 
 
                         <RadioGroup
@@ -1124,7 +792,8 @@
                             android:id="@+id/qc2105c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"/>
+                            android:inputType="text"
+                            android:text='@{qc2105aa.checked ?  "" : qc2105c.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1142,7 +811,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:text='@{qc2105aa.checked || qc2105ab.checked ?  "" : qc2105d.getText.toString }'/>
 
                 </LinearLayout>
 
@@ -1191,38 +861,7 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
-                            <!--<TextView
-                                  android:layout_width="match_parent"
-                                  android:layout_height="55dp"
-                                  android:background="@color/white"
-                                  android:gravity="center"
-                                  android:text="Medical Records"
-                                  android:textColor="@color/black" />-->
-
                         </LinearLayout>
-
-                        <!--<RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>-->
 
 
                         <RadioGroup
@@ -1310,7 +949,8 @@
                             android:id="@+id/qc2106c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"/>
+                            android:inputType="text"
+                            android:text='@{qc2106aa.checked ?  "" : qc2106c.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1328,7 +968,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:text='@{qc2106aa.checked || qc2106ab.checked ?  "" : qc2106d.getText.toString }'/>
 
                 </LinearLayout>
 
@@ -1353,43 +994,6 @@
                         android:textSize="23sp"
                         android:text="@string/qc2201"
                         android:elevation="1dp"/>
-
-
-                    <!--<LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="horizontal">
-
-                               <TextView
-                                   android:layout_height="wrap_content"
-                                   android:layout_width="match_parent"
-                                   android:gravity="center"
-                                   android:padding="5sp"
-                                   android:layout_weight="3"
-                                   android:elevation="1dp"
-                                   android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="YES"
-                                        android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="NO"
-                                        android:background="@color/colorPrimary" />
-
-                                </LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1420,38 +1024,7 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
-                            <!--<TextView
-                                  android:layout_width="match_parent"
-                                  android:layout_height="55dp"
-                                  android:background="@color/white"
-                                  android:gravity="center"
-                                  android:text="Medical Records"
-                                  android:textColor="@color/black" />-->
-
                         </LinearLayout>
-
-                        <!--<RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>-->
 
 
                         <RadioGroup
@@ -1539,7 +1112,8 @@
                             android:id="@+id/qc2201c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"/>
+                            android:inputType="text"
+                            android:text='@{qc2201aa.checked ?  "" : qc2201c.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1557,7 +1131,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:text='@{qc2201aa.checked || qc2201ab.checked ?  "" : qc2201d.getText.toString }'/>
 
                 </LinearLayout>
 
@@ -1582,43 +1157,6 @@
                         android:textSize="23sp"
                         android:text="@string/qc2301"
                         android:elevation="1dp"/>
-
-
-                    <!--<LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="horizontal">
-
-                               <TextView
-                                   android:layout_height="wrap_content"
-                                   android:layout_width="match_parent"
-                                   android:gravity="center"
-                                   android:padding="5sp"
-                                   android:layout_weight="3"
-                                   android:elevation="1dp"
-                                   android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="YES"
-                                        android:background="@color/colorPrimary"/>
-
-                                    <TextView
-                                        android:layout_height="wrap_content"
-                                        android:layout_width="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5sp"
-                                        android:layout_weight="3"
-                                        android:elevation="1dp"
-                                        android:text="NO"
-                                        android:background="@color/colorPrimary" />
-
-                                </LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1649,38 +1187,7 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
-                            <!--<TextView
-                                  android:layout_width="match_parent"
-                                  android:layout_height="55dp"
-                                  android:background="@color/white"
-                                  android:gravity="center"
-                                  android:text="Medical Records"
-                                  android:textColor="@color/black" />-->
-
                         </LinearLayout>
-
-                        <!--<RadioGroup
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"
-                                android:gravity="center"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>-->
 
 
                         <RadioGroup
@@ -1768,7 +1275,8 @@
                             android:id="@+id/qc2301c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text"/>
+                            android:inputType="text"
+                            android:text='@{qc2301aa.checked ?  "" : qc2301c.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1786,7 +1294,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine"
+                        android:text='@{qc2301aa.checked || qc2301ab.checked ?  "" : qc2301d.getText.toString }'/>
 
                 </LinearLayout>
 
