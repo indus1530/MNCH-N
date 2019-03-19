@@ -191,14 +191,14 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_rsd) {
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
-            i.putExtra("type","rsd");
+            i.putExtra(MainApp.FORM_TYPE,MainApp.RSD);
             startActivity(i);
         } else if (id == R.id.navQOC ) {
 //            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
 
             //startActivity(new Intent(MainActivity.this, RSDInfoActivity.class));
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
-            i.putExtra("type","qoc");
+            i.putExtra(MainApp.FORM_TYPE,MainApp.QOC);
             startActivity(i);
 
         } else if (id == R.id.nav_dhmt) {
@@ -369,9 +369,10 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
 
 //                Upload Form
-                Collection collection1 = null;
+                /*RSD Forms Upload*/
+                Collection rsdcollection = null;
                 try {
-                    collection1 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
+                    rsdcollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.RSD).get();
                 } catch (ExecutionException e) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {
@@ -379,10 +380,26 @@ public class MainActivity extends AppCompatActivity
                 }
                 new SyncAllData(
                         this,
-                        "Forms",
+                        "RSDForms",
                         "updateSyncedForms",
                         Forms.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS, collection1
+                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", CONSTANTS.URL_RSD), rsdcollection
+                ).execute();
+
+                Collection qoccollection = null;
+                try {
+                    qoccollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.QOC).get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                new SyncAllData(
+                        this,
+                        "QOCForms",
+                        "updateSyncedForms",
+                        Forms.class,
+                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", CONSTANTS.URL_QOC), qoccollection
                 ).execute();
 
                 SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);

@@ -58,7 +58,7 @@ public class RSDInfoActivity extends AppCompatActivity {
         bi.setCallback(this);
         this.setTitle(R.string.module_one);
 
-        type = getIntent().getStringExtra("type");
+        type = getIntent().getStringExtra(MainApp.FORM_TYPE);
 
         tempVisible(this);
         bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -384,7 +384,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             if (UpdateDB()) {
 
                 finish();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals("qoc") ? Qoc1.class : RSDActivity.class));
+                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : RSDActivity.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -416,13 +416,13 @@ public class RSDInfoActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         fc = new Forms();
-
         fc.setDevicetagID(MainApp.getTagName(this));
-        fc.setFormType(getIntent().getStringExtra("fType"));
+        fc.setFormType(type);
         fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         fc.setUsername(MainApp.userName);
         fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         fc.setDeviceID(MainApp.deviceId);
+
 
         setGPS(fc); // Set GPS
 

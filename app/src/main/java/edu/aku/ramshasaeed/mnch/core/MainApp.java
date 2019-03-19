@@ -80,6 +80,9 @@ public class MainApp extends Application {
     public static String wSerialNo;
     public static String wName;
     public static String DeviceURL = "devices.php";
+    public static String RSD = "1";
+    public static String QOC = "2";
+    public static String FORM_TYPE = "formType";
 
 
     protected static LocationManager locationManager;

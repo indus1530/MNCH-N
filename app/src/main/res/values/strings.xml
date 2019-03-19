@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">QOC - UEN</string>
     <string name="module_one">MNCH</string>
+    <string name="routinetwo">KQI-HF </string>
+    <string name="routineone">DHIS-DVT </string>
+    <string name="routinethree">DHMT Monitoring </string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">MNCH</string>
