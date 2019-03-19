@@ -222,7 +222,7 @@ public class Qoc8 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         qoc8.put("qc2004d", bi.qc2004d.getText().toString().trim().length() > 0 ? bi.qc2004d.getText().toString() : "0");
 
 
-        fc.setSqoc1(String.valueOf(qoc8));
+        fc.setSqoc8(String.valueOf(qoc8));
 
     }
 

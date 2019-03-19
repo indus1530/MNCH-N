@@ -128,7 +128,7 @@ public class Qoc9 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         qoc9.put("qc2301d", bi.qc2301d.getText().toString().trim().length() > 0 ? bi.qc2301d.getText().toString() : "0");
 
 
-        fc.setSqoc1(String.valueOf(qoc9));
+        fc.setSqoc9(String.valueOf(qoc9));
 
     }
 

@@ -191,7 +191,7 @@ public class Qoc3 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         /*preFix.equals("QOC");
         JSONObject json_qoc1 = GeneratorClass.getContainerJSON(bi.llqoc1, true, preFix);*/
 
-        fc.setSqoc1(String.valueOf(qoc3));
+        fc.setSqoc3(String.valueOf(qoc3));
 
     }
 

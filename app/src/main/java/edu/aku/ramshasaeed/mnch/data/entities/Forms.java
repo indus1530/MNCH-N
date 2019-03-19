@@ -39,7 +39,15 @@ public class Forms implements Serializable {
     private String istatus96x = ""; // Interview Status
     private String shfa = "";     // Health Facility Assesment Section
     private String srsd = "";     // Routine Service Delivery Section
-    private String sqoc1 = "";     // Quality of Care
+    private String sqoc1 = "";     // Quality of Care One
+    private String sqoc2 = "";     // Quality of Care Two
+    private String sqoc3 = "";     // Quality of Care Three
+    private String sqoc4 = "";     // Quality of Care Four
+    private String sqoc5 = "";     // Quality of Care Five
+    private String sqoc6 = "";     // Quality of Care Six
+    private String sqoc7 = "";     // Quality of Care Seven
+    private String sqoc8 = "";     // Quality of Care Eight
+    private String sqoc9 = "";     // Quality of Care Nine
     private String sinfo = "";     // Info Activity
     private String starttime = "";
     private String endtime = "";
@@ -67,6 +75,14 @@ public class Forms implements Serializable {
         this.shfa = forms.shfa;
         this.srsd = forms.srsd;
         this.sqoc1 = forms.sqoc1;
+        this.sqoc2 = forms.sqoc2;
+        this.sqoc3 = forms.sqoc3;
+        this.sqoc4 = forms.sqoc4;
+        this.sqoc5 = forms.sqoc5;
+        this.sqoc6 = forms.sqoc6;
+        this.sqoc7 = forms.sqoc7;
+        this.sqoc8 = forms.sqoc8;
+        this.sqoc9 = forms.sqoc9;
         this.sinfo = forms.sinfo;
         this.starttime = forms.starttime;
         this.endtime = forms.endtime;
@@ -173,6 +189,71 @@ public class Forms implements Serializable {
 
     public void setSqoc1(String sqoc1) {
         this.sqoc1 = sqoc1;
+    }
+
+
+    public String getSqoc2() {
+        return sqoc2;
+    }
+
+    public void setSqoc2(String sqoc2) {
+        this.sqoc2 = sqoc2;
+    }
+
+    public String getSqoc3() {
+        return sqoc3;
+    }
+
+    public void setSqoc3(String sqoc3) {
+        this.sqoc3 = sqoc3;
+    }
+
+    public String getSqoc4() {
+        return sqoc4;
+    }
+
+    public void setSqoc4(String sqoc4) {
+        this.sqoc4 = sqoc4;
+    }
+
+    public String getSqoc5() {
+        return sqoc5;
+    }
+
+    public void setSqoc5(String sqoc5) {
+        this.sqoc5 = sqoc5;
+    }
+
+    public String getSqoc6() {
+        return sqoc6;
+    }
+
+    public void setSqoc6(String sqoc6) {
+        this.sqoc6 = sqoc6;
+    }
+
+    public String getSqoc7() {
+        return sqoc7;
+    }
+
+    public void setSqoc7(String sqoc7) {
+        this.sqoc7 = sqoc7;
+    }
+
+    public String getSqoc8() {
+        return sqoc8;
+    }
+
+    public void setSqoc8(String sqoc8) {
+        this.sqoc8 = sqoc8;
+    }
+
+    public String getSqoc9() {
+        return sqoc9;
+    }
+
+    public void setSqoc9(String sqoc9) {
+        this.sqoc9 = sqoc9;
     }
 
     public String getSinfo() {
