@@ -397,6 +397,30 @@ public class Forms implements Serializable {
         if (!this.sqoc1.equals("")) {
             json.put("sqoc1", this.sqoc1.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc1));
         }
+        if (!this.sqoc2.equals("")) {
+            json.put("sqoc2", this.sqoc2.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc2));
+        }
+        if (!this.sqoc3.equals("")) {
+            json.put("sqoc3", this.sqoc3.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc3));
+        }
+        if (!this.sqoc4.equals("")) {
+            json.put("sqoc4", this.sqoc4.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc4));
+        }
+        if (!this.sqoc5.equals("")) {
+            json.put("sqoc5", this.sqoc5.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc5));
+        }
+        if (!this.sqoc6.equals("")) {
+            json.put("sqoc6", this.sqoc6.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc6));
+        }
+        if (!this.sqoc7.equals("")) {
+            json.put("sqoc7", this.sqoc7.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc7));
+        }
+        if (!this.sqoc1.equals("")) {
+            json.put("sqoc1", this.sqoc1.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc1));
+        }
+        if (!this.sqoc9.equals("")) {
+            json.put("sqoc9", this.sqoc9.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc9));
+        }
 
 
         return json;
