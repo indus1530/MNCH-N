@@ -24,6 +24,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity
     String DirectoryName;
     private boolean updata = false;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    String _dtToday = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity
 //        Collection<Forms> unsyncedForms = null;
         try {
 //            unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
-            todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute(dtToday).get();
+            todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute("%"+_dtToday+"%").get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -109,12 +112,6 @@ public class MainActivity extends AppCompatActivity
                         case "2":
                             iStatus = "\tIncomplete";
                             break;
-                        case "3":
-                            iStatus = "\tRefused";
-                            break;
-                        case "4":
-                            iStatus = "\tRefused";
-                            break;
                         default:
                             iStatus = "\tN/A";
                     }
@@ -123,7 +120,7 @@ public class MainActivity extends AppCompatActivity
                 }
                 formID = formID + "\n"+fc.getId();
                 completestatus = completestatus + "\n"+iStatus;
-                syncedStatus = syncedStatus + "\n"+fc.getSynced() == null ? "Not Synced" : "Synced";
+                syncedStatus = syncedStatus + "\n"+(fc.getSynced() == null || fc.getSynced().equals("") ? "Not Synced" : "Synced");
               /*  rSumText += fc.getId();
 
                 rSumText += " " + iStatus + " ";
@@ -177,9 +174,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -252,10 +249,10 @@ public class MainActivity extends AppCompatActivity
                     new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
                     Toast.makeText(MainActivity.this, "Sync District", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "District", MainApp._HOST_URL + CONSTANTS.URL_DISTRICT).execute();
-                    Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
+                    /*Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();
                     Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();
+                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
                     Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
                 }

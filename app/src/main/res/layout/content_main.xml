@@ -64,7 +64,8 @@
                         android:text="SYNC STATUS" />
                 </TableRow>
 
-                <TableRow>
+                <TableRow
+                    >
 
                     <TextView
                         android:id="@+id/form_id"

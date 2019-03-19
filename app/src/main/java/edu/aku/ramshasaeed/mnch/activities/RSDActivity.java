@@ -506,7 +506,7 @@ public class RSDActivity extends AppCompatActivity {
                 return false;
             }
         }
-        if (!bi.rs3699.isChecked()  && !bi.rs3697.isChecked()) {
+        if (!bi.rs3699.isChecked() && !bi.rs3697.isChecked()) {
 
             if (!validatorClass.EmptyTextBox(this, bi.rs36, getString(R.string.rs36))) {
                 return false;
