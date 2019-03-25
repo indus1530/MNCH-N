@@ -386,6 +386,7 @@ public class MainActivity extends AppCompatActivity
                         MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", CONSTANTS.URL_RSD), rsdcollection
                 ).execute();
 
+                /*QOC Forms Upload*/
                 Collection qoccollection = null;
                 try {
                     qoccollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.QOC).get();

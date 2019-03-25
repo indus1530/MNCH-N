@@ -37,7 +37,9 @@ import android.widget.Toast;
 
 import org.json.JSONArray;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -105,10 +107,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                     .getPackageManager()
                     .getPackageInfo("edu.aku.ramshasaeed.mnch", 0)
                     .versionName;
-//            bi.txtinstalldate.setText("Ver. " + versionName + "." + String.valueOf(versionCode) + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
+            bi.txtinstalldate.setText("Ver. " + versionName + "." + String.valueOf(versionCode) + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
 //
-//            MainApp.versionCode = versionCode;
-//            MainApp.versionName = versionName;
+            MainApp.versionCode = versionCode;
+            MainApp.versionName = versionName;
 
 
         } catch (PackageManager.NameNotFoundException e) {

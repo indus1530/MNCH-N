@@ -85,6 +85,7 @@ public class MainApp extends Application {
     public static String FORM_TYPE = "formType";
 
 
+
     protected static LocationManager locationManager;
     public static String getTagName(Context mContext) {
         SharedPreferences sharedPref = mContext.getSharedPreferences("tagName", MODE_PRIVATE);
