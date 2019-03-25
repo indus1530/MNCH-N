@@ -200,6 +200,7 @@ public class Forms implements Serializable {
         this.sqoc2 = sqoc2;
     }
 
+
     public String getSqoc3() {
         return sqoc3;
     }
@@ -207,6 +208,7 @@ public class Forms implements Serializable {
     public void setSqoc3(String sqoc3) {
         this.sqoc3 = sqoc3;
     }
+
 
     public String getSqoc4() {
         return sqoc4;
@@ -216,6 +218,7 @@ public class Forms implements Serializable {
         this.sqoc4 = sqoc4;
     }
 
+
     public String getSqoc5() {
         return sqoc5;
     }
@@ -223,6 +226,7 @@ public class Forms implements Serializable {
     public void setSqoc5(String sqoc5) {
         this.sqoc5 = sqoc5;
     }
+
 
     public String getSqoc6() {
         return sqoc6;
@@ -232,6 +236,7 @@ public class Forms implements Serializable {
         this.sqoc6 = sqoc6;
     }
 
+
     public String getSqoc7() {
         return sqoc7;
     }
@@ -239,6 +244,7 @@ public class Forms implements Serializable {
     public void setSqoc7(String sqoc7) {
         this.sqoc7 = sqoc7;
     }
+
 
     public String getSqoc8() {
         return sqoc8;
@@ -248,6 +254,7 @@ public class Forms implements Serializable {
         this.sqoc8 = sqoc8;
     }
 
+
     public String getSqoc9() {
         return sqoc9;
     }
@@ -255,6 +262,7 @@ public class Forms implements Serializable {
     public void setSqoc9(String sqoc9) {
         this.sqoc9 = sqoc9;
     }
+
 
     public String getSinfo() {
         return sinfo;
@@ -415,8 +423,8 @@ public class Forms implements Serializable {
         if (!this.sqoc7.equals("")) {
             json.put("sqoc7", this.sqoc7.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc7));
         }
-        if (!this.sqoc1.equals("")) {
-            json.put("sqoc1", this.sqoc1.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc1));
+        if (!this.sqoc8.equals("")) {
+            json.put("sqoc8", this.sqoc8.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc8));
         }
         if (!this.sqoc9.equals("")) {
             json.put("sqoc9", this.sqoc9.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc9));
