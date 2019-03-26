@@ -56,7 +56,7 @@ public class RSDInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsdinfo);
         bi.setCallback(this);
-        this.setTitle(R.string.module_one);
+        this.setTitle(R.string.app_name);
 
         type = getIntent().getStringExtra(MainApp.FORM_TYPE);
 
