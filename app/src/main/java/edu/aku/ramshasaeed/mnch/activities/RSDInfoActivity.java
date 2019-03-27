@@ -7,6 +7,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
+import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -49,6 +50,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
     String type;
+    String dateToday = new SimpleDateFormat("dd/MM/yyyy").format(new Date().getTime());
 
 
     @Override
@@ -71,6 +73,12 @@ public class RSDInfoActivity extends AppCompatActivity {
                 }
             }
         });
+
+        bi.hfMdate.setManager(getSupportFragmentManager());
+        bi.hfMdate.setMaxDate(dateToday);
+        bi.hfMtime.setManager(getSupportFragmentManager());
+        bi.hfMtime.setTimeFormat("HH:mm");
+        bi.hfMtime.setIs24HourView(true);
     }
 
     private void tempVisible(final Context context) {
@@ -117,7 +125,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 MainApp.DistrictCode = districtCodes.get(position);
-
+/*
                 facility_code = new ArrayList<>();
                 facility_name = new ArrayList<>();
                 tehsilNames = new ArrayList<>();
@@ -149,34 +157,33 @@ public class RSDInfoActivity extends AppCompatActivity {
 
 
                         // attaching data adapter to spinner
-                        bi.hfFacilityProvider.setAdapter(dataAdapter);
-                        if (position == 0) {
+//                        bi.hfFacilityProvider.setAdapter(dataAdapter);
+                     *//*   if (position == 0) {
                             bi.fldGrphfUc.setVisibility(GONE);
 
                         } else {
                             bi.fldGrphfUc.setVisibility(VISIBLE);
 
                         }
-
+*//*
                     } else {
 //                        Toast.makeText(this, "Tehsils not found!!", Toast.LENGTH_SHORT).show();
-                        bi.fldGrphfUc.setVisibility(GONE);
+//                        bi.fldGrphfUc.setVisibility(GONE);
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (ExecutionException e) {
                     e.printStackTrace();
-                }
+                }*/
 
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                bi.fldGrphfUc.setVisibility(GONE);
+//                bi.fldGrphfUc.setVisibility(GONE);
 
             }
         });
-
         /* bi.hfDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -355,7 +362,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             }
         });
 */
-        bi.hfFacilityProvider.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+       /* bi.hfFacilityProvider.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 MainApp.facilityProviderCode = facility_code.get(position);
@@ -368,7 +375,7 @@ public class RSDInfoActivity extends AppCompatActivity {
 
             }
         });
-
+*/
 
     }
 
@@ -384,7 +391,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             if (UpdateDB()) {
 
                 finish();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : RSDActivity.class));
+                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RSDActivity.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -406,10 +413,16 @@ public class RSDInfoActivity extends AppCompatActivity {
         if (!validatorClass.EmptySpinner(this, bi.hfUc, getString(R.string.hf_uc))) {
             return false;
         }*/
-        if (!validatorClass.EmptySpinner(this, bi.hfFacilityProvider, getString(R.string.hf_uen))) {
+      /*  if (!validatorClass.EmptySpinner(this, bi.hfFacilityProvider, getString(R.string.hf_uen))) {
+            return false;
+        }*/
+
+        if (!validatorClass.EmptyTextBox(this, bi.hfMdate, getString(R.string.meetingtime)+" "+getString(R.string.date))) {
             return false;
         }
-
+        if (!validatorClass.EmptyTextBox(this, bi.hfMtime, getString(R.string.meetingtime)+" "+getString(R.string.time))) {
+            return false;
+        }
         return validatorClass.EmptyRadioButton(this, bi.hfConsent, bi.hfConsenta, getString(R.string.hf_consent));
     }
 
@@ -429,12 +442,16 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         JSONObject f01 = new JSONObject();
         f01.put("district_code", MainApp.DistrictCode);
-        f01.put("tehsil_code", MainApp.tehsilCode);
+      /*  f01.put("tehsil_code", MainApp.tehsilCode);
         f01.put("uc_code", MainApp.ucCode);
-        f01.put("facility_provider_code", MainApp.facilityProviderCode);
+        f01.put("facility_provider_code", MainApp.facilityProviderCode);*/
+        f01.put("hf_mdate", bi.hfMdate.getText().toString());
+        f01.put("hf_mtime",  bi.hfMtime.getText().toString());
         f01.put("rs_consent", bi.hfConsenta.isChecked() ? "1"
                 : bi.hfConsentb.isChecked() ? "2"
                 : "0");
+
+
         fc.setSinfo(String.valueOf(f01));
 
     }

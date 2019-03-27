@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 
-@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER)
+//@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER)
 public class Facility_provider {
 
     @PrimaryKey(autoGenerate = true)

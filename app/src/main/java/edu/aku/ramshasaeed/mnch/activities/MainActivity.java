@@ -190,11 +190,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_hfa) {
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_rsd) {
+            finish();
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
             i.putExtra(MainApp.FORM_TYPE,MainApp.RSD);
             startActivity(i);
         } else if (id == R.id.navQOC ) {
 //            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
+            finish();
 
             //startActivity(new Intent(MainActivity.this, RSDInfoActivity.class));
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
@@ -202,7 +204,11 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
 
         } else if (id == R.id.nav_dhmt) {
-            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
+            finish();
+
+            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
+            i.putExtra(MainApp.FORM_TYPE,MainApp.DHMT);
+            startActivity(i);
 
         } else if (id == R.id.nav_upload) {
             uploadData();
@@ -220,8 +226,13 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
             }
         } else if (id == R.id.nav_opendb) {
-            Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
-            startActivity(dbmanager);
+            if (MainApp.admin) {
+                Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
+                startActivity(dbmanager);
+            } else {
+                Toast.makeText(this,"You are not allowed to avail this feature!!",Toast.LENGTH_SHORT).show();
+            }
+
         }
 
 
@@ -253,8 +264,8 @@ public class MainActivity extends AppCompatActivity
                     new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();
                     Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
-                    Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
+                    /*Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();*/
                 }
             });
 
@@ -280,7 +291,7 @@ public class MainActivity extends AppCompatActivity
 
     public void dbBackup() {
 
-        sharedPref = getSharedPreferences("uen_mnch", MODE_PRIVATE);
+        sharedPref = getSharedPreferences("qoc_uen", MODE_PRIVATE);
         editor = sharedPref.edit();
 
         if (sharedPref.getBoolean("flag", true)) {
@@ -293,7 +304,7 @@ public class MainActivity extends AppCompatActivity
                 editor.commit();
             }
 
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-MNCH");
+            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-QOC-UEN");
             boolean success = true;
             if (!folder.exists()) {
                 success = folder.mkdirs();
@@ -401,6 +412,23 @@ public class MainActivity extends AppCompatActivity
                         "updateSyncedForms",
                         Forms.class,
                         MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", CONSTANTS.URL_QOC), qoccollection
+                ).execute();
+
+                /*DHMT Forms Upload*/
+                Collection dhmtcollection = null;
+                try {
+                    dhmtcollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.DHMT).get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                new SyncAllData(
+                        this,
+                        "DHMTForms",
+                        "updateSyncedForms",
+                        Forms.class,
+                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", CONSTANTS.URL_DHMT), dhmtcollection
                 ).execute();
 
                 SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);

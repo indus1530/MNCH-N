@@ -39,6 +39,7 @@ public class Forms implements Serializable {
     private String istatus96x = ""; // Interview Status
     private String shfa = "";     // Health Facility Assesment Section
     private String srsd = "";     // Routine Service Delivery Section
+    private String sdhmt = "";     // DHMT monitoring
     private String sqoc1 = "";     // Quality of Care One
     private String sqoc2 = "";     // Quality of Care Two
     private String sqoc3 = "";     // Quality of Care Three
@@ -74,6 +75,7 @@ public class Forms implements Serializable {
         this.istatus96x = forms.istatus96x;
         this.shfa = forms.shfa;
         this.srsd = forms.srsd;
+        this.sdhmt = forms.sdhmt;
         this.sqoc1 = forms.sqoc1;
         this.sqoc2 = forms.sqoc2;
         this.sqoc3 = forms.sqoc3;
@@ -368,6 +370,14 @@ public class Forms implements Serializable {
         this.appversion = appversion;
     }
 
+    public String getSdhmt() {
+        return sdhmt;
+    }
+
+    public void setSdhmt(String sdhmt) {
+        this.sdhmt = sdhmt;
+    }
+
     @Ignore
     public JSONObject toJSONObject() throws JSONException {
 
@@ -398,6 +408,9 @@ public class Forms implements Serializable {
         }
         if (!this.srsd.equals("")) {
             json.put("srsd", this.srsd.equals("") ? JSONObject.NULL : new JSONObject(this.srsd));
+        }
+        if (!this.sdhmt.equals("")) {
+            json.put("sdhmt", this.sdhmt.equals("") ? JSONObject.NULL : new JSONObject(this.sdhmt));
         }
         if (!this.sinfo.equals("")) {
             json.put("sinfo", this.sinfo.equals("") ? JSONObject.NULL : new JSONObject(this.sinfo));

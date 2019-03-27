@@ -36,13 +36,13 @@ public interface FormsDAO {
     @Insert
     Long insertDistrict(District district);
 
-    @Insert
+  /*  @Insert
     Long insertTehsil(Tehsil tehsil);
 
     @Insert
     Long insertUCs(UCs ucs);
     @Insert
-    Long insertFacilityProvider(Facility_provider facility_provider);
+    Long insertFacilityProvider(Facility_provider facility_provider);*/
 
     @Query("DELETE from " + AppDatabase.Sub_DBConnection.TABLE_USERS)
     int deleteUsers();
@@ -50,7 +50,7 @@ public interface FormsDAO {
     @Query("DELETE from " + Sub_DBConnection.TABLE_DISTRICT)
     int deleteDistrict();
 
-    @Query("DELETE from " + Sub_DBConnection.TABLE_TEHSIL)
+   /* @Query("DELETE from " + Sub_DBConnection.TABLE_TEHSIL)
     int deleteTehsil();
 
     @Query("DELETE from " + Sub_DBConnection.TABLE_UCs)
@@ -58,7 +58,7 @@ public interface FormsDAO {
 
     @Query("DELETE from " + Sub_DBConnection.TABLE_FACILITY_PROVIDER)
     int deleteFacilityProvider();
-
+*/
 
     /*Update methods after upload on server*/
 

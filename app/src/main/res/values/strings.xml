@@ -18,6 +18,7 @@
 
 
     <string name="hf_district">District</string>
+    <string name="meetingtime">Please Select Meeting Date and Time</string>
     <string name="hf_tehsil">Tehsil</string>
     <string name="hf_uc">Union Council</string>
     <string name="hf_uen">Facility Name</string>
@@ -31,6 +32,9 @@
     <string name="istatusa">Complete</string>
     <string name="istatusb">Incomplete</string>
 
+
+    <string name="date"> Date </string>
+    <string name="time"> Time </string>
 
     <string name="action_sign_in_short">Sign in</string>
     <string name="dummy_button">Dummy Button</string>
@@ -370,6 +374,15 @@
 
     <string name="qc23"><![CDATA[Referral from Community & Facilities]]></string>
     <string name="qc2301">Check and verify by record from OPD register or slips in referral boxes</string>
+
+    <string name="dhheading">Performance Evaluation of DHMTs</string>
+    <string name="dh01">Regularity of meetings; held within 100 days of last meeting</string>
+    <string name="dh02">Level of participation; at least 70% participation of notified members</string>
+    <string name="dh03">Chairmanship of meetings; chaired by designated/notified chairperson</string>
+    <string name="dh04">Review of health system’s performance using data sources; HMIS, LHW-MIS</string>
+    <string name="dh05">Decisions on the basis of data review; for improving performance</string>
+    <string name="dh06">Follow up of previous decisions and progress; follow up done</string>
+
 
 
 </resources>
