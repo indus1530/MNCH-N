@@ -28,7 +28,7 @@ import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 
 public class MainApp extends Application {
 
-    public static final String AppName = "mnch"; // Must be without space
+    public static final String AppName = "qoc"; // Must be without space
 //    public static final String _IP = "10.1.42.30"; // linux server
     public static final String _IP = "f38158"; // .Net server
 //    public static final String _IP = "43.245.131.159"; // PHP server
@@ -82,7 +82,9 @@ public class MainApp extends Application {
     public static String DeviceURL = "devices.php";
     public static String RSD = "1";
     public static String QOC = "2";
+    public static String DHMT = "3";
     public static String FORM_TYPE = "formType";
+
 
 
     protected static LocationManager locationManager;

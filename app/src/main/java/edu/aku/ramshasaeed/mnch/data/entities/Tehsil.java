@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 
-@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_TEHSIL)
+//@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_TEHSIL)
 public class Tehsil {
 
     @PrimaryKey(autoGenerate = true)
