@@ -712,31 +712,30 @@
 
                     </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/qa0104cll"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility='@{qa0104aa.checked ? View.VISIBLE : View.GONE}'>
-
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/qa0104cll"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c"
-                        android:textSize="20sp" />
+                        android:orientation="vertical"
+                        android:visibility='@{qa0104aa.checked ? View.VISIBLE : View.GONE}'>
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/qa0101c"
+                            android:textSize="20sp" />
 
-                    <EditText
-                        android:id="@+id/qa0104c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textMultiLine"
-                        android:lines="3"
-                        android:text='@{!qa0104aa.checked ?  "" : qa0104c.getText.toString }'/>
-                
-                </LinearLayout>
-                
+                        <EditText
+                            android:id="@+id/qa0104c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:text='@{!qa0104aa.checked ?  "" : qa0104c.getText.toString }'/>
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -4333,7 +4332,8 @@
                     android:text="@string/nextSection"
                     android:textColor="@color/white"
                     android:background="@android:color/holo_green_light"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

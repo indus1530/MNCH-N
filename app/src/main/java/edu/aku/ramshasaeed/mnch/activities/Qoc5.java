@@ -43,6 +43,7 @@ public class Qoc5 extends AppCompatActivity implements RadioGroup.OnCheckedChang
                 SaveDraft();
                 if (UpdateDB()) {
                     startActivity(new Intent(this, Qoc6.class));
+                    finish();
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }

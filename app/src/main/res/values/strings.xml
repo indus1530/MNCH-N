@@ -371,5 +371,69 @@
     <string name="qc23"><![CDATA[Referral from Community & Facilities]]></string>
     <string name="qc2301">Check and verify by record from OPD register or slips in referral boxes</string>
 
+    <string name="qd01">Evidence Based Practices for routine care and management of complications during labour, child birth and early post natal period as per guidelines</string>
+    <string name="qd0101"><![CDATA[Routine assessment of every mother on admission, during labour and child birth and are given timely & appropriate care]]></string>
+    <string name="qd0102">Every Women / Newborn / Child have provide support to get immunized for their respective immunization plan as per Guideline</string>
+    <string name="qd0103">Women with Pre Eclampsia / Eclampsia promptly receive appropriate intervention, as per guideline (IV Anticonvulsants and Anti-Hypertensive)</string>
+    <string name="qd0104">Women with Post-Partum Hemorrhages promptly receive appropriate intervention, as per guideline (Active Management of 3rd Stage of Labour through IV / Oral Uterotonics)</string>
+    <string name="qd0105">Women with Prolong / Obstructed Labour promptly receive appropriate intervention, as per guideline (Available and Properly Filled Partograph)</string>
+    <string name="qd0106">Women with Pre-Term Labour promptly receive appropriate intervention, as per guideline (IV Dexamethasone and Nifidipine)</string>
+    <string name="qd0107">Women with or at risk of any infection during labour, child birth and early post natal period promptly receive appropriate intervention, as per guideline (IV Antibiotics)</string>
+    <string name="qd0108"><![CDATA[Newborns who are not breathing spontaneously receive resuscitation with bag & mask within one minute of birth (Implementation of HBB)]]></string>
+    <string name="qd0109">Newborn with or at risk of any suspected infections (PSBI) promptly receive appropriate intervention, as per guideline</string>
+    <string name="qd0110"><![CDATA[Preterm & Small Babies receive appropriate care as per guidelines (Implementation of ECSB & ECEB Guidelines)]]></string>
+    <string name="qd0111">Newborn receive routine care immediately after birth (Breast Feeding, CHX application and Immunization)</string>
+    <string name="qd0112"><![CDATA[Mother and Newborn receive routine post natal care (Maternal & Neonatal Danger Signs in Post Natal Period)]]></string>
+    <string name="qd0113"><![CDATA[Child presenting with Cough or difficult breathing promptly receive appropriate intervention, as per IMNCI guideline (Use of ARI Timer, Pulse Oximeter & Amoxil DT)]]></string>
+    <string name="qd0114">Child presenting with diarrhea promptly receive appropriate intervention, as per IMNCI guideline (Use of Zinc DT, Lo-ORS)</string>
+    <string name="qd0115">Child presenting with Possible serious bacterial infections promptly receive appropriate intervention, as per IMNCI guideline</string>
+    <string name="qd0116">The Health Care Provider and Skilled Birth Attendant in respective facility receive In-Service Training on Updated Intervention / Guidelines</string>
+
+    <string name="qd02">Actionable Information System</string>
+    <string name="qd0201">Every Women / Newborn / Child has a complete, accurate, standardized medical record during attaining hospital / clinic for OPD / IPD care</string>
+    <string name="qd0202">Every health facility has a mechanism of Monthly data collection source Registers (DHIS / PPMIS)</string>
+    <string name="qd0203">Every health facility has a mechanism of Monthly Report Generation through source Registers and Analyzed indicators (DHIS / PPMIS)</string>
+
+    <string name="qd03">Functioning Referral System</string>
+    <string name="qd0301">Established both referral system i.e. from community to health facility and between health facilities</string>
+    <string name="qd0302">Every Women / Newborn / Child is appropriately assessed before referral, and Refer is made without delay</string>
+    <string name="qd0303">Every Women / Newborn / Child referred within or between health facilities there is appropriate information exchange (Referral Note)</string>
+    <string name="qd0304">An up to date list of networking facilities in the same geographical area that provide referral care to clients should pasted on wall</string>
+    <string name="qd0305">The Health Facility has ready access to a functioning ambulance or other vehicle for emergency transportation of clients</string>
+
+    <string name="qd04">Effective Communications</string>
+    <string name="qd0401"><![CDATA[Every Women / Newborn / Child along with their families should receive clear and accurate information exchange by health care provider (Before & After getting Care)]]></string>
+    <string name="qd0402">Every Women / Newborn / Child receive IEC Material to strengthen his / her understanding during hospital / clinic visit</string>
+    <string name="qd0403">Every Women / Newborn / Child along with their families should receive Complete counseling care</string>
+    <string name="qd0404"><![CDATA[Women/Neonate & Child with C-Section / Blood Transfusion priorly signed Informed Written Consent]]></string>
+
+    <string name="qd05"><![CDATA[Respect & Dignity]]></string>
+    <string name="qd0501">Every Women / Newborn / Child have privacy around the time, and their confidentiality is respected</string>
+    <string name="qd0502">No Women / Newborn / Child is subjected to mis treatment such as verbal abuse / discrimination / neglect or denial of services</string>
+    <string name="qd0503">Every Women / Newborn / Child have right to informed choices in the services they receive, and the reason for intervention / outcome are clearly explained</string>
+
+    <string name="qd06"><![CDATA[Competent & Motivated Personnel]]></string>
+    <string name="qd0601">Every Women / Newborn / Child has access at all the time to at least one health care provider and support staff for routine care and management of complication</string>
+    <string name="qd0602">The Health Care Provider and Support Staff at facility have appropriately competent and skilled (In Service Training on Updated Guidelines are Completed and Refresher will planned after 12months)</string>
+    <string name="qd0603">Health Facility has a designated focal person for quality improvement of hospital / clinic</string>
+    <string name="qd0604">Health Facility has record of at least one monthly meeting (MRM-Facility Level) to review Gaps and improve Quality of Care Services</string>
+
+    <string name="qd07">Availability of Essential Physical Resources</string>
+    <string name="qd0701">The health facility has a functioning source of safe water located on the premises that is adequate to meet all demands for drinking, personal hygiene, medical interventions.</string>
+    <string name="qd0702">The health facility has leak proof, covered, labeled waste bins available in every treatment areas as per main 04 categories (Sharps / Non Sharps Infectious Waste / General non-infectious waste / Anatomical Waste)</string>
+    <string name="qd0703">At least one functioning hand hygiene station with soap / alcohol based hand rub and water</string>
+    <string name="qd0704">Health facility has energy infrastructure with a backup power source</string>
+    <string name="qd0705">The Health Facility has written up to date clinical management protocols for Maternal / Neonatal / Child Health Issues, consistent with WHO guidelines.</string>
+    <string name="qd0706">The health facility has sanitation / toilet facility on premises that are useable and separated by gender for staff and patients</string>
+    <string name="qd0707">The health facility has a labour and child birth area separated for delivery and post-partum care</string>
+    <string name="qd0708">A facility offering surgical services has adequately equipped operation theater</string>
+    <string name="qd0709"><![CDATA[Health facilities has 03 months supplies of Anti-Hypertensive, Anti Convulsant, IV & Oral Uterotonics, IV infusions, Injection Vitamin K, and antenatal corticosteroids (Dexamethasone & Betamethasone) to manage labour and its complications]]></string>
+    <string name="qd0710"><![CDATA[The health facility has functional essential equipment’s & supplies for detection of complications like thermometer, sphygmomanometer, stethoscopes, ARI Timers, Pulse Oximeter at all the times]]></string>
+    <string name="qd0711">The health facility has 03 months supplies of first and second line oral and injectable antibiotics and other lifesaving essential medicine available at all the time.</string>
+    <string name="qd0712">The health facility has functional laboratory having essential laboratory test performing there or at least having networking with nearby  laboratory and blood banks</string>
+    <string name="qd0713"><![CDATA[The health facility has functional essential equipment’s & supplies for saving life from complications like Vaccum, Forceps, Incubators, delivery and C-Section instruments kits, sterile gloves at all the times]]></string>
+    <string name="qd0714">The health facility has uninterrupted oxygen source and  resuscitation supplies</string>
+    <string name="qd0715">The health facility has an on-site pharmacy and medicine / supplies stock management system managed by a trained pharmacist or dispenser</string>
+
 
 </resources>

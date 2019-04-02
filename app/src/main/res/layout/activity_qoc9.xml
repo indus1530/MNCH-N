@@ -1303,6 +1303,3001 @@
 
 
 
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/qd01"/>
+
+            <!--qd0101-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0101"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0101a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0101aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0101ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0101aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0101b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0101ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0101bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0101bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0101ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0101c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0101aa.checked ?  "" : qd0101c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0101d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0101aa.checked || qd0101ab.checked ?  "" : qd0101d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0102-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0102"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0102a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0102aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0102ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0102aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0102b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0102ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0102bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0102bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0102ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0102c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0102aa.checked ?  "" : qd0102c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0102d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0102aa.checked || qd0102ab.checked ?  "" : qd0102d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0103-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0103"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0103a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0103aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0103ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0103aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0103b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0103ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0103bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0103bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0103ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0103c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0103aa.checked ?  "" : qd0103c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0103d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0103aa.checked || qd0103ab.checked ?  "" : qd0103d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0104-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0104"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0104a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0104aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0104ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0104aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0104b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0104ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0104bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0104bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0104ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0104c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0104aa.checked ?  "" : qd0104c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0104d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0104aa.checked || qd0104ab.checked ?  "" : qd0104d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0105-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0105"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0105a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0105aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0105ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0105aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0105b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0105ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0105bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0105bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0105ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0105c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0105aa.checked ?  "" : qd0105c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0105d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0105aa.checked || qd0105ab.checked ?  "" : qd0105d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0106-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0106"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0106a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0106aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0106ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0106aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0106b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0106ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0106bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0106bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0106ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0106c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0106aa.checked ?  "" : qd0106c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0106d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0106aa.checked || qd0106ab.checked ?  "" : qd0106d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0107-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0107"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0107a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0107aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0107ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0107aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0107b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0107ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0107bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0107bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0107ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0107c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0107aa.checked ?  "" : qd0107c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0107d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0107aa.checked || qd0107ab.checked ?  "" : qd0107d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0108-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0108"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0108a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0108aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0108ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0108aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0108b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0108ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0108bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0108bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0108ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0108c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0108aa.checked ?  "" : qd0108c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0108d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0108aa.checked || qd0108ab.checked ?  "" : qd0108d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0109-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0109"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0109a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0109aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0109ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0109aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0109b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0109ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0109bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0109bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0109ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0109c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0109aa.checked ?  "" : qd0109c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0109d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0109aa.checked || qd0109ab.checked ?  "" : qd0109d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0110-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0110"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0110a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0110aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0110ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0110aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0110b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0110ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0110bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0110bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0110ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0110c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0110aa.checked ?  "" : qd0110c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0110d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0110aa.checked || qd0110ab.checked ?  "" : qd0110d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0111-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0111"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0111a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0111aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0111ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0111aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0111b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0111ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0111bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0111bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0111ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0111c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0111aa.checked ?  "" : qd0111c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0111d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0111aa.checked || qd0111ab.checked ?  "" : qd0111d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0112-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0112"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0112a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0112aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0112ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0112aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0112b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0112ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0112bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0112bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0112ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0112c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0112aa.checked ?  "" : qd0112c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0112d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0112aa.checked || qd0112ab.checked ?  "" : qd0112d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0113-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0113"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0113a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0113aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0113ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0113aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0113b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0113ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0113bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0113bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0113ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0113c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0113aa.checked ?  "" : qd0113c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0113d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0113aa.checked || qd0113ab.checked ?  "" : qd0113d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0114-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0114"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0114a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0114aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0114ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0114aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0114b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0114ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0114bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0114bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0114ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0114c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0114aa.checked ?  "" : qd0114c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0114d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0114aa.checked || qd0114ab.checked ?  "" : qd0114d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0115-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0115"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0115a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0115aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0115ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0115aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0115b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0115ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0115bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0115bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0115ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0115c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0115aa.checked ?  "" : qd0115c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0115d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0115aa.checked || qd0115ab.checked ?  "" : qd0115d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0116-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0116"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0116a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0116aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0116ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0116aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0116b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0116ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0116bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0116bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0116ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0116c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0116aa.checked ?  "" : qd0116c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0116d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0116aa.checked || qd0116ab.checked ?  "" : qd0116d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/qd02"/>
+
+            <!--qd0201-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0201"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0201a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0201aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0201ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0201aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0201b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0201ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0201bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0201bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0201ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0201c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0201aa.checked ?  "" : qd0201c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0201d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0201aa.checked || qd0201ab.checked ?  "" : qd0201d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0202-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0202"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0202a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0202aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0202ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0202aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0202b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0202ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0202bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0202bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0202ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0202c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0202aa.checked ?  "" : qd0202c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0202d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0202aa.checked || qd0202ab.checked ?  "" : qd0202d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--qd0203-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5sp"
+                        android:background="@color/colorPrimaryDark"
+                        android:textSize="23sp"
+                        android:text="@string/qd0203"
+                        android:elevation="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/yes"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/no"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/qd0203a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:layout_weight="2">
+
+                            <RadioButton
+                                android:id="@+id/qd0203aa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0203ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0203aa.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="Verification Method"/>
+
+                        <RadioGroup
+                            android:id="@+id/qd0203b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5sp">
+
+                            <RadioButton
+                                android:id="@+id/qd0203ba"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0203bb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Direct Observation on Clients"/>
+
+                            <RadioButton
+                                android:id="@+id/qd0203bc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Review Medical Records"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility='@{qd0203ab.checked ? View.VISIBLE : View.GONE }'>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorPrimary"
+                            android:text="If No (Reasons)"/>
+
+                        <EditText
+                            android:id="@+id/qd0203c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:text='@{qd0203aa.checked ?  "" : qd0203c.getText.toString }'/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/qa0101c" />
+
+
+                    <EditText
+                        android:id="@+id/qd0203d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="3"
+                        android:inputType="textMultiLine"
+                        android:text='@{qd0203aa.checked || qd0203ab.checked ?  "" : qd0203d.getText.toString }'/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1333,7 +4328,8 @@
                     android:text="@string/nextSection"
                     android:textColor="@color/white"
                     android:background="@android:color/holo_green_light"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

@@ -48,6 +48,7 @@ public class Forms implements Serializable {
     private String sqoc7 = "";     // Quality of Care Seven
     private String sqoc8 = "";     // Quality of Care Eight
     private String sqoc9 = "";     // Quality of Care Nine
+    private String sqoc10 = "";     // Quality of Care Ten
     private String sinfo = "";     // Info Activity
     private String starttime = "";
     private String endtime = "";
@@ -83,6 +84,7 @@ public class Forms implements Serializable {
         this.sqoc7 = forms.sqoc7;
         this.sqoc8 = forms.sqoc8;
         this.sqoc9 = forms.sqoc9;
+        this.sqoc10 = forms.sqoc10;
         this.sinfo = forms.sinfo;
         this.starttime = forms.starttime;
         this.endtime = forms.endtime;
@@ -264,6 +266,15 @@ public class Forms implements Serializable {
     }
 
 
+    public String getSqoc10() {
+        return sqoc10;
+    }
+
+    public void setSqoc10(String sqoc10) {
+        this.sqoc10 = sqoc10;
+    }
+
+
     public String getSinfo() {
         return sinfo;
     }
@@ -429,7 +440,9 @@ public class Forms implements Serializable {
         if (!this.sqoc9.equals("")) {
             json.put("sqoc9", this.sqoc9.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc9));
         }
-
+        if (!this.sqoc10.equals("")) {
+            json.put("sqoc10", this.sqoc10.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc10));
+        }
 
         return json;
     }

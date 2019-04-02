@@ -45,6 +45,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
                 SaveDraft();
                 if (UpdateDB()) {
                     startActivity(new Intent(this, Qoc2.class));
+                    finish();
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }
@@ -78,9 +79,6 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         validatorClass.EmptyCheckingContainer(this, bi.llqoc1);
         return false;
     }
-
-
-
 
     private void SaveDraft() throws JSONException {
 
