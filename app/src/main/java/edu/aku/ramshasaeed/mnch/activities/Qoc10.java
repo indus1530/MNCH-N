@@ -85,26 +85,30 @@ public class Qoc10 extends AppCompatActivity implements RadioGroup.OnCheckedChan
     private void SaveDraft() throws JSONException {
 
         JSONObject qoc10 = new JSONObject();
+/*
 
         qoc10.put("qd0301a", bi.qd0301aa.isChecked() ? "1" : bi.qd0301ab.isChecked() ? "2" : "0");
         qoc10.put("qd0301b", bi.qd0301ba.isChecked() ? "1" : bi.qd0301bb.isChecked() ? "2" : bi.qd0301bc.isChecked() ? "3" : "0");
         qoc10.put("qd0301c", bi.qd0301c.getText().toString().trim().length() > 0 ? bi.qd0301c.getText().toString() : "0");
         qoc10.put("qd0301d", bi.qd0301d.getText().toString().trim().length() > 0 ? bi.qd0301d.getText().toString() : "0");
+*/
+/*
 
         qoc10.put("qd0302a", bi.qd0302aa.isChecked() ? "1" : bi.qd0302ab.isChecked() ? "2" : "0");
         qoc10.put("qd0302b", bi.qd0302ba.isChecked() ? "1" : bi.qd0302bb.isChecked() ? "2" : bi.qd0302bc.isChecked() ? "3" : "0");
         qoc10.put("qd0302c", bi.qd0302c.getText().toString().trim().length() > 0 ? bi.qd0302c.getText().toString() : "0");
         qoc10.put("qd0302d", bi.qd0302d.getText().toString().trim().length() > 0 ? bi.qd0302d.getText().toString() : "0");
+*/
 
-        qoc10.put("qd0303a", bi.qd0303aa.isChecked() ? "1" : bi.qd0303ab.isChecked() ? "2" : "0");
-        qoc10.put("qd0303b", bi.qd0303ba.isChecked() ? "1" : bi.qd0303bb.isChecked() ? "2" : bi.qd0303bc.isChecked() ? "3" : "0");
-        qoc10.put("qd0303c", bi.qd0303c.getText().toString().trim().length() > 0 ? bi.qd0303c.getText().toString() : "0");
-        qoc10.put("qd0303d", bi.qd0303d.getText().toString().trim().length() > 0 ? bi.qd0303d.getText().toString() : "0");
+//        qoc10.put("qd0303a", bi.qd0303aa.isChecked() ? "1" : bi.qd0303ab.isChecked() ? "2" : "0");
+//        qoc10.put("qd0303b", bi.qd0303ba.isChecked() ? "1" : bi.qd0303bb.isChecked() ? "2" : bi.qd0303bc.isChecked() ? "3" : "0");
+//        qoc10.put("qd0303c", bi.qd0303c.getText().toString().trim().length() > 0 ? bi.qd0303c.getText().toString() : "0");
+//        qoc10.put("qd0303d", bi.qd0303d.getText().toString().trim().length() > 0 ? bi.qd0303d.getText().toString() : "0");
 
-        qoc10.put("qd0304a", bi.qd0304aa.isChecked() ? "1" : bi.qd0304ab.isChecked() ? "2" : "0");
-        qoc10.put("qd0304b", bi.qd0304ba.isChecked() ? "1" : bi.qd0304bb.isChecked() ? "2" : bi.qd0304bc.isChecked() ? "3" : "0");
-        qoc10.put("qd0304c", bi.qd0304c.getText().toString().trim().length() > 0 ? bi.qd0304c.getText().toString() : "0");
-        qoc10.put("qd0304d", bi.qd0304d.getText().toString().trim().length() > 0 ? bi.qd0304d.getText().toString() : "0");
+//        qoc10.put("qd0304a", bi.qd0304aa.isChecked() ? "1" : bi.qd0304ab.isChecked() ? "2" : "0");
+//        qoc10.put("qd0304b", bi.qd0304ba.isChecked() ? "1" : bi.qd0304bb.isChecked() ? "2" : bi.qd0304bc.isChecked() ? "3" : "0");
+//        qoc10.put("qd0304c", bi.qd0304c.getText().toString().trim().length() > 0 ? bi.qd0304c.getText().toString() : "0");
+//        qoc10.put("qd0304d", bi.qd0304d.getText().toString().trim().length() > 0 ? bi.qd0304d.getText().toString() : "0");
 
         qoc10.put("qd0305a", bi.qd0305aa.isChecked() ? "1" : bi.qd0305ab.isChecked() ? "2" : "0");
         qoc10.put("qd0305b", bi.qd0305ba.isChecked() ? "1" : bi.qd0305bb.isChecked() ? "2" : bi.qd0305bc.isChecked() ? "3" : "0");
@@ -251,6 +255,7 @@ public class Qoc10 extends AppCompatActivity implements RadioGroup.OnCheckedChan
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
+/*
 
         if (!bi.qd0301aa.isChecked()){
             bi.qd0301b.clearCheck();
@@ -258,27 +263,28 @@ public class Qoc10 extends AppCompatActivity implements RadioGroup.OnCheckedChan
         } else {
             bi.qd0301c.setEnabled(false);
         }
+*/
 
-        if (!bi.qd0302aa.isChecked()){
+   /*     if (!bi.qd0302aa.isChecked()){
             bi.qd0302b.clearCheck();
             bi.qd0302c.setEnabled(true);
         } else {
             bi.qd0302c.setEnabled(false);
         }
-
-        if (!bi.qd0303aa.isChecked()){
+*/
+        /*if (!bi.qd0303aa.isChecked()){
             bi.qd0303b.clearCheck();
             bi.qd0303c.setEnabled(true);
         } else {
             bi.qd0303c.setEnabled(false);
-        }
+        }*/
 
-        if (!bi.qd0304aa.isChecked()){
+        /*if (!bi.qd0304aa.isChecked()){
             bi.qd0304b.clearCheck();
             bi.qd0304c.setEnabled(true);
         } else {
             bi.qd0304c.setEnabled(false);
-        }
+        }*/
 
         if (!bi.qd0305aa.isChecked()){
             bi.qd0305b.clearCheck();
@@ -481,10 +487,10 @@ public class Qoc10 extends AppCompatActivity implements RadioGroup.OnCheckedChan
 
     void events_call() {
 
-        bi.qd0301a.setOnCheckedChangeListener(this);
-        bi.qd0302a.setOnCheckedChangeListener(this);
-        bi.qd0303a.setOnCheckedChangeListener(this);
-        bi.qd0304a.setOnCheckedChangeListener(this);
+//        bi.qd0301a.setOnCheckedChangeListener(this);
+//        bi.qd0302a.setOnCheckedChangeListener(this);
+//        bi.qd0303a.setOnCheckedChangeListener(this);
+//        bi.qd0304a.setOnCheckedChangeListener(this);
         bi.qd0305a.setOnCheckedChangeListener(this);
 
         bi.qd0401a.setOnCheckedChangeListener(this);
