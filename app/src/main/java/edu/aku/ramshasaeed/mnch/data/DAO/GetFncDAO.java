@@ -27,6 +27,7 @@ public interface GetFncDAO {
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = ''")
     List<Forms> getUnSyncedForms();
+
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_DISTRICT)
     List<District> getAllDistricts();
 

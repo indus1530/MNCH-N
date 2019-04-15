@@ -47,9 +47,6 @@ public class Forms implements Serializable {
     private String sqoc5 = "";     // Quality of Care Five
     private String sqoc6 = "";     // Quality of Care Six
     private String sqoc7 = "";     // Quality of Care Seven
-    private String sqoc8 = "";     // Quality of Care Eight
-    private String sqoc9 = "";     // Quality of Care Nine
-    private String sqoc10 = "";     // Quality of Care Ten
     private String sinfo = "";     // Info Activity
     private String starttime = "";
     private String endtime = "";
@@ -84,9 +81,6 @@ public class Forms implements Serializable {
         this.sqoc5 = forms.sqoc5;
         this.sqoc6 = forms.sqoc6;
         this.sqoc7 = forms.sqoc7;
-        this.sqoc8 = forms.sqoc8;
-        this.sqoc9 = forms.sqoc9;
-        this.sqoc10 = forms.sqoc10;
         this.sinfo = forms.sinfo;
         this.starttime = forms.starttime;
         this.endtime = forms.endtime;
@@ -247,33 +241,6 @@ public class Forms implements Serializable {
 
     public void setSqoc7(String sqoc7) {
         this.sqoc7 = sqoc7;
-    }
-
-
-    public String getSqoc8() {
-        return sqoc8;
-    }
-
-    public void setSqoc8(String sqoc8) {
-        this.sqoc8 = sqoc8;
-    }
-
-
-    public String getSqoc9() {
-        return sqoc9;
-    }
-
-    public void setSqoc9(String sqoc9) {
-        this.sqoc9 = sqoc9;
-    }
-
-
-    public String getSqoc10() {
-        return sqoc10;
-    }
-
-    public void setSqoc10(String sqoc10) {
-        this.sqoc10 = sqoc10;
     }
 
 
@@ -446,15 +413,6 @@ public class Forms implements Serializable {
         }
         if (!this.sqoc7.equals("")) {
             json.put("sqoc7", this.sqoc7.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc7));
-        }
-        if (!this.sqoc8.equals("")) {
-            json.put("sqoc8", this.sqoc8.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc8));
-        }
-        if (!this.sqoc9.equals("")) {
-            json.put("sqoc9", this.sqoc9.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc9));
-        }
-        if (!this.sqoc10.equals("")) {
-            json.put("sqoc10", this.sqoc10.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc10));
         }
 
         return json;

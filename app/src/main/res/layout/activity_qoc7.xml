@@ -10,10 +10,10 @@
         <variable
             name="callback"
             type="edu.aku.ramshasaeed.mnch.activities.Qoc7" />
+
     </data>
 
     <ScrollView
-        android:id="@+id/rsd_scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/dullWhile">
@@ -28,13 +28,11 @@
             android:background="@color/dullWhile"
             android:orientation="vertical">
 
-
-
             <TextView
                 style="@style/textViewCenterGravity"
-                android:text="@string/qc09"/>
+                android:text="@string/qg07"/>
 
-            <!--qc0901-->
+            <!--qg0701-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -45,7 +43,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc0901"
+                        android:text="@string/qg0701"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -58,7 +61,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -77,24 +80,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc0901a"
+                            android:id="@+id/qg0701a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc0901aa"
+                                android:id="@+id/qg0701aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc0901ab"
+                                android:id="@+id/qg0701ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0701a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -107,7 +123,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc0901aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0701ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -115,58 +131,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc0901b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc0901ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0901bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0901bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc0901ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc0901c"
+                            android:id="@+id/qg0701b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc0901aa.checked ?  "" : qc0901c.getText.toString }'/>
+                            android:text='@{qg0701aa.checked ?  "" : qg0701b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -176,22 +148,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc0901d"
+                        android:id="@+id/qg0701c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc0901aa.checked || qc0901ab.checked ?  "" : qc0901d.getText.toString }'/>
+                        android:text='@{qg0701aa.checked || qg0701ab.checked || qg0701a97.checked?  "" : qg0701c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc0902-->
+            <!--qg0702-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -202,7 +174,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc0902"
+                        android:text="@string/qg0702"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -215,7 +192,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -234,24 +211,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc0902a"
+                            android:id="@+id/qg0702a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc0902aa"
+                                android:id="@+id/qg0702aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc0902ab"
+                                android:id="@+id/qg0702ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0702a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -264,7 +254,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc0902aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0702ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -272,58 +262,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc0902b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc0902ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0902bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0902bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc0902ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc0902c"
+                            android:id="@+id/qg0702b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc0902aa.checked ?  "" : qc0902c.getText.toString }'/>
+                            android:text='@{qg0702aa.checked ?  "" : qg0702b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -333,22 +279,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc0902d"
+                        android:id="@+id/qg0702c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc0902aa.checked || qc0902ab.checked ?  "" : qc0902d.getText.toString }'/>
+                        android:text='@{qg0702aa.checked || qg0702ab.checked || qg0702a97.checked?  "" : qg0702c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc0903-->
+            <!--qg0703-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -359,7 +305,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc0903"
+                        android:text="@string/qg0703"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -372,7 +323,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -391,24 +342,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc0903a"
+                            android:id="@+id/qg0703a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc0903aa"
+                                android:id="@+id/qg0703aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc0903ab"
+                                android:id="@+id/qg0703ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0703a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -421,7 +385,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc0903aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0703ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -429,58 +393,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc0903b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc0903ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0903bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0903bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc0903ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc0903c"
+                            android:id="@+id/qg0703b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc0903aa.checked ?  "" : qc0903c.getText.toString }'/>
+                            android:text='@{qg0703aa.checked ?  "" : qg0703b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -490,22 +410,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc0903d"
+                        android:id="@+id/qg0703c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc0903aa.checked || qc0903ab.checked ?  "" : qc0903d.getText.toString }'/>
+                        android:text='@{qg0703aa.checked || qg0703ab.checked || qg0703a97.checked?  "" : qg0703c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc0904-->
+            <!--qg0704-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -516,7 +436,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc0904"
+                        android:text="@string/qg0704"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -529,7 +454,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -548,24 +473,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc0904a"
+                            android:id="@+id/qg0704a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc0904aa"
+                                android:id="@+id/qg0704aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc0904ab"
+                                android:id="@+id/qg0704ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0704a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -578,7 +516,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc0904aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0704ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -586,58 +524,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc0904b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc0904ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0904bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0904bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc0904ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc0904c"
+                            android:id="@+id/qg0704b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc0904aa.checked ?  "" : qc0904c.getText.toString }'/>
+                            android:text='@{qg0704aa.checked ?  "" : qg0704b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -647,22 +541,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc0904d"
+                        android:id="@+id/qg0704c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc0904aa.checked || qc0904ab.checked ?  "" : qc0904d.getText.toString }'/>
+                        android:text='@{qg0704aa.checked || qg0704ab.checked || qg0704a97.checked?  "" : qg0704c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc0905-->
+            <!--qg0705-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -673,7 +567,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc0905"
+                        android:text="@string/qg0705"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -686,7 +585,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -705,24 +604,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc0905a"
+                            android:id="@+id/qg0705a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc0905aa"
+                                android:id="@+id/qg0705aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc0905ab"
+                                android:id="@+id/qg0705ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0705a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -735,7 +647,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc0905aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0705ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -743,58 +655,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc0905b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc0905ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0905bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0905bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc0905ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc0905c"
+                            android:id="@+id/qg0705b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc0905aa.checked ?  "" : qc0905c.getText.toString }'/>
+                            android:text='@{qg0705aa.checked ?  "" : qg0705b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -804,22 +672,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc0905d"
+                        android:id="@+id/qg0705c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc0905aa.checked || qc0905ab.checked ?  "" : qc0905d.getText.toString }'/>
+                        android:text='@{qg0705aa.checked || qg0705ab.checked || qg0705a97.checked?  "" : qg0705c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc0906-->
+            <!--qg0706-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -830,7 +698,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc0906"
+                        android:text="@string/qg0706"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -843,7 +716,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -862,24 +735,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc0906a"
+                            android:id="@+id/qg0706a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc0906aa"
+                                android:id="@+id/qg0706aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc0906ab"
+                                android:id="@+id/qg0706ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0706a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -892,7 +778,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc0906aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0706ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -900,58 +786,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc0906b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc0906ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0906bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0906bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc0906ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc0906c"
+                            android:id="@+id/qg0706b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc0906aa.checked ?  "" : qc0906c.getText.toString }'/>
+                            android:text='@{qg0706aa.checked ?  "" : qg0706b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -961,22 +803,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc0906d"
+                        android:id="@+id/qg0706c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc0906aa.checked || qc0906ab.checked ?  "" : qc0906d.getText.toString }'/>
+                        android:text='@{qg0706aa.checked || qg0706ab.checked || qg0706a97.checked?  "" : qg0706c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc0907-->
+            <!--qg0707-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -987,7 +829,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc0907"
+                        android:text="@string/qg0707"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -1000,7 +847,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -1019,24 +866,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc0907a"
+                            android:id="@+id/qg0707a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc0907aa"
+                                android:id="@+id/qg0707aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc0907ab"
+                                android:id="@+id/qg0707ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0707a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -1049,7 +909,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc0907aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0707ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1057,58 +917,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc0907b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc0907ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0907bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0907bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc0907ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc0907c"
+                            android:id="@+id/qg0707b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc0907aa.checked ?  "" : qc0907c.getText.toString }'/>
+                            android:text='@{qg0707aa.checked ?  "" : qg0707b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1118,22 +934,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc0907d"
+                        android:id="@+id/qg0707c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc0907aa.checked || qc0907ab.checked ?  "" : qc0907d.getText.toString }'/>
+                        android:text='@{qg0707aa.checked || qg0707ab.checked || qg0707a97.checked?  "" : qg0707c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc0908-->
+            <!--qg0708-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -1144,7 +960,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc0908"
+                        android:text="@string/qg0708"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -1157,7 +978,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -1176,24 +997,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc0908a"
+                            android:id="@+id/qg0708a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc0908aa"
+                                android:id="@+id/qg0708aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc0908ab"
+                                android:id="@+id/qg0708ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0708a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -1206,7 +1040,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc0908aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0708ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1214,58 +1048,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc0908b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc0908ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0908bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc0908bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc0908ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc0908c"
+                            android:id="@+id/qg0708b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc0908aa.checked ?  "" : qc0908c.getText.toString }'/>
+                            android:text='@{qg0708aa.checked ?  "" : qg0708b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1275,28 +1065,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc0908d"
+                        android:id="@+id/qg0708c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc0908aa.checked || qc0908ab.checked ?  "" : qc0908d.getText.toString }'/>
+                        android:text='@{qg0708aa.checked || qg0708ab.checked || qg0708a97.checked?  "" : qg0708c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/qc10"/>
-
-            <!--qc1001-->
+            <!--qg0709-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -1307,7 +1091,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc1001"
+                        android:text="@string/qg0709"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -1320,7 +1109,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -1339,24 +1128,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc1001a"
+                            android:id="@+id/qg0709a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc1001aa"
+                                android:id="@+id/qg0709aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc1001ab"
+                                android:id="@+id/qg0709ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0709a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -1369,7 +1171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc1001aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0709ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1377,58 +1179,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1001b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1001ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1001bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1001bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1001ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc1001c"
+                            android:id="@+id/qg0709b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc1001aa.checked ?  "" : qc1001c.getText.toString }'/>
+                            android:text='@{qg0709aa.checked ?  "" : qg0709b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1438,22 +1196,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc1001d"
+                        android:id="@+id/qg0709c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc1001aa.checked || qc1001ab.checked ?  "" : qc1001d.getText.toString }'/>
+                        android:text='@{qg0709aa.checked || qg0709ab.checked || qg0709a97.checked?  "" : qg0709c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc1002-->
+            <!--qg0710-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -1464,7 +1222,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc1002"
+                        android:text="@string/qg0710"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -1477,7 +1240,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -1496,24 +1259,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc1002a"
+                            android:id="@+id/qg0710a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc1002aa"
+                                android:id="@+id/qg0710aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc1002ab"
+                                android:id="@+id/qg0710ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0710a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -1526,7 +1302,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc1002aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0710ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1534,58 +1310,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1002b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1002ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1002bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1002bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1002ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc1002c"
+                            android:id="@+id/qg0710b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc1002aa.checked ?  "" : qc1002c.getText.toString }'/>
+                            android:text='@{qg0710aa.checked ?  "" : qg0710b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1595,28 +1327,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc1002d"
+                        android:id="@+id/qg0710c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc1002aa.checked || qc1002ab.checked ?  "" : qc1002d.getText.toString }'/>
+                        android:text='@{qg0710aa.checked || qg0710ab.checked || qg0710a97.checked?  "" : qg0710c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/qc11"/>
-
-            <!--qc1101-->
+            <!--qg0711-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -1627,7 +1353,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc1101"
+                        android:text="@string/qg0711"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -1640,7 +1371,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -1659,24 +1390,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc1101a"
+                            android:id="@+id/qg0711a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc1101aa"
+                                android:id="@+id/qg0711aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc1101ab"
+                                android:id="@+id/qg0711ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0711a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -1689,7 +1433,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc1101aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0711ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1697,58 +1441,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1101b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1101ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1101bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1101bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1101ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc1101c"
+                            android:id="@+id/qg0711b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc1101aa.checked ?  "" : qc1101c.getText.toString }'/>
+                            android:text='@{qg0711aa.checked ?  "" : qg0711b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1758,22 +1458,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc1101d"
+                        android:id="@+id/qg0711c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc1101aa.checked || qc1101ab.checked ?  "" : qc1101d.getText.toString }'/>
+                        android:text='@{qg0711aa.checked || qg0711ab.checked || qg0711a97.checked?  "" : qg0711c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc1102-->
+            <!--qg0712-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -1784,7 +1484,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc1102"
+                        android:text="@string/qg0712"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -1797,7 +1502,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -1816,24 +1521,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc1102a"
+                            android:id="@+id/qg0712a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc1102aa"
+                                android:id="@+id/qg0712aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc1102ab"
+                                android:id="@+id/qg0712ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0712a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -1846,7 +1564,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc1102aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0712ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1854,58 +1572,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1102b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1102ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1102bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1102bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1102ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc1102c"
+                            android:id="@+id/qg0712b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc1102aa.checked ?  "" : qc1102c.getText.toString }'/>
+                            android:text='@{qg0712aa.checked ?  "" : qg0712b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -1915,22 +1589,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc1102d"
+                        android:id="@+id/qg0712c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc1102aa.checked || qc1102ab.checked ?  "" : qc1102d.getText.toString }'/>
+                        android:text='@{qg0712aa.checked || qg0712ab.checked || qg0712a97.checked?  "" : qg0712c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc1103-->
+            <!--qg0713-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -1941,7 +1615,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc1103"
+                        android:text="@string/qg0713"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -1954,7 +1633,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -1973,24 +1652,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc1103a"
+                            android:id="@+id/qg0713a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc1103aa"
+                                android:id="@+id/qg0713aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc1103ab"
+                                android:id="@+id/qg0713ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0713a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -2003,7 +1695,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc1103aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0713ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -2011,58 +1703,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1103b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1103ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1103bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1103bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1103ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc1103c"
+                            android:id="@+id/qg0713b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc1103aa.checked ?  "" : qc1103c.getText.toString }'/>
+                            android:text='@{qg0713aa.checked ?  "" : qg0713b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -2072,22 +1720,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc1103d"
+                        android:id="@+id/qg0713c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc1103aa.checked || qc1103ab.checked ?  "" : qc1103d.getText.toString }'/>
+                        android:text='@{qg0713aa.checked || qg0713ab.checked || qg0713a97.checked?  "" : qg0713c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-            <!--qc1104-->
+            <!--qg0714-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -2098,7 +1746,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc1104"
+                        android:text="@string/qg0714"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -2111,7 +1764,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -2130,24 +1783,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc1104a"
+                            android:id="@+id/qg0714a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc1104aa"
+                                android:id="@+id/qg0714aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc1104ab"
+                                android:id="@+id/qg0714ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0714a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -2160,7 +1826,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc1104aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0714ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -2168,58 +1834,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1104b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1104ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1104bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1104bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1104ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc1104c"
+                            android:id="@+id/qg0714b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc1104aa.checked ?  "" : qc1104c.getText.toString }'/>
+                            android:text='@{qg0714aa.checked ?  "" : qg0714b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -2229,28 +1851,22 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc1104d"
+                        android:id="@+id/qg0714c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc1104aa.checked || qc1104ab.checked ?  "" : qc1104d.getText.toString }'/>
+                        android:text='@{qg0714aa.checked || qg0714ab.checked || qg0714a97.checked?  "" : qg0714c.getText.toString }'/>
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/qc12"/>
-
-            <!--qc1201-->
+            <!--qg0715-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
@@ -2261,7 +1877,12 @@
                         android:padding="5sp"
                         android:background="@color/colorPrimaryDark"
                         android:textSize="23sp"
-                        android:text="@string/qc1201"
+                        android:text="@string/qg0715"
+                        android:elevation="1dp"/>
+
+                    <TextView
+                        style="@style/h_textview"
+                        android:text="@string/s01"
                         android:elevation="1dp"/>
 
                     <LinearLayout
@@ -2274,7 +1895,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:background="@color/white"
-                            android:layout_weight="2"
+                            android:layout_weight="3"
                             android:orientation="vertical">
 
                             <TextView
@@ -2293,24 +1914,37 @@
                                 android:text="@string/no"
                                 android:textColor="@color/black" />
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:text="@string/nap"
+                                android:textColor="@color/black" />
+
                         </LinearLayout>
 
 
                         <RadioGroup
-                            android:id="@+id/qc1201a"
+                            android:id="@+id/qg0715a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:layout_weight="2">
+                            android:layout_weight="3">
 
                             <RadioButton
-                                android:id="@+id/qc1201aa"
+                                android:id="@+id/qg0715aa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
                             <RadioButton
-                                android:id="@+id/qc1201ab"
+                                android:id="@+id/qg0715ab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="55dp"/>
+
+                            <RadioButton
+                                android:id="@+id/qg0715a97"
                                 android:layout_width="wrap_content"
                                 android:layout_height="55dp"/>
 
@@ -2323,7 +1957,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility='@{qc1201aa.checked ? View.VISIBLE : View.GONE }'>
+                        android:visibility='@{qg0715ab.checked ? View.VISIBLE : View.GONE }'>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -2331,58 +1965,14 @@
                             android:textSize="20sp"
                             android:layout_gravity="center_vertical"
                             android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1201b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1201ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1201bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1201bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1201ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
+                            android:text="@string/inr"/>
 
                         <EditText
-                            android:id="@+id/qc1201c"
+                            android:id="@+id/qg0715b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qc1201aa.checked ?  "" : qc1201c.getText.toString }'/>
+                            android:text='@{qg0715aa.checked ?  "" : qg0715b.getText.toString }'/>
 
                     </LinearLayout>
 
@@ -2392,1138 +1982,16 @@
                         android:textSize="20sp"
                         android:layout_gravity="center_vertical"
                         android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
+                        android:text="@string/qaAp" />
 
 
                     <EditText
-                        android:id="@+id/qc1201d"
+                        android:id="@+id/qg0715c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qc1201aa.checked || qc1201ab.checked ?  "" : qc1201d.getText.toString }'/>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--qc1202-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qc1202"
-                        android:elevation="1dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qc1202a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:id="@+id/qc1202aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1202ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1202aa.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1202b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1202ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1202bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1202bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1202ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
-
-                        <EditText
-                            android:id="@+id/qc1202c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qc1202aa.checked ?  "" : qc1202c.getText.toString }'/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
-
-
-                    <EditText
-                        android:id="@+id/qc1202d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qc1202aa.checked || qc1202ab.checked ?  "" : qc1202d.getText.toString }'/>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--qc1203-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qc1203"
-                        android:elevation="1dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qc1203a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:id="@+id/qc1203aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1203ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1203aa.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1203b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1203ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1203bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1203bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1203ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
-
-                        <EditText
-                            android:id="@+id/qc1203c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qc1203aa.checked ?  "" : qc1203c.getText.toString }'/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
-
-
-                    <EditText
-                        android:id="@+id/qc1203d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qc1203aa.checked || qc1203ab.checked ?  "" : qc1203d.getText.toString }'/>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-            
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/qc13"/>
-
-            <!--qc1301-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qc1301"
-                        android:elevation="1dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qc1301a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:id="@+id/qc1301aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1301ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1301aa.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1301b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1301ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1301bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1301bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1301ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
-
-                        <EditText
-                            android:id="@+id/qc1301c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qc1301aa.checked ?  "" : qc1301c.getText.toString }'/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
-
-
-                    <EditText
-                        android:id="@+id/qc1301d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qc1301aa.checked || qc1301ab.checked ?  "" : qc1301d.getText.toString }'/>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--qc1302-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qc1302"
-                        android:elevation="1dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qc1302a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:id="@+id/qc1302aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1302ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1302aa.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1302b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1302ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1302bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1302bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1302ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
-
-                        <EditText
-                            android:id="@+id/qc1302c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qc1302aa.checked ?  "" : qc1302c.getText.toString }'/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
-
-
-                    <EditText
-                        android:id="@+id/qc1302d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qc1302aa.checked || qc1302ab.checked ?  "" : qc1302d.getText.toString }'/>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/qc14"/>
-
-            <!--qc1401-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qc1401"
-                        android:elevation="1dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qc1401a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:id="@+id/qc1401aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1401ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1401aa.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1401b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1401ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1401bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1401bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1401ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
-
-                        <EditText
-                            android:id="@+id/qc1401c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qc1401aa.checked ?  "" : qc1401c.getText.toString }'/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
-
-
-                    <EditText
-                        android:id="@+id/qc1401d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qc1401aa.checked || qc1401ab.checked ?  "" : qc1401d.getText.toString }'/>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/qc15"/>
-
-            <!--qc1501-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qc1501"
-                        android:elevation="1dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qc1501a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:id="@+id/qc1501aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1501ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1501aa.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1501b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1501ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1501bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1501bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1501ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
-
-                        <EditText
-                            android:id="@+id/qc1501c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qc1501aa.checked ?  "" : qc1501c.getText.toString }'/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
-
-
-                    <EditText
-                        android:id="@+id/qc1501d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qc1501aa.checked || qc1501ab.checked ?  "" : qc1501d.getText.toString }'/>
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/qc16"/>
-
-            <!--qc1601-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="5sp"
-                        android:background="@color/colorPrimaryDark"
-                        android:textSize="23sp"
-                        android:text="@string/qc1601"
-                        android:elevation="1dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/yes"
-                                android:textColor="@color/black" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="55dp"
-                                android:background="@color/white"
-                                android:gravity="center"
-                                android:text="@string/no"
-                                android:textColor="@color/black" />
-
-                        </LinearLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/qc1601a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:layout_weight="2">
-
-                            <RadioButton
-                                android:id="@+id/qc1601aa"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1601ab"
-                                android:layout_width="wrap_content"
-                                android:layout_height="55dp"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1601aa.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="Verification Method"/>
-
-                        <RadioGroup
-                            android:id="@+id/qc1601b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:padding="5sp">
-
-                            <RadioButton
-                                android:id="@+id/qc1601ba"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1601bb"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Direct Observation on Clients"/>
-
-                            <RadioButton
-                                android:id="@+id/qc1601bc"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Review Medical Records"/>
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility='@{qc1601ab.checked ? View.VISIBLE : View.GONE }'>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@color/colorPrimary"
-                            android:text="If No (Reasons)"/>
-
-                        <EditText
-                            android:id="@+id/qc1601c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text"
-                            android:text='@{qc1601aa.checked ?  "" : qc1601c.getText.toString }'/>
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/qa0101c" />
-
-
-                    <EditText
-                        android:id="@+id/qc1601d"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:lines="3"
-                        android:inputType="textMultiLine"
-                        android:text='@{qc1601aa.checked || qc1601ab.checked ?  "" : qc1601d.getText.toString }'/>
+                        android:text='@{qg0715aa.checked || qg0715ab.checked || qg0715a97.checked?  "" : qg0715c.getText.toString }'/>
 
                 </LinearLayout>
 
