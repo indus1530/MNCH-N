@@ -394,7 +394,7 @@ public class MainActivity extends AppCompatActivity
                         "RSDForms",
                         "updateSyncedForms",
                         Forms.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", CONSTANTS.URL_RSD), rsdcollection
+                        MainApp._HOST_URL + CONSTANTS.URL_RSD, rsdcollection
                 ).execute();
 
                 /*QOC Forms Upload*/
@@ -411,7 +411,7 @@ public class MainActivity extends AppCompatActivity
                         "QOCForms",
                         "updateSyncedForms",
                         Forms.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", CONSTANTS.URL_QOC), qoccollection
+                        MainApp._HOST_URL + CONSTANTS.URL_QOC, qoccollection
                 ).execute();
 
                 /*DHMT Forms Upload*/
@@ -428,7 +428,7 @@ public class MainActivity extends AppCompatActivity
                         "DHMTForms",
                         "updateSyncedForms",
                         Forms.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", CONSTANTS.URL_DHMT), dhmtcollection
+                        MainApp._HOST_URL + CONSTANTS.URL_DHMT, dhmtcollection
                 ).execute();
 
                 SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
