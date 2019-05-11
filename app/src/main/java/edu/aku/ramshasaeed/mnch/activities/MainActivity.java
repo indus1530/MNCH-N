@@ -79,9 +79,9 @@ public class MainActivity extends AppCompatActivity
 
     private void displayFormsStatus() {
         Collection<Forms> todaysForms = null;
-//        Collection<Forms> unsyncedForms = null;
+        Collection<Forms> unsyncedForms = null;
         try {
-//            unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
+            unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
             todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute("%"+_dtToday+"%").get();
         } catch (InterruptedException e) {
             e.printStackTrace();

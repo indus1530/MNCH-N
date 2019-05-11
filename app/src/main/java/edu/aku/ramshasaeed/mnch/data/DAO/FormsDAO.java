@@ -66,9 +66,7 @@ public interface FormsDAO {
      * Updating only sync and syncDate
      * By order id
      */
-    @Query("UPDATE Forms SET synced = :synced, synced_date= :date WHERE id =:id")
-    int updateSyncedForms(String synced, String date, int id);
-
-
+    @Query("UPDATE Forms SET synced = '1', synced_date= :date WHERE id =:id")
+    int updateSyncedForms(String date, int id);
 
 }
