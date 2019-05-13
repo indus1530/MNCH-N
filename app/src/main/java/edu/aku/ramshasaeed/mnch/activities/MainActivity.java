@@ -189,14 +189,15 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_hfa) {
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
+
         } else if (id == R.id.nav_rsd) {
-            finish();
+            //finish();
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
             i.putExtra(MainApp.FORM_TYPE,MainApp.RSD);
             startActivity(i);
         } else if (id == R.id.navQOC ) {
 //            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
-            finish();
+            //finish();
 
             //startActivity(new Intent(MainActivity.this, RSDInfoActivity.class));
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
@@ -204,7 +205,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
 
         } else if (id == R.id.nav_dhmt) {
-            finish();
+            //finish();
 
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
             i.putExtra(MainApp.FORM_TYPE,MainApp.DHMT);
