@@ -49,17 +49,15 @@ public class RSDInfoActivity extends AppCompatActivity {
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
     private String type;
-    private String dateToday = new SimpleDateFormat("dd/MM/yyyy").format(new Date().getTime());
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsdinfo);
         bi.setCallback(this);
-        this.setTitle(R.string.app_name);
 
         type = getIntent().getStringExtra(MainApp.FORM_TYPE);
+        this.setTitle(type.equals(MainApp.RSD) ? "ROUTINE SERVICE DELIVERY" : type.equals(MainApp.DHMT) ? "DHMT" : type.equals(MainApp.QOC) ? "QUALITY OF CARE" : "");
 
         tempVisible(this);
         bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
