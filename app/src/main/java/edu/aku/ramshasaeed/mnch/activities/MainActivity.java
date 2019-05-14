@@ -10,21 +10,14 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -57,6 +50,7 @@ public class MainActivity extends AppCompatActivity
     SharedPreferences sharedPref;
     String DirectoryName;
     private boolean updata = false;
+    private Boolean exit = false;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     String _dtToday = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
 
@@ -82,7 +76,7 @@ public class MainActivity extends AppCompatActivity
         Collection<Forms> unsyncedForms = null;
         try {
             unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
-            todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute("%"+_dtToday+"%").get();
+            todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute("%" + _dtToday + "%").get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -118,9 +112,9 @@ public class MainActivity extends AppCompatActivity
                 } else {
                     iStatus = "\tN/A";
                 }
-                formID = formID + "\n"+fc.getId();
-                completestatus = completestatus + "\n"+iStatus;
-                syncedStatus = syncedStatus + "\n"+(fc.getSynced() == null || fc.getSynced().equals("") ? "Not Synced" : "Synced");
+                formID = formID + "\n" + fc.getId();
+                completestatus = completestatus + "\n" + iStatus;
+                syncedStatus = syncedStatus + "\n" + (fc.getSynced() == null || fc.getSynced().equals("") ? "Not Synced" : "Synced");
               /*  rSumText += fc.getId();
 
                 rSumText += " " + iStatus + " ";
@@ -135,28 +129,6 @@ public class MainActivity extends AppCompatActivity
         bi.appbarmain.contentmain.completeStatus.setText(completestatus);
         bi.appbarmain.contentmain.syncStatus.setText(syncedStatus);
 
-/*
-        SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
-       rSumText += "Last Data Download: \t" + syncPref.getString("LastDownSyncServer", "Never Updated");
-        rSumText += "\r\n";
-        rSumText += "Last Data Upload: \t" + syncPref.getString("LastUpSyncServer", "Never Synced");
-        rSumText += "\r\n";
-        rSumText += "\r\n";
-        rSumText += "Unsynced Forms: \t" + unsyncedForms.size();
-        rSumText += "\r\n";
-
-        Log.d(TAG, "onCreate: " + rSumText);
-        mainBinding.recordSummary.setText(rSumText);
-        */
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (bi.drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            bi.drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
     }
 
     @Override
@@ -191,26 +163,18 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_rsd) {
-            //finish();
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
-            i.putExtra(MainApp.FORM_TYPE,MainApp.RSD);
+            i.putExtra(MainApp.FORM_TYPE, MainApp.RSD);
             startActivity(i);
-        } else if (id == R.id.navQOC ) {
-//            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
-            //finish();
-
-            //startActivity(new Intent(MainActivity.this, RSDInfoActivity.class));
+        } else if (id == R.id.navQOC) {
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
-            i.putExtra(MainApp.FORM_TYPE,MainApp.QOC);
+            i.putExtra(MainApp.FORM_TYPE, MainApp.QOC);
             startActivity(i);
 
         } else if (id == R.id.nav_dhmt) {
-            //finish();
-
             Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
-            i.putExtra(MainApp.FORM_TYPE,MainApp.DHMT);
+            i.putExtra(MainApp.FORM_TYPE, MainApp.DHMT);
             startActivity(i);
-
         } else if (id == R.id.nav_upload) {
             uploadData();
 
@@ -231,7 +195,7 @@ public class MainActivity extends AppCompatActivity
                 Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
                 startActivity(dbmanager);
             } else {
-                Toast.makeText(this,"You are not allowed to avail this feature!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "You are not allowed to avail this feature!!", Toast.LENGTH_SHORT).show();
             }
 
         }
@@ -241,52 +205,26 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    public void onBackPressed() {
+        if (bi.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            bi.drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            if (exit) {
+                finish(); // finish activity
+                startActivity(new Intent(this, LoginActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+            } else {
+                Toast.makeText(this, "Press Back again to Exit.",
+                        Toast.LENGTH_SHORT).show();
+                exit = true;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        exit = false;
+                    }
+                }, 3 * 1000);
 
-    public class syncData extends AsyncTask<String, String, String> {
-
-        private Context mContext;
-
-        public syncData(Context mContext) {
-            this.mContext = mContext;
-        }
-
-        @Override
-        protected String doInBackground(String... strings) {
-            runOnUiThread(new Runnable() {
-
-                @Override
-                public void run() {
-
-                    Toast.makeText(MainActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
-                    Toast.makeText(MainActivity.this, "Sync District", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "District", MainApp._HOST_URL + CONSTANTS.URL_DISTRICT).execute();
-                    /*Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();
-                    Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
-                    /*Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();*/
-                }
-            });
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            new Handler().postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
-
-                    editor.putBoolean("flag", true);
-                    editor.commit();
-
-                    dbBackup();
-
-                }
-            }, 1200);
+            }
         }
     }
 
@@ -320,25 +258,6 @@ public class MainActivity extends AppCompatActivity
                 if (success) {
 
                     try {
-                        /*File dbFile = new File(this.getDatabasePath(AppDatabase.Sub_DBConnection.DATABASE_NAME).getAbsolutePath());
-                        FileInputStream fis = new FileInputStream(dbFile);
-
-                        String outFileName = DirectoryName + File.separator +
-                                AppDatabase.Sub_DBConnection.DATABASE_NAME + ".db";
-
-                        // Open the empty db as the output stream
-                        OutputStream output = new FileOutputStream(outFileName);
-
-                        // Transfer bytes from the inputfile to the outputfile
-                        byte[] buffer = new byte[1024];
-                        int length;
-                        while ((length = fis.read(buffer)) > 0) {
-                            output.write(buffer, 0, length);
-                        }
-                        // Close the streams
-                        output.flush();
-                        output.close();
-                        fis.close();*/
 
                         String dbFileName = this.getDatabasePath(AppDatabase.Sub_DBConnection.DATABASE_NAME).getAbsolutePath();
                         String outFileName = DirectoryName + File.separator + AppDatabase.Sub_DBConnection.DATABASE_NAME + ".db";
@@ -445,6 +364,54 @@ public class MainActivity extends AppCompatActivity
             updata = false;
         }
 
+    }
+
+    public class syncData extends AsyncTask<String, String, String> {
+
+        private Context mContext;
+
+        public syncData(Context mContext) {
+            this.mContext = mContext;
+        }
+
+        @Override
+        protected String doInBackground(String... strings) {
+            runOnUiThread(new Runnable() {
+
+                @Override
+                public void run() {
+
+                    Toast.makeText(MainActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
+                    Toast.makeText(MainActivity.this, "Sync District", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "District", MainApp._HOST_URL + CONSTANTS.URL_DISTRICT).execute();
+                    Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
+                    /*Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();
+                    Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
+                }
+            });
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+
+                    editor.putBoolean("flag", true);
+                    editor.commit();
+
+                    dbBackup();
+
+                }
+            }, 1200);
+        }
     }
 
 }
