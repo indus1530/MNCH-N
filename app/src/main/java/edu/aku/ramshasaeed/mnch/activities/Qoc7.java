@@ -259,4 +259,9 @@ public class Qoc7 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         bi.qg0715a.setOnCheckedChangeListener(this);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
 }
