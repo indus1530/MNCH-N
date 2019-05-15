@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity
     String DirectoryName;
     private boolean updata = false;
     private Boolean exit = false;
-    String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
-    String _dtToday = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
+    String dtToday = new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date().getTime());
+    String _dtToday = new SimpleDateFormat("dd-MM-yyyy").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -247,10 +247,10 @@ public class MainActivity extends AppCompatActivity
 
         if (sharedPref.getBoolean("flag", true)) {
 
-            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
+            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
 
-            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date())) {
-                editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
+            if (dt != new SimpleDateFormat("dd-MM-yyyy").format(new Date())) {
+                editor.putString("dt", new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
 
                 editor.commit();
             }

@@ -34,11 +34,21 @@
             <Spinner
                 android:id="@+id/hf_district"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:popupBackground="#d6d6d6"
                 android:prompt="@string/hf_district" />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/fldGrpInfo02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -49,11 +59,13 @@
             <Spinner
                 android:id="@+id/hf_facility_provider"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:popupBackground="#d6d6d6"
                 android:prompt="@string/hf_uen" />
+
+        </LinearLayout>
 
             <!--    <LinearLayout
                     android:id="@+id/fldGrphf_district"
@@ -102,7 +114,6 @@
                        android:background="@color/colorSecondaryLight"
                        android:popupBackground="#d6d6d6"
                        android:prompt="@string/hf_uc" />
-
 
 -->
 
@@ -172,10 +183,12 @@
                         android:textColor="@android:color/black"
                         app:is24HourView="true"
                         app:timeFormat="HH:mm" />
+
                 </LinearLayout>
 
             </LinearLayout>
 
+       <!--
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -213,7 +226,10 @@
                         android:text="@string/no" />
 
                 </RadioGroup>
+
             </LinearLayout>
+
+-->
 
             <LinearLayout
                 android:id="@+id/fldGrpbtn"
@@ -254,5 +270,7 @@
             <!--</LinearLayout>-->
 
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
