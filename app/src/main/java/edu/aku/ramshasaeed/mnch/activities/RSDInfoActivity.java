@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
@@ -60,7 +61,14 @@ public class RSDInfoActivity extends AppCompatActivity {
         this.setTitle(type.equals(MainApp.RSD) ? "ROUTINE SERVICE DELIVERY" : type.equals(MainApp.DHMT) ? "DHMT" : type.equals(MainApp.QOC) ? "QUALITY OF CARE" : "");
 
         tempVisible(this);
-        bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+        if (type.equals(MainApp.DHMT)) {
+            bi.fldGrpInfo02.setVisibility(GONE);
+        } else {
+            bi.fldGrpInfo02.setVisibility(VISIBLE);
+        }
+
+        /*bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (bi.hfConsenta.isChecked()) {
@@ -69,7 +77,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                     bi.btnNext.setVisibility(GONE);
                 }
             }
-        });
+        });*/
 
         bi.hfMtime.setTimeFormat("HH:mm");
         bi.hfMtime.setIs24HourView(true);
@@ -112,44 +120,46 @@ public class RSDInfoActivity extends AppCompatActivity {
         }
 
 
-        bi.hfDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) return;
+        if (!type.equals(MainApp.DHMT)) {
+            bi.hfDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    if (position == 0) return;
 
-                facility_name = new ArrayList<>();
-                facility_name.add("....");
-                facilityMap = new HashMap<>();
+                    facility_name = new ArrayList<>();
+                    facility_name.add("....");
 
-                Collection<FacilityProvider> facility_provider;
-                try {
-                    facility_provider =
-                            (Collection<FacilityProvider>)
-                                    new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
-                                            .execute(districtCodes.get(position)).get();
+                    Collection<FacilityProvider> facility_provider;
+                    try {
+                        facility_provider =
+                                (Collection<FacilityProvider>)
+                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
+                                                .execute(districtCodes.get(position)).get();
 
-                    if (facility_provider.size() != 0) {
-                        for (FacilityProvider fp : facility_provider) {
-                            facility_name.add(fp.getHf_name());
-                            facilityMap.put(fp.getHf_name(), fp);
+                        facilityMap = new HashMap<>();
+                        if (facility_provider.size() != 0) {
+                            for (FacilityProvider fp : facility_provider) {
+                                facility_name.add(fp.getHf_name());
+                                facilityMap.put(fp.getHf_name(), fp);
+                            }
                         }
+
+                        bi.hfFacilityProvider.setAdapter(new ArrayAdapter<>(context,
+                                android.R.layout.simple_spinner_dropdown_item, facility_name));
+
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
                     }
 
-                    bi.hfFacilityProvider.setAdapter(new ArrayAdapter<>(context,
-                            android.R.layout.simple_spinner_dropdown_item, facility_name));
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
                 }
 
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+        }
 
 
     }
@@ -197,20 +207,24 @@ public class RSDInfoActivity extends AppCompatActivity {
         JSONObject f01 = new JSONObject();
         f01.put("district_code", districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
 
-        FacilityProvider fp = facilityMap.get(bi.hfFacilityProvider.getSelectedItem().toString());
-        f01.put("hf_dhis", fp.getHf_dhis());
-        f01.put("hf_district_code", fp.getHf_district_code());
-        f01.put("hf_tehsil", fp.getHf_tehsil());
-        f01.put("hf_uc", fp.getHf_uc());
-        f01.put("hf_name", fp.getHf_name());
-        f01.put("hf_name_govt", fp.getHf_name_govt());
-        f01.put("hf_uen_code", fp.getHf_uen_code());
+        if (!type.equals(MainApp.DHMT)) {
+            FacilityProvider fp = facilityMap.get(bi.hfFacilityProvider.getSelectedItem().toString());
+            f01.put("hf_dhis", fp.getHf_dhis());
+            f01.put("hf_district_code", fp.getHf_district_code());
+            f01.put("hf_tehsil", fp.getHf_tehsil());
+            f01.put("hf_uc", fp.getHf_uc());
+            f01.put("hf_name", fp.getHf_name());
+            f01.put("hf_name_govt", fp.getHf_name_govt());
+            f01.put("hf_uen_code", fp.getHf_uen_code());
+
+        }
 
         /*f01.put("hf_mdate", bi.hfMdate.getText().toString());
         f01.put("hf_mtime", bi.hfMtime.getText().toString());*/
-        f01.put("rs_consent", bi.hfConsenta.isChecked() ? "1"
+
+        /*f01.put("rs_consent", bi.hfConsenta.isChecked() ? "1"
                 : bi.hfConsentb.isChecked() ? "2"
-                : "0");
+                : "0");*/
 
         fc.setSinfo(String.valueOf(f01));
     }
