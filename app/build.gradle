@@ -52,9 +52,13 @@ dependencies {
     //Edittext library
     implementation 'com.github.AliAzaz:Edittext-Library:0.0.8'
 
+    //Datepicker
     implementation 'com.github.BlackBoxVision:datetimepicker-edittext:v0.4.0'
 
-// Room DB Library
+    //GSON
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // Room DB Library
     implementation "android.arch.persistence.room:runtime:1.1.1"
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
 

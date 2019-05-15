@@ -1,18 +1,29 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
+import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DownloadManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.databinding.DataBindingUtil;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,9 +31,12 @@ import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,9 +46,11 @@ import java.nio.channels.FileChannel;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
+import edu.aku.ramshasaeed.mnch.appVersion.VersionAppContract;
 import edu.aku.ramshasaeed.mnch.core.CONSTANTS;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
@@ -48,8 +64,7 @@ import im.dino.dbinspector.activities.DbInspectorActivity;
 
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ActivityMainBinding bi;
     SharedPreferences.Editor editor;
     SharedPreferences sharedPref;
@@ -60,6 +75,15 @@ public class MainActivity extends AppCompatActivity
     private Boolean exit = false;
     String dtToday = new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date().getTime());
     String _dtToday = new SimpleDateFormat("dd-MM-yyyy").format(new Date().getTime());
+
+    static File file;
+    //working on verison control
+    SharedPreferences sharedPrefDownload;
+    SharedPreferences.Editor editorDownload;
+    VersionAppContract versionAppContract;
+    DownloadManager downloadManager;
+    Long refID;
+    String preVer = "", newVer = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,6 +161,8 @@ public class MainActivity extends AppCompatActivity
         bi.appbarmain.contentmain.completeStatus.setText(completestatus);
         bi.appbarmain.contentmain.syncStatus.setText(syncedStatus);
 
+        settingVersion();
+
     }
 
     @Override
@@ -205,6 +231,7 @@ public class MainActivity extends AppCompatActivity
 
     private void startingActivities(int flag) {
         if (loadTagDialog()) return;
+        if (settingVersion()) return;
 
         Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
         if (flag == 1)
@@ -468,4 +495,143 @@ public class MainActivity extends AppCompatActivity
         return false;
     }
 
+    boolean settingVersion() {
+        sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
+        editorDownload = sharedPrefDownload.edit();
+
+        BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
+
+                    DownloadManager.Query query = new DownloadManager.Query();
+                    query.setFilterById(sharedPrefDownload.getLong("refID", 0));
+
+                    downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                    Cursor cursor = downloadManager.query(query);
+                    if (cursor.moveToFirst()) {
+                        int colIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
+                        if (DownloadManager.STATUS_SUCCESSFUL == cursor.getInt(colIndex)) {
+
+                            editorDownload.putBoolean("flag", true);
+                            editorDownload.commit();
+
+                            Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
+                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + "  Downloaded.");
+
+                            ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+                            List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
+                            if (taskInfo.get(0).topActivity.getClassName().equals(MainActivity.class.getName())) {
+//                                InstallNewApp(newVer, preVer);
+                                showDialog(newVer, preVer);
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        versionAppContract = new Gson().fromJson(getSharedPreferences("main", Context.MODE_PRIVATE).getString("appVersion", ""), VersionAppContract.class);
+        if (versionAppContract != null) {
+
+            if (versionAppContract.getVersioncode() != null) {
+                preVer = MainApp.versionName + "." + MainApp.versionCode;
+                newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
+
+                if (MainApp.versionCode < Integer.valueOf(versionAppContract.getVersioncode())) {
+                    bi.appbarmain.contentmain.lblAppVersion.setVisibility(View.VISIBLE);
+
+                    String fileName = AppDatabase.Sub_DBConnection.DATABASE_NAME.replace(".db", "-New-Apps");
+                    file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionAppContract.getPathname());
+
+                    if (file.exists()) {
+                        bi.appbarmain.contentmain.lblAppVersion.setText("MNCH New Version " + newVer + "  Downloaded.");
+                        showDialog(newVer, preVer);
+                    } else {
+                        NetworkInfo networkInfo = ((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
+                        if (networkInfo != null && networkInfo.isConnected()) {
+
+                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + " Downloading..");
+                            downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                            Uri uri = Uri.parse(MainApp._UPDATE_URL + versionAppContract.getPathname());
+                            DownloadManager.Request request = new DownloadManager.Request(uri);
+                            request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
+                                    .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                                    .setTitle("Downloading MNCH App new App ver." + newVer);
+                            refID = downloadManager.enqueue(request);
+
+                            editorDownload.putLong("refID", refID);
+                            editorDownload.putBoolean("flag", false);
+                            editorDownload.commit();
+
+                        } else {
+                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + "  Available..\n(Can't download.. Internet connectivity issue!!)");
+                        }
+                    }
+
+                    return true;
+
+                } else {
+                    bi.appbarmain.contentmain.lblAppVersion.setVisibility(View.GONE);
+                    bi.appbarmain.contentmain.lblAppVersion.setText(null);
+                }
+            }
+        }
+
+        registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+
+        return false;
+    }
+
+
+    void showDialog(String newVer, String preVer) {
+        FragmentManager ft = getSupportFragmentManager();
+        FragmentTransaction transaction = ft.beginTransaction();
+        Fragment prev = ft.findFragmentByTag("dialog");
+        if (prev != null) {
+            transaction.remove(prev);
+        }
+        transaction.addToBackStack(null);
+        DialogFragment newFragment = MyDialogFragment.newInstance(newVer, preVer);
+        newFragment.show(ft, "dialog");
+    }
+
+    public static class MyDialogFragment extends DialogFragment {
+
+        String newVer, preVer;
+
+        static MyDialogFragment newInstance(String newVer, String preVer) {
+            MyDialogFragment f = new MyDialogFragment();
+
+            Bundle args = new Bundle();
+            args.putString("newVer", newVer);
+            args.putString("preVer", preVer);
+            f.setArguments(args);
+
+            return f;
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            newVer = getArguments().getString("newVer");
+            preVer = getArguments().getString("preVer");
+
+            return new AlertDialog.Builder(getActivity())
+                    .setIcon(android.R.drawable.ic_dialog_info)
+                    .setTitle("MNCH App is available!")
+                    .setMessage("MNCH App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
+                    .setPositiveButton("INSTALL!!",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                                    intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    startActivity(intent);
+                                }
+                            }
+                    )
+                    .create();
+        }
+
+    }
 }
