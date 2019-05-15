@@ -1,6 +1,8 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
@@ -14,9 +16,12 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -48,6 +53,8 @@ public class MainActivity extends AppCompatActivity
     ActivityMainBinding bi;
     SharedPreferences.Editor editor;
     SharedPreferences sharedPref;
+    AlertDialog.Builder builder;
+    String m_Text = "";
     String DirectoryName;
     private boolean updata = false;
     private Boolean exit = false;
@@ -66,6 +73,7 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         dbBackup();
         displayFormsStatus();
+        loadTagDialog();
 
         bi.navView.setNavigationItemSelectedListener(this);
 
@@ -163,24 +171,14 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_rsd) {
-            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
-            i.putExtra(MainApp.FORM_TYPE, MainApp.RSD);
-            startActivity(i);
+            startingActivities(1);
         } else if (id == R.id.navQOC) {
-            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
-            i.putExtra(MainApp.FORM_TYPE, MainApp.QOC);
-            startActivity(i);
-
+            startingActivities(2);
         } else if (id == R.id.nav_dhmt) {
-            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
-            i.putExtra(MainApp.FORM_TYPE, MainApp.DHMT);
-            startActivity(i);
+            startingActivities(3);
         } else if (id == R.id.nav_upload) {
             uploadData();
-
         } else if (id == R.id.nav_download) {
-            //TODO implement
-
             // Require permissions INTERNET & ACCESS_NETWORK_STATE
             ConnectivityManager connMgr = (ConnectivityManager)
                     getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -203,6 +201,20 @@ public class MainActivity extends AppCompatActivity
 
         bi.drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void startingActivities(int flag) {
+        if (loadTagDialog()) return;
+
+        Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
+        if (flag == 1)
+            i.putExtra(MainApp.FORM_TYPE, MainApp.RSD);
+        else if (flag == 2)
+            i.putExtra(MainApp.FORM_TYPE, MainApp.QOC);
+        else if (flag == 3)
+            i.putExtra(MainApp.FORM_TYPE, MainApp.DHMT);
+
+        startActivity(i);
     }
 
     @Override
@@ -412,6 +424,47 @@ public class MainActivity extends AppCompatActivity
                 }
             }, 1200);
         }
+    }
+
+    private boolean loadTagDialog() {
+
+        sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+        editor = sharedPref.edit();
+        if (!sharedPref.contains("tagName") && sharedPref.getString("tagName", null) == null) {
+
+            builder = new AlertDialog.Builder(MainActivity.this);
+            ImageView img = new ImageView(getApplicationContext());
+            img.setPadding(0, 15, 0, 15);
+            builder.setCustomTitle(img);
+
+            final EditText input = new EditText(MainActivity.this);
+            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            builder.setView(input);
+
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    m_Text = input.getText().toString();
+                    if (!m_Text.equals("")) {
+                        editor.putString("tagName", m_Text);
+                        editor.commit();
+                        dialog.dismiss();
+
+                    }
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            builder.show();
+
+            return true;
+        }
+        return false;
     }
 
 }
