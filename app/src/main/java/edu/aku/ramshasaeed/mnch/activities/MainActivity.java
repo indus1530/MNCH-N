@@ -433,6 +433,7 @@ public class MainActivity extends AppCompatActivity
         if (!sharedPref.contains("tagName") && sharedPref.getString("tagName", null) == null) {
 
             builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("TAG-ID");
             ImageView img = new ImageView(getApplicationContext());
             img.setPadding(0, 15, 0, 15);
             builder.setCustomTitle(img);
