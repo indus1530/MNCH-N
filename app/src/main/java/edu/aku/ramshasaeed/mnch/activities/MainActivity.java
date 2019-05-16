@@ -33,7 +33,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -460,10 +459,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (!sharedPref.contains("tagName") && sharedPref.getString("tagName", null) == null) {
 
             builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("TAG-ID");
-            ImageView img = new ImageView(getApplicationContext());
+            builder.setTitle("ENTER DEVICE TAG-ID");
+            /*ImageView img = new ImageView(getApplicationContext());
             img.setPadding(0, 15, 0, 15);
-            builder.setCustomTitle(img);
+            builder.setCustomTitle(img);*/
 
             final EditText input = new EditText(MainActivity.this);
             input.setInputType(InputType.TYPE_CLASS_TEXT);
