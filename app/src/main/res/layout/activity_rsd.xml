@@ -43,9 +43,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs01" />
 
@@ -60,26 +60,27 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0199.checked ?  "":rs01.getText.toString }'
                                 android:visibility='@{rs0199.checked ? View.GONE : View.VISIBLE }' />
 
-                        <CheckBox
-                            android:id="@+id/rs0199"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/msing"
-                            android:layout_marginRight="3dp"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:textColor="@color/gray"
-                            android:textSize="16sp" />
+                            <CheckBox
+                                android:id="@+id/rs0199"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
                         </LinearLayout>
 
                     </LinearLayout>
@@ -99,9 +100,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs02" />
 
@@ -116,13 +117,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0299.checked ?  "":rs02.getText.toString }'
                                 android:visibility='@{rs0299.checked ? View.GONE : View.VISIBLE }' />
 
@@ -130,10 +131,10 @@
                                 android:id="@+id/rs0299"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -153,9 +154,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs03" />
 
@@ -170,13 +171,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0399.checked ?  "":rs03.getText.toString }'
                                 android:visibility='@{rs0399.checked ? View.GONE : View.VISIBLE }' />
 
@@ -184,10 +185,10 @@
                                 android:id="@+id/rs0399"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -207,9 +208,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs04" />
 
@@ -224,13 +225,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0499.checked ?  "":rs04.getText.toString }'
                                 android:visibility='@{rs0499.checked ? View.GONE : View.VISIBLE }' />
 
@@ -238,10 +239,10 @@
                                 android:id="@+id/rs0499"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -261,9 +262,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs05" />
 
@@ -278,13 +279,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0599.checked ?  "":rs05.getText.toString }'
                                 android:visibility='@{rs0599.checked ? View.GONE : View.VISIBLE }' />
 
@@ -292,10 +293,10 @@
                                 android:id="@+id/rs0599"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -307,7 +308,6 @@
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint02" />
-
 
 
             <!--06-->
@@ -322,9 +322,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs06" />
 
@@ -339,13 +339,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0699.checked ?  "":rs05.getText.toString }'
                                 android:visibility='@{rs0699.checked ? View.GONE : View.VISIBLE }' />
 
@@ -353,10 +353,10 @@
                                 android:id="@+id/rs0699"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -376,9 +376,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs07" />
 
@@ -393,13 +393,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0799.checked ?  "":rs07.getText.toString }'
                                 android:visibility='@{rs0799.checked ? View.GONE : View.VISIBLE }' />
 
@@ -407,10 +407,10 @@
                                 android:id="@+id/rs0799"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -430,9 +430,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs08" />
 
@@ -447,13 +447,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0899.checked ?  "":rs08.getText.toString }'
                                 android:visibility='@{rs0899.checked ? View.GONE : View.VISIBLE }' />
 
@@ -461,10 +461,10 @@
                                 android:id="@+id/rs0899"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -483,9 +483,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs09" />
 
@@ -500,13 +500,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs0999.checked ?  "":rs09.getText.toString }'
                                 android:visibility='@{rs0999.checked ? View.GONE : View.VISIBLE }' />
 
@@ -514,10 +514,10 @@
                                 android:id="@+id/rs0999"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -542,9 +542,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs10" />
 
@@ -559,13 +559,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1099.checked ?  "":rs10.getText.toString }'
                                 android:visibility='@{rs1099.checked ? View.GONE : View.VISIBLE }' />
 
@@ -573,10 +573,10 @@
                                 android:id="@+id/rs1099"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -595,9 +595,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs11" />
 
@@ -612,13 +612,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1199.checked ?  "":rs11.getText.toString }'
                                 android:visibility='@{rs1199.checked ? View.GONE : View.VISIBLE }' />
 
@@ -626,10 +626,10 @@
                                 android:id="@+id/rs1199"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -648,9 +648,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs12" />
 
@@ -665,13 +665,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1299.checked ?  "":rs12.getText.toString }'
                                 android:visibility='@{rs1299.checked ? View.GONE : View.VISIBLE }' />
 
@@ -679,10 +679,10 @@
                                 android:id="@+id/rs1299"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -701,9 +701,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs13" />
 
@@ -718,13 +718,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1399.checked ?  "":rs13.getText.toString }'
                                 android:visibility='@{rs1399.checked ? View.GONE : View.VISIBLE }' />
 
@@ -732,10 +732,10 @@
                                 android:id="@+id/rs1399"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -754,9 +754,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs14" />
 
@@ -771,13 +771,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1499.checked ?  "":rs14.getText.toString }'
                                 android:visibility='@{rs1499.checked ? View.GONE : View.VISIBLE }' />
 
@@ -785,10 +785,10 @@
                                 android:id="@+id/rs1499"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -807,9 +807,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs15" />
 
@@ -824,13 +824,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1599.checked ?  "":rs15.getText.toString }'
                                 android:visibility='@{rs1599.checked ? View.GONE : View.VISIBLE }' />
 
@@ -838,10 +838,10 @@
                                 android:id="@+id/rs1599"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -860,9 +860,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs16" />
 
@@ -877,13 +877,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1699.checked ?  "":rs16.getText.toString }'
                                 android:visibility='@{rs1699.checked ? View.GONE : View.VISIBLE }' />
 
@@ -891,10 +891,10 @@
                                 android:id="@+id/rs1699"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -913,9 +913,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs17" />
 
@@ -930,13 +930,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1799.checked ?  "":rs17.getText.toString }'
                                 android:visibility='@{rs1799.checked ? View.GONE : View.VISIBLE }' />
 
@@ -944,10 +944,10 @@
                                 android:id="@+id/rs1799"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -967,9 +967,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs18" />
 
@@ -984,13 +984,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1899.checked ?  "":rs18.getText.toString }'
                                 android:visibility='@{rs1899.checked ? View.GONE : View.VISIBLE }' />
 
@@ -998,10 +998,10 @@
                                 android:id="@+id/rs1899"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1020,9 +1020,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs19" />
 
@@ -1037,13 +1037,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs1999.checked ?  "":rs19.getText.toString }'
                                 android:visibility='@{rs1999.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1051,10 +1051,10 @@
                                 android:id="@+id/rs1999"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1073,9 +1073,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs20" />
 
@@ -1090,13 +1090,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2099.checked ?  "":rs20.getText.toString }'
                                 android:visibility='@{rs2099.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1104,10 +1104,10 @@
                                 android:id="@+id/rs2099"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1126,9 +1126,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs21" />
 
@@ -1143,13 +1143,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2199.checked ?  "":rs21.getText.toString }'
                                 android:visibility='@{rs2199.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1157,10 +1157,10 @@
                                 android:id="@+id/rs2199"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1179,9 +1179,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs22" />
 
@@ -1196,13 +1196,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2299.checked ?  "":rs22.getText.toString }'
                                 android:visibility='@{rs2299.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1210,20 +1210,21 @@
                                 android:id="@+id/rs2299"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                             <CheckBox
                                 android:id="@+id/rs2297"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/na"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1242,9 +1243,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs23" />
 
@@ -1259,13 +1260,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2399.checked ?  "":rs23.getText.toString }'
                                 android:visibility='@{rs2399.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1273,10 +1274,10 @@
                                 android:id="@+id/rs2399"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1295,9 +1296,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs24" />
 
@@ -1312,13 +1313,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2499.checked ?  "":rs24.getText.toString }'
                                 android:visibility='@{rs2499.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1326,10 +1327,10 @@
                                 android:id="@+id/rs2499"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1348,9 +1349,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs25" />
 
@@ -1365,13 +1366,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2599.checked ?  "":rs25.getText.toString }'
                                 android:visibility='@{rs2599.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1379,10 +1380,10 @@
                                 android:id="@+id/rs2599"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1401,9 +1402,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs26" />
 
@@ -1418,13 +1419,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2699.checked ?  "":rs26.getText.toString }'
                                 android:visibility='@{rs2699.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1432,10 +1433,10 @@
                                 android:id="@+id/rs2699"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1454,9 +1455,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs27" />
 
@@ -1471,13 +1472,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2799.checked ?  "":rs27.getText.toString }'
                                 android:visibility='@{rs2799.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1485,10 +1486,10 @@
                                 android:id="@+id/rs2799"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1513,9 +1514,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs28" />
 
@@ -1530,13 +1531,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2899.checked ?  "":rs28.getText.toString }'
                                 android:visibility='@{rs2899.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1544,10 +1545,10 @@
                                 android:id="@+id/rs2899"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1566,9 +1567,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs29" />
 
@@ -1583,13 +1584,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs2999.checked ?  "":rs29.getText.toString }'
                                 android:visibility='@{rs2999.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1597,10 +1598,10 @@
                                 android:id="@+id/rs2999"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1619,9 +1620,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs30" />
 
@@ -1636,13 +1637,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3099.checked ?  "":rs30.getText.toString }'
                                 android:visibility='@{rs3099.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1650,16 +1651,17 @@
                                 android:id="@+id/rs3099"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint05" />
@@ -1675,9 +1677,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs31" />
 
@@ -1692,13 +1694,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3199.checked ?  "":rs31.getText.toString }'
                                 android:visibility='@{rs3199.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1706,10 +1708,10 @@
                                 android:id="@+id/rs3199"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1728,9 +1730,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs32" />
 
@@ -1745,13 +1747,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3299.checked ?  "":rs32.getText.toString }'
                                 android:visibility='@{rs3299.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1759,10 +1761,10 @@
                                 android:id="@+id/rs3299"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1781,9 +1783,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs33" />
 
@@ -1798,13 +1800,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3399.checked ?  "":rs33.getText.toString }'
                                 android:visibility='@{rs3399.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1812,10 +1814,10 @@
                                 android:id="@+id/rs3399"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1834,9 +1836,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs34" />
 
@@ -1851,13 +1853,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3499.checked ?  "":rs34.getText.toString }'
                                 android:visibility='@{rs3499.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1865,10 +1867,10 @@
                                 android:id="@+id/rs3499"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1887,9 +1889,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs35" />
 
@@ -1904,13 +1906,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3599.checked ?  "":rs35.getText.toString }'
                                 android:visibility='@{rs3599.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1918,20 +1920,21 @@
                                 android:id="@+id/rs3599"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                             <CheckBox
                                 android:id="@+id/rs3597"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/na"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -1951,9 +1954,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs36" />
 
@@ -1968,13 +1971,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3699.checked ?  "":rs36.getText.toString }'
                                 android:visibility='@{rs3699.checked ? View.GONE : View.VISIBLE }' />
 
@@ -1982,27 +1985,27 @@
                                 android:id="@+id/rs3699"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                             <CheckBox
                                 android:id="@+id/rs3697"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/na"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
 
 
             <TextView
@@ -2020,9 +2023,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs37" />
 
@@ -2037,13 +2040,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3799.checked || rs3797.checked ?  "":rs37.getText.toString }'
                                 android:visibility='@{rs3799.checked || rs3797.checked ? View.GONE : View.VISIBLE }' />
 
@@ -2051,23 +2054,24 @@
                                 android:id="@+id/rs3799"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
-                                android:gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:checked='@{rs3797.checked ? false:true, default = false}'
+                                android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                             <CheckBox
                                 android:id="@+id/rs3797"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/na"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textColor="@color/gray"
+                                android:layout_marginRight="3dp"
                                 android:checked='@{rs3799.checked ? false:true,  default = false}'
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -2085,9 +2089,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs38" />
 
@@ -2102,13 +2106,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3899.checked ?  "":rs38.getText.toString }'
                                 android:visibility='@{rs3899.checked ? View.GONE : View.VISIBLE }' />
 
@@ -2116,20 +2120,21 @@
                                 android:id="@+id/rs3899"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                             <CheckBox
                                 android:id="@+id/rs3897"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/na"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -2148,9 +2153,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs39" />
 
@@ -2165,13 +2170,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs3999.checked ?  "":rs39.getText.toString }'
                                 android:visibility='@{rs3999.checked ? View.GONE : View.VISIBLE }' />
 
@@ -2179,20 +2184,21 @@
                                 android:id="@+id/rs3999"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                             <CheckBox
                                 android:id="@+id/rs3997"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/na"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
@@ -2211,9 +2217,9 @@
 
                         <TextView
                             style="@style/textViewstartAlignGravity"
-                            android:layout_marginBottom="10dp"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
                             android:layout_weight="3"
                             android:text="@string/rs40" />
 
@@ -2228,13 +2234,13 @@
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:layout_marginTop="8dp"
                                 android:maxLength="4"
-                                android:layout_marginRight="2dp"
-                                android:layout_marginLeft="2dp"
-                                android:gravity="center"
                                 android:text='@{rs4099.checked ?  "":rs40.getText.toString }'
                                 android:visibility='@{rs4099.checked ? View.GONE : View.VISIBLE }' />
 
@@ -2242,27 +2248,27 @@
                                 android:id="@+id/rs4099"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/msing"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                             <CheckBox
                                 android:id="@+id/rs4097"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/na"
-                                android:layout_marginRight="3dp"
                                 android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
                                 android:gravity="center"
+                                android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
 
 
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -2301,7 +2307,6 @@
                 android:paddingTop="32dp">
 
 
-
                 <Button
                     android:id="@+id/btnEnd"
                     android:layout_width="0dp"
@@ -2313,6 +2318,7 @@
                     android:textColor="@android:color/holo_red_light"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
                 <Button
                     android:id="@+id/btnNext"
                     android:layout_width="0dp"
