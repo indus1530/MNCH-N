@@ -1,6 +1,5 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,27 +14,26 @@ import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
-import edu.aku.ramshasaeed.mnch.databinding.ActivityQoc9Binding;
+import edu.aku.ramshasaeed.mnch.databinding.ActivityDhmtMonitoringBinding;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
-public class Qoc9 extends AppCompatActivity {
-
-    ActivityQoc9Binding bi;
-
+public class DHMT_MonitoringActivity extends AppCompatActivity {
+ActivityDhmtMonitoringBinding bi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc9);
+        bi = DataBindingUtil.setContentView(this,R.layout.activity_dhmt_monitoring);
         bi.setCallback(this);
-        this.setTitle("Quality of Care 09");
+        this.setTitle(getString(R.string.dhheading));
+
     }
 
 
     public void BtnContinue() {
-        /*if (formValidation()) {
+        if (formValidation()) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -48,18 +46,13 @@ public class Qoc9 extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
-        }*/
-
-        startActivity(new Intent(Qoc9.this, EndingActivity.class));
-        finish();
+        }
     }
-
 
     public void BtnEnd() {
         MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
 
     }
-
 
     private boolean UpdateDB() {
 
@@ -78,14 +71,27 @@ public class Qoc9 extends AppCompatActivity {
 
     }
 
-
     public boolean formValidation() {
 
-        /*if (!bi.rs0199.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs01, getString(R.string.rs01))) {
+            if (!validatorClass.EmptyRadioButton(this, bi.dh01,bi.dh01a, getString(R.string.dh01))) {
                 return false;
             }
-        }*/
+            if (!validatorClass.EmptyRadioButton(this, bi.dh02,bi.dh02a, getString(R.string.dh02))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.dh03,bi.dh03a, getString(R.string.dh03))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.dh04,bi.dh04a, getString(R.string.dh04))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.dh05,bi.dh05a, getString(R.string.dh05))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.dh06,bi.dh06a, getString(R.string.dh06))) {
+                return false;
+            }
+
 
 
         return true;
@@ -93,16 +99,15 @@ public class Qoc9 extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        /*JSONObject f01 = new JSONObject();
-        f01.put("rs01", bi.rs0199.isChecked() ? "99" : bi.rs01.getText().toString());
-        f01.put("rs02", bi.rs0299.isChecked() ? "99" : bi.rs02.getText().toString());
+        JSONObject dhmt = new JSONObject();
+        dhmt.put("dh01", bi.dh01a.isChecked() ? "1" : bi.dh01b.isChecked() ? "2" : "0");
+        dhmt.put("dh02", bi.dh02a.isChecked() ? "1" : bi.dh02b.isChecked() ? "2" : "0");
+        dhmt.put("dh03", bi.dh03a.isChecked() ? "1" : bi.dh03b.isChecked() ? "2" : "0");
+        dhmt.put("dh04", bi.dh04a.isChecked() ? "1" : bi.dh04b.isChecked() ? "2" : "0");
+        dhmt.put("dh05", bi.dh05a.isChecked() ? "1" : bi.dh05b.isChecked() ? "2" : "0");
+        dhmt.put("dh06", bi.dh06a.isChecked() ? "1" : bi.dh06b.isChecked() ? "2" : "0");
 
-        f01.put("rs21", bi.rs2199.isChecked() ? "99" : bi.rs21.getText().toString());
-        f01.put("rs22", bi.rs2299.isChecked() ? "99" : bi.rs22.getText().toString());
-
-        f01.put("rsrem", bi.rsrem.getText().toString());
-
-        fc.setSrsd(String.valueOf(f01));*/
+        fc.setSdhmt(String.valueOf(dhmt));
 
     }
 }

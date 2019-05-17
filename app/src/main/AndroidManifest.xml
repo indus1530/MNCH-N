@@ -23,6 +23,10 @@
         android:theme="@style/AppTheme">
 
         <activity
+            android:name=".activities.DHMT_MonitoringActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+        <activity
             android:name=".activities.SplashscreenActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
@@ -43,46 +47,44 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activities.RSDInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
         <activity
             android:name=".activities.Qoc1"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
         <activity
             android:name=".activities.Qoc2"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
         <activity
             android:name=".activities.Qoc3"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
         <activity
             android:name=".activities.Qoc4"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
         <activity
             android:name=".activities.Qoc5"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
         <activity
             android:name=".activities.Qoc6"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
         <activity
             android:name=".activities.Qoc7"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
-
-        <activity
-            android:name=".activities.Qoc8"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
-
-        <activity
-            android:name=".activities.Qoc9"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
 

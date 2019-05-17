@@ -36,9 +36,17 @@ public class Forms implements Serializable {
     private String uen = ""; */
     private String username = ""; // Interviewer
     private String istatus = ""; // Interview Status
-    private String istatus88x = ""; // Interview Status
+    private String istatus96x = ""; // Interview Status
     private String shfa = "";     // Health Facility Assesment Section
     private String srsd = "";     // Routine Service Delivery Section
+    private String sdhmt = "";     // DHMT monitoring
+    private String sqoc1 = "";     // Quality of Care One
+    private String sqoc2 = "";     // Quality of Care Two
+    private String sqoc3 = "";     // Quality of Care Three
+    private String sqoc4 = "";     // Quality of Care Four
+    private String sqoc5 = "";     // Quality of Care Five
+    private String sqoc6 = "";     // Quality of Care Six
+    private String sqoc7 = "";     // Quality of Care Seven
     private String sinfo = "";     // Info Activity
     private String starttime = "";
     private String endtime = "";
@@ -62,9 +70,17 @@ public class Forms implements Serializable {
         this.formType = forms.formType;
         this.username = forms.username;
         this.istatus = forms.istatus;
-        this.istatus88x = forms.istatus88x;
+        this.istatus96x = forms.istatus96x;
         this.shfa = forms.shfa;
         this.srsd = forms.srsd;
+        this.sdhmt = forms.sdhmt;
+        this.sqoc1 = forms.sqoc1;
+        this.sqoc2 = forms.sqoc2;
+        this.sqoc3 = forms.sqoc3;
+        this.sqoc4 = forms.sqoc4;
+        this.sqoc5 = forms.sqoc5;
+        this.sqoc6 = forms.sqoc6;
+        this.sqoc7 = forms.sqoc7;
         this.sinfo = forms.sinfo;
         this.starttime = forms.starttime;
         this.endtime = forms.endtime;
@@ -140,12 +156,12 @@ public class Forms implements Serializable {
         this.istatus = istatus;
     }
 
-    public String getIstatus88x() {
-        return istatus88x;
+    public String getIstatus96x() {
+        return istatus96x;
     }
 
-    public void setIstatus88x(String istatus88x) {
-        this.istatus88x = istatus88x;
+    public void setIstatus96x(String istatus96x) {
+        this.istatus96x = istatus96x;
     }
 
     public String getShfa() {
@@ -163,6 +179,70 @@ public class Forms implements Serializable {
     public void setSrsd(String srsd) {
         this.srsd = srsd;
     }
+
+
+    public String getSqoc1() {
+        return sqoc1;
+    }
+
+    public void setSqoc1(String sqoc1) {
+        this.sqoc1 = sqoc1;
+    }
+
+
+    public String getSqoc2() {
+        return sqoc2;
+    }
+
+    public void setSqoc2(String sqoc2) {
+        this.sqoc2 = sqoc2;
+    }
+
+
+    public String getSqoc3() {
+        return sqoc3;
+    }
+
+    public void setSqoc3(String sqoc3) {
+        this.sqoc3 = sqoc3;
+    }
+
+
+    public String getSqoc4() {
+        return sqoc4;
+    }
+
+    public void setSqoc4(String sqoc4) {
+        this.sqoc4 = sqoc4;
+    }
+
+
+    public String getSqoc5() {
+        return sqoc5;
+    }
+
+    public void setSqoc5(String sqoc5) {
+        this.sqoc5 = sqoc5;
+    }
+
+
+    public String getSqoc6() {
+        return sqoc6;
+    }
+
+    public void setSqoc6(String sqoc6) {
+        this.sqoc6 = sqoc6;
+    }
+
+
+    public String getSqoc7() {
+        return sqoc7;
+    }
+
+    public void setSqoc7(String sqoc7) {
+        this.sqoc7 = sqoc7;
+    }
+
 
     public String getSinfo() {
         return sinfo;
@@ -268,6 +348,14 @@ public class Forms implements Serializable {
         this.appversion = appversion;
     }
 
+    public String getSdhmt() {
+        return sdhmt;
+    }
+
+    public void setSdhmt(String sdhmt) {
+        this.sdhmt = sdhmt;
+    }
+
     @Ignore
     public JSONObject toJSONObject() throws JSONException {
 
@@ -280,6 +368,8 @@ public class Forms implements Serializable {
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
+        json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
+        json.put("istatus96x", this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
         json.put("starttime", this.starttime == null ? JSONObject.NULL : this.starttime);
         json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
         json.put("gpsLat", this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
@@ -297,10 +387,33 @@ public class Forms implements Serializable {
         if (!this.srsd.equals("")) {
             json.put("srsd", this.srsd.equals("") ? JSONObject.NULL : new JSONObject(this.srsd));
         }
+        if (!this.sdhmt.equals("")) {
+            json.put("sdhmt", this.sdhmt.equals("") ? JSONObject.NULL : new JSONObject(this.sdhmt));
+        }
         if (!this.sinfo.equals("")) {
             json.put("sinfo", this.sinfo.equals("") ? JSONObject.NULL : new JSONObject(this.sinfo));
         }
-
+        if (!this.sqoc1.equals("")) {
+            json.put("sqoc1", this.sqoc1.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc1));
+        }
+        if (!this.sqoc2.equals("")) {
+            json.put("sqoc2", this.sqoc2.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc2));
+        }
+        if (!this.sqoc3.equals("")) {
+            json.put("sqoc3", this.sqoc3.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc3));
+        }
+        if (!this.sqoc4.equals("")) {
+            json.put("sqoc4", this.sqoc4.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc4));
+        }
+        if (!this.sqoc5.equals("")) {
+            json.put("sqoc5", this.sqoc5.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc5));
+        }
+        if (!this.sqoc6.equals("")) {
+            json.put("sqoc6", this.sqoc6.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc6));
+        }
+        if (!this.sqoc7.equals("")) {
+            json.put("sqoc7", this.sqoc7.equals("") ? JSONObject.NULL : new JSONObject(this.sqoc7));
+        }
 
         return json;
     }

@@ -24,6 +24,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -56,11 +58,12 @@ public class MainActivity extends AppCompatActivity
     String DirectoryName;
     private boolean updata = false;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+    String _dtToday = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi= DataBindingUtil.setContentView(this,R.layout.activity_main);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
         setSupportActionBar(bi.appbarmain.toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -68,9 +71,83 @@ public class MainActivity extends AppCompatActivity
         bi.drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         dbBackup();
+        displayFormsStatus();
 
         bi.navView.setNavigationItemSelectedListener(this);
 
+    }
+
+    private void displayFormsStatus() {
+        Collection<Forms> todaysForms = null;
+        Collection<Forms> unsyncedForms = null;
+        try {
+            unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
+            todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute("%"+_dtToday+"%").get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
+    /*    rSumText += "TODAY'S RECORDS SUMMARY\r\n";
+
+        rSumText += "=======================\r\n";
+        rSumText += "\r\n";
+        rSumText += "Total Forms Today: " + todaysForms.size() + "\r\n";
+        rSumText += "\r\n";*/
+        String formID = "", completestatus = "", syncedStatus = "";
+        if (todaysForms.size() > 0) {
+//            rSumText += "\tFORMS' LIST: \r\n";
+            String iStatus;
+//            rSumText += "--------------------------------------------------\r\n";
+//            rSumText += "[ Form_ID ] \t[Form Status] \t[Sync Status]----------\r\n";
+//            rSumText += "--------------------------------------------------\r\n";
+            for (Forms fc : todaysForms) {
+                if (fc.getIstatus() != null) {
+                    switch (fc.getIstatus()) {
+                        case "1":
+                            iStatus = "\tComplete";
+                            break;
+                        case "2":
+                            iStatus = "\tIncomplete";
+                            break;
+                        default:
+                            iStatus = "\tN/A";
+                    }
+                } else {
+                    iStatus = "\tN/A";
+                }
+                formID = formID + "\n"+fc.getId();
+                completestatus = completestatus + "\n"+iStatus;
+                syncedStatus = syncedStatus + "\n"+(fc.getSynced() == null || fc.getSynced().equals("") ? "Not Synced" : "Synced");
+              /*  rSumText += fc.getId();
+
+                rSumText += " " + iStatus + " ";
+
+                rSumText += (fc.getSynced() == null ? "\t\tNot Synced" : "\t\tSynced");
+                rSumText += "\r\n";
+                rSumText += "--------------------------------------------------\r\n";*/
+            }
+        }
+//        Setting Text in  UI
+        bi.appbarmain.contentmain.formId.setText(formID);
+        bi.appbarmain.contentmain.completeStatus.setText(completestatus);
+        bi.appbarmain.contentmain.syncStatus.setText(syncedStatus);
+
+/*
+        SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
+       rSumText += "Last Data Download: \t" + syncPref.getString("LastDownSyncServer", "Never Updated");
+        rSumText += "\r\n";
+        rSumText += "Last Data Upload: \t" + syncPref.getString("LastUpSyncServer", "Never Synced");
+        rSumText += "\r\n";
+        rSumText += "\r\n";
+        rSumText += "Unsynced Forms: \t" + unsyncedForms.size();
+        rSumText += "\r\n";
+
+        Log.d(TAG, "onCreate: " + rSumText);
+        mainBinding.recordSummary.setText(rSumText);
+        */
     }
 
     @Override
@@ -97,9 +174,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -112,19 +189,32 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_hfa) {
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
+
         } else if (id == R.id.nav_rsd) {
-            startActivity(new Intent(MainActivity.this,RSDInfoActivity.class));
-        } else if (id == R.id.navQOC) {
+            //finish();
+            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
+            i.putExtra(MainApp.FORM_TYPE,MainApp.RSD);
+            startActivity(i);
+        } else if (id == R.id.navQOC ) {
 //            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(MainActivity.this, Qoc1.class));
+            //finish();
+
+            //startActivity(new Intent(MainActivity.this, RSDInfoActivity.class));
+            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
+            i.putExtra(MainApp.FORM_TYPE,MainApp.QOC);
+            startActivity(i);
 
         } else if (id == R.id.nav_dhmt) {
-            Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
+            //finish();
+
+            Intent i = new Intent(MainActivity.this, RSDInfoActivity.class);
+            i.putExtra(MainApp.FORM_TYPE,MainApp.DHMT);
+            startActivity(i);
 
         } else if (id == R.id.nav_upload) {
             uploadData();
 
-        }else if (id == R.id.nav_download) {
+        } else if (id == R.id.nav_download) {
             //TODO implement
 
             // Require permissions INTERNET & ACCESS_NETWORK_STATE
@@ -137,15 +227,19 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
             }
         } else if (id == R.id.nav_opendb) {
-            Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
-            startActivity(dbmanager);
+            if (MainApp.admin) {
+                Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
+                startActivity(dbmanager);
+            } else {
+                Toast.makeText(this,"You are not allowed to avail this feature!!",Toast.LENGTH_SHORT).show();
+            }
+
         }
 
 
         bi.drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 
     public class syncData extends AsyncTask<String, String, String> {
@@ -167,12 +261,12 @@ public class MainActivity extends AppCompatActivity
                     new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
                     Toast.makeText(MainActivity.this, "Sync District", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "District", MainApp._HOST_URL + CONSTANTS.URL_DISTRICT).execute();
-                    Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
+                    /*Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();
                     Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();
-                    Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_FACILITY_PROVIDER).execute();
+                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
+                    /*Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();*/
                 }
             });
 
@@ -195,9 +289,10 @@ public class MainActivity extends AppCompatActivity
             }, 1200);
         }
     }
+
     public void dbBackup() {
 
-        sharedPref = getSharedPreferences("uen_mnch", MODE_PRIVATE);
+        sharedPref = getSharedPreferences("qoc_uen", MODE_PRIVATE);
         editor = sharedPref.edit();
 
         if (sharedPref.getBoolean("flag", true)) {
@@ -210,7 +305,7 @@ public class MainActivity extends AppCompatActivity
                 editor.commit();
             }
 
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-MNCH");
+            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-QOC-UEN");
             boolean success = true;
             if (!folder.exists()) {
                 success = folder.mkdirs();
@@ -270,6 +365,7 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
+
     public void uploadData() {
 
         if (!updata) {
@@ -285,9 +381,10 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
 
 //                Upload Form
-                Collection collection1 = null;
+                /*RSD Forms Upload*/
+                Collection rsdcollection = null;
                 try {
-                    collection1 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
+                    rsdcollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.RSD).get();
                 } catch (ExecutionException e) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {
@@ -295,10 +392,44 @@ public class MainActivity extends AppCompatActivity
                 }
                 new SyncAllData(
                         this,
-                        "Forms",
+                        "RSDForms",
                         "updateSyncedForms",
                         Forms.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS, collection1
+                        MainApp._HOST_URL + CONSTANTS.URL_RSD, rsdcollection
+                ).execute();
+
+                /*QOC Forms Upload*/
+                Collection qoccollection = null;
+                try {
+                    qoccollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.QOC).get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                new SyncAllData(
+                        this,
+                        "QOCForms",
+                        "updateSyncedForms",
+                        Forms.class,
+                        MainApp._HOST_URL + CONSTANTS.URL_QOC, qoccollection
+                ).execute();
+
+                /*DHMT Forms Upload*/
+                Collection dhmtcollection = null;
+                try {
+                    dhmtcollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.DHMT).get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                new SyncAllData(
+                        this,
+                        "DHMTForms",
+                        "updateSyncedForms",
+                        Forms.class,
+                        MainApp._HOST_URL + CONSTANTS.URL_DHMT, dhmtcollection
                 ).execute();
 
                 SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);

@@ -29,12 +29,19 @@
 
             <TextView
                 style="@style/textViewCenterGravity"
+                android:elevation="5dp"
                 android:text="@string/rshint01" />
 
             <!--01-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
 
-                <LinearLayout style="@style/linerlayout_view">
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -80,18 +87,27 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-
                         </LinearLayout>
 
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--   </LinearLayout>
+                   </android.support.v7.widget.CardView>-->
 
 
-            <!--02-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--02-->
+                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                         <LinearLayout style="@style/linerlayout_view">
+         -->
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -139,13 +155,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--   </LinearLayout>
+                   </android.support.v7.widget.CardView>
 
-            <!--03-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                   &lt;!&ndash;03&ndash;&gt;
+                   <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                       <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -193,13 +216,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--       </LinearLayout>
+                       </android.support.v7.widget.CardView>
+           -->
+                    <!--04-->
+                    <!--   <android.support.v7.widget.CardView style="@style/cardView">
 
-            <!--04-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
+                           <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -247,13 +277,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--        </LinearLayout>
+                        </android.support.v7.widget.CardView>-->
 
-            <!--05-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--05-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -308,12 +345,16 @@
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint02" />
-
-
             <!--06-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
 
-                <LinearLayout style="@style/linerlayout_view">
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -361,13 +402,21 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--     </LinearLayout>
+                     </android.support.v7.widget.CardView>-->
 
-            <!--07-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--07-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                        <LinearLayout style="@style/linerlayout_view">
+        -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -415,13 +464,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--    </LinearLayout>
+                    </android.support.v7.widget.CardView>-->
 
-            <!--08-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--08-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -469,12 +525,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--09-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--      </LinearLayout>
+                      </android.support.v7.widget.CardView>-->
+                    <!--09-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -525,15 +588,20 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
+
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint03" />
-
-
             <!--10-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
 
-                <LinearLayout style="@style/linerlayout_view">
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -581,12 +649,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--11-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--  </LinearLayout>
+                  </android.support.v7.widget.CardView>-->
+                    <!--11-->
+                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                         <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -634,12 +709,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--12-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!-- </LinearLayout>
+                 </android.support.v7.widget.CardView>-->
+                    <!--12-->
+                    <!--   <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                           <LinearLayout style="@style/linerlayout_view">
+           -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -687,12 +770,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--13-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--    </LinearLayout>
+                    </android.support.v7.widget.CardView>-->
+                    <!--13-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">
+          -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -740,12 +831,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--14-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--   </LinearLayout>
+                   </android.support.v7.widget.CardView>-->
+                    <!--14-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -793,12 +891,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--15-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--  </LinearLayout>
+                  </android.support.v7.widget.CardView>-->
+                    <!--15-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                <LinearLayout style="@style/linerlayout_view">
+                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -846,12 +951,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--16-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--</LinearLayout>-->
+                    <!--</android.support.v7.widget.CardView>-->
+                    <!--16-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                <LinearLayout style="@style/linerlayout_view">
+                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -899,12 +1011,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--17-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--</LinearLayout>-->
+                    <!--</android.support.v7.widget.CardView>-->
+                    <!--17-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                <LinearLayout style="@style/linerlayout_view">
+                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -952,13 +1071,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--</LinearLayout>-->
+                    <!--</android.support.v7.widget.CardView>-->
 
-            <!--18-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--18-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1006,12 +1132,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--19-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--</LinearLayout>-->
+                    <!--</android.support.v7.widget.CardView>-->
+                    <!--19-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                <LinearLayout style="@style/linerlayout_view">
+                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1059,12 +1192,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--20-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--</LinearLayout>-->
+                    <!--</android.support.v7.widget.CardView>-->
+                    <!--20-->
+                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                         <LinearLayout style="@style/linerlayout_view">
+         -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1112,12 +1253,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--21-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--</LinearLayout>-->
+                    <!--</android.support.v7.widget.CardView>-->
+                    <!--21-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                        <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1165,12 +1313,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--22-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--  </LinearLayout>
+                  </android.support.v7.widget.CardView>-->
+                    <!--22-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                        <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1202,9 +1357,7 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs2299.checked ?  "":rs22.getText.toString }'
-                                android:visibility='@{rs2299.checked ? View.GONE : View.VISIBLE }' />
+                                android:maxLength="4" />
 
                             <CheckBox
                                 android:id="@+id/rs2299"
@@ -1215,7 +1368,9 @@
                                 android:gravity="center"
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp"
+
+                                />
 
                             <CheckBox
                                 android:id="@+id/rs2297"
@@ -1226,15 +1381,25 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp"
+
+                                />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--23-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!-- </LinearLayout>
+                 </android.support.v7.widget.CardView>-->
+                    <!--23-->
+                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                         <LinearLayout style="@style/linerlayout_view">
+         -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1282,12 +1447,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--24-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--    </LinearLayout>
+                    </android.support.v7.widget.CardView>-->
+                    <!--24-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">
+          -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1335,12 +1508,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--25-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--    </LinearLayout>
+                    </android.support.v7.widget.CardView>-->
+                    <!--25-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1388,12 +1568,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--26-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--   </LinearLayout>
+                   </android.support.v7.widget.CardView>-->
+                    <!--26-->
+                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                         <LinearLayout style="@style/linerlayout_view">
+         -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1441,12 +1629,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--27-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!-- </LinearLayout>
+                 </android.support.v7.widget.CardView>-->
+                    <!--27-->
+                    <!--    <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                            <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1501,11 +1696,16 @@
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint04" />
-
             <!--28-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
 
-                <LinearLayout style="@style/linerlayout_view">
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1553,12 +1753,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--29-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--   </LinearLayout>
+                   </android.support.v7.widget.CardView>-->
+                    <!--29-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                        <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1606,12 +1813,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--30-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--  </LinearLayout>
+                  </android.support.v7.widget.CardView>-->
+                    <!--30-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1662,13 +1876,20 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
+
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint05" />
             <!--31-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
 
-                <LinearLayout style="@style/linerlayout_view">
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1716,12 +1937,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--32-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--</LinearLayout>
+                </android.support.v7.widget.CardView>-->
+                    <!--32-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1769,12 +1997,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--33-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!-- </LinearLayout>
+                 </android.support.v7.widget.CardView>-->
+                    <!--33-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1822,12 +2057,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--34-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--   </LinearLayout>
+                   </android.support.v7.widget.CardView>-->
+                    <!--34-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                        <LinearLayout style="@style/linerlayout_view">
+        -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1875,12 +2118,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--35-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--  </LinearLayout>
+                  </android.support.v7.widget.CardView>-->
+                    <!--35-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                        <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1912,9 +2162,7 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs3599.checked ?  "":rs35.getText.toString }'
-                                android:visibility='@{rs3599.checked ? View.GONE : View.VISIBLE }' />
+                                android:maxLength="4" />
 
                             <CheckBox
                                 android:id="@+id/rs3599"
@@ -1939,13 +2187,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!-- </LinearLayout>
+                 </android.support.v7.widget.CardView>-->
 
-            <!--36-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--36-->
+                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                         <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1977,9 +2232,7 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs3699.checked ?  "":rs36.getText.toString }'
-                                android:visibility='@{rs3699.checked ? View.GONE : View.VISIBLE }' />
+                                android:maxLength="4" />
 
                             <CheckBox
                                 android:id="@+id/rs3699"
@@ -2012,9 +2265,15 @@
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint06" />
             <!--37-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
 
-                <LinearLayout style="@style/linerlayout_view">
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2046,9 +2305,7 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs3799.checked || rs3797.checked ?  "":rs37.getText.toString }'
-                                android:visibility='@{rs3799.checked || rs3797.checked ? View.GONE : View.VISIBLE }' />
+                                android:maxLength="4" />
 
                             <CheckBox
                                 android:id="@+id/rs3799"
@@ -2056,9 +2313,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginRight="3dp"
-                                android:checked='@{rs3797.checked ? false:true, default = false}'
                                 android:gravity="center"
                                 android:text="@string/msing"
+
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
@@ -2068,19 +2325,25 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginRight="3dp"
-                                android:checked='@{rs3799.checked ? false:true,  default = false}'
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--38-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--    </LinearLayout>
+                    </android.support.v7.widget.CardView>-->
+                    <!--38-->
+                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                <LinearLayout style="@style/linerlayout_view">
+                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2112,9 +2375,7 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs3899.checked ?  "":rs38.getText.toString }'
-                                android:visibility='@{rs3899.checked ? View.GONE : View.VISIBLE }' />
+                                android:maxLength="4" />
 
                             <CheckBox
                                 android:id="@+id/rs3899"
@@ -2139,12 +2400,19 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--39-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--  </LinearLayout>
+                  </android.support.v7.widget.CardView>-->
+                    <!--39-->
+                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                          <LinearLayout style="@style/linerlayout_view">-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2176,9 +2444,7 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs3999.checked ?  "":rs39.getText.toString }'
-                                android:visibility='@{rs3999.checked ? View.GONE : View.VISIBLE }' />
+                                android:maxLength="4" />
 
                             <CheckBox
                                 android:id="@+id/rs3999"
@@ -2203,12 +2469,20 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <!--40-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--</LinearLayout>
+                </android.support.v7.widget.CardView>-->
+                    <!--40-->
+                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                <LinearLayout style="@style/linerlayout_view">
+                         <LinearLayout style="@style/linerlayout_view">
+         -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2240,9 +2514,7 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs4099.checked ?  "":rs40.getText.toString }'
-                                android:visibility='@{rs4099.checked ? View.GONE : View.VISIBLE }' />
+                                android:maxLength="4" />
 
                             <CheckBox
                                 android:id="@+id/rs4099"
@@ -2265,20 +2537,34 @@
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
 
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/rsrem" />
 
-                <LinearLayout style="@style/linerlayout_view">
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
 
-                    <TextView
-                        style="@style/textViewstartAlignGravity"
-                        android:layout_width="match_parent"
-                        android:text="@string/rsrem" />
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
+
+                    <!--  <TextView
+                          style="@style/textViewstartAlignGravity"
+                          android:layout_width="match_parent"
+                          android:text="@string/rsrem" />-->
 
                     <EditText
                         android:id="@+id/rsrem"
@@ -2294,7 +2580,9 @@
                         android:maxLines="8"
                         android:minLines="6"
                         android:scrollbars="vertical" />
+
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
 
@@ -2306,30 +2594,32 @@
                 android:orientation="horizontal"
                 android:paddingTop="32dp">
 
-
                 <Button
-                    android:id="@+id/btnEnd"
+                    android:id="@+id/btn_End"
+                    style="@style/buttons"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
                     android:layout_weight="1"
+                    android:background="@color/red"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/endForm"
-                    android:textColor="@android:color/holo_red_light"
-                    android:textSize="24sp"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/btnNext"
+                    android:id="@+id/btn_Continue"
+                    style="@style/buttons"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
                     android:layout_weight="1"
+                    android:background="#1ed61e"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection"
-                    android:textColor="@android:color/holo_green_light"
-                    android:textSize="24sp" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
             </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

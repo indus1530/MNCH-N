@@ -15,7 +15,7 @@ import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.UCs;
 import edu.aku.ramshasaeed.mnch.data.entities.Users;
 
-@Database(entities = {Users.class, Forms.class, District.class, Tehsil.class, UCs.class, Facility_provider.class}, version = AppDatabase.Sub_DBConnection.DATABASE_VERSION, exportSchema = false)
+@Database(entities = {Users.class, Forms.class, District.class}, version = AppDatabase.Sub_DBConnection.DATABASE_VERSION, exportSchema = false)
 
 public abstract class AppDatabase extends RoomDatabase {
 
@@ -56,8 +56,8 @@ public abstract class AppDatabase extends RoomDatabase {
         String TABLE_FORMS = "forms";
         String TABLE_USERS = "users";
         String TABLE_DISTRICT = "district";
-        String TABLE_TEHSIL = "tehsil";
+       /* String TABLE_TEHSIL = "tehsil";
         String TABLE_UCs = "ucs";
-        String TABLE_FACILITY_PROVIDER = "facility_provider";
+        String TABLE_FACILITY_PROVIDER = "facility_provider";*/
     }
 }

@@ -27,6 +27,7 @@ public interface GetFncDAO {
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = ''")
     List<Forms> getUnSyncedForms();
+
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_DISTRICT)
     List<District> getAllDistricts();
 
@@ -52,15 +53,15 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_DISTRICT )
     District getDistrictRecord();
 */
-
+/*
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_TEHSIL + " where district_code=:district_code")
     List<Tehsil> getTehsil(String district_code);
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_UCs + " where tehsil_code=:tehsil_code")
     List<UCs> getUCs(String tehsil_code);
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER + " where uc_code=:hf_uc_code")
-    List<Facility_provider> getFacilityProvider(String hf_uc_code);
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER + " where hf_district_code=:hf_district_code")
+    List<Facility_provider> getFacilityProvider(String hf_district_code);*/
 
   /*  @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where youthID=:part_id and pdeviation = '1' and istatus = '1' and formType != '14' order by id DESC")
     Forms getParticipantRecordForm7(String part_id);
