@@ -37,6 +37,14 @@ public class RSDActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd);
         bi.setCallback(this);
         this.setTitle(getString(R.string.routineone));
+        EventsCall();
+
+
+
+
+    }
+
+    void EventsCall() {
 
         bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -97,6 +105,7 @@ public class RSDActivity extends AppCompatActivity {
                 }
             }
         });
+
         bi.rs3699.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -245,9 +254,7 @@ public class RSDActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
 
     public void BtnContinue() {
         if (formValidation()) {
