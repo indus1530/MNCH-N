@@ -62,10 +62,10 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         tempVisible(this);
 
-        if (type.equals(MainApp.DHMT)) {
-            bi.fldGrpInfo02.setVisibility(GONE);
-        } else {
+        if (!type.equals(MainApp.DHMT)) {
             bi.fldGrpInfo02.setVisibility(VISIBLE);
+        } else {
+            bi.fldGrpInfo02.setVisibility(GONE);
         }
 
         /*bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
