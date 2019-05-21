@@ -115,19 +115,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
 
-    /*    rSumText += "TODAY'S RECORDS SUMMARY\r\n";
+        String rSumText = "TODAY'S RECORDS SUMMARY\r\n";
 
         rSumText += "=======================\r\n";
         rSumText += "\r\n";
         rSumText += "Total Forms Today: " + todaysForms.size() + "\r\n";
-        rSumText += "\r\n";*/
+        rSumText += "\r\n";
         String formID = "", completestatus = "", syncedStatus = "";
         if (todaysForms.size() > 0) {
-//            rSumText += "\tFORMS' LIST: \r\n";
+            rSumText += "\tFORMS' LIST: \r\n";
             String iStatus;
-//            rSumText += "--------------------------------------------------\r\n";
-//            rSumText += "[ Form_ID ] \t[Form Status] \t[Sync Status]----------\r\n";
-//            rSumText += "--------------------------------------------------\r\n";
+            rSumText += "--------------------------------------------------\r\n";
+            rSumText += "[ Form_ID ] \t[Form Status] \t[Sync Status]----------\r\n";
+            rSumText += "--------------------------------------------------\r\n";
             for (Forms fc : todaysForms) {
                 if (fc.getIstatus() != null) {
                     switch (fc.getIstatus()) {
@@ -146,13 +146,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 formID = formID + "\n" + fc.getId();
                 completestatus = completestatus + "\n" + iStatus;
                 syncedStatus = syncedStatus + "\n" + (fc.getSynced() == null || fc.getSynced().equals("") ? "Not Synced" : "Synced");
-              /*  rSumText += fc.getId();
+                rSumText += fc.getId();
 
                 rSumText += " " + iStatus + " ";
 
                 rSumText += (fc.getSynced() == null ? "\t\tNot Synced" : "\t\tSynced");
                 rSumText += "\r\n";
-                rSumText += "--------------------------------------------------\r\n";*/
+                rSumText += "--------------------------------------------------\r\n";
             }
         }
 //        Setting Text in  UI
