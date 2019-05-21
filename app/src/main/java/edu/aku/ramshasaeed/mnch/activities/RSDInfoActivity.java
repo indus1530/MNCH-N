@@ -200,7 +200,7 @@ public class RSDInfoActivity extends AppCompatActivity {
         fc.setFormType(type);
         fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         fc.setUsername(MainApp.userName);
-        fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        fc.setFormDate(new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date().getTime()));
         fc.setDeviceID(MainApp.deviceId);
 
         setGPS(fc); // Set GPS

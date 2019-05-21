@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     SharedPreferences.Editor editor;
     SharedPreferences sharedPref;
     AlertDialog.Builder builder;
+    private String rSumText = "";
     String m_Text = "";
     String DirectoryName;
     private boolean updata = false;
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
 
-        String rSumText = "TODAY'S RECORDS SUMMARY\r\n";
+        rSumText = "TODAY'S RECORDS SUMMARY\r\n";
 
         rSumText += "=======================\r\n";
         rSumText += "\r\n";
@@ -159,6 +160,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bi.appbarmain.contentmain.formId.setText(formID);
         bi.appbarmain.contentmain.completeStatus.setText(completestatus);
         bi.appbarmain.contentmain.syncStatus.setText(syncedStatus);
+
 
         settingVersion();
 
