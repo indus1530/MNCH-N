@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     SharedPreferences sharedPref;
     AlertDialog.Builder builder;
     private String rSumText = "";
-    String m_Text = "";
+    String m_Text = "", preVer = "", newVer = "";
     String DirectoryName;
     private boolean updata = false;
     private Boolean exit = false;
@@ -83,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     VersionAppContract versionAppContract;
     DownloadManager downloadManager;
     Long refID;
-    String preVer = "", newVer = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,7 +143,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bi.appbarmain.contentmain.formId.setText(formID);
         bi.appbarmain.contentmain.completeStatus.setText(completestatus);
         bi.appbarmain.contentmain.syncStatus.setText(syncedStatus);
-
 
         settingVersion();
 
