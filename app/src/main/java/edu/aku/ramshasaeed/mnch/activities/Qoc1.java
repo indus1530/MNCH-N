@@ -84,15 +84,6 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         qoc1.put("qa0101a", bi.qa0101aa.isChecked() ? "1" : bi.qa0101ab.isChecked() ? "2" : bi.qa0101a97.isChecked() ? "NA" : "0");
         qoc1.put("qa0101b", bi.qa0101b.getText().toString().trim().length() > 0 ? bi.qa0101b.getText().toString() : "0");
 //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
-        //        qoc1.put("qa0101c", bi.qa0101c.getText().toString().trim().length() > 0 ? bi.qa0101c.getText().toString() : "0");
 
         qoc1.put("qa0102a", bi.qa0102aa.isChecked() ? "1" : bi.qa0102ab.isChecked() ? "2" : bi.qa0102a97.isChecked() ? "NA" : "0");
         qoc1.put("qa0102b", bi.qa0102b.getText().toString().trim().length() > 0 ? bi.qa0102b.getText().toString() : "0");
@@ -154,7 +145,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         qoc1.put("qa0116b", bi.qa0116b.getText().toString().trim().length() > 0 ? bi.qa0116b.getText().toString() : "0");
 //        qoc1.put("qa0116c", bi.qa0116c.getText().toString().trim().length() > 0 ? bi.qa0116c.getText().toString() : "0");
 
-        qoc1.put("qa01AP", bi.qa01AP.getText().toString().trim().length() > 0 ? bi.qa01AP.getText().toString() : "0");
+        qoc1.put("qa01Ap", bi.qa01AP.getText().toString().trim().length() > 0 ? bi.qa01AP.getText().toString() : "0");
 
         fc.setSqoc1(String.valueOf(qoc1));
 
