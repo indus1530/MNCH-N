@@ -2,6 +2,7 @@ package edu.aku.ramshasaeed.mnch.validation;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,12 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.edittextpicker.aliazaz.EditTextPicker;
+
+import java.lang.reflect.Field;
+
+import edu.aku.ramshasaeed.mnch.R;
 
 /**
  * Created by ali.azaz on 12/04/17.
@@ -162,6 +169,91 @@ public abstract class validatorClass {
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
             return false;
         }
+    }
+
+    public static boolean EmptyCheckingContainer(Context context, LinearLayout lv) {
+
+        for (int i = 0; i < lv.getChildCount(); i++) {
+            View view = lv.getChildAt(i);
+
+            if (view.getVisibility() != View.VISIBLE || !view.isEnabled())
+                continue;
+
+            if (view instanceof CardView) {
+                for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
+                    View view1 = ((CardView) view).getChildAt(j);
+                    if (view1 instanceof LinearLayout) {
+                        if (!EmptyCheckingContainer(context, (LinearLayout) view1)) {
+                            return false;
+                        }
+                    }
+                }
+            } else if (view instanceof RadioGroup) {
+
+                View v = ((RadioGroup) view).getChildAt(0);
+                if (v != null) {
+
+                    String asNamed = getString(context, getIDComponent(view));
+
+                    if (!EmptyRadioButton(context, (RadioGroup) view, (RadioButton) v, asNamed)) {
+                        return false;
+                    }
+                }
+            } else if (view instanceof Spinner) {
+                if (!EmptySpinner(context, (Spinner) view, getString(context, getIDComponent(view)))) {
+                    return false;
+                }
+            } else if (view instanceof EditText) {
+
+                if (view instanceof EditTextPicker) {
+
+                    if (!((EditTextPicker) view).isEmptyTextBox())
+                        return false;
+
+                    if (!((EditTextPicker) view).isRangeTextValidate())
+                        return false;
+
+                    if (!((EditTextPicker) view).isTextEqualToPattern())
+                        return false;
+
+                } else {
+                    if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
+                        return false;
+                    }
+                }
+            } else if (view instanceof LinearLayout) {
+                if (!EmptyCheckingContainer(context, (LinearLayout) view)) {
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
+
+    public static String getIDComponent(View view) {
+        String[] idName = (view).getResources().getResourceName((view).getId()).split("id/");
+
+        return idName[1];
+    }
+
+    private static String getString(Context context, String idName) {
+
+        Field[] fields = R.string.class.getFields();
+        for (final Field field : fields) {
+
+            if (field.getName().split("R$string.")[0].equals(idName)) {
+                try {
+                    int id = field.getInt(R.string.class); //id of string
+
+                    return context.getString(id);
+
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return "";
     }
 
 }

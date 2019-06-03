@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -21,7 +22,7 @@ import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
-public class Qoc4 extends AppCompatActivity {
+public class Qoc4 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
     ActivityQoc4Binding bi;
 
@@ -31,34 +32,30 @@ public class Qoc4 extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc4);
         bi.setCallback(this);
         this.setTitle("Quality of Care 04");
+        events_call();
     }
 
-
     public void BtnContinue() {
-        /*if (formValidation()) {
+        if (formValidation()) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
+                Toast.makeText(this, "Starting 5th Section", Toast.LENGTH_SHORT).show();
+                MainApp.endActivity(this, this, Qoc5.class, true, RSDInfoActivity.fc);
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
-        }*/
-        startActivity(new Intent(Qoc4.this, Qoc5.class));
-        finish();
+        }
     }
-
 
     public void BtnEnd() {
         MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
 
     }
-
 
     private boolean UpdateDB() {
 
@@ -80,28 +77,77 @@ public class Qoc4 extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        /*if (!bi.rs0199.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs01, getString(R.string.rs01))) {
-                return false;
-            }
-        }*/
-
-
-        return true;
+        return validatorClass.EmptyCheckingContainer(this, bi.llqoc4);
     }
 
     private void SaveDraft() throws JSONException {
 
-        /*JSONObject f01 = new JSONObject();
-        f01.put("rs01", bi.rs0199.isChecked() ? "99" : bi.rs01.getText().toString());
-        f01.put("rs02", bi.rs0299.isChecked() ? "99" : bi.rs02.getText().toString());
+        JSONObject qoc4 = new JSONObject();
 
-        f01.put("rs21", bi.rs2199.isChecked() ? "99" : bi.rs21.getText().toString());
-        f01.put("rs22", bi.rs2299.isChecked() ? "99" : bi.rs22.getText().toString());
+        qoc4.put("qd0401a", bi.qd0401aa.isChecked() ? "1" : bi.qd0401ab.isChecked() ? "2" : bi.qd0401a97.isChecked() ? "NA" : "0");
+        qoc4.put("qd0401b", bi.qd0401b.getText().toString().trim().length() > 0 ? bi.qd0401b.getText().toString() : "0");
+//        qoc4.put("qd0401c", bi.qd0401c.getText().toString().trim().length() > 0 ? bi.qd0401c.getText().toString() : "0");
 
-        f01.put("rsrem", bi.rsrem.getText().toString());
+        qoc4.put("qd0402a", bi.qd0402aa.isChecked() ? "1" : bi.qd0402ab.isChecked() ? "2" : bi.qd0402a97.isChecked() ? "NA" : "0");
+        qoc4.put("qd0402b", bi.qd0402b.getText().toString().trim().length() > 0 ? bi.qd0402b.getText().toString() : "0");
+//        qoc4.put("qd0402c", bi.qd0402c.getText().toString().trim().length() > 0 ? bi.qd0402c.getText().toString() : "0");
 
-        fc.setSrsd(String.valueOf(f01));*/
+        qoc4.put("qd0403a", bi.qd0403aa.isChecked() ? "1" : bi.qd0403ab.isChecked() ? "2" : bi.qd0403a97.isChecked() ? "NA" : "0");
+        qoc4.put("qd0403b", bi.qd0403b.getText().toString().trim().length() > 0 ? bi.qd0403b.getText().toString() : "0");
+//        qoc4.put("qd0403c", bi.qd0403c.getText().toString().trim().length() > 0 ? bi.qd0403c.getText().toString() : "0");
+
+        qoc4.put("qd0404a", bi.qd0404aa.isChecked() ? "1" : bi.qd0404ab.isChecked() ? "2" : bi.qd0404a97.isChecked() ? "NA" : "0");
+        qoc4.put("qd0404b", bi.qd0404b.getText().toString().trim().length() > 0 ? bi.qd0404b.getText().toString() : "0");
+//        qoc4.put("qd0404c", bi.qd0404c.getText().toString().trim().length() > 0 ? bi.qd0404c.getText().toString() : "0");
+
+        qoc4.put("qd04Ap", bi.qd04Ap.getText().toString().trim().length() > 0 ? bi.qd04Ap.getText().toString() : "0");
+
+
+        fc.setSqoc4(String.valueOf(qoc4));
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+        if (!bi.qd0401ab.isChecked()){
+            bi.qd0401b.setEnabled(false);
+        } else {
+            bi.qd0401b.setEnabled(true);
+        }
+
+        if (!bi.qd0402ab.isChecked()){
+            bi.qd0402b.setEnabled(false);
+        } else {
+            bi.qd0402b.setEnabled(true);
+        }
+
+        if (!bi.qd0403ab.isChecked()){
+            bi.qd0403b.setEnabled(false);
+        } else {
+            bi.qd0403b.setEnabled(true);
+        }
+
+        if (!bi.qd0404ab.isChecked()){
+            bi.qd0404b.setEnabled(false);
+        } else {
+            bi.qd0404b.setEnabled(true);
+        }
+
+    }
+
+
+    void events_call() {
+
+        bi.qd0401a.setOnCheckedChangeListener(this);
+        bi.qd0402a.setOnCheckedChangeListener(this);
+        bi.qd0403a.setOnCheckedChangeListener(this);
+        bi.qd0404a.setOnCheckedChangeListener(this);
 
     }
 }
