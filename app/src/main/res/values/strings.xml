@@ -92,7 +92,10 @@
     <string name="rs32"> Deaths due to Pneumonia cases/ ARI &lt;5 years (Indoor)</string>
     <string name="rs34"> Number of Diarrhea cases &lt;5 years (Indoor)</string>
     <string name="rs35"> Deaths due to Diarrhea among  &lt;5 years (Indoor)</string>
+    <string name="rra"> Remarks / Reasons / Action Points </string>
     <string name="rsrem"> Remarks </string>
+    <string name="summary"> Summary </string>
+    <string name="adsummary"> Add summary of meetings in bullet points </string>
 
     <!--<string name="qa01">Water &amp; Sanitation</string>
     <string name="qa0101">Clean Drinking Water</string>

@@ -1,8 +1,8 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -101,11 +101,24 @@ ActivityDhmtMonitoringBinding bi;
 
         JSONObject dhmt = new JSONObject();
         dhmt.put("dh01", bi.dh01a.isChecked() ? "1" : bi.dh01b.isChecked() ? "2" : "0");
+        dhmt.put("dh01Ap", bi.dh01Ap.getText().toString().trim().length() > 0 ? bi.dh01Ap.getText().toString() : "0");
+
         dhmt.put("dh02", bi.dh02a.isChecked() ? "1" : bi.dh02b.isChecked() ? "2" : "0");
+        dhmt.put("dh02Ap", bi.dh02Ap.getText().toString().trim().length() > 0 ? bi.dh02Ap.getText().toString() : "0");
+
         dhmt.put("dh03", bi.dh03a.isChecked() ? "1" : bi.dh03b.isChecked() ? "2" : "0");
+        dhmt.put("dh03Ap", bi.dh03Ap.getText().toString().trim().length() > 0 ? bi.dh03Ap.getText().toString() : "0");
+
         dhmt.put("dh04", bi.dh04a.isChecked() ? "1" : bi.dh04b.isChecked() ? "2" : "0");
+        dhmt.put("dh04Ap", bi.dh04Ap.getText().toString().trim().length() > 0 ? bi.dh04Ap.getText().toString() : "0");
+
         dhmt.put("dh05", bi.dh05a.isChecked() ? "1" : bi.dh05b.isChecked() ? "2" : "0");
+        dhmt.put("dh05Ap", bi.dh05Ap.getText().toString().trim().length() > 0 ? bi.dh05Ap.getText().toString() : "0");
+
         dhmt.put("dh06", bi.dh06a.isChecked() ? "1" : bi.dh06b.isChecked() ? "2" : "0");
+        dhmt.put("dh06Ap", bi.dh06Ap.getText().toString().trim().length() > 0 ? bi.dh06Ap.getText().toString() : "0");
+
+        dhmt.put("dhmtSum", bi.dhmtSum.getText().toString().trim().length() > 0 ? bi.dhmtSum.getText().toString() : "0");
 
         fc.setSdhmt(String.valueOf(dhmt));
 
