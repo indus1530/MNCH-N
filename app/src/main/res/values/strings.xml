@@ -95,7 +95,7 @@
     <string name="rra"> Remarks / Reasons / Action Points </string>
     <string name="rsrem"> Remarks </string>
     <string name="summary"> Summary </string>
-    <string name="adsummary"> Add summary of meetings in bullet points </string>
+    <string name="adsummary"> Add summary of meeting </string>
 
     <!--<string name="qa01">Water &amp; Sanitation</string>
     <string name="qa0101">Clean Drinking Water</string>
@@ -457,6 +457,5 @@
     <string name="s03">Source: \t Review Medical Records</string>
     <string name="s02r03">Direct Observation on Clients \n\t OR \n\t Review Medical Records</string>
     <string name="inr">If No (Reasons)</string>
-
 
 </resources>

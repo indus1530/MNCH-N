@@ -103,6 +103,7 @@ ActivityDhmtMonitoringBinding bi;
     private void SaveDraft() throws JSONException {
 
         JSONObject dhmt = new JSONObject();
+
         dhmt.put("dh01", bi.dh01a.isChecked() ? "1" : bi.dh01b.isChecked() ? "2" : "0");
         dhmt.put("dh01Ap", bi.dh01Ap.getText().toString().trim().length() > 0 ? bi.dh01Ap.getText().toString() : "0");
 
