@@ -72,124 +72,6 @@ public class RSDActivity extends AppCompatActivity {
             }
         });
 
-        bi.rs3599.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3597.isChecked()) {
-                    bi.rs3597.setChecked(false);
-                }
-                if (b) {
-                    bi.rs35.setVisibility(View.GONE);
-                    bi.rs35.setText(null);
-                } else {
-                    bi.rs35.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs3597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3599.isChecked()) {
-                    bi.rs3599.setChecked(false);
-                }
-                if (b) {
-                    bi.rs35.setVisibility(View.GONE);
-                    bi.rs35.setText(null);
-                } else {
-                    bi.rs35.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs3699.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3697.isChecked()) {
-                    bi.rs3697.setChecked(false);
-                }
-                if (b) {
-                    bi.rs36.setVisibility(View.GONE);
-                    bi.rs36.setText(null);
-                } else {
-                    bi.rs36.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs3697.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3699.isChecked()) {
-                    bi.rs3699.setChecked(false);
-                }
-                if (b) {
-                    bi.rs36.setVisibility(View.GONE);
-                    bi.rs36.setText(null);
-                } else {
-                    bi.rs36.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs3799.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3797.isChecked()) {
-                    bi.rs3797.setChecked(false);
-                }
-                if (b) {
-                    bi.rs37.setVisibility(View.GONE);
-                    bi.rs37.setText(null);
-                } else {
-                    bi.rs37.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs3797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3799.isChecked()) {
-                    bi.rs3799.setChecked(false);
-                }
-                if (b) {
-                    bi.rs37.setVisibility(View.GONE);
-                    bi.rs37.setText(null);
-                } else {
-                    bi.rs37.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-        bi.rs3899.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3897.isChecked()) {
-                    bi.rs3897.setChecked(false);
-                }
-                if (b) {
-                    bi.rs38.setVisibility(View.GONE);
-                    bi.rs38.setText(null);
-                } else {
-                    bi.rs38.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs3897.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3899.isChecked()) {
-                    bi.rs3899.setChecked(false);
-                }
-                if (b) {
-                    bi.rs38.setVisibility(View.GONE);
-                    bi.rs38.setText(null);
-                } else {
-                    bi.rs38.setVisibility(View.VISIBLE);
-                }
-            }
-        });
         bi.rs3999.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -246,6 +128,126 @@ public class RSDActivity extends AppCompatActivity {
                     bi.rs40.setText(null);
                 } else {
                     bi.rs40.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3199.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3197.isChecked()) {
+                    bi.rs3197.setChecked(false);
+                }
+                if (b) {
+                    bi.rs31.setVisibility(View.GONE);
+                    bi.rs31.setText(null);
+                } else {
+                    bi.rs31.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3197.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3199.isChecked()) {
+                    bi.rs3199.setChecked(false);
+                }
+                if (b) {
+                    bi.rs31.setVisibility(View.GONE);
+                    bi.rs31.setText(null);
+                } else {
+                    bi.rs31.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3297.isChecked()) {
+                    bi.rs3297.setChecked(false);
+                }
+                if (b) {
+                    bi.rs32.setVisibility(View.GONE);
+                    bi.rs32.setText(null);
+                } else {
+                    bi.rs32.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3297.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3299.isChecked()) {
+                    bi.rs3299.setChecked(false);
+                }
+                if (b) {
+                    bi.rs32.setVisibility(View.GONE);
+                    bi.rs32.setText(null);
+                } else {
+                    bi.rs32.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3499.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3497.isChecked()) {
+                    bi.rs3497.setChecked(false);
+                }
+                if (b) {
+                    bi.rs34.setVisibility(View.GONE);
+                    bi.rs34.setText(null);
+                } else {
+                    bi.rs34.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3497.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3499.isChecked()) {
+                    bi.rs3499.setChecked(false);
+                }
+                if (b) {
+                    bi.rs34.setVisibility(View.GONE);
+                    bi.rs34.setText(null);
+                } else {
+                    bi.rs34.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3599.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3597.isChecked()) {
+                    bi.rs3597.setChecked(false);
+                }
+                if (b) {
+                    bi.rs35.setVisibility(View.GONE);
+                    bi.rs35.setText(null);
+                } else {
+                    bi.rs35.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        bi.rs3597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b && bi.rs3599.isChecked()) {
+                    bi.rs3599.setChecked(false);
+                }
+                if (b) {
+                    bi.rs35.setVisibility(View.GONE);
+                    bi.rs35.setText(null);
+                } else {
+                    bi.rs35.setVisibility(View.VISIBLE);
                 }
             }
         });
