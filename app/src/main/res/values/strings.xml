@@ -444,13 +444,14 @@
     <string name="qg0714">The health facility has uninterrupted oxygen source and  resuscitation supplies</string>
     <string name="qg0715">The health facility has an on-site pharmacy and medicine / supplies stock management system managed by a trained pharmacist or dispenser</string>
 
-    <string name="dhheading">Performance Evaluation of DHMTs</string>
-    <string name="dh01">Regularity of meetings; held within 100 days of last meeting</string>
-    <string name="dh02">Level of participation; at least 70% participation of notified members</string>
-    <string name="dh03">Chairmanship of meetings; chaired by designated/notified chairperson</string>
-    <string name="dh04">Review of health system’s performance using data sources; HMIS, LHW-MIS</string>
-    <string name="dh05">Decisions on the basis of data review; for improving performance</string>
-    <string name="dh06">Follow up of previous decisions and progress; follow up done</string>
+    <string name="dhheading"> Performance Evaluation of DHMTs </string>
+    <string name="dh01"> Regularity of meetings; held within 100 days of last meeting </string>
+    <string name="dh02"> Meeting Conducted on defined date or it was postponed </string>
+    <string name="dh03"> Chairmanship of meetings; chaired by designated/notified chairperson (District Health Officer / Deputy Commissioner) </string>
+    <string name="dh04"> Review of health system’s performance using data sources; DHIS and LHW-MIS (By Others) </string>
+    <string name="dh05"> Presentation of health system’s performance using data sources; DHIS QOC, LHW-MIS, and Gap Analysis (By AKU Representative) </string>
+    <string name="dh06"> What are the basic / key Decisions has been taken on the basis of data review; for improving performance by meeting lead? </string>
+    <string name="dh07"> Follow up of previous decisions and progress; follow up done </string>
     <string name="s01">Source: \t Direct Observation</string>
     <string name="s02">Source: \t Direct Observation on Clients</string>
     <string name="s03">Source: \t Review Medical Records</string>

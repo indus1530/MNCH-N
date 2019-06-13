@@ -19,6 +19,7 @@
         android:background="@color/dullWhile">
 
         <LinearLayout
+            android:id="@+id/lldhmt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -26,6 +27,8 @@
             android:animateLayoutChanges="true"
             android:background="@color/dullWhile"
             android:orientation="vertical">
+
+
             <!--001-->
             <TextView
                 style="@style/textViewCenterGravity"
@@ -402,6 +405,72 @@
 
                     <EditText
                         android:id="@+id/dh06Ap"
+                        style="@style/textInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/rra"
+                        android:inputType="textMultiLine"
+                        android:lines="4"
+                        android:maxLines="4"
+                        android:minLines="3"
+                        android:scrollbars="vertical" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!--007-->
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:elevation="5dp"
+                android:text="@string/dh07" />
+
+            <!--07-->
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
+
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
+
+                    <RadioGroup
+                        android:id="@+id/dh07"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/dh07a"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes"
+                            android:textColor="@color/gray"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/dh07b"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dp"
+                            android:layout_weight="1"
+                            android:text="@string/no"
+                            android:textColor="@color/gray"
+                            android:textSize="16sp" />
+
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/dh07Ap"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

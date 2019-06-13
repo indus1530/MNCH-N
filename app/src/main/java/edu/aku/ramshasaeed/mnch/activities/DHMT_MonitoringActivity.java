@@ -73,7 +73,7 @@ ActivityDhmtMonitoringBinding bi;
 
     public boolean formValidation() {
 
-            if (!validatorClass.EmptyRadioButton(this, bi.dh01,bi.dh01a, getString(R.string.dh01))) {
+            /*if (!validatorClass.EmptyRadioButton(this, bi.dh01,bi.dh01a, getString(R.string.dh01))) {
                 return false;
             }
             if (!validatorClass.EmptyRadioButton(this, bi.dh02,bi.dh02a, getString(R.string.dh02))) {
@@ -92,10 +92,13 @@ ActivityDhmtMonitoringBinding bi;
                 return false;
             }
 
+        return true;*/
 
 
-        return true;
+        return validatorClass.EmptyCheckingContainer(this, bi.lldhmt);
+
     }
+
 
     private void SaveDraft() throws JSONException {
 
@@ -117,6 +120,9 @@ ActivityDhmtMonitoringBinding bi;
 
         dhmt.put("dh06", bi.dh06a.isChecked() ? "1" : bi.dh06b.isChecked() ? "2" : "0");
         dhmt.put("dh06Ap", bi.dh06Ap.getText().toString().trim().length() > 0 ? bi.dh06Ap.getText().toString() : "0");
+
+        dhmt.put("dh07", bi.dh07a.isChecked() ? "1" : bi.dh07b.isChecked() ? "2" : "0");
+        dhmt.put("dh07Ap", bi.dh07Ap.getText().toString().trim().length() > 0 ? bi.dh07Ap.getText().toString() : "0");
 
         dhmt.put("dhmtSum", bi.dhmtSum.getText().toString().trim().length() > 0 ? bi.dhmtSum.getText().toString() : "0");
 
