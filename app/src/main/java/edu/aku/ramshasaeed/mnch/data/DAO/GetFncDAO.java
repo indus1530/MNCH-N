@@ -9,6 +9,7 @@ import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 import edu.aku.ramshasaeed.mnch.data.entities.District;
 import edu.aku.ramshasaeed.mnch.data.entities.FacilityProvider;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
+import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.Users;
 
 @Dao
@@ -50,13 +51,15 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_DISTRICT )
     District getDistrictRecord();
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_TEHSIL + " where district_code=:district_code")
-    List<Tehsil> getTehsil(String district_code);
+
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_UCs + " where tehsil_code=:tehsil_code")
     List<UCs> getUCs(String tehsil_code);*/
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER + " where hf_district_code=:hf_district_code")
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER + " where hf_district_code =:hf_district_code")
     List<FacilityProvider> getFacilityProvider(String hf_district_code);
+
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_TEHSIL + " where district_code =:district_code")
+    List<Tehsil> getTehsil(String district_code);
 
 }

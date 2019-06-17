@@ -38,34 +38,66 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:popupBackground="#d6d6d6"
-                android:prompt="@string/hf_district" />
+                android:prompt="@string/hf_district"
+                android:spinnerMode="dialog" />
 
 
-
-
-        <LinearLayout
-            android:id="@+id/fldGrpInfo02"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:animateLayoutChanges="true"
-            android:orientation="vertical">
-
-            <TextView
+            <LinearLayout
+                android:id="@+id/fldGrpInfo02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/hf_uen" />
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/hf_facility_provider"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:popupBackground="#d6d6d6"
-                android:prompt="@string/hf_uen" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_tehsil" />
+
+                <Spinner
+                    android:id="@+id/hf_tehsil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:popupBackground="#d6d6d6"
+                    android:prompt="@string/hf_tehsil"
+                    android:spinnerMode="dialog" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_uc" />
+
+                <EditText
+                    android:id="@+id/hf_uc"
+                    style="@style/textInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:hint="@string/hf_uc" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_uen" />
+
+                <EditText
+                    android:id="@+id/hf_facility_provider"
+                    style="@style/textInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:hint="@string/hf_uen"
+                    android:prompt="@string/hf_uen" />
+
+            </LinearLayout>
 
             <!--    <LinearLayout
                     android:id="@+id/fldGrphf_district"
@@ -188,48 +220,48 @@
 
             </LinearLayout>
 
-       <!--
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            <!--
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/hf_consent"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@android:color/white" />
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="16dp"
+                         android:background="@color/colorPrimary"
+                         android:text="@string/hf_consent"
+                         android:textAppearance="?android:attr/textAppearanceLarge"
+                         android:textColor="@android:color/white" />
 
-                <RadioGroup
-                    android:id="@+id/hf_consent"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                     <RadioGroup
+                         android:id="@+id/hf_consent"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/hf_consenta"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/yes" />
+                         <RadioButton
+                             android:id="@+id/hf_consenta"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginBottom="1dp"
+                             android:layout_weight="1"
+                             android:text="@string/yes" />
 
-                    <RadioButton
-                        android:id="@+id/hf_consentb"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="1dp"
-                        android:layout_weight="1"
-                        android:text="@string/no" />
+                         <RadioButton
+                             android:id="@+id/hf_consentb"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginBottom="1dp"
+                             android:layout_weight="1"
+                             android:text="@string/no" />
 
-                </RadioGroup>
+                     </RadioGroup>
 
-            </LinearLayout>
+                 </LinearLayout>
 
--->
+     -->
 
             <LinearLayout
                 android:id="@+id/fldGrpbtn"

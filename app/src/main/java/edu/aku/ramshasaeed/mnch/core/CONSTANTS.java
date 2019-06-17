@@ -9,6 +9,7 @@ public interface CONSTANTS {
     String URL_QOC = "forms_qoc.php";
     String URL_DHMT = "forms_dhmt.php";
     String URL_HEALTH_FACILITY = "healthfacilities.php";
+    String URL_TEHSILS = "tehsils.php";
     String URL_UPDATE_APP = "output.json";
 
     /*  String URL_FACILITY_PROVIDER = "facility_provider.php";

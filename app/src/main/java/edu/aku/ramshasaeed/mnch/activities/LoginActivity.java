@@ -800,10 +800,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                     new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
                     Toast.makeText(LoginActivity.this, "Sync District", Toast.LENGTH_SHORT).show();
                     new GetAllData(mContext, "District", MainApp._HOST_URL + CONSTANTS.URL_DISTRICT).execute();
-                    Toast.makeText(LoginActivity.this, "Sync Facility Provider", Toast.LENGTH_SHORT).show();
-                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
+//                    Toast.makeText(LoginActivity.this, "Sync Facility Provider", Toast.LENGTH_SHORT).show();
+//                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
                     Toast.makeText(LoginActivity.this, "Sync AppVersion", Toast.LENGTH_SHORT).show();
                     new GetAllData(mContext, "appversion", MainApp._UPDATE_URL + CONSTANTS.URL_UPDATE_APP).execute();
+                    Toast.makeText(LoginActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Tehsils", MainApp._HOST_URL + CONSTANTS.URL_TEHSILS).execute();
 
                     /*Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();

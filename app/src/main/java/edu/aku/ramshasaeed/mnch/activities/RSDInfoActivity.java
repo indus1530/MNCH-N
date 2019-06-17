@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
@@ -12,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -35,6 +33,7 @@ import edu.aku.ramshasaeed.mnch.data.DAO.GetFncDAO;
 import edu.aku.ramshasaeed.mnch.data.entities.District;
 import edu.aku.ramshasaeed.mnch.data.entities.FacilityProvider;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
+import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsdinfoBinding;
 import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
@@ -45,8 +44,9 @@ import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class RSDInfoActivity extends AppCompatActivity {
     private ActivityRsdinfoBinding bi;
-    private List<String> districtNames, districtCodes, facility_name;
+    private List<String> districtNames, districtCodes, facility_name, tehsilName, tehsilCode;
     private Map<String, FacilityProvider> facilityMap;
+    private Map<String, Tehsil> tehsilMap;
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
     private String type;
@@ -126,26 +126,26 @@ public class RSDInfoActivity extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 0) return;
 
-                    facility_name = new ArrayList<>();
-                    facility_name.add("....");
+                    tehsilName = new ArrayList<>();
+                    tehsilName.add("....");
 
-                    Collection<FacilityProvider> facility_provider;
+                    Collection<Tehsil> tehsils;
                     try {
-                        facility_provider =
-                                (Collection<FacilityProvider>)
-                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
+                        tehsils =
+                                (Collection<Tehsil>)
+                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTehsil")
                                                 .execute(districtCodes.get(position)).get();
 
-                        facilityMap = new HashMap<>();
-                        if (facility_provider.size() != 0) {
-                            for (FacilityProvider fp : facility_provider) {
-                                facility_name.add(fp.getHf_name());
-                                facilityMap.put(fp.getHf_name(), fp);
+                        tehsilMap = new HashMap<>();
+                        if (tehsils.size() != 0) {
+                            for (Tehsil fp : tehsils) {
+                                tehsilName.add(fp.getTehsil_name());
+                                tehsilMap.put(fp.getTehsil_name(), fp);
                             }
                         }
 
-                        bi.hfFacilityProvider.setAdapter(new ArrayAdapter<>(context,
-                                android.R.layout.simple_spinner_dropdown_item, facility_name));
+                        bi.hfTehsil.setAdapter(new ArrayAdapter<>(context,
+                                android.R.layout.simple_spinner_dropdown_item, tehsilName));
 
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -209,14 +209,17 @@ public class RSDInfoActivity extends AppCompatActivity {
         f01.put("district_code", districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
 
         if (!type.equals(MainApp.DHMT)) {
-            FacilityProvider fp = facilityMap.get(bi.hfFacilityProvider.getSelectedItem().toString());
-            f01.put("hf_dhis", fp.getHf_dhis());
-            f01.put("hf_district_code", fp.getHf_district_code());
-            f01.put("hf_tehsil", fp.getHf_tehsil());
-            f01.put("hf_uc", fp.getHf_uc());
-            f01.put("hf_name", fp.getHf_name());
-            f01.put("hf_name_govt", fp.getHf_name_govt());
-            f01.put("hf_uen_code", fp.getHf_uen_code());
+            f01.put("tehsil_code", tehsilMap.get(bi.hfTehsil.getSelectedItemPosition()));
+            f01.put("uc", bi.hfUc.getText().toString());
+            f01.put("hfName", bi.hfFacilityProvider.getText().toString());
+//            FacilityProvider fp = facilityMap.get(bi.hfFacilityProvider.getSelectedItem().toString());
+//            f01.put("hf_dhis", fp.getHf_dhis());
+//            f01.put("hf_district_code", fp.getHf_district_code());
+//            f01.put("hf_tehsil", fp.getHf_tehsil());
+//            f01.put("hf_uc", fp.getHf_uc());
+//            f01.put("hf_name", fp.getHf_name());
+//            f01.put("hf_name_govt", fp.getHf_name_govt());
+//            f01.put("hf_uen_code", fp.getHf_uen_code());
 
         }
 
