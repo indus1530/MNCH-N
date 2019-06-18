@@ -9,15 +9,15 @@ import org.json.JSONObject;
 
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 
-//@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_UCs)
+@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_UCs)
 public class UCs {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
 
     @ColumnInfo
-    private String UCs_code = "";
-    private String UCs_name = "";
+    private String uc_code = "";
+    private String uc_name = "";
     private String tehsil_code = "";
     private String uen_code = "";
 
@@ -32,20 +32,20 @@ public class UCs {
         this.id = id;
     }
 
-    public String getUCs_code() {
-        return UCs_code;
+    public String getUc_code() {
+        return uc_code;
     }
 
-    public void setUCs_code(String UCs_code) {
-        this.UCs_code = UCs_code;
+    public void setUc_code(String uc_code) {
+        this.uc_code = uc_code;
     }
 
-    public String getUCs_name() {
-        return UCs_name;
+    public String getUc_name() {
+        return uc_name;
     }
 
-    public void setUCs_name(String UCs_name) {
-        this.UCs_name = UCs_name;
+    public void setUc_name(String uc_name) {
+        this.uc_name = uc_name;
     }
 
     public String getTehsil_code() {
@@ -66,10 +66,10 @@ public class UCs {
 
     public UCs Sync(JSONObject jsonObjectCls) throws JSONException {
 
-        this.UCs_code = jsonObjectCls.getString("hf_uc_code");
-        this.UCs_name = jsonObjectCls.getString("hf_uc_name");
-        this.tehsil_code = jsonObjectCls.getString("hf_tehsil_code");
-        this.uen_code = jsonObjectCls.getString("hf_uen_code");
+        this.uc_code = jsonObjectCls.getString("uc_code");
+        this.uc_name = jsonObjectCls.getString("uc_name");
+        this.tehsil_code = jsonObjectCls.getString("tehsil_code");
+//        this.uen_code = jsonObjectCls.getString("hf_uen_code");
         return this;
     }
 }

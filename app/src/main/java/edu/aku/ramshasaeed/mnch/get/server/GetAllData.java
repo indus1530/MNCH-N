@@ -100,9 +100,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "Tehsils":
                             GetSyncFncs.syncTehsil(jsonArray);
                             break;
-//                        case "UCs":
-//                            GetSyncFncs.syncUCs(jsonArray);
-//                            break;
+                        case "UCs":
+                            GetSyncFncs.syncUCs(jsonArray);
+                            break;
 //                        case "FacilityProvider":
 //                            GetSyncFncs.syncFacilityProvider(jsonArray);
 //                            break;

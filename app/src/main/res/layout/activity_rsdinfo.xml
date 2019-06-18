@@ -72,14 +72,15 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/hf_uc" />
 
-                <EditText
+                <Spinner
                     android:id="@+id/hf_uc"
-                    style="@style/textInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:popupBackground="#d6d6d6"
                     android:layout_marginBottom="15dp"
-                    android:hint="@string/hf_uc" />
+                    android:hint="@string/hf_uc"
+                    android:spinnerMode="dialog"/>
 
                 <TextView
                     android:layout_width="match_parent"
