@@ -333,5 +333,4 @@ public class RSDInfoActivity extends AppCompatActivity {
 
     }
 
-
 }
