@@ -848,7 +848,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS13 ENDS HERE-->
 
@@ -906,7 +908,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS14 ENDS HERE-->
 
@@ -964,7 +968,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS15 ENDS HERE-->
 
@@ -1022,7 +1028,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS16 ENDS HERE-->
 
@@ -1080,7 +1088,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS17 ENDS HERE-->
 
@@ -1138,7 +1148,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS18 ENDS HERE-->
 
@@ -1196,7 +1208,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS19 ENDS HERE-->
 
@@ -1254,7 +1268,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS20 ENDS HERE-->
 
@@ -1312,7 +1328,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS21 ENDS HERE-->
 
@@ -1367,9 +1385,7 @@
                                 android:gravity="center"
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp"
-
-                                />
+                                android:textSize="16sp" />
 
                             <CheckBox
                                 android:id="@+id/rs2297"
@@ -1380,10 +1396,10 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp"
+                                android:textSize="16sp" />
 
-                                />
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS22 ENDS HERE-->
 
@@ -1441,7 +1457,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS23 ENDS HERE-->
 
@@ -1499,7 +1517,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS24 ENDS HERE-->
 
@@ -1557,7 +1577,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS25 ENDS HERE-->
 
@@ -1615,7 +1637,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS26 ENDS HERE-->
 
@@ -1745,7 +1769,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS36 ENDS HERE-->
 
@@ -1876,7 +1902,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS33 ENDS HERE-->
 
@@ -1934,7 +1962,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS37 ENDS HERE-->
 
@@ -1992,7 +2022,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS38 ENDS HERE-->
 
@@ -2059,7 +2091,9 @@
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS39 ENDS HERE-->
 
@@ -2126,7 +2160,9 @@
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS40 ENDS HERE-->
 
@@ -2255,7 +2291,9 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
                     <!--RS28 ENDS HERE-->
 
@@ -2534,7 +2572,7 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS31 ENDS HERE-->
+                    <!--RS32 ENDS HERE-->
 
                 </LinearLayout>
 
