@@ -46,20 +46,23 @@
     <string name="error_incorrect_password">This password is incorrect</string>
 
     <string name="rshint01"> Maternal Health Register </string>
-    <string name="rshint02"> EPI Health Register</string>
-    <string name="rshint03"> Obstetric Register </string>
-    <string name="rshint04"> Daily Bed Statement Register (For RHC only)</string>
-    <string name="rshint05"> OPD register</string>
-    <string name="rshint06"> Indoor Register (For RHC only)</string>
-
     <string name="rs01"> Number of ANC – 1 visit </string>
     <string name="rs02"> Number of ANC Revisits (2/3/4 or more) </string>
     <string name="rs03"> ANC-1 women with Hb 10 g/dl </string>
     <string name="rs04"> Number of PNC-1 visits </string>
     <string name="rs05"> Number of PNC-2 visits </string>
+
+
+    <string name="rshint02"> EPI Health Register</string>
     <string name="rs06"> Women given TT-2 vaccination </string>
+
+
+    <string name="rshint03"> SHC - Ob/Gyn OPD register </string>
     <string name="rs07"> Total New Cases OB/GYN </string>
     <string name="rs08"> Referred Cases attended (OB/GYN) </string>
+
+
+    <string name="rshint04"> Obstetric Register </string>
     <string name="rs09"> Normal Vaginal Delivery </string>
     <string name="rs10"> Assisted Vaginal Deliveries </string>
     <string name="rs11"> Cesarean Sections </string>
@@ -78,20 +81,32 @@
     <string name="rs24"> Number of newborns to whom chlorhexadine gel is applied to umbilical stumps </string>
     <string name="rs25"> Prematurity (no. of pre-term births) </string>
     <string name="rs26"> Birth trauma </string>
-    <string name="rs36"> Number of ultrasounds for ANC</string>
-    <string name="rs27"> Number of Infant deaths (1 -11 months) </string>
-    <string name="rs28"> Number of child deaths (1 to 4 years) </string>
     <string name="rs29"> Number of neonatal deaths (28 days) </string>
+
+
+    <string name="rshint05"> Point where maternal services are provided</string>
+    <!--<string name="rshint05"> Daily Bed Statement Register (For RHC only)</string>-->
+    <string name="rs36"> Number of ultrasounds for ANC</string>
+
+
+    <string name="rshint06"> OPD register-PHC (Pediatrics OPD register for SHC)</string>
     <string name="rs30"> Number of Pneumonia cases/ ARI &lt;5 years (OPD) </string>
     <string name="rs33"> Number of Diarrhea cases &lt;5 years (OPD)</string>
     <string name="rs37"> Total General OPD (1-11months)</string>
     <string name="rs38"> Total General OPD (1-4 years)</string>
     <string name="rs39">Follow up cases (Child Health 0-5yr)</string>
     <string name="rs40"> Referred Cases attended (Pediatrics)</string>
-    <string name="rs31"> Number of Pneumonia cases/ARI &lt;5 years (Indoor)</string>
-    <string name="rs32"> Deaths due to Pneumonia cases/ ARI &lt;5 years (Indoor)</string>
-    <string name="rs34"> Number of Diarrhea cases &lt;5 years (Indoor)</string>
-    <string name="rs35"> Deaths due to Diarrhea among  &lt;5 years (Indoor)</string>
+
+
+    <string name="rshint07"> Indoor Register (SHC)</string>
+    <string name="rs27"> Number of Infant deaths (1 -11 months) </string>
+    <string name="rs28"> Number of child deaths (1 to 4 years) </string>
+    <string name="rs34"> Number of Diarrhea cases &lt; 5 years (Indoor)</string>
+    <string name="rs35"> Deaths due to Diarrhea among  &lt; 5 years (Indoor)</string>
+    <string name="rs31"> Number of Pneumonia cases/ARI &lt; 5 years (Indoor)</string>
+    <string name="rs32"> Deaths due to Pneumonia cases/ ARI &lt; 5 years (Indoor)</string>
+
+
     <string name="rra"> Remarks / Reasons / Action Points </string>
     <string name="rsrem"> Remarks </string>
     <string name="summary"> Summary </string>
