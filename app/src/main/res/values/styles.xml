@@ -151,7 +151,7 @@
     </style>
 
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/et_style</item>
