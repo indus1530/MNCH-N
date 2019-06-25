@@ -403,16 +403,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 @Override
                 public void run() {
 
-                    Toast.makeText(MainActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
+                    // RAMSHA SAEED
+                    /*Toast.makeText(MainActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
                     Toast.makeText(MainActivity.this, "Sync District", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "District", MainApp._HOST_URL + CONSTANTS.URL_DISTRICT).execute();
                     Toast.makeText(MainActivity.this, "Sync Facility Provider", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
-                    /*Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
+                    *//*Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();
                     Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
+
+                    //MUSTAFA ANSARI BY SAJID
+                    Toast.makeText(MainActivity.this, "Sync Users", Toast.LENGTH_SHORT).show();
+                    new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
+                    Toast.makeText(MainActivity.this, "Sync District", Toast.LENGTH_SHORT).show();
+                    new GetAllData(mContext, "District", MainApp._HOST_URL + CONSTANTS.URL_DISTRICT).execute();
+//                    Toast.makeText(LoginActivity.this, "Sync Facility Provider", Toast.LENGTH_SHORT).show();
+//                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
+                    Toast.makeText(MainActivity.this, "Sync AppVersion", Toast.LENGTH_SHORT).show();
+                    new GetAllData(mContext, "appversion", MainApp._UPDATE_URL + CONSTANTS.URL_UPDATE_APP).execute();
+                    Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Tehsils", MainApp._HOST_URL + CONSTANTS.URL_TEHSILS).execute();
+                    Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();
                 }
             });
 

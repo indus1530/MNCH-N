@@ -11,6 +11,8 @@ import edu.aku.ramshasaeed.mnch.data.AppDatabase.Sub_DBConnection;
 import edu.aku.ramshasaeed.mnch.data.entities.District;
 import edu.aku.ramshasaeed.mnch.data.entities.FacilityProvider;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
+import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
+import edu.aku.ramshasaeed.mnch.data.entities.UCs;
 import edu.aku.ramshasaeed.mnch.data.entities.Users;
 
 @Dao
@@ -37,11 +39,11 @@ public interface FormsDAO {
     @Insert
     Long insertFacilityProvider(FacilityProvider facility_provider);
 
-  /*  @Insert
-    Long insertTehsil(Tehsil tehsil);
-
     @Insert
-    Long insertUCs(UCs ucs);*/
+    Long insertTehsil(Tehsil tehsil);
+//
+    @Insert
+    Long insertUCs(UCs ucs);
 
     @Query("DELETE from " + AppDatabase.Sub_DBConnection.TABLE_USERS)
     int deleteUsers();
@@ -52,14 +54,12 @@ public interface FormsDAO {
     @Query("DELETE from " + Sub_DBConnection.TABLE_FACILITY_PROVIDER)
     int deleteFacilityProvider();
 
-   /* @Query("DELETE from " + Sub_DBConnection.TABLE_TEHSIL)
+    @Query("DELETE from " + Sub_DBConnection.TABLE_TEHSIL)
     int deleteTehsil();
 
     @Query("DELETE from " + Sub_DBConnection.TABLE_UCs)
-    int deleteUcs();*/
+    int deleteUcs();
 
-
-    /*Update methods after upload on server*/
 
     /**
      * Updating only sync and syncDate

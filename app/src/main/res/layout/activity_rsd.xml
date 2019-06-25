@@ -27,12 +27,13 @@
             android:background="@color/dullWhile"
             android:orientation="vertical">
 
+
+            <!--SECTION 01 STARTS HERE-->
             <TextView
                 style="@style/textViewCenterGravity"
                 android:elevation="5dp"
                 android:text="@string/rshint01" />
 
-            <!--01-->
             <android.support.v7.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
@@ -43,6 +44,8 @@
                     style="@style/linerlayout_view"
                     android:paddingRight="5dp">
 
+
+                    <!--RS01 STARTS HERE-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -90,17 +93,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--   </LinearLayout>
-                   </android.support.v7.widget.CardView>-->
+                    <!--RS01 ENDS HERE-->
 
 
-                    <!--02-->
-                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
-
-                         <LinearLayout style="@style/linerlayout_view">
-         -->
-
-
+                    <!--RS02 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -153,15 +149,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                    <!--   </LinearLayout>
-                   </android.support.v7.widget.CardView>
+                    <!--RS02 ENDS HERE-->
 
-                   &lt;!&ndash;03&ndash;&gt;
-                   <android.support.v7.widget.CardView style="@style/cardView">
 
-                       <LinearLayout style="@style/linerlayout_view">-->
+                    <!--RS03 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -214,15 +209,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--       </LinearLayout>
-                       </android.support.v7.widget.CardView>
-           -->
-                    <!--04-->
-                    <!--   <android.support.v7.widget.CardView style="@style/cardView">
 
-                           <LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS03 ENDS HERE-->
+
+
+                    <!--RS04 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -275,15 +269,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                    <!--        </LinearLayout>
-                        </android.support.v7.widget.CardView>-->
+                    <!--RS04 ENDS HERE-->
 
-                    <!--05-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                          <LinearLayout style="@style/linerlayout_view">-->
+                    <!--RS05 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -336,16 +329,23 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
+                    <!--RS05 ENDS HERE-->
+
                 </LinearLayout>
+
             </android.support.v7.widget.CardView>
+            <!--SECTION 01 ENDS HERE-->
 
 
+            <!--SECTION 02 STARTS HERE-->
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint02" />
-            <!--06-->
+
             <android.support.v7.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
@@ -356,6 +356,8 @@
                     style="@style/linerlayout_view"
                     android:paddingRight="5dp">
 
+
+                    <!--RS06 STARTS HERE-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -387,7 +389,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0699.checked ?  "":rs05.getText.toString }'
+                                android:text='@{rs0699.checked ?  "":rs06.getText.toString }'
                                 android:visibility='@{rs0699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -400,24 +402,35 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                    <!--     </LinearLayout>
-                     </android.support.v7.widget.CardView>-->
+                    <!--RS06 ENDS HERE-->
 
-                    <!--07-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">
+                </LinearLayout>
 
-                        <LinearLayout style="@style/linerlayout_view">
-        -->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
+            </android.support.v7.widget.CardView>
+            <!--SECTION 02 ENDS HERE-->
 
+
+            <!--SECTION 03 STARTS HERE-->
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/rshint03" />
+
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
+
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
+
+
+                    <!--RS07 STARTS HERE-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -462,15 +475,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                    <!--    </LinearLayout>
-                    </android.support.v7.widget.CardView>-->
+                    <!--RS07 ENDS HERE-->
 
-                    <!--08-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                          <LinearLayout style="@style/linerlayout_view">-->
+                    <!--RS08 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -523,22 +535,35 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                    <!--      </LinearLayout>
-                      </android.support.v7.widget.CardView>-->
-                    <!--09-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--RS08 ENDS HERE-->
 
-                          <LinearLayout style="@style/linerlayout_view">-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
 
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--SECTION 03 ENDS HERE-->
+
+
+            <!--SECTION 04 STARTS HERE-->
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/rshint04" />
+
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
+
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
+
+                    <!--RS09 STARTS HERE-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -583,25 +608,21 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--RS09 ENDS HERE-->
 
 
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/rshint03" />
-            <!--10-->
-            <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="@null"
-                android:layout_marginRight="3dp">
-
-                <LinearLayout
-                    style="@style/linerlayout_view"
-                    android:paddingRight="5dp">
+                    <!--RS10 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -647,14 +668,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--  </LinearLayout>
-                  </android.support.v7.widget.CardView>-->
-                    <!--11-->
-                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                         <LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS10 ENDS HERE-->
+
+
+                    <!--RS11 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -707,15 +728,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!-- </LinearLayout>
-                 </android.support.v7.widget.CardView>-->
-                    <!--12-->
-                    <!--   <android.support.v7.widget.CardView style="@style/cardView">
 
-                           <LinearLayout style="@style/linerlayout_view">
-           -->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS11 ENDS HERE-->
+
+
+                    <!--RS12 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -768,15 +788,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--    </LinearLayout>
-                    </android.support.v7.widget.CardView>-->
-                    <!--13-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                          <LinearLayout style="@style/linerlayout_view">
-          -->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS12 ENDS HERE-->
+
+
+                    <!--RS13 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -829,14 +848,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--   </LinearLayout>
-                   </android.support.v7.widget.CardView>-->
-                    <!--14-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                          <LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS13 ENDS HERE-->
+
+
+                    <!--RS14 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -889,14 +908,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--  </LinearLayout>
-                  </android.support.v7.widget.CardView>-->
-                    <!--15-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS14 ENDS HERE-->
+
+
+                    <!--RS15 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -949,14 +968,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--</LinearLayout>-->
-                    <!--</android.support.v7.widget.CardView>-->
-                    <!--16-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS15 ENDS HERE-->
+
+
+                    <!--RS16 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1009,14 +1028,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--</LinearLayout>-->
-                    <!--</android.support.v7.widget.CardView>-->
-                    <!--17-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS16 ENDS HERE-->
+
+
+                    <!--RS17 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1069,15 +1088,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                    <!--</LinearLayout>-->
-                    <!--</android.support.v7.widget.CardView>-->
+                    <!--RS17 ENDS HERE-->
 
-                    <!--18-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                          <LinearLayout style="@style/linerlayout_view">-->
+                    <!--RS18 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1130,14 +1148,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--</LinearLayout>-->
-                    <!--</android.support.v7.widget.CardView>-->
-                    <!--19-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS18 ENDS HERE-->
+
+
+                    <!--RS19 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1190,15 +1208,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--</LinearLayout>-->
-                    <!--</android.support.v7.widget.CardView>-->
-                    <!--20-->
-                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                         <LinearLayout style="@style/linerlayout_view">
-         -->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS19 ENDS HERE-->
+
+
+                    <!--RS20 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1251,14 +1268,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--</LinearLayout>-->
-                    <!--</android.support.v7.widget.CardView>-->
-                    <!--21-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                        <LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS20 ENDS HERE-->
+
+
+                    <!--RS21 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1311,14 +1328,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--  </LinearLayout>
-                  </android.support.v7.widget.CardView>-->
-                    <!--22-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                        <LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS21 ENDS HERE-->
+
+
+                    <!--RS22 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1368,9 +1385,7 @@
                                 android:gravity="center"
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp"
-
-                                />
+                                android:textSize="16sp" />
 
                             <CheckBox
                                 android:id="@+id/rs2297"
@@ -1381,18 +1396,15 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp"
+                                android:textSize="16sp" />
 
-                                />
                         </LinearLayout>
-                    </LinearLayout>
-                    <!-- </LinearLayout>
-                 </android.support.v7.widget.CardView>-->
-                    <!--23-->
-                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                         <LinearLayout style="@style/linerlayout_view">
-         -->
+                    </LinearLayout>
+                    <!--RS22 ENDS HERE-->
+
+
+                    <!--RS23 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1445,15 +1457,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--    </LinearLayout>
-                    </android.support.v7.widget.CardView>-->
-                    <!--24-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                          <LinearLayout style="@style/linerlayout_view">
-          -->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS23 ENDS HERE-->
+
+
+                    <!--RS24 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1506,14 +1517,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--    </LinearLayout>
-                    </android.support.v7.widget.CardView>-->
-                    <!--25-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                          <LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS24 ENDS HERE-->
+
+
+                    <!--RS25 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1566,15 +1577,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--   </LinearLayout>
-                   </android.support.v7.widget.CardView>-->
-                    <!--26-->
-                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                         <LinearLayout style="@style/linerlayout_view">
-         -->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS25 ENDS HERE-->
+
+
+                    <!--RS26 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1627,143 +1637,19 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!-- </LinearLayout>
-                 </android.support.v7.widget.CardView>-->
-                    <!--27-->
-                    <!--    <android.support.v7.widget.CardView style="@style/cardView">
 
-                            <LinearLayout style="@style/linerlayout_view">-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS26 ENDS HERE-->
+
+
+                    <!--RS29 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs27" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:id="@+id/rs27"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
-                                android:gravity="center"
-                                android:hint="@string/numberhint"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs2799.checked ?  "":rs27.getText.toString }'
-                                android:visibility='@{rs2799.checked ? View.GONE : View.VISIBLE }' />
-
-                            <CheckBox
-                                android:id="@+id/rs2799"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/rshint04" />
-            <!--28-->
-            <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="@null"
-                android:layout_marginRight="3dp">
-
-                <LinearLayout
-                    style="@style/linerlayout_view"
-                    android:paddingRight="5dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs28" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:id="@+id/rs28"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
-                                android:gravity="center"
-                                android:hint="@string/numberhint"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs2899.checked ?  "":rs28.getText.toString }'
-                                android:visibility='@{rs2899.checked ? View.GONE : View.VISIBLE }' />
-
-                            <CheckBox
-                                android:id="@+id/rs2899"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--   </LinearLayout>
-                   </android.support.v7.widget.CardView>-->
-                    <!--29-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">
-
-                        <LinearLayout style="@style/linerlayout_view">-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
+                        android:layout_marginStart="29dp"
+                        android:layout_marginEnd="29dp"
                         android:background="@android:color/darker_gray"
                         android:paddingTop="5dp" />
 
@@ -1811,22 +1697,107 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                    <!--  </LinearLayout>
-                  </android.support.v7.widget.CardView>-->
-                    <!--30-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
+                    <!--RS29 ENDS HERE-->
 
-                          <LinearLayout style="@style/linerlayout_view">-->
-                    <View
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--SECTION 04 ENDS HERE-->
+
+
+            <!--SECTION 05 STARTS HERE-->
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/rshint05" />
+
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
+
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
+
+                    <!--RS36 STARTS HERE-->
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs36" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs36"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs3699.checked ?  "":rs36.getText.toString }'
+                                android:visibility='@{rs3699.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs3699"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS36 ENDS HERE-->
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--SECTION 05 ENDS HERE-->
+
+
+            <!--SECTION 06 STARTS HERE-->
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/rshint06" />
+
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
+
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
+
+
+                    <!--RS30 STARTS HERE-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1871,138 +1842,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
+
                         </LinearLayout>
+
                     </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--RS30 ENDS HERE-->
 
 
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/rshint05" />
-            <!--31-->
-            <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="@null"
-                android:layout_marginRight="3dp">
-
-                <LinearLayout
-                    style="@style/linerlayout_view"
-                    android:paddingRight="5dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs31" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:id="@+id/rs31"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
-                                android:gravity="center"
-                                android:hint="@string/numberhint"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs3199.checked ?  "":rs31.getText.toString }'
-                                android:visibility='@{rs3199.checked ? View.GONE : View.VISIBLE }' />
-
-                            <CheckBox
-                                android:id="@+id/rs3199"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--</LinearLayout>
-                </android.support.v7.widget.CardView>-->
-                    <!--32-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
-
-                          <LinearLayout style="@style/linerlayout_view">-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs32" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:id="@+id/rs32"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
-                                android:gravity="center"
-                                android:hint="@string/numberhint"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs3299.checked ?  "":rs32.getText.toString }'
-                                android:visibility='@{rs3299.checked ? View.GONE : View.VISIBLE }' />
-
-                            <CheckBox
-                                android:id="@+id/rs3299"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!-- </LinearLayout>
-                 </android.support.v7.widget.CardView>-->
-                    <!--33-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
-
-                          <LinearLayout style="@style/linerlayout_view">-->
+                    <!--RS33 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2055,15 +1902,14 @@
                                 android:text="@string/msing"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--   </LinearLayout>
-                   </android.support.v7.widget.CardView>-->
-                    <!--34-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">
 
-                        <LinearLayout style="@style/linerlayout_view">
-        -->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS33 ENDS HERE-->
+
+
+                    <!--RS37 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2071,209 +1917,6 @@
                         android:layout_marginEnd="30dp"
                         android:background="@android:color/darker_gray"
                         android:paddingTop="5dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs34" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:id="@+id/rs34"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
-                                android:gravity="center"
-                                android:hint="@string/numberhint"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:text='@{rs3499.checked ?  "":rs34.getText.toString }'
-                                android:visibility='@{rs3499.checked ? View.GONE : View.VISIBLE }' />
-
-                            <CheckBox
-                                android:id="@+id/rs3499"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--  </LinearLayout>
-                  </android.support.v7.widget.CardView>-->
-                    <!--35-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">
-
-                        <LinearLayout style="@style/linerlayout_view">-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs35" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:id="@+id/rs35"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
-                                android:gravity="center"
-                                android:hint="@string/numberhint"
-                                android:inputType="number"
-                                android:maxLength="4" />
-
-                            <CheckBox
-                                android:id="@+id/rs3599"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-
-                            <CheckBox
-                                android:id="@+id/rs3597"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/na"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!-- </LinearLayout>
-                 </android.support.v7.widget.CardView>-->
-
-                    <!--36-->
-                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
-
-                         <LinearLayout style="@style/linerlayout_view">-->
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginEnd="30dp"
-                        android:background="@android:color/darker_gray"
-                        android:paddingTop="5dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textViewstartAlignGravity"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="3"
-                            android:text="@string/rs36" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:id="@+id/rs36"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="2dp"
-                                android:gravity="center"
-                                android:hint="@string/numberhint"
-                                android:inputType="number"
-                                android:maxLength="4" />
-
-                            <CheckBox
-                                android:id="@+id/rs3699"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/msing"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-
-                            <CheckBox
-                                android:id="@+id/rs3697"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/na"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/rshint06" />
-            <!--37-->
-            <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="@null"
-                android:layout_marginRight="3dp">
-
-                <LinearLayout
-                    style="@style/linerlayout_view"
-                    android:paddingRight="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2305,7 +1948,9 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4" />
+                                android:maxLength="4"
+                                android:text='@{rs3799.checked ?  "":rs37.getText.toString }'
+                                android:visibility='@{rs3799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
                                 android:id="@+id/rs3799"
@@ -2315,28 +1960,16 @@
                                 android:layout_marginRight="3dp"
                                 android:gravity="center"
                                 android:text="@string/msing"
-
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
-                            <CheckBox
-                                android:id="@+id/rs3797"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/na"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
                         </LinearLayout>
-                    </LinearLayout>
-                    <!--    </LinearLayout>
-                    </android.support.v7.widget.CardView>-->
-                    <!--38-->
-                    <!--<android.support.v7.widget.CardView style="@style/cardView">-->
 
-                    <!--<LinearLayout style="@style/linerlayout_view">-->
+                    </LinearLayout>
+                    <!--RS37 ENDS HERE-->
+
+
+                    <!--RS38 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2375,7 +2008,9 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4" />
+                                android:maxLength="4"
+                                android:text='@{rs3899.checked ?  "":rs38.getText.toString }'
+                                android:visibility='@{rs3899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
                                 android:id="@+id/rs3899"
@@ -2388,24 +2023,13 @@
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
-                            <CheckBox
-                                android:id="@+id/rs3897"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="3dp"
-                                android:gravity="center"
-                                android:text="@string/na"
-                                android:textColor="@color/gray"
-                                android:textSize="16sp" />
                         </LinearLayout>
-                    </LinearLayout>
-                    <!--  </LinearLayout>
-                  </android.support.v7.widget.CardView>-->
-                    <!--39-->
-                    <!--  <android.support.v7.widget.CardView style="@style/cardView">
 
-                          <LinearLayout style="@style/linerlayout_view">-->
+                    </LinearLayout>
+                    <!--RS38 ENDS HERE-->
+
+
+                    <!--RS39 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2467,15 +2091,14 @@
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <!--</LinearLayout>
-                </android.support.v7.widget.CardView>-->
-                    <!--40-->
-                    <!-- <android.support.v7.widget.CardView style="@style/cardView">
 
-                         <LinearLayout style="@style/linerlayout_view">
-         -->
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS39 ENDS HERE-->
+
+
+                    <!--RS40 STARTS HERE-->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2541,10 +2164,420 @@
                         </LinearLayout>
 
                     </LinearLayout>
+                    <!--RS40 ENDS HERE-->
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+            <!--SECTION 06 ENDS HERE-->
+
+
+            <!--SECTION 07 STARTS HERE-->
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/rshint07" />
+
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
+
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
+
+
+                    <!--RS27 STARTS HERE-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs27" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs27"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs2799.checked ?  "":rs27.getText.toString }'
+                                android:visibility='@{rs2799.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs2799"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS27 ENDS HERE-->
+
+                    <!--RS28 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs28" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs28"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs2899.checked ?  "":rs28.getText.toString }'
+                                android:visibility='@{rs2899.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs2899"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS28 ENDS HERE-->
+
+
+                    <!--RS34 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs34" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs34"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4" />
+
+                            <CheckBox
+                                android:id="@+id/rs3499"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/rs3497"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS34 ENDS HERE-->
+
+
+                    <!--RS35 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs35" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs35"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4" />
+
+                            <CheckBox
+                                android:id="@+id/rs3599"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/rs3597"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS35 ENDS HERE-->
+
+
+                    <!--RS31 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs31" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs31"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4" />
+
+                            <CheckBox
+                                android:id="@+id/rs3199"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/rs3197"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS31 ENDS HERE-->
+
+
+                    <!--RS32 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs32" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs32"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4" />
+
+                            <CheckBox
+                                android:id="@+id/rs3299"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/rs3297"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS32 ENDS HERE-->
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--SECTION 07 ENDS HERE-->
 
 
             <TextView
@@ -2623,4 +2656,5 @@
         </LinearLayout>
 
     </ScrollView>
+
 </layout>
