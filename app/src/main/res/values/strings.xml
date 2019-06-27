@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">QOC - UEN</string>
-    <string name="module_one">MNCH</string>
-    <string name="routinetwo">KQI-HF </string>
-    <string name="routineone">DHIS-DVT </string>
-    <string name="routinethree">DHMT Monitoring </string>
+    <string name="module_one"> MNCH </string>
+    <string name="routinetwo"> Key Quality Indicator Tool for Health Facility </string>
+    <string name="routineone"> DHIS Data-Validation Tools for Decision Making </string>
+    <string name="routinethree"> Performance Evaluation of District Team Meetings </string>
+    <string name="routine1two"> KQI-HF </string>
+    <string name="routine1one"> DHIS-DVT </string>
+    <string name="routine1three"> DHMT Monitoring </string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">MNCH</string>
@@ -53,7 +56,7 @@
     <string name="rs05"> Number of PNC-2 visits </string>
 
 
-    <string name="rshint02"> EPI Health Register</string>
+    <string name="rshint02"> EPI Health Register </string>
     <string name="rs06"> Women given TT-2 vaccination </string>
 
 
@@ -84,27 +87,27 @@
     <string name="rs29"> Number of neonatal deaths (28 days) </string>
 
 
-    <string name="rshint05"> Point where maternal services are provided</string>
+    <string name="rshint05"> Point where maternal services are provided </string>
     <!--<string name="rshint05"> Daily Bed Statement Register (For RHC only)</string>-->
-    <string name="rs36"> Number of ultrasounds for ANC</string>
+    <string name="rs36"> Number of ultrasounds for ANC </string>
 
 
-    <string name="rshint06"> OPD register-PHC (Pediatrics OPD register for SHC)</string>
+    <string name="rshint06"> OPD register-PHC (Pediatrics OPD register for SHC) </string>
     <string name="rs30"> Number of Pneumonia cases/ ARI &lt;5 years (OPD) </string>
     <string name="rs33"> Number of Diarrhea cases &lt;5 years (OPD)</string>
-    <string name="rs37"> Total General OPD (1-11months)</string>
-    <string name="rs38"> Total General OPD (1-4 years)</string>
-    <string name="rs39">Follow up cases (Child Health 0-5yr)</string>
-    <string name="rs40"> Referred Cases attended (Pediatrics)</string>
+    <string name="rs37"> Total General OPD (1-11months) </string>
+    <string name="rs38"> Total General OPD (1-4 years) </string>
+    <string name="rs39"> Follow up cases (Child Health 0-5yr) </string>
+    <string name="rs40"> Referred Cases attended (Pediatrics) </string>
 
 
-    <string name="rshint07"> Indoor Register (SHC)</string>
+    <string name="rshint07"> Indoor Register (SHC) </string>
     <string name="rs27"> Number of Infant deaths (1 -11 months) </string>
     <string name="rs28"> Number of child deaths (1 to 4 years) </string>
-    <string name="rs34"> Number of Diarrhea cases &lt; 5 years (Indoor)</string>
-    <string name="rs35"> Deaths due to Diarrhea among  &lt; 5 years (Indoor)</string>
-    <string name="rs31"> Number of Pneumonia cases/ARI &lt; 5 years (Indoor)</string>
-    <string name="rs32"> Deaths due to Pneumonia cases/ ARI &lt; 5 years (Indoor)</string>
+    <string name="rs34"> Number of Diarrhea cases &lt; 5 years (Indoor) </string>
+    <string name="rs35"> Deaths due to Diarrhea among  &lt; 5 years (Indoor) </string>
+    <string name="rs31"> Number of Pneumonia cases/ARI &lt; 5 years (Indoor) </string>
+    <string name="rs32"> Deaths due to Pneumonia cases/ ARI &lt; 5 years (Indoor) </string>
 
 
     <string name="rra"> Remarks / Reasons / Action Points </string>
@@ -414,50 +417,50 @@
     <string name="qa0116">The Health Care Provider and Skilled Birth Attendant in respective facility receive In-Service Training on Updated Intervention / Guidelines</string>
 
     <string name="qb02">Actionable Information System</string>
-    <string name="qb0201">Every Women / Newborn / Child has a complete, accurate, standardized medical record during attaining hospital / clinic for OPD / IPD care</string>
-    <string name="qb0202">Every health facility has a mechanism of Monthly data collection source Registers (DHIS / PPMIS)</string>
-    <string name="qb0203">Every health facility has a mechanism of Monthly Report Generation through source Registers and Analyzed indicators (DHIS / PPMIS)</string>
+    <string name="qb0201"> Every Women / Newborn / Child has a complete, accurate, standardized medical record during attaining hospital / clinic for OPD / IPD care </string>
+    <string name="qb0202"> Every health facility has a mechanism of Monthly data collection source Registers (DHIS / PPMIS) </string>
+    <string name="qb0203"> Every health facility has a mechanism of Monthly Report Generation through source Registers and Analyzed indicators (DHIS / PPMIS) </string>
 
-    <string name="qc03">Functioning Referral System</string>
-    <string name="qc0301">Established both referral system i.e. from community to health facility and between health facilities</string>
-    <string name="qc0302">Every Women / Newborn / Child is appropriately assessed before referral, and Refer is made without delay</string>
-    <string name="qc0303">Every Women / Newborn / Child referred within or between health facilities there is appropriate information exchange (Referral Note)</string>
-    <string name="qc0304">An up to date list of networking facilities in the same geographical area that provide referral care to clients should pasted on wall</string>
-    <string name="qc0305">The Health Facility has ready access to a functioning ambulance or other vehicle for emergency transportation of clients</string>
+    <string name="qc03"> Functioning Referral System </string>
+    <string name="qc0301"> Established both referral system i.e. from community to health facility and between health facilities </string>
+    <string name="qc0302"> Every Women / Newborn / Child is appropriately assessed before referral, and Refer is made without delay</string>
+    <string name="qc0303"> Every Women / Newborn / Child referred within or between health facilities there is appropriate information exchange (Referral Note) </string>
+    <string name="qc0304"> An up to date list of networking facilities in the same geographical area that provide referral care to clients should pasted on wall </string>
+    <string name="qc0305"> The Health Facility has ready access to a functioning ambulance or other vehicle for emergency transportation of clients </string>
 
-    <string name="qd04">Effective Communications</string>
-    <string name="qd0401"><![CDATA[Every Women / Newborn / Child along with their families should receive clear and accurate information exchange by health care provider (Before & After getting Care)]]></string>
-    <string name="qd0402">Every Women / Newborn / Child receive IEC Material to strengthen his / her understanding during hospital / clinic visit</string>
-    <string name="qd0403">Every Women / Newborn / Child along with their families should receive Complete counseling care</string>
-    <string name="qd0404"><![CDATA[Women/Neonate & Child with C-Section / Blood Transfusion priorly signed Informed Written Consent]]></string>
+    <string name="qd04"> Effective Communications </string>
+    <string name="qd0401"> <![CDATA[Every Women / Newborn / Child along with their families should receive clear and accurate information exchange by health care provider (Before & After getting Care)]]> </string>
+    <string name="qd0402"> Every Women / Newborn / Child receive IEC Material to strengthen his / her understanding during hospital / clinic visit </string>
+    <string name="qd0403"> Every Women / Newborn / Child along with their families should receive Complete counseling care </string>
+    <string name="qd0404"> <![CDATA[Women/Neonate & Child with C-Section / Blood Transfusion priorly signed Informed Written Consent]]> </string>
 
-    <string name="qe05"><![CDATA[Respect & Dignity]]></string>
-    <string name="qe0501">Every Women / Newborn / Child have privacy around the time, and their confidentiality is respected</string>
-    <string name="qe0502">No Women / Newborn / Child is subjected to mis treatment such as verbal abuse / discrimination / neglect or denial of services</string>
-    <string name="qe0503">Every Women / Newborn / Child have right to informed choices in the services they receive, and the reason for intervention / outcome are clearly explained</string>
+    <string name="qe05"> <![CDATA[Respect & Dignity]]> </string>
+    <string name="qe0501"> Every Women / Newborn / Child have privacy around the time, and their confidentiality is respected </string>
+    <string name="qe0502"> No Women / Newborn / Child is subjected to mis treatment such as verbal abuse / discrimination / neglect or denial of services </string>
+    <string name="qe0503"> Every Women / Newborn / Child have right to informed choices in the services they receive, and the reason for intervention / outcome are clearly explained </string>
 
-    <string name="qf06"><![CDATA[Competent & Motivated Personnel]]></string>
-    <string name="qf0601">Every Women / Newborn / Child has access at all the time to at least one health care provider and support staff for routine care and management of complication</string>
-    <string name="qf0602">The Health Care Provider and Support Staff at facility have appropriately competent and skilled (In Service Training on Updated Guidelines are Completed and Refresher will planned after 12months)</string>
-    <string name="qf0603">Health Facility has a designated focal person for quality improvement of hospital / clinic</string>
-    <string name="qf0604">Health Facility has record of at least one monthly meeting (MRM-Facility Level) to review Gaps and improve Quality of Care Services</string>
+    <string name="qf06"> <![CDATA[Competent & Motivated Personnel]]> </string>
+    <string name="qf0601"> Every Women / Newborn / Child has access at all the time to at least one health care provider and support staff for routine care and management of complication </string>
+    <string name="qf0602"> The Health Care Provider and Support Staff at facility have appropriately competent and skilled (In Service Training on Updated Guidelines are Completed and Refresher will planned after 12months) </string>
+    <string name="qf0603"> Health Facility has a designated focal person for quality improvement of hospital / clinic </string>
+    <string name="qf0604"> Health Facility has record of at least one monthly meeting (MRM-Facility Level) to review Gaps and improve Quality of Care Services </string>
 
-    <string name="qg07">Availability of Essential Physical Resources</string>
-    <string name="qg0701">The health facility has a functioning source of safe water located on the premises that is adequate to meet all demands for drinking, personal hygiene, medical interventions.</string>
-    <string name="qg0702">The health facility has leak proof, covered, labeled waste bins available in every treatment areas as per main 04 categories (Sharps / Non Sharps Infectious Waste / General non-infectious waste / Anatomical Waste)</string>
-    <string name="qg0703">At least one functioning hand hygiene station with soap / alcohol based hand rub and water</string>
-    <string name="qg0704">Health facility has energy infrastructure with a backup power source</string>
-    <string name="qg0705">The Health Facility has written up to date clinical management protocols for Maternal / Neonatal / Child Health Issues, consistent with WHO guidelines.</string>
-    <string name="qg0706">The health facility has sanitation / toilet facility on premises that are useable and separated by gender for staff and patients</string>
-    <string name="qg0707">The health facility has a labour and child birth area separated for delivery and post-partum care</string>
-    <string name="qg0708">A facility offering surgical services has adequately equipped operation theater</string>
-    <string name="qg0709"><![CDATA[Health facilities has 03 months supplies of Anti-Hypertensive, Anti Convulsant, IV & Oral Uterotonics, IV infusions, Injection Vitamin K, and antenatal corticosteroids (Dexamethasone & Betamethasone) to manage labour and its complications]]></string>
-    <string name="qg0710"><![CDATA[The health facility has functional essential equipment’s & supplies for detection of complications like thermometer, sphygmomanometer, stethoscopes, ARI Timers, Pulse Oximeter at all the times]]></string>
-    <string name="qg0711">The health facility has 03 months supplies of first and second line oral and injectable antibiotics and other lifesaving essential medicine available at all the time.</string>
-    <string name="qg0712">The health facility has functional laboratory having essential laboratory test performing there or at least having networking with nearby  laboratory and blood banks</string>
-    <string name="qg0713"><![CDATA[The health facility has functional essential equipment’s & supplies for saving life from complications like Vaccum, Forceps, Incubators, delivery and C-Section instruments kits, sterile gloves at all the times]]></string>
-    <string name="qg0714">The health facility has uninterrupted oxygen source and  resuscitation supplies</string>
-    <string name="qg0715">The health facility has an on-site pharmacy and medicine / supplies stock management system managed by a trained pharmacist or dispenser</string>
+    <string name="qg07"> Availability of Essential Physical Resources </string>
+    <string name="qg0701"> The health facility has a functioning source of safe water located on the premises that is adequate to meet all demands for drinking, personal hygiene, medical interventions. </string>
+    <string name="qg0702"> The health facility has leak proof, covered, labeled waste bins available in every treatment areas as per main 04 categories (Sharps / Non Sharps Infectious Waste / General non-infectious waste / Anatomical Waste) </string>
+    <string name="qg0703"> At least one functioning hand hygiene station with soap / alcohol based hand rub and water </string>
+    <string name="qg0704"> Health facility has energy infrastructure with a backup power source </string>
+    <string name="qg0705"> The Health Facility has written up to date clinical management protocols for Maternal / Neonatal / Child Health Issues, consistent with WHO guidelines. </string>
+    <string name="qg0706"> The health facility has sanitation / toilet facility on premises that are useable and separated by gender for staff and patients </string>
+    <string name="qg0707"> The health facility has a labour and child birth area separated for delivery and post-partum care </string>
+    <string name="qg0708"> A facility offering surgical services has adequately equipped operation theater </string>
+    <string name="qg0709"> <![CDATA[Health facilities has 03 months supplies of Anti-Hypertensive, Anti Convulsant, IV & Oral Uterotonics, IV infusions, Injection Vitamin K, and antenatal corticosteroids (Dexamethasone & Betamethasone) to manage labour and its complications]]> </string>
+    <string name="qg0710"> <![CDATA[The health facility has functional essential equipment’s & supplies for detection of complications like thermometer, sphygmomanometer, stethoscopes, ARI Timers, Pulse Oximeter at all the times]]> </string>
+    <string name="qg0711"> The health facility has 03 months supplies of first and second line oral and injectable antibiotics and other lifesaving essential medicine available at all the time. </string>
+    <string name="qg0712"> The health facility has functional laboratory having essential laboratory test performing there or at least having networking with nearby  laboratory and blood banks </string>
+    <string name="qg0713"> <![CDATA[The health facility has functional essential equipment’s & supplies for saving life from complications like Vaccum, Forceps, Incubators, delivery and C-Section instruments kits, sterile gloves at all the times]]> </string>
+    <string name="qg0714"> The health facility has uninterrupted oxygen source and  resuscitation supplies </string>
+    <string name="qg0715"> The health facility has an on-site pharmacy and medicine / supplies stock management system managed by a trained pharmacist or dispenser </string>
 
     <string name="dhheading"> Performance Evaluation of DHMTs </string>
     <string name="dh01"> Regularity of meetings; held within 100 days of last meeting </string>

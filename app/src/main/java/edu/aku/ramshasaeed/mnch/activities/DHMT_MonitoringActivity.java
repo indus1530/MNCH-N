@@ -27,7 +27,7 @@ ActivityDhmtMonitoringBinding bi;
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this,R.layout.activity_dhmt_monitoring);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.dhheading));
+        this.setTitle(getString(R.string.routinethree));
 
     }
 

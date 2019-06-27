@@ -31,7 +31,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc1);
         bi.setCallback(this);
-        this.setTitle("Evidence Based Practice for routine care & Management");
+        this.setTitle(getString(R.string.routinetwo));
         events_call();
     }
 
