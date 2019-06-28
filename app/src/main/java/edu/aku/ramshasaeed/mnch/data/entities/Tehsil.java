@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 
-//@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_TEHSIL)
+@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_TEHSIL)
 public class Tehsil {
 
     @PrimaryKey(autoGenerate = true)
@@ -57,9 +57,9 @@ public class Tehsil {
 
     public Tehsil Sync(JSONObject jsonObjectCls) throws JSONException {
 
-        this.tehsil_code = jsonObjectCls.getString("hf_tehsil_code");
-        this.tehsil_name = jsonObjectCls.getString("hf_tehsil_name");
-        this.district_code = jsonObjectCls.getString("hf_district_code");
+        this.tehsil_code = jsonObjectCls.getString("tehsil_code");
+        this.tehsil_name = jsonObjectCls.getString("tehsil_name");
+        this.district_code = jsonObjectCls.getString("district_code");
         return this;
     }
 }

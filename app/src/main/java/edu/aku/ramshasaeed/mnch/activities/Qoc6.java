@@ -1,9 +1,8 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -31,7 +30,7 @@ public class Qoc6 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc6);
         bi.setCallback(this);
-        this.setTitle("Quality of Care 06");
+        this.setTitle(getString(R.string.routinetwo));
         events_call();
     }
 
@@ -86,19 +85,21 @@ public class Qoc6 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
         qoc6.put("qf0601a", bi.qf0601aa.isChecked() ? "1" : bi.qf0601ab.isChecked() ? "2" : bi.qf0601a97.isChecked() ? "NA" : "0");
         qoc6.put("qf0601b", bi.qf0601b.getText().toString().trim().length() > 0 ? bi.qf0601b.getText().toString() : "0");
-        qoc6.put("qf0601c", bi.qf0601c.getText().toString().trim().length() > 0 ? bi.qf0601c.getText().toString() : "0");
+//        qoc6.put("qf0601c", bi.qf0601c.getText().toString().trim().length() > 0 ? bi.qf0601c.getText().toString() : "0");
 
         qoc6.put("qf0602a", bi.qf0602aa.isChecked() ? "1" : bi.qf0602ab.isChecked() ? "2" : bi.qf0602a97.isChecked() ? "NA" : "0");
         qoc6.put("qf0602b", bi.qf0602b.getText().toString().trim().length() > 0 ? bi.qf0602b.getText().toString() : "0");
-        qoc6.put("qf0602c", bi.qf0602c.getText().toString().trim().length() > 0 ? bi.qf0602c.getText().toString() : "0");
+//        qoc6.put("qf0602c", bi.qf0602c.getText().toString().trim().length() > 0 ? bi.qf0602c.getText().toString() : "0");
 
         qoc6.put("qf0603a", bi.qf0603aa.isChecked() ? "1" : bi.qf0603ab.isChecked() ? "2" : bi.qf0603a97.isChecked() ? "NA" : "0");
         qoc6.put("qf0603b", bi.qf0603b.getText().toString().trim().length() > 0 ? bi.qf0603b.getText().toString() : "0");
-        qoc6.put("qf0603c", bi.qf0603c.getText().toString().trim().length() > 0 ? bi.qf0603c.getText().toString() : "0");
+//        qoc6.put("qf0603c", bi.qf0603c.getText().toString().trim().length() > 0 ? bi.qf0603c.getText().toString() : "0");
 
         qoc6.put("qf0604a", bi.qf0604aa.isChecked() ? "1" : bi.qf0604ab.isChecked() ? "2" : bi.qf0604a97.isChecked() ? "NA" : "0");
         qoc6.put("qf0604b", bi.qf0604b.getText().toString().trim().length() > 0 ? bi.qf0604b.getText().toString() : "0");
-        qoc6.put("qf0604c", bi.qf0604c.getText().toString().trim().length() > 0 ? bi.qf0604c.getText().toString() : "0");
+//        qoc6.put("qf0604c", bi.qf0604c.getText().toString().trim().length() > 0 ? bi.qf0604c.getText().toString() : "0");
+
+        qoc6.put("qf06Ap", bi.qf06Ap.getText().toString().trim().length() > 0 ? bi.qf06Ap.getText().toString() : "0");
 
         fc.setSqoc6(String.valueOf(qoc6));
 

@@ -9,7 +9,7 @@ import android.arch.persistence.room.Update;
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 import edu.aku.ramshasaeed.mnch.data.AppDatabase.Sub_DBConnection;
 import edu.aku.ramshasaeed.mnch.data.entities.District;
-import edu.aku.ramshasaeed.mnch.data.entities.Facility_provider;
+import edu.aku.ramshasaeed.mnch.data.entities.FacilityProvider;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.UCs;
@@ -36,13 +36,14 @@ public interface FormsDAO {
     @Insert
     Long insertDistrict(District district);
 
-  /*  @Insert
-    Long insertTehsil(Tehsil tehsil);
+    @Insert
+    Long insertFacilityProvider(FacilityProvider facility_provider);
 
     @Insert
-    Long insertUCs(UCs ucs);
+    Long insertTehsil(Tehsil tehsil);
+//
     @Insert
-    Long insertFacilityProvider(Facility_provider facility_provider);*/
+    Long insertUCs(UCs ucs);
 
     @Query("DELETE from " + AppDatabase.Sub_DBConnection.TABLE_USERS)
     int deleteUsers();
@@ -50,17 +51,15 @@ public interface FormsDAO {
     @Query("DELETE from " + Sub_DBConnection.TABLE_DISTRICT)
     int deleteDistrict();
 
-   /* @Query("DELETE from " + Sub_DBConnection.TABLE_TEHSIL)
+    @Query("DELETE from " + Sub_DBConnection.TABLE_FACILITY_PROVIDER)
+    int deleteFacilityProvider();
+
+    @Query("DELETE from " + Sub_DBConnection.TABLE_TEHSIL)
     int deleteTehsil();
 
     @Query("DELETE from " + Sub_DBConnection.TABLE_UCs)
     int deleteUcs();
 
-    @Query("DELETE from " + Sub_DBConnection.TABLE_FACILITY_PROVIDER)
-    int deleteFacilityProvider();
-*/
-
-    /*Update methods after upload on server*/
 
     /**
      * Updating only sync and syncDate

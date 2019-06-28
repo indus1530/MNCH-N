@@ -1,8 +1,8 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -27,7 +27,7 @@ ActivityDhmtMonitoringBinding bi;
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this,R.layout.activity_dhmt_monitoring);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.dhheading));
+        this.setTitle(getString(R.string.routinethree));
 
     }
 
@@ -73,7 +73,7 @@ ActivityDhmtMonitoringBinding bi;
 
     public boolean formValidation() {
 
-            if (!validatorClass.EmptyRadioButton(this, bi.dh01,bi.dh01a, getString(R.string.dh01))) {
+            /*if (!validatorClass.EmptyRadioButton(this, bi.dh01,bi.dh01a, getString(R.string.dh01))) {
                 return false;
             }
             if (!validatorClass.EmptyRadioButton(this, bi.dh02,bi.dh02a, getString(R.string.dh02))) {
@@ -92,22 +92,48 @@ ActivityDhmtMonitoringBinding bi;
                 return false;
             }
 
+        return true;*/
 
 
-        return true;
+        return validatorClass.EmptyCheckingContainer(this, bi.lldhmt);
+
     }
+
 
     private void SaveDraft() throws JSONException {
 
         JSONObject dhmt = new JSONObject();
+
         dhmt.put("dh01", bi.dh01a.isChecked() ? "1" : bi.dh01b.isChecked() ? "2" : "0");
+        dhmt.put("dh01Ap", bi.dh01Ap.getText().toString().trim().length() > 0 ? bi.dh01Ap.getText().toString() : "0");
+
         dhmt.put("dh02", bi.dh02a.isChecked() ? "1" : bi.dh02b.isChecked() ? "2" : "0");
+        dhmt.put("dh02Ap", bi.dh02Ap.getText().toString().trim().length() > 0 ? bi.dh02Ap.getText().toString() : "0");
+
         dhmt.put("dh03", bi.dh03a.isChecked() ? "1" : bi.dh03b.isChecked() ? "2" : "0");
+        dhmt.put("dh03Ap", bi.dh03Ap.getText().toString().trim().length() > 0 ? bi.dh03Ap.getText().toString() : "0");
+
         dhmt.put("dh04", bi.dh04a.isChecked() ? "1" : bi.dh04b.isChecked() ? "2" : "0");
+        dhmt.put("dh04Ap", bi.dh04Ap.getText().toString().trim().length() > 0 ? bi.dh04Ap.getText().toString() : "0");
+
         dhmt.put("dh05", bi.dh05a.isChecked() ? "1" : bi.dh05b.isChecked() ? "2" : "0");
+        dhmt.put("dh05Ap", bi.dh05Ap.getText().toString().trim().length() > 0 ? bi.dh05Ap.getText().toString() : "0");
+
         dhmt.put("dh06", bi.dh06a.isChecked() ? "1" : bi.dh06b.isChecked() ? "2" : "0");
+        dhmt.put("dh06Ap", bi.dh06Ap.getText().toString().trim().length() > 0 ? bi.dh06Ap.getText().toString() : "0");
+
+        dhmt.put("dh07", bi.dh07a.isChecked() ? "1" : bi.dh07b.isChecked() ? "2" : "0");
+        dhmt.put("dh07Ap", bi.dh07Ap.getText().toString().trim().length() > 0 ? bi.dh07Ap.getText().toString() : "0");
+
+        dhmt.put("dhmtSum", bi.dhmtSum.getText().toString().trim().length() > 0 ? bi.dhmtSum.getText().toString() : "0");
 
         fc.setSdhmt(String.valueOf(dhmt));
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
+
 }
