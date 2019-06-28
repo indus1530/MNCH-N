@@ -44,7 +44,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting 2nd Section", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
                 MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
 
             } else {
