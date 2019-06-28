@@ -33,6 +33,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         bi.setCallback(this);
         this.setTitle(getString(R.string.routinetwo));
         events_call();
+
     }
 
 
@@ -276,4 +277,5 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
+
 }
