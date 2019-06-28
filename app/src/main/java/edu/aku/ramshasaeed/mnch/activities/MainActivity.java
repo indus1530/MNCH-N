@@ -176,10 +176,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_hfa) {
+        /*if (id == R.id.nav_hfa) {
             Toast.makeText(this, "This Form is Under Construction!", Toast.LENGTH_SHORT).show();
 
-        } else if (id == R.id.nav_rsd) {
+        } else*/
+        if (id == R.id.nav_rsd) {
             startingActivities(1);
         } else if (id == R.id.navQOC) {
             startingActivities(2);

@@ -4,9 +4,12 @@
     <string name="routinetwo"> Key Quality Indicator Tool for Health Facility </string>
     <string name="routineone"> DHIS Data-Validation Tools for Decision Making </string>
     <string name="routinethree"> Performance Evaluation of District Team Meetings </string>
-    <string name="routine1two"> KQI-HF </string>
-    <string name="routine1one"> DHIS-DVT </string>
-    <string name="routine1three"> DHMT Monitoring </string>
+    <string name="routine1two"> Key Quality Indicator Tool for HF </string>
+    <string name="routine1one"> DHIS Data-Validation Tools for DM </string>
+    <string name="routine1three"> Performance Evaluation of DHMTs </string>
+    <string name="routine2two"> KQI-HF </string>
+    <string name="routine2one"> DHIS-DVT </string>
+    <string name="routine2three"> DHMT Monitoring </string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">MNCH</string>
