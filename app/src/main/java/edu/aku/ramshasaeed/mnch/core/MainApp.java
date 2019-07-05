@@ -40,20 +40,20 @@ public class MainApp extends Application {
 
     public static final String AppName = "uen_qoc"; // Must be without space
     //    public static final String _IP = "10.1.42.30"; // linux server
-//    public static final String _IP = "vcoe1.aku.edu"; // .Net server
-    public static final String _IP = "f38158";
-    //    public static final String _IP = "43.245.131.159"; // PHP server
+    public static final String _IP = "vcoe1.aku.edu"; // .Net server
+    //                public static final String _IP = "f38158";// .TEST server
+//        public static final String _IP = "43.245.131.159"; // PHP server
 //    public static final String _IP = "f49461"; // Test PHP server
     public static final Integer _PORT = 8080; // Port - with colon (:)
     //    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/uen_mnch/api/";
 //    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_mnch/api/";
-    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/";// .VOC server
-    //    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/";// .TEST server
-    public static final String _UPDATE_URL = "http://" + MainApp._IP + "/uen_qoc/app/";
+    public static final String _HOST_URL = "https://" + MainApp._IP + "/uen_qoc/api/";// .VOC server
+    //            public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/";// .TEST server
+    public static final String _UPDATE_URL = "https://" + MainApp._IP + "/uen_qoc/app/";
 
-    //public static final long MILLISECONDS_IN_5
-    //    public static final Integer MONTHS_LIMIT = 11;
-    //    public static final Integer DAYS_LIMIT = 29;YEAR = (MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR);
+    public static final Integer MONTHS_LIMIT = 11;
+    public static final Integer DAYS_LIMIT = 29;
+    //public static final long MILLISECONDS_IN_5YEAR = (MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR);
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
     private static final int TWENTY_MINUTES = 1000 * 60 * 20;
@@ -224,7 +224,7 @@ public class MainApp extends Application {
     public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
         String message = "";
 
-        if (complete)
+        if(complete)
             message = "Do you want to Finish?";
         else
             message = "Do you want to Exit?";

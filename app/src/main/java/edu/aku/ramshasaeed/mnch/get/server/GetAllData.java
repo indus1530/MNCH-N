@@ -121,7 +121,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 pd.show();
             }
         } else {
-            pd.setTitle("Connection Error");
+//            pd.setTitle("Connection Error");
             pd.setMessage("Server not found!");
             pd.show();
         }

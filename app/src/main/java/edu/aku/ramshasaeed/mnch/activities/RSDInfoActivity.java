@@ -59,7 +59,10 @@ public class RSDInfoActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         type = getIntent().getStringExtra(MainApp.FORM_TYPE);
-        this.setTitle(type.equals(MainApp.RSD) ? "ROUTINE SERVICE DELIVERY" : type.equals(MainApp.DHMT) ? "DHMT" : type.equals(MainApp.QOC) ? "QUALITY OF CARE" : "");
+//        this.setTitle(type.equals(MainApp.RSD) ? "ROUTINE SERVICE DELIVERY" : type.equals(MainApp.DHMT) ? "DHMT" : type.equals(MainApp.QOC) ? "QUALITY OF CARE" : "");
+        this.setTitle(type.equals(MainApp.RSD) ? "DHIS Data-Validation Tools for Decision Making"
+                : type.equals(MainApp.DHMT) ? "Performance Evaluation of District Team Meetings"
+                : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility" : "");
 
         tempVisible(this);
 
@@ -332,6 +335,5 @@ public class RSDInfoActivity extends AppCompatActivity {
         return false;
 
     }
-
 
 }

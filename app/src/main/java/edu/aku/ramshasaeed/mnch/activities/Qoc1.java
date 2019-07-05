@@ -31,8 +31,9 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc1);
         bi.setCallback(this);
-        this.setTitle("Quality Of Care 01");
+        this.setTitle(getString(R.string.routinetwo));
         events_call();
+
     }
 
 
@@ -44,7 +45,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting 2nd Section", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
                 MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
 
             } else {
@@ -276,4 +277,5 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
+
 }

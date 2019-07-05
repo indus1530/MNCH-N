@@ -4,22 +4,22 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
+        <!--<item
             android:id="@+id/nav_hfa"
             android:icon="@android:drawable/ic_menu_recent_history"
-            android:title="Health Facility Assessment" />
+            android:title="Health Facility Assessment" />-->
         <item
             android:id="@+id/nav_rsd"
             android:icon="@android:drawable/ic_menu_directions"
-            android:title="@string/routineone" />
+            android:title="@string/routine1one" />
         <item
             android:id="@+id/navQOC"
             android:icon="@android:drawable/ic_menu_agenda"
-            android:title="@string/routinetwo" />
+            android:title="@string/routine1two" />
         <item
             android:id="@+id/nav_dhmt"
             android:icon="@android:drawable/ic_menu_preferences"
-            android:title="@string/routinethree" />
+            android:title="@string/routine1three" />
     </group>
 
     <item android:title="Other Tools">

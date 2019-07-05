@@ -32,7 +32,7 @@ public class Qoc7 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc7);
         bi.setCallback(this);
-        this.setTitle("Quality Of Care 07");
+        this.setTitle(getString(R.string.routinetwo));
         events_call();
     }
 

@@ -62,5 +62,6 @@ public class VersionAppContract {
         public static final String COLUMN_VERSION_CODE = "versionCode";
         public static final String COLUMN_VERSION_NAME = "versionName";
         public static final String COLUMN_PATH_NAME = "path";
+
     }
 }
