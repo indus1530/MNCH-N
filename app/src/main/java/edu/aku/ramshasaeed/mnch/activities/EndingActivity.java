@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -93,7 +92,7 @@ public class EndingActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         try {
-            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao","updateForm").get();
+            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
         } catch (InterruptedException e) {
@@ -108,10 +107,7 @@ public class EndingActivity extends AppCompatActivity {
     private boolean formValidation() {
         Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
-        if (!validatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusa, getString(R.string.istatus))) {
-            return false;
-        }
-/*
+        return validatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusa, getString(R.string.istatus));/*
 
         if (istatus88.isChecked()) {
 
@@ -126,7 +122,6 @@ public class EndingActivity extends AppCompatActivity {
 */
 
 
-        return true;
     }
 
 
