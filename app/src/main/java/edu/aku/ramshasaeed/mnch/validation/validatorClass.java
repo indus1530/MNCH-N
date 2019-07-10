@@ -226,8 +226,8 @@ public abstract class validatorClass {
                     return false;
                 }
             }
-
         }
+
         return true;
     }
 
