@@ -415,7 +415,7 @@ public class RSDActivity extends AppCompatActivity {
         }
         if (!bi.rs2099.isChecked()) {
 
-            if (!validatorClass.EmptyTextBox(this, bi.rs10, getString(R.string.rs20))) {
+            if (!validatorClass.EmptyTextBox(this, bi.rs20, getString(R.string.rs20))) {
                 return false;
             }
         }
@@ -543,12 +543,7 @@ public class RSDActivity extends AppCompatActivity {
                 return false;
             }
         }
-        if (!validatorClass.EmptyTextBox(this, bi.rsrem, getString(R.string.rsrem))) {
-            return false;
-        }
-
-
-        return true;
+        return validatorClass.EmptyTextBox(this, bi.rsrem, getString(R.string.rsrem));
     }
 
 

@@ -30,7 +30,7 @@ public class Qoc3 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc3);
         bi.setCallback(this);
-        this.setTitle("Functioning Refferal System");
+        this.setTitle(getString(R.string.routinetwo));
         events_call();
     }
 

@@ -30,7 +30,7 @@ public class Qoc2 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc2);
         bi.setCallback(this);
-        this.setTitle("Actionable Information System");
+        this.setTitle(getString(R.string.routinetwo));
         events_call();
     }
 

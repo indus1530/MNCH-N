@@ -28,7 +28,7 @@ import edu.aku.ramshasaeed.mnch.R;
 public abstract class validatorClass {
 
     public static boolean EmptyTextBox(Context context, EditText txt, String msg) {
-        if (TextUtils.isEmpty(txt.getText().toString())) {
+        if (TextUtils.isEmpty(txt.getText().toString().trim())) {
             Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_SHORT).show();
             txt.setError("This data is Required! ");    // Set Error on last radio button
             txt.requestFocus();
@@ -226,8 +226,8 @@ public abstract class validatorClass {
                     return false;
                 }
             }
-
         }
+
         return true;
     }
 

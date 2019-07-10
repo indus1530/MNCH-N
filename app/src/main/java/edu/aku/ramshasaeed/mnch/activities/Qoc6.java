@@ -30,7 +30,7 @@ public class Qoc6 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc6);
         bi.setCallback(this);
-        this.setTitle("Competent & Motivated Personnel");
+        this.setTitle(getString(R.string.routinetwo));
         events_call();
     }
 
