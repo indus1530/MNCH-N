@@ -22,7 +22,7 @@ import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
-public class RSDActivity extends AppCompatActivity {
+public class Rsd01 extends AppCompatActivity {
     //Routine Service Delivery
     ActivityRsdBinding bi;
 
@@ -30,7 +30,7 @@ public class RSDActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd01);
         bi.setCallback(this);
         this.setTitle(getString(R.string.routineone));
         EventsCall();
