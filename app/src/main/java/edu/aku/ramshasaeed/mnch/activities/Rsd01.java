@@ -354,6 +354,7 @@ public class Rsd01 extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject f01 = new JSONObject();
+
         f01.put("rs01", bi.rs0199.isChecked() ? "Mi" : bi.rs01.getText().toString());
         f01.put("rs02", bi.rs0299.isChecked() ? "Mi" : bi.rs02.getText().toString());
         f01.put("rs03", bi.rs0399.isChecked() ? "Mi" : bi.rs03.getText().toString());
@@ -401,7 +402,7 @@ public class Rsd01 extends AppCompatActivity {
 //
 //        f01.put("rsrem", bi.rsrem.getText().toString());
 
-        fc.setSrsd(String.valueOf(f01));
+        fc.setSrsd1(String.valueOf(f01));
 
     }
 
