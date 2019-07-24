@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -36,6 +37,7 @@ import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.UCs;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsdinfoBinding;
 import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
+import edu.aku.ramshasaeed.mnch.validation.ClearClass;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 
 import static android.view.View.GONE;
@@ -67,10 +69,46 @@ public class RSDInfoActivity extends AppCompatActivity {
         tempVisible(this);
 
         if (type.equals(MainApp.DHMT)) {
+            ClearClass.ClearAllFields(bi.fldGrpInfo02, null);
             bi.fldGrpInfo02.setVisibility(GONE);
         } else {
             bi.fldGrpInfo02.setVisibility(VISIBLE);
         }
+
+
+        if (type.equals(MainApp.RSD)) {
+            bi.llpp.setVisibility(VISIBLE);
+            bi.llpvt.setVisibility(GONE);
+            bi.llpub.setVisibility(GONE);
+        } else {
+            ClearClass.ClearAllFields(bi.llpp, null);
+            ClearClass.ClearAllFields(bi.llpub, null);
+            bi.llpp.setVisibility(GONE);
+            bi.llpub.setVisibility(GONE);
+        }
+
+
+        bi.rGpp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                ClearClass.ClearAllFields(bi.llpvt, null);
+                ClearClass.ClearAllFields(bi.llpub, null);
+                bi.llpvt.setVisibility(GONE);
+                bi.llpub.setVisibility(GONE);
+
+                if (checkedId == bi.pub.getId()) {
+                    bi.llpub.setVisibility(View.VISIBLE);
+                } else if (checkedId == bi.pvt.getId()) {
+                    bi.llpvt.setVisibility(View.VISIBLE);
+                }
+
+            }
+
+        });
+
+
+        ///RSD Public & Private
 
         /*bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -223,7 +261,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             if (UpdateDB()) {
 
                 finish();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : Rsd01.class));
+                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

@@ -27,7 +27,8 @@
     <string name="meetingtime">Please Select Meeting Date and Time</string>
     <string name="hf_tehsil">Tehsil</string>
     <string name="hf_uc">Union Council</string>
-    <string name="hf_uen">Facility Name</string>
+    <string name="hf_uen_private">Private Facility Name</string>
+    <string name="hf_uen_public">Public Facility Name</string>
     <string name="hf_consent">Is Consent form Signed</string>
     <string name="check">Check</string>
     <string name="yes">Yes</string>
@@ -478,5 +479,6 @@
     <string name="s03">Source: \t Review Medical Records</string>
     <string name="s02r03">Direct Observation on Clients \n\t OR \n\t Review Medical Records</string>
     <string name="inr">If No (Reasons)</string>
+    <string name="hftype">Health Facility Type ?</string>
 
 </resources>

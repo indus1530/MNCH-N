@@ -93,9 +93,11 @@ public class MainApp extends Application {
     public static String wName;
     public static String DeviceURL = "devices.php";
     public static String RSD = "RSD";
+    public static String RSDMain = "RSDMain";
     public static String QOC = "QOC";
     public static String DHMT = "DHMT";
     public static String FORM_TYPE = "formType";
+    public static String formSubtype;
 
 
     protected static LocationManager locationManager;
