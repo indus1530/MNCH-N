@@ -134,7 +134,7 @@
                         android:text="@string/hf_uen_private" />
 
                     <EditText
-                        android:id="@+id/hf_facility_provider"
+                        android:id="@+id/hf_name"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -161,7 +161,7 @@
                         android:text="@string/hf_uen_public" />
 
                     <Spinner
-                        android:id="@+id/public_facility_provider"
+                        android:id="@+id/hf_name_public"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"

@@ -295,7 +295,13 @@ public class RSDInfoActivity extends AppCompatActivity {
         if (!type.equals(MainApp.DHMT)) {
             f01.put("tehsil_code", tehsilCode.get(bi.hfTehsil.getSelectedItemPosition()));
             f01.put("uc_code", ucCode.get(bi.hfUc.getSelectedItemPosition()));
-            f01.put("hf_name", bi.hfFacilityProvider.getText().toString());
+
+            if (type.equals(MainApp.RSD)) {
+                f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
+                f01.put("hf_name_public", facility_name.get(bi.hfUc.getSelectedItemPosition()));
+            }
+
+            f01.put("hf_name", bi.hfName.getText().toString());
 //            FacilityProvider fp = facilityMap.get(bi.hfFacilityProvider.getSelectedItem().toString());
 //            f01.put("hf_dhis", fp.getHf_dhis());
 //            f01.put("hf_district_code", fp.getHf_district_code());
