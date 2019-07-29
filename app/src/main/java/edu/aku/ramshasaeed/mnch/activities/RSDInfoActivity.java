@@ -78,6 +78,8 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         if (type.equals(MainApp.RSD)) {
             bi.llpp.setVisibility(VISIBLE);
+            ClearClass.ClearAllFields(bi.llpvt, null);
+            ClearClass.ClearAllFields(bi.llpub, null);
             bi.llpvt.setVisibility(GONE);
             bi.llpub.setVisibility(GONE);
         } else {
