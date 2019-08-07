@@ -54,10 +54,10 @@
 
     <string name="rshint01"> Maternal Health Register </string>
     <string name="rs01"> Number of ANC – 1 visit </string>
-    <string name="rs02"> Number of ANC Revisits (2/3/4 or more) </string>
+    <string name="rs02"> Number of ANC Revisits ( 2, 3, 4 or more) </string>
     <string name="rs03"> ANC-1 women with Hb 10 g/dl </string>
     <string name="rs04"> Number of PNC-1 visits </string>
-    <string name="rs05"> Number of PNC-2 visits </string>
+    <string name="rs05"> Number of PNC Revisits (2, 3, 4 or more) </string>
 
 
     <string name="rshint02"> EPI Health Register </string>

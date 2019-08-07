@@ -46,10 +46,11 @@ import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class RSDInfoActivity extends AppCompatActivity {
     private ActivityRsdinfoBinding bi;
-    private List<String> districtNames, districtCodes, facility_name, tehsilName, tehsilCode, UcNames, ucCode;
+    private List<String> districtNames, districtCodes, hf_name, tehsilName, tehsilCode, UcNames, ucCode;
     private Map<String, FacilityProvider> facilityMap;
     private Map<String, String> tehsilMap;
     private Map<String, String> UcMap;
+    private Map<String, String> FacilityProvider;
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
     private String type;
@@ -300,7 +301,7 @@ public class RSDInfoActivity extends AppCompatActivity {
 
             if (type.equals(MainApp.RSD)) {
                 f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
-                f01.put("hf_name_public", facility_name.get(bi.hfUc.getSelectedItemPosition()));
+                f01.put("hf_name_public", hf_name.get(bi.hfNamePublic.getSelectedItemPosition()));
             }
 
             f01.put("hf_name", bi.hfName.getText().toString());
