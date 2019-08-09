@@ -264,16 +264,15 @@ public class RSDInfoActivity extends AppCompatActivity {
                                 (Collection<FacilityProvider>)
                                         new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
                                                 .execute(districtCodes.get(position)).get();
-                        if (hfp.size() != 0) {
-                            for (FacilityProvider fp : hfp) {
-                                hfName.add(fp.getHf_name());
-                                ucCode.add(fp.getHf_uen_code());
+                        if (hfp.size() == 0) return;
 
-                            }
+                        for (FacilityProvider fp : hfp) {
+                            hfName.add(fp.getHf_name());
+                            hfCode.add(fp.getHf_uen_code());
+
                         }
 
-                        bi.hfNamePublic.setAdapter(new ArrayAdapter<>(context,
-                                android.R.layout.simple_spinner_dropdown_item, hfName));
+                        bi.hfNamePublic.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_spinner_dropdown_item, hfName));
 
                     } catch (InterruptedException e) {
                         e.printStackTrace();
