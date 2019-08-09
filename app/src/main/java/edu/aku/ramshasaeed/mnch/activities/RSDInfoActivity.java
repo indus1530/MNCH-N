@@ -267,7 +267,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                         if (hfp.size() != 0) {
                             for (FacilityProvider fp : hfp) {
                                 hfName.add(fp.getHf_name());
-                                ucCode.add(fp.getHf_uen_code());
+                                hfCode.add(fp.getHf_uen_code());
 
                             }
                         }
@@ -342,7 +342,11 @@ public class RSDInfoActivity extends AppCompatActivity {
 
             if (type.equals(MainApp.RSD)) {
                 f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
-                f01.put("hf_name_public", hfCode.get(bi.hfNamePublic.getSelectedItemPosition()));
+                if (bi.pub.isChecked()) {
+                    f01.put("hf_code", hfCode.get(bi.hfNamePublic.getSelectedItemPosition()));
+                } else {
+                    f01.put("hf_name", bi.hfName.getText().toString());
+                }
             } else {
                 f01.put("hf_name", bi.hfName.getText().toString());
             }
