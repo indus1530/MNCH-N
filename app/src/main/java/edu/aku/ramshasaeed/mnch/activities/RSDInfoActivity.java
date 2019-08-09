@@ -46,7 +46,7 @@ import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class RSDInfoActivity extends AppCompatActivity {
     private ActivityRsdinfoBinding bi;
-    private List<String> districtNames, districtCodes, hf_name, tehsilName, tehsilCode, UcNames, ucCode;
+    private List<String> districtNames, districtCodes, hf_name, tehsilName, tehsilCode, UcNames, ucCode, hfName, hfCode;
     private Map<String, FacilityProvider> facilityMap;
     private Map<String, String> tehsilMap;
     private Map<String, String> UcMap;
@@ -247,6 +247,47 @@ public class RSDInfoActivity extends AppCompatActivity {
 
                 }
             });
+
+            bi.hfUc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    if (position == 0) return;
+
+                    hfName = new ArrayList<>();
+                    hfCode = new ArrayList<>();
+                    hfCode.add("....");
+                    hfName.add("....");
+
+                    Collection<FacilityProvider> hfp;
+                    try {
+                        hfp =
+                                (Collection<FacilityProvider>)
+                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
+                                                .execute(districtCodes.get(position)).get();
+                        if (hfp.size() != 0) {
+                            for (FacilityProvider fp : hfp) {
+                                hfName.add(fp.getHf_name());
+                                ucCode.add(fp.getHf_uen_code());
+
+                            }
+                        }
+
+                        bi.hfNamePublic.setAdapter(new ArrayAdapter<>(context,
+                                android.R.layout.simple_spinner_dropdown_item, hfName));
+
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
         }
 
 
@@ -301,10 +342,10 @@ public class RSDInfoActivity extends AppCompatActivity {
 
             if (type.equals(MainApp.RSD)) {
                 f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
-                f01.put("hf_name_public", hf_name.get(bi.hfNamePublic.getSelectedItemPosition()));
+                f01.put("hf_name_public", hfCode.get(bi.hfNamePublic.getSelectedItemPosition()));
+            } else {
+                f01.put("hf_name", bi.hfName.getText().toString());
             }
-
-            f01.put("hf_name", bi.hfName.getText().toString());
 //            FacilityProvider fp = facilityMap.get(bi.hfFacilityProvider.getSelectedItem().toString());
 //            f01.put("hf_dhis", fp.getHf_dhis());
 //            f01.put("hf_district_code", fp.getHf_district_code());
