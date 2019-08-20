@@ -3,8 +3,6 @@ package edu.aku.ramshasaeed.mnch.activities;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -38,69 +36,26 @@ public class Rsd06 extends AppCompatActivity {
 
     }
 
+
     void EventsCall() {
 
-        bi.rs3999.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+       /* bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3997.isChecked()) {
-                    bi.rs3997.setChecked(false);
+                if (b && bi.rs2297.isChecked()) {
+                    bi.rs2297.setChecked(false);
                 }
                 if (b) {
-                    bi.rs39.setVisibility(View.GONE);
-                    bi.rs39.setText(null);
+                    bi.rs22.setVisibility(View.GONE);
+                    bi.rs22.setText(null);
                 } else {
-                    bi.rs39.setVisibility(View.VISIBLE);
+                    bi.rs22.setVisibility(View.VISIBLE);
                 }
             }
-        });
-
-        bi.rs3997.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs3999.isChecked()) {
-                    bi.rs3999.setChecked(false);
-                }
-                if (b) {
-                    bi.rs39.setVisibility(View.GONE);
-                    bi.rs39.setText(null);
-                } else {
-                    bi.rs39.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs4099.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs4097.isChecked()) {
-                    bi.rs4097.setChecked(false);
-                }
-                if (b) {
-                    bi.rs40.setVisibility(View.GONE);
-                    bi.rs40.setText(null);
-                } else {
-                    bi.rs40.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs4097.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs4099.isChecked()) {
-                    bi.rs4099.setChecked(false);
-                }
-                if (b) {
-                    bi.rs40.setVisibility(View.GONE);
-                    bi.rs40.setText(null);
-                } else {
-                    bi.rs40.setVisibility(View.VISIBLE);
-                }
-            }
-        });
+        });*/
 
     }
+
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -118,6 +73,7 @@ public class Rsd06 extends AppCompatActivity {
             }
         }
     }
+
 
     public void BtnEnd() {
         MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
@@ -143,44 +99,20 @@ public class Rsd06 extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        if (!bi.rs3099.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs30, getString(R.string.rs30))) {
-                return false;
-            }
-        }
-        if (!bi.rs3399.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs33, getString(R.string.rs33))) {
-                return false;
-            }
-        }
-        if (!bi.rs3799.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs37, getString(R.string.rs37))) {
-                return false;
-            }
-        }
-        if (!bi.rs3899.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs38, getString(R.string.rs38))) {
-                return false;
-            }
-        }
-        if (!bi.rs3999.isChecked() && !bi.rs3997.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs39, getString(R.string.rs39))) {
-                return false;
-            }
-        }
-        if (!bi.rs4099.isChecked() && !bi.rs4097.isChecked()) {
-
-            return validatorClass.EmptyTextBox(this, bi.rs40, getString(R.string.rs40));
+        if (!bi.rs0699.isChecked()) {
+            return validatorClass.EmptyTextBox(this, bi.rs06, getString(R.string.rs06));
         }
 
-        //return validatorClass.EmptyTextBox(this, bi.rsrem, getString(R.string.rsrem));
+        if (!bi.rs4799.isChecked()) {
+            return validatorClass.EmptyTextBox(this, bi.rs47, getString(R.string.rs47));
+        }
+
+        if (!bi.rs4899.isChecked()) {
+            return validatorClass.EmptyTextBox(this, bi.rs48, getString(R.string.rs48));
+        }
+
         return true;
+
     }
 
 
@@ -188,16 +120,13 @@ public class Rsd06 extends AppCompatActivity {
 
         JSONObject f01 = new JSONObject();
 
-        f01.put("rs30", bi.rs3099.isChecked() ? "Mi" : bi.rs30.getText().toString());
-        f01.put("rs33", bi.rs3399.isChecked() ? "Mi" : bi.rs33.getText().toString());
-        f01.put("rs37", bi.rs3799.isChecked() ? "Mi" : bi.rs37.getText().toString());
-        f01.put("rs38", bi.rs3899.isChecked() ? "Mi" : bi.rs38.getText().toString());
-        f01.put("rs39", bi.rs3999.isChecked() ? "Mi" : bi.rs3997.isChecked() ? "NA" : bi.rs39.getText().toString());
-        f01.put("rs40", bi.rs4099.isChecked() ? "Mi" : bi.rs4097.isChecked() ? "NA" : bi.rs40.getText().toString());
+        f01.put("rs06", bi.rs0699.isChecked() ? "Mi" : bi.rs06.getText().toString());
+        f01.put("rs47", bi.rs4799.isChecked() ? "Mi" : bi.rs47.getText().toString());
+        f01.put("rs48", bi.rs4899.isChecked() ? "Mi" : bi.rs48.getText().toString());
 
-//        f01.put("rsrem", bi.rsrem.getText().toString());
+        //f01.put("rsrem", bi.rsrem.getText().toString());
 
-        fc.setSrsd6(String.valueOf(f01));
+        fc.setSrsd2(String.valueOf(f01));
 
     }
 

@@ -31,7 +31,7 @@
             <!--SECTION 07 STARTS HERE-->
             <TextView
                 style="@style/textViewCenterGravity"
-                android:text="@string/rshint07" />
+                android:text="@string/rshint05" />
 
             <android.support.v7.widget.CardView
                 style="@style/cardView"

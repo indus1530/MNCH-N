@@ -38,7 +38,7 @@ public class Rsd02 extends AppCompatActivity {
 
     void EventsCall() {
 
-       /* bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /*bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b && bi.rs2297.isChecked()) {
@@ -96,13 +96,19 @@ public class Rsd02 extends AppCompatActivity {
 
     public boolean formValidation() {
 
-        if (!bi.rs0699.isChecked()) {
+        if (!bi.rs0799.isChecked()) {
 
-            return validatorClass.EmptyTextBox(this, bi.rs06, getString(R.string.rs06));
+            if (!validatorClass.EmptyTextBox(this, bi.rs07, getString(R.string.rs07))) {
+                return false;
+            }
+        }
+
+        if (!bi.rs0899.isChecked()) {
+
+            return validatorClass.EmptyTextBox(this, bi.rs08, getString(R.string.rs08));
         }
 
         return true;
-
     }
 
 
@@ -110,9 +116,10 @@ public class Rsd02 extends AppCompatActivity {
 
         JSONObject f01 = new JSONObject();
 
-        f01.put("rs06", bi.rs0699.isChecked() ? "Mi" : bi.rs06.getText().toString());
+        f01.put("rs07", bi.rs0799.isChecked() ? "Mi" : bi.rs07.getText().toString());
+        f01.put("rs08", bi.rs0899.isChecked() ? "Mi" : bi.rs08.getText().toString());
 
-        //f01.put("rsrem", bi.rsrem.getText().toString());
+//        f01.put("rsrem", bi.rsrem.getText().toString());
 
         fc.setSrsd2(String.valueOf(f01));
 
