@@ -173,6 +173,74 @@
                     </LinearLayout>
                     <!--RS31 ENDS HERE-->
 
+                    <!--RS45 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs45" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs45"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4" />
+
+                            <CheckBox
+                                android:id="@+id/rs4599"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/rs4597"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS45 ENDS HERE-->
+
 
                     <!--RS27 STARTS HERE-->
                     <View
@@ -359,6 +427,75 @@
 
                     </LinearLayout>
                     <!--RS35 ENDS HERE-->
+
+
+                    <!--rs46 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs46" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs46"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4" />
+
+                            <CheckBox
+                                android:id="@+id/rs4699"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <CheckBox
+                                android:id="@+id/rs4697"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--rs46 ENDS HERE-->
 
 
                     <!--RS32 STARTS HERE-->
