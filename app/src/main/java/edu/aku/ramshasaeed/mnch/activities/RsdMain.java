@@ -119,11 +119,11 @@ public class RsdMain extends AppCompatActivity {
                 case R.id.form06:
                     oF = new Intent(RsdMain.this, Rsd06.class);
                     MainApp.formSubtype = "f6";
-                    break;
+                    break;/*
                 case R.id.form07:
                     oF = new Intent(RsdMain.this, Rsd07.class);
                     MainApp.formSubtype = "f7";
-                    break;
+                    break;*/
 
             }
             startActivity(oF);

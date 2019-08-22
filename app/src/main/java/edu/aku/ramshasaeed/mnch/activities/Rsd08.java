@@ -126,7 +126,7 @@ public class Rsd08 extends AppCompatActivity {
 
         //f01.put("rsrem", bi.rsrem.getText().toString());
 
-        fc.setSrsd2(String.valueOf(f01));
+        fc.setSrsd1(String.valueOf(f01));
 
     }
 

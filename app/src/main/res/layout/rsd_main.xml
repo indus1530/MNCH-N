@@ -82,16 +82,18 @@
                 android:onClick="openForm"
                 android:text="@string/rshint06"
                 android:textSize="20dp" />
+            <!--
 
-            <Button
-                android:id="@+id/form07"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="openForm"
-                android:text="@string/rshint07"
-                android:textSize="20dp" />
+                        <Button
+                            android:id="@+id/form07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:onClick="openForm"
+                            android:text="@string/rshint07"
+                            android:textSize="20dp" />
+            -->
 
         </LinearLayout>
 
