@@ -75,7 +75,9 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4" />
+                                android:maxLength="4"
+                                android:text='@{rs3499.checked ?  "":rs34.getText.toString }'
+                                android:visibility='@{rs3499.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
                                 android:id="@+id/rs3499"
@@ -88,7 +90,7 @@
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
-                            <CheckBox
+                            <!--<CheckBox
                                 android:id="@+id/rs3497"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -97,7 +99,7 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp" />-->
 
                         </LinearLayout>
 
@@ -143,7 +145,9 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4" />
+                                android:maxLength="4"
+                                android:text='@{rs3199.checked ?  "":rs31.getText.toString }'
+                                android:visibility='@{rs3199.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
                                 android:id="@+id/rs3199"
@@ -153,11 +157,10 @@
                                 android:layout_marginRight="3dp"
                                 android:gravity="center"
                                 android:text="@string/msing"
-
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
-                            <CheckBox
+                            <!--<CheckBox
                                 android:id="@+id/rs3197"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -166,14 +169,14 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp" />-->
 
                         </LinearLayout>
 
                     </LinearLayout>
                     <!--RS31 ENDS HERE-->
 
-                    <!--RS45 STARTS HERE-->
+                    <!--RS45 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -239,7 +242,7 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS45 ENDS HERE-->
+                    RS45 ENDS HERE-->
 
 
                     <!--RS27 STARTS HERE-->
@@ -399,7 +402,9 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4" />
+                                android:maxLength="4"
+                                android:text='@{rs3599.checked ?  "":rs35.getText.toString }'
+                                android:visibility='@{rs3599.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
                                 android:id="@+id/rs3599"
@@ -412,7 +417,7 @@
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
-                            <CheckBox
+                            <!--<CheckBox
                                 android:id="@+id/rs3597"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -421,7 +426,7 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp" />-->
 
                         </LinearLayout>
 
@@ -429,7 +434,7 @@
                     <!--RS35 ENDS HERE-->
 
 
-                    <!--rs46 STARTS HERE-->
+                    <!--rs46 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -495,7 +500,7 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--rs46 ENDS HERE-->
+                    rs46 ENDS HERE-->
 
 
                     <!--RS32 STARTS HERE-->
@@ -537,7 +542,9 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4" />
+                                android:maxLength="4"
+                                android:text='@{rs3299.checked ?  "":rs32.getText.toString }'
+                                android:visibility='@{rs3299.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
                                 android:id="@+id/rs3299"
@@ -550,7 +557,7 @@
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
-                            <CheckBox
+                            <!--<CheckBox
                                 android:id="@+id/rs3297"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -559,7 +566,7 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp" />-->
 
                         </LinearLayout>
 
@@ -570,45 +577,6 @@
 
             </android.support.v7.widget.CardView>
             <!--SECTION 05 ENDS HERE-->
-
-
-            <TextView
-                style="@style/textViewCenterGravity"
-                android:text="@string/rsrem" />
-
-            <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="@null"
-                android:layout_marginRight="3dp">
-
-                <LinearLayout
-                    style="@style/linerlayout_view"
-                    android:paddingRight="5dp">
-
-                    <!--  <TextView
-                          style="@style/textViewstartAlignGravity"
-                          android:layout_width="match_parent"
-                          android:text="@string/rsrem" />-->
-
-                    <EditText
-                        android:id="@+id/rsrem"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_marginBottom="1dp"
-                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/rsrem"
-                        android:inputType="textMultiLine"
-                        android:lines="8"
-                        android:maxLines="8"
-                        android:minLines="6"
-                        android:scrollbars="vertical" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->

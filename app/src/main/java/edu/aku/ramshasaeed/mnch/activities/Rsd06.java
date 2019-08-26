@@ -111,7 +111,7 @@ public class Rsd06 extends AppCompatActivity {
             return validatorClass.EmptyTextBox(this, bi.rs48, getString(R.string.rs48));
         }
 
-        return true;
+        return validatorClass.EmptyTextBox(this, bi.rsrem, getString(R.string.rsrem));
 
     }
 
@@ -124,7 +124,7 @@ public class Rsd06 extends AppCompatActivity {
         f01.put("rs47", bi.rs4799.isChecked() ? "Mi" : bi.rs47.getText().toString());
         f01.put("rs48", bi.rs4899.isChecked() ? "Mi" : bi.rs48.getText().toString());
 
-        //f01.put("rsrem", bi.rsrem.getText().toString());
+        f01.put("rsrem", bi.rsrem.getText().toString());
 
         fc.setSrsd6(String.valueOf(f01));
 

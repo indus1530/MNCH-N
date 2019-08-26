@@ -28,7 +28,7 @@
             android:orientation="vertical">
 
 
-            <!--SECTION 02 STARTS HERE-->
+            <!--SECTION 06 STARTS HERE-->
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint06" />
@@ -197,10 +197,49 @@
                     </LinearLayout>
                     <!--RS48 ENDS HERE-->
 
+
+                    <TextView
+                        style="@style/textViewCenterGravity"
+                        android:text="@string/rsrem" />
+
+                    <android.support.v7.widget.CardView
+                        style="@style/cardView"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="@null"
+                        android:layout_marginRight="3dp">
+
+                        <LinearLayout
+                            style="@style/linerlayout_view"
+                            android:paddingRight="5dp">
+
+                            <!--  <TextView
+                                  style="@style/textViewstartAlignGravity"
+                                  android:layout_width="match_parent"
+                                  android:text="@string/rsrem" />-->
+
+                            <EditText
+                                android:id="@+id/rsrem"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginBottom="1dp"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:hint="@string/rsrem"
+                                android:inputType="textMultiLine"
+                                android:lines="8"
+                                android:maxLines="8"
+                                android:minLines="6"
+                                android:scrollbars="vertical" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-            <!--SECTION 02 ENDS HERE-->
+            <!--SECTION 06 ENDS HERE-->
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
