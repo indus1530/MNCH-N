@@ -97,19 +97,17 @@
     <string name="rs40"> Referred Cases attended (Pediatrics) </string>
 
     <string name="rshint05"> Indoor Register (SHC) </string>
-    <string name="rs34"> Number of Diarrhea cases &lt;5 years (Indoor) </string>
-    <string name="rs31"> Number of Pneumonia cases &lt;5 years (Indoor) </string>
-    <string name="rs45"> Number of Dysentery cases &lt;5 years (Indoor) </string>
-    <string name="rs27"> Number of Infant deaths (1 &#8211; 11 months) </string>
-    <string name="rs28"> Number of child deaths (1 to 4 years) </string>
-    <string name="rs35"> Deaths due to Diarrhea among  &lt;5 years (Indoor) </string>
-    <string name="rs46"> Deaths due to Dysentery among  &lt;5 years (Indoor) </string>
+    <string name="rs34"> Diarrhea / Dysentery cases &lt;5 years (Indoor) </string>
+    <string name="rs31"> Pneumonia cases &lt;5 years (Indoor) </string>
+    <string name="rs27"> Infant deaths (1 &#8211; 11 months) </string>
+    <string name="rs28"> Child deaths (1 to 4 years) </string>
+    <string name="rs35"> Deaths due to Diarrhea / Dysentery among  &lt;5 years (Indoor) </string>
     <string name="rs32"> Deaths due to Pneumonia cases &lt;5 years (Indoor) </string>
 
     <string name="rshint06"> EPI Health Register (both PHC &amp; SHC) </string>
     <string name="rs06"> Pregnant Women given TT-2 vaccination </string>
-    <string name="rs47"> Children &lt;12 months received 3rd Pentavalent Vaccine </string>
-    <string name="rs48"> Children &lt;12 months received 1st Measles Vaccine </string>
+    <string name="rs47"> Children &lt;12 months received 3rd dosage of Pentavalent Vaccine </string>
+    <string name="rs48"> Children &lt;12 months received 1st dosage of Measles Vaccine </string>
 
 
     <!--23-Aug-19
