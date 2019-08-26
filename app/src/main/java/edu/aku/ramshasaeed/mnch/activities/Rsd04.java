@@ -3,8 +3,6 @@ package edu.aku.ramshasaeed.mnch.activities;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -33,14 +31,14 @@ public class Rsd04 extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd04);
         bi.setCallback(this);
         this.setTitle(getString(R.string.routineone));
-        EventsCall();
+        //EventsCall();
 
 
     }
 
     void EventsCall() {
 
-        bi.rs3999.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /*bi.rs3999.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b && bi.rs3997.isChecked()) {
@@ -98,7 +96,7 @@ public class Rsd04 extends AppCompatActivity {
                     bi.rs40.setVisibility(View.VISIBLE);
                 }
             }
-        });
+        });*/
 
     }
 
@@ -148,14 +146,14 @@ public class Rsd04 extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.rs33, getString(R.string.rs33))) {
                 return false;
             }
-        }
+        }/*
         if (!bi.rs4399.isChecked()) {
 
 
             if (!validatorClass.EmptyTextBox(this, bi.rs43, getString(R.string.rs43))) {
                 return false;
             }
-        }
+        }*/
         if (!bi.rs3099.isChecked()) {
 
 
@@ -183,6 +181,15 @@ public class Rsd04 extends AppCompatActivity {
                 return false;
             }
         }
+        if (!bi.rs3999.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.rs39, getString(R.string.rs39))) {
+                return false;
+            }
+        }
+        if (!bi.rs4099.isChecked()) {
+
+            return validatorClass.EmptyTextBox(this, bi.rs40, getString(R.string.rs40));
+        }/*
         if (!bi.rs3999.isChecked() && !bi.rs3997.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.rs39, getString(R.string.rs39))) {
                 return false;
@@ -191,7 +198,7 @@ public class Rsd04 extends AppCompatActivity {
         if (!bi.rs4099.isChecked() && !bi.rs4097.isChecked()) {
 
             return validatorClass.EmptyTextBox(this, bi.rs40, getString(R.string.rs40));
-        }
+        }*/
 
         //return validatorClass.EmptyTextBox(this, bi.rsrem, getString(R.string.rsrem));
         return true;
@@ -203,13 +210,15 @@ public class Rsd04 extends AppCompatActivity {
         JSONObject f01 = new JSONObject();
 
         f01.put("rs33", bi.rs3399.isChecked() ? "Mi" : bi.rs33.getText().toString());
-        f01.put("rs43", bi.rs4399.isChecked() ? "Mi" : bi.rs43.getText().toString());
+//        f01.put("rs43", bi.rs4399.isChecked() ? "Mi" : bi.rs43.getText().toString());
         f01.put("rs30", bi.rs3099.isChecked() ? "Mi" : bi.rs30.getText().toString());
         f01.put("rs44", bi.rs4499.isChecked() ? "Mi" : bi.rs44.getText().toString());
         f01.put("rs37", bi.rs3799.isChecked() ? "Mi" : bi.rs37.getText().toString());
         f01.put("rs38", bi.rs3899.isChecked() ? "Mi" : bi.rs38.getText().toString());
-        f01.put("rs39", bi.rs3999.isChecked() ? "Mi" : bi.rs3997.isChecked() ? "NA" : bi.rs39.getText().toString());
-        f01.put("rs40", bi.rs4099.isChecked() ? "Mi" : bi.rs4097.isChecked() ? "NA" : bi.rs40.getText().toString());
+        f01.put("rs39", bi.rs3999.isChecked() ? "Mi" : bi.rs39.getText().toString());
+        f01.put("rs40", bi.rs4099.isChecked() ? "Mi" : bi.rs40.getText().toString());
+//        f01.put("rs39", bi.rs3999.isChecked() ? "Mi" : bi.rs3997.isChecked() ? "NA" : bi.rs39.getText().toString());
+//        f01.put("rs40", bi.rs4099.isChecked() ? "Mi" : bi.rs4097.isChecked() ? "NA" : bi.rs40.getText().toString());
 
 //        f01.put("rsrem", bi.rsrem.getText().toString());
 

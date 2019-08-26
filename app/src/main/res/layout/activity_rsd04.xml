@@ -96,7 +96,7 @@
                     <!--RS33 ENDS HERE-->
 
 
-                    <!--RS43 STARTS HERE-->
+                    <!--RS43 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -153,7 +153,7 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS43 ENDS HERE-->
+                    RS43 ENDS HERE-->
 
 
                     <!--RS30 STARTS HERE-->
@@ -435,7 +435,9 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4" />
+                                android:maxLength="4"
+                                android:text='@{rs3999.checked ?  "":rs39.getText.toString }'
+                                android:visibility='@{rs3999.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
                                 android:id="@+id/rs3999"
@@ -448,7 +450,7 @@
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
-                            <CheckBox
+                            <!--<CheckBox
                                 android:id="@+id/rs3997"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -457,7 +459,7 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp" />-->
 
                         </LinearLayout>
 
@@ -504,7 +506,9 @@
                                 android:gravity="center"
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
-                                android:maxLength="4" />
+                                android:maxLength="4"
+                                android:text='@{rs4099.checked ?  "":rs40.getText.toString }'
+                                android:visibility='@{rs4099.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
                                 android:id="@+id/rs4099"
@@ -517,7 +521,7 @@
                                 android:textColor="@color/gray"
                                 android:textSize="16sp" />
 
-                            <CheckBox
+                            <!--<CheckBox
                                 android:id="@+id/rs4097"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -526,7 +530,7 @@
                                 android:gravity="center"
                                 android:text="@string/na"
                                 android:textColor="@color/gray"
-                                android:textSize="16sp" />
+                                android:textSize="16sp" />-->
 
                         </LinearLayout>
 
