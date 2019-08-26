@@ -3,8 +3,6 @@ package edu.aku.ramshasaeed.mnch.activities;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -33,14 +31,14 @@ public class Rsd03 extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd03);
         bi.setCallback(this);
         this.setTitle(getString(R.string.routineone));
-        EventsCall();
+        //EventsCall();
 
 
     }
 
     void EventsCall() {
 
-        bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /*bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b && bi.rs2297.isChecked()) {
@@ -68,7 +66,7 @@ public class Rsd03 extends AppCompatActivity {
                     bi.rs22.setVisibility(View.VISIBLE);
                 }
             }
-        });
+        });*/
 
     }
 
@@ -193,11 +191,16 @@ public class Rsd03 extends AppCompatActivity {
                 return false;
             }
         }
+        if (!bi.rs2299.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.rs22, getString(R.string.rs22))) {
+                return false;
+            }
+        }/*
         if (!bi.rs2299.isChecked() && !bi.rs2297.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.rs22, getString(R.string.rs22))) {
                 return false;
             }
-        }
+        }*/
         if (!bi.rs2399.isChecked()) {
 
             if (!validatorClass.EmptyTextBox(this, bi.rs23, getString(R.string.rs23))) {
@@ -250,7 +253,8 @@ public class Rsd03 extends AppCompatActivity {
         f01.put("rs20", bi.rs2099.isChecked() ? "Mi" : bi.rs20.getText().toString());
         f01.put("rs41", bi.rs4199.isChecked() ? "Mi" : bi.rs41.getText().toString());
         f01.put("rs21", bi.rs2199.isChecked() ? "Mi" : bi.rs21.getText().toString());
-        f01.put("rs22", bi.rs2299.isChecked() ? "Mi" : bi.rs2297.isChecked() ? "NA" : bi.rs22.getText().toString());
+//        f01.put("rs22", bi.rs2299.isChecked() ? "Mi" : bi.rs2297.isChecked() ? "NA" : bi.rs22.getText().toString());
+        f01.put("rs22", bi.rs2299.isChecked() ? "Mi" : bi.rs22.getText().toString());
         f01.put("rs23", bi.rs2399.isChecked() ? "Mi" : bi.rs23.getText().toString());
         f01.put("rs24", bi.rs2499.isChecked() ? "Mi" : bi.rs24.getText().toString());
         f01.put("rs25", bi.rs2599.isChecked() ? "Mi" : bi.rs25.getText().toString());
