@@ -65,7 +65,7 @@ public class Rsd06 extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
+                MainApp.endActivity(this, this, RsdMain.class, true, RSDInfoActivity.fc);
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -129,9 +129,9 @@ public class Rsd06 extends AppCompatActivity {
 
     }
 
-    @Override
+/*    @Override
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 }
