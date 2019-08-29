@@ -31,8 +31,7 @@ public class Rsd06 extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd06);
         bi.setCallback(this);
         this.setTitle(getString(R.string.routineone));
-        EventsCall();
-
+        //EventsCall();
 
     }
 

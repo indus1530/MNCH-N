@@ -19,32 +19,77 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:id="@+id/fldGrpInfo01"
+            android:id="@+id/llrsdInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
 
-            <TextView
+            <LinearLayout
+                android:id="@+id/llrsdInfo01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/hf_district" />
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/hf_district"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"
-                android:popupBackground="#d6d6d6"
-                android:prompt="@string/hf_district"
-                android:spinnerMode="dialog" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hftype" />
+
+                <RadioGroup
+                    android:id="@+id/rGpp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/pub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Public" />
+
+                    <RadioButton
+                        android:id="@+id/pvt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Private" />
+
+                </RadioGroup>
+
+            </LinearLayout>
 
 
             <LinearLayout
-                android:id="@+id/fldGrpInfo02"
+                android:id="@+id/llrsdInfo02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_district" />
+
+                <Spinner
+                    android:id="@+id/hf_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:popupBackground="#d6d6d6"
+                    android:prompt="@string/hf_district"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llrsdInfo03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:animateLayoutChanges="true"
@@ -83,94 +128,59 @@
                     android:popupBackground="#d6d6d6"
                     android:spinnerMode="dialog" />
 
+            </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/llpp"
+
+            <LinearLayout
+                android:id="@+id/llpvt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:animateLayoutChanges="true"
-                    android:orientation="vertical">
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_uen_private" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/hftype" />
+                <EditText
+                    android:id="@+id/hf_name"
+                    style="@style/textInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:hint="@string/hf_uen_private"
+                    android:prompt="@string/hf_uen_private" />
 
-                    <RadioGroup
-                        android:id="@+id/rGpp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <RadioButton
-                            android:id="@+id/pub"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Public" />
-
-                        <RadioButton
-                            android:id="@+id/pvt"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Private" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
+            </LinearLayout>
 
 
-                <LinearLayout
-                    android:id="@+id/llpvt"
+            <LinearLayout
+                android:id="@+id/llpub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:animateLayoutChanges="true"
-                    android:orientation="vertical">
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_uen_public" />
 
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/hf_uen_private" />
-
-                    <EditText
-                        android:id="@+id/hf_name"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="15dp"
-                        android:hint="@string/hf_uen_private"
-                        android:prompt="@string/hf_uen_private" />
-
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/llpub"
+                <Spinner
+                    android:id="@+id/hf_name_public"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:animateLayoutChanges="true"
-                    android:orientation="vertical">
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/hf_uen_public" />
-
-                    <Spinner
-                        android:id="@+id/hf_name_public"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="15dp"
-                        android:popupBackground="#d6d6d6"
-                        android:prompt="@string/hf_uen_public"
-                        android:spinnerMode="dialog" />
-
-                </LinearLayout>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:popupBackground="#d6d6d6"
+                    android:prompt="@string/hf_uen_public"
+                    android:spinnerMode="dialog" />
 
             </LinearLayout>
 

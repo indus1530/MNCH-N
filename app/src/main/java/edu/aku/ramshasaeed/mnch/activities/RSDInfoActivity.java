@@ -70,24 +70,28 @@ public class RSDInfoActivity extends AppCompatActivity {
         tempVisible(this);
 
         if (type.equals(MainApp.DHMT)) {
-            ClearClass.ClearAllFields(bi.fldGrpInfo02, null);
-            bi.fldGrpInfo02.setVisibility(GONE);
-        } else {
-            bi.fldGrpInfo02.setVisibility(VISIBLE);
+            ClearClass.ClearAllFields(bi.llrsdInfo01, null);
+            ClearClass.ClearAllFields(bi.llrsdInfo03, null);
+            ClearClass.ClearAllFields(bi.llpvt, null);
+            ClearClass.ClearAllFields(bi.llpub, null);
+            bi.llrsdInfo01.setVisibility(GONE);
+            bi.llrsdInfo03.setVisibility(GONE);
+            bi.llpvt.setVisibility(GONE);
+            bi.llpub.setVisibility(GONE);
+            bi.llrsdInfo02.setVisibility(VISIBLE);
         }
 
 
-        if (type.equals(MainApp.RSD)) {
-            bi.llpp.setVisibility(VISIBLE);
+        if (!type.equals(MainApp.DHMT)) {
+            ClearClass.ClearAllFields(bi.llrsdInfo02, null);
+            ClearClass.ClearAllFields(bi.llrsdInfo03, null);
             ClearClass.ClearAllFields(bi.llpvt, null);
             ClearClass.ClearAllFields(bi.llpub, null);
+            bi.llrsdInfo02.setVisibility(GONE);
+            bi.llrsdInfo03.setVisibility(GONE);
             bi.llpvt.setVisibility(GONE);
             bi.llpub.setVisibility(GONE);
-        } else {
-            ClearClass.ClearAllFields(bi.llpp, null);
-            ClearClass.ClearAllFields(bi.llpub, null);
-            bi.llpp.setVisibility(GONE);
-            bi.llpub.setVisibility(GONE);
+            bi.llrsdInfo01.setVisibility(VISIBLE);
         }
 
 
@@ -95,14 +99,21 @@ public class RSDInfoActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
+                ClearClass.ClearAllFields(bi.llrsdInfo02, null);
+                ClearClass.ClearAllFields(bi.llrsdInfo03, null);
                 ClearClass.ClearAllFields(bi.llpvt, null);
                 ClearClass.ClearAllFields(bi.llpub, null);
+                bi.llrsdInfo02.setVisibility(GONE);
+                bi.llrsdInfo03.setVisibility(GONE);
                 bi.llpvt.setVisibility(GONE);
                 bi.llpub.setVisibility(GONE);
 
                 if (checkedId == bi.pub.getId()) {
+                    bi.llrsdInfo02.setVisibility(VISIBLE);
                     bi.llpub.setVisibility(View.VISIBLE);
                 } else if (checkedId == bi.pvt.getId()) {
+                    bi.llrsdInfo02.setVisibility(VISIBLE);
+                    bi.llrsdInfo03.setVisibility(VISIBLE);
                     bi.llpvt.setVisibility(View.VISIBLE);
                 }
 
@@ -171,32 +182,66 @@ public class RSDInfoActivity extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 0) return;
 
-                    tehsilName = new ArrayList<>();
-                    tehsilCode = new ArrayList<>();
-                    tehsilCode.add("....");
-                    tehsilName.add("....");
+                    if (bi.pvt.isChecked()) {
 
-                    Collection<Tehsil> tehsils;
-                    try {
-                        tehsils =
-                                (Collection<Tehsil>)
-                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTehsil")
-                                                .execute(districtCodes.get(position)).get();
+                        tehsilName = new ArrayList<>();
+                        tehsilCode = new ArrayList<>();
+                        tehsilCode.add("....");
+                        tehsilName.add("....");
 
-                        if (tehsils.size() != 0) {
-                            for (Tehsil fp : tehsils) {
-                                tehsilName.add(fp.getTehsil_name());
-                                tehsilCode.add(fp.getTehsil_code());
+                        Collection<Tehsil> tehsils;
+                        try {
+                            tehsils =
+                                    (Collection<Tehsil>)
+                                            new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTehsil")
+                                                    .execute(districtCodes.get(position)).get();
+
+                            if (tehsils.size() != 0) {
+                                for (Tehsil fp : tehsils) {
+                                    tehsilName.add(fp.getTehsil_name());
+                                    tehsilCode.add(fp.getTehsil_code());
+                                }
                             }
+
+                            bi.hfTehsil.setAdapter(new ArrayAdapter<>(context,
+                                    android.R.layout.simple_spinner_dropdown_item, tehsilName));
+
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } catch (ExecutionException e) {
+                            e.printStackTrace();
                         }
 
-                        bi.hfTehsil.setAdapter(new ArrayAdapter<>(context,
-                                android.R.layout.simple_spinner_dropdown_item, tehsilName));
+                    } else if (bi.pub.isChecked()) {
 
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
+                        hfName = new ArrayList<>();
+                        hfCode = new ArrayList<>();
+                        hfCode.add("....");
+                        hfName.add("....");
+
+                        Collection<FacilityProvider> hfp;
+                        try {
+                            hfp =
+                                    (Collection<FacilityProvider>)
+                                            new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
+                                                    .execute(districtCodes.get(position)).get();
+                            if (hfp.size() != 0) {
+                                for (FacilityProvider fp : hfp) {
+                                    hfName.add(fp.getHf_name());
+                                    hfCode.add(fp.getHf_uen_code());
+
+                                }
+                            }
+
+                            bi.hfNamePublic.setAdapter(new ArrayAdapter<>(context,
+                                    android.R.layout.simple_spinner_dropdown_item, hfName));
+
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } catch (ExecutionException e) {
+                            e.printStackTrace();
+                        }
+
                     }
 
                 }
@@ -248,7 +293,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                 }
             });
 
-            bi.hfUc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            /*bi.hfDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 0) return;
@@ -287,7 +332,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                 public void onNothingSelected(AdapterView<?> parent) {
 
                 }
-            });
+            });*/
         }
 
 
@@ -318,7 +363,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-        return validatorClass.EmptyCheckingContainer(this, bi.fldGrpInfo01);
+        return validatorClass.EmptyCheckingContainer(this, bi.llrsdInfo);
     }
 
     private void SaveDraft() throws JSONException {
@@ -337,16 +382,24 @@ public class RSDInfoActivity extends AppCompatActivity {
         f01.put("district_code", districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
 
         if (!type.equals(MainApp.DHMT)) {
-            f01.put("tehsil_code", tehsilCode.get(bi.hfTehsil.getSelectedItemPosition()));
-            f01.put("uc_code", ucCode.get(bi.hfUc.getSelectedItemPosition()));
+            f01.put("tehsil_code", bi.pvt.isChecked() ? tehsilCode.get(bi.hfTehsil.getSelectedItemPosition()) : "");
+            f01.put("uc_code", bi.pvt.isChecked() ? ucCode.get(bi.hfUc.getSelectedItemPosition()) : "");
 
-            if (type.equals(MainApp.RSD)) {
+            /*if (type.equals(MainApp.RSD)) {
                 f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
                 if (bi.pub.isChecked()) {
                     f01.put("hf_code", hfCode.get(bi.hfNamePublic.getSelectedItemPosition()));
                 } else {
                     f01.put("hf_name", bi.hfName.getText().toString());
                 }
+            } else {
+                f01.put("hf_name", bi.hfName.getText().toString());
+            }*/
+
+            f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
+
+            if (bi.pub.isChecked()) {
+                f01.put("hf_code", hfCode.get(bi.hfNamePublic.getSelectedItemPosition()));
             } else {
                 f01.put("hf_name", bi.hfName.getText().toString());
             }
