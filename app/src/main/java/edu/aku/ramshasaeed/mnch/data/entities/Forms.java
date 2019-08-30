@@ -28,6 +28,7 @@ public class Forms implements Serializable {
     private String uuid = "";
     private String formType = "";
     private String formDate = ""; // Date
+    private String formSubType = "";
 /*    private String district = "";
     private String tehsil = "";
     private String ucs = "";
@@ -72,6 +73,7 @@ public class Forms implements Serializable {
         this.uuid = forms.uuid;
         this.formDate = forms.formDate;
         this.formType = forms.formType;
+        this.formSubType = forms.formSubType;
         this.username = forms.username;
         this.istatus = forms.istatus;
         this.istatus96x = forms.istatus96x;
@@ -140,6 +142,14 @@ public class Forms implements Serializable {
 
     public void setFormType(String formType) {
         this.formType = formType;
+    }
+
+    public String getFormSubType() {
+        return formSubType;
+    }
+
+    public void setFormSubType(String formSubType) {
+        this.formSubType = formSubType;
     }
 
     public String getFormDate() {
@@ -425,6 +435,7 @@ public class Forms implements Serializable {
         json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put("formSubType", this.formSubType == null ? JSONObject.NULL : this.formSubType);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put("istatus96x", this.istatus96x == null ? JSONObject.NULL : this.istatus96x);

@@ -1,16 +1,27 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.concurrent.ExecutionException;
+
 import edu.aku.ramshasaeed.mnch.R;
+import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
+import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
+import edu.aku.ramshasaeed.mnch.databinding.RsdMainBinding;
+
+import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class RsdMain extends AppCompatActivity {
+
+    RsdMainBinding bi;
+
     public static Forms fc;
     private String type;
 
@@ -18,7 +29,8 @@ public class RsdMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.rsd_main);
+        bi = DataBindingUtil.setContentView(this, R.layout.rsd_main);
+        bi.setCallback(this);
         type = getIntent().getStringExtra(MainApp.FORM_TYPE);
         this.setTitle("DHIS Data-Validation Tools for Decision Making");
 
@@ -93,33 +105,80 @@ public class RsdMain extends AppCompatActivity {
         }*/
     }
 
+
+    public void BtnContinue() {
+
+        /*if (formValidation()) {*/
+        SaveDraft();
+
+        if (UpdateDB()) {
+
+            finish();
+            MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
+
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    public void BtnEnd() {
+        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+    }
+
+
+    private boolean UpdateDB() {
+
+        try {
+
+            Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+            return longID == 1;
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+
+    }
+
+
+    private void SaveDraft() {
+
+        fc.setFormSubType(MainApp.FORM_SUB_TYPE);
+    }
+
+
+
     private void OpenFormFunc(int id) {
         Intent oF = new Intent();
         if (!MainApp.userName.equals("0000")) {
             switch (id) {
                 case R.id.form01:
                     oF = new Intent(RsdMain.this, Rsd01.class);
-                    MainApp.formSubtype = "f1";
+                    MainApp.FORM_SUB_TYPE = "f1";
                     break;
                 case R.id.form02:
                     oF = new Intent(RsdMain.this, Rsd02.class);
-                    MainApp.formSubtype = "f2";
+                    MainApp.FORM_SUB_TYPE = "f2";
                     break;
                 case R.id.form03:
                     oF = new Intent(RsdMain.this, Rsd03.class);
-                    MainApp.formSubtype = "f3";
+                    MainApp.FORM_SUB_TYPE = "f3";
                     break;
                 case R.id.form04:
                     oF = new Intent(RsdMain.this, Rsd04.class);
-                    MainApp.formSubtype = "f4";
+                    MainApp.FORM_SUB_TYPE = "f4";
                     break;
                 case R.id.form05:
                     oF = new Intent(RsdMain.this, Rsd05.class);
-                    MainApp.formSubtype = "f5";
+                    MainApp.FORM_SUB_TYPE = "f5";
                     break;
                 case R.id.form06:
                     oF = new Intent(RsdMain.this, Rsd06.class);
-                    MainApp.formSubtype = "f6";
+                    MainApp.FORM_SUB_TYPE = "f6";
                     break;/*
                 case R.id.form07:
                     oF = new Intent(RsdMain.this, Rsd07.class);

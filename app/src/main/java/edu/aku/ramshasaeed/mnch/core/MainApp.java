@@ -104,7 +104,7 @@ public class MainApp extends Application {
     public static String QOC = "QOC";
     public static String DHMT = "DHMT";
     public static String FORM_TYPE = "formType";
-    public static String formSubtype;
+    public static String FORM_SUB_TYPE = "formSubType";
 
 
     protected static LocationManager locationManager;

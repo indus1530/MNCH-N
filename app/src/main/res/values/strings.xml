@@ -588,5 +588,6 @@
     <string name="s02r03">Direct Observation on Clients \n\t OR \n\t Review Medical Records</string>
     <string name="inr">If No (Reasons)</string>
     <string name="hftype">Health Facility Type ?</string>
+    <string name="rm">Reporting Month</string>
 
 </resources>
