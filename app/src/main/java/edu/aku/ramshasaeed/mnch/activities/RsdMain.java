@@ -14,6 +14,7 @@ public class RsdMain extends AppCompatActivity {
     public static Forms fc;
     private String type;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

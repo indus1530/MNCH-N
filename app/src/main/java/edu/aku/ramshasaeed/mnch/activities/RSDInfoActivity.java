@@ -54,6 +54,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
     private String type;
+    String rsd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -293,46 +294,6 @@ public class RSDInfoActivity extends AppCompatActivity {
                 }
             });
 
-            /*bi.hfDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    if (position == 0) return;
-
-                    hfName = new ArrayList<>();
-                    hfCode = new ArrayList<>();
-                    hfCode.add("....");
-                    hfName.add("....");
-
-                    Collection<FacilityProvider> hfp;
-                    try {
-                        hfp =
-                                (Collection<FacilityProvider>)
-                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
-                                                .execute(districtCodes.get(position)).get();
-                        if (hfp.size() != 0) {
-                            for (FacilityProvider fp : hfp) {
-                                hfName.add(fp.getHf_name());
-                                hfCode.add(fp.getHf_uen_code());
-
-                            }
-                        }
-
-                        bi.hfNamePublic.setAdapter(new ArrayAdapter<>(context,
-                                android.R.layout.simple_spinner_dropdown_item, hfName));
-
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
-                }
-            });*/
         }
 
 
@@ -350,6 +311,9 @@ public class RSDInfoActivity extends AppCompatActivity {
             if (UpdateDB()) {
 
                 finish();
+                Intent i = new Intent();
+                rsd = "0";
+                i.putExtra("rsd", rsd);
                 startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
 
             } else {
