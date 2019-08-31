@@ -359,47 +359,6 @@ public class Rsd01 extends AppCompatActivity {
         f01.put("rs04", bi.rs0499.isChecked() ? "Mi" : bi.rs04.getText().toString());
         f01.put("rs05", bi.rs0599.isChecked() ? "Mi" : bi.rs05.getText().toString());
 
-//        f01.put("rs06", bi.rs0699.isChecked() ? "Mi" : bi.rs06.getText().toString());
-
-//        f01.put("rs07", bi.rs0799.isChecked() ? "Mi" : bi.rs07.getText().toString());
-//        f01.put("rs08", bi.rs0899.isChecked() ? "Mi" : bi.rs08.getText().toString());
-
-//        f01.put("rs09", bi.rs0999.isChecked() ? "Mi" : bi.rs09.getText().toString());
-//        f01.put("rs10", bi.rs1099.isChecked() ? "Mi" : bi.rs10.getText().toString());
-//        f01.put("rs11", bi.rs1199.isChecked() ? "Mi" : bi.rs11.getText().toString());
-//        f01.put("rs12", bi.rs1299.isChecked() ? "Mi" : bi.rs12.getText().toString());
-//        f01.put("rs13", bi.rs1399.isChecked() ? "Mi" : bi.rs13.getText().toString());
-//        f01.put("rs14", bi.rs1499.isChecked() ? "Mi" : bi.rs14.getText().toString());
-//        f01.put("rs15", bi.rs1599.isChecked() ? "Mi" : bi.rs15.getText().toString());
-//        f01.put("rs16", bi.rs1699.isChecked() ? "Mi" : bi.rs16.getText().toString());
-//        f01.put("rs17", bi.rs1799.isChecked() ? "Mi" : bi.rs17.getText().toString());
-//        f01.put("rs18", bi.rs1899.isChecked() ? "Mi" : bi.rs18.getText().toString());
-//        f01.put("rs19", bi.rs1999.isChecked() ? "Mi" : bi.rs19.getText().toString());
-//        f01.put("rs20", bi.rs2099.isChecked() ? "Mi" : bi.rs20.getText().toString());
-//
-//        f01.put("rs21", bi.rs2199.isChecked() ? "Mi" : bi.rs21.getText().toString());
-//        f01.put("rs22", bi.rs2299.isChecked() ? "Mi" : bi.rs2297.isChecked() ? "NA" : bi.rs22.getText().toString());
-//        f01.put("rs23", bi.rs2399.isChecked() ? "Mi" : bi.rs23.getText().toString());
-//        f01.put("rs24", bi.rs2499.isChecked() ? "Mi" : bi.rs24.getText().toString());
-//        f01.put("rs25", bi.rs2599.isChecked() ? "Mi" : bi.rs25.getText().toString());
-//        f01.put("rs26", bi.rs2699.isChecked() ? "Mi" : bi.rs26.getText().toString());
-//        f01.put("rs27", bi.rs2799.isChecked() ? "Mi" : bi.rs27.getText().toString());
-//        f01.put("rs28", bi.rs2899.isChecked() ? "Mi" : bi.rs28.getText().toString());
-//        f01.put("rs29", bi.rs2999.isChecked() ? "Mi" : bi.rs29.getText().toString());
-//        f01.put("rs30", bi.rs3099.isChecked() ? "Mi" : bi.rs30.getText().toString());
-//        f01.put("rs31", bi.rs3199.isChecked() ? "Mi" : bi.rs3197.isChecked() ? "NA" : bi.rs31.getText().toString());
-//        f01.put("rs32", bi.rs3299.isChecked() ? "Mi" : bi.rs3297.isChecked() ? "NA" : bi.rs32.getText().toString());
-//        f01.put("rs33", bi.rs3399.isChecked() ? "Mi" : bi.rs33.getText().toString());
-//        f01.put("rs34", bi.rs3499.isChecked() ? "Mi" : bi.rs3497.isChecked() ? "NA" : bi.rs34.getText().toString());
-//        f01.put("rs35", bi.rs3599.isChecked() ? "Mi" : bi.rs3597.isChecked() ? "NA" : bi.rs35.getText().toString());
-//        f01.put("rs36", bi.rs3699.isChecked() ? "Mi" : bi.rs36.getText().toString());
-//        f01.put("rs37", bi.rs3799.isChecked() ? "Mi" : bi.rs37.getText().toString());
-//        f01.put("rs38", bi.rs3899.isChecked() ? "Mi" : bi.rs38.getText().toString());
-//        f01.put("rs39", bi.rs3999.isChecked() ? "Mi" : bi.rs3997.isChecked() ? "NA" : bi.rs39.getText().toString());
-//        f01.put("rs40", bi.rs4099.isChecked() ? "Mi" : bi.rs4097.isChecked() ? "NA" : bi.rs40.getText().toString());
-//
-//        f01.put("rsrem", bi.rsrem.getText().toString());
-
         fc.setSrsd1(String.valueOf(f01));
 
     }
