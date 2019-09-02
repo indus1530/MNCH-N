@@ -48,7 +48,7 @@ import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 public class RSDInfoActivity extends AppCompatActivity {
     private ActivityRsdinfoBinding bi;
     private String mon = new SimpleDateFormat("MMM-yy").format(new Date().getTime());
-    private List<String> reportingMonth, districtNames, districtCodes, hf_name, tehsilName, tehsilCode, UcNames, ucCode, hfName, hfCode;
+    private List<String> reportingMonth, districtNames, districtCodes, tehsilName, tehsilCode, UcNames, ucCode, hfName, hfCode;
     private Map<String, FacilityProvider> facilityMap;
     private Map<String, String> tehsilMap;
     private Map<String, String> UcMap;
@@ -142,34 +142,6 @@ public class RSDInfoActivity extends AppCompatActivity {
     }
 
     private void tempVisible(final Context context) {
-
-        reportingMonth = new ArrayList<>();
-        reportingMonth.add("....");
-        reportingMonth.add(mon.toUpperCase());
-        reportingMonth.add(DateUtils.getMonthsBack("MMM-yy", -1).toUpperCase());
-        reportingMonth.add(DateUtils.getMonthsBack("MMM-yy", -2).toUpperCase());
-        // Creating adapter for spinner
-        ArrayAdapter<String> monAdapter = new ArrayAdapter<>(context,
-                android.R.layout.simple_spinner_dropdown_item, reportingMonth);
-        // Drop down layout style - list view with radio button
-        monAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // attaching data adapter to spinner
-        bi.reportMonth.setAdapter(monAdapter);
-        bi.reportMonth.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                setTitle(type.equals(MainApp.RSD) ? "DHIS Data-Validation Tools for Decision Making (" + bi.reportMonth.getSelectedItem() + ")"
-                        : type.equals(MainApp.DHMT) ? "Performance Evaluation of District Team Meetings (" + bi.reportMonth.getSelectedItem() + ")"
-                        : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility (" + bi.reportMonth.getSelectedItem() + ")" : " ");
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
 
         districtNames = new ArrayList<>();
         districtCodes = new ArrayList<>();
@@ -347,6 +319,32 @@ public class RSDInfoActivity extends AppCompatActivity {
             }
         });*/
 
+        reportingMonth = new ArrayList<>();
+        reportingMonth.add("....");
+        reportingMonth.add(mon.toUpperCase());
+        reportingMonth.add(DateUtils.getMonthsBack("MMM-yy", -1).toUpperCase());
+        reportingMonth.add(DateUtils.getMonthsBack("MMM-yy", -2).toUpperCase());
+        // Creating adapter for spinner
+        ArrayAdapter<String> monAdapter = new ArrayAdapter<>(context,
+                android.R.layout.simple_spinner_dropdown_item, reportingMonth);
+        // Drop down layout style - list view with radio button
+        monAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // attaching data adapter to spinner
+        bi.reportMonth.setAdapter(monAdapter);
+        bi.reportMonth.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                setTitle(type.equals(MainApp.RSD) ? "DHIS Data-Validation Tools for Decision Making (" + bi.reportMonth.getSelectedItem() + ")"
+                        : type.equals(MainApp.DHMT) ? "Performance Evaluation of District Team Meetings (" + bi.reportMonth.getSelectedItem() + ")"
+                        : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility (" + bi.reportMonth.getSelectedItem() + ")" : " ");
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
     }
 
@@ -363,7 +361,7 @@ public class RSDInfoActivity extends AppCompatActivity {
 
                 finish();
                 String rm = (String) bi.reportMonth.getSelectedItem();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
+                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class).putExtra("rm", rm));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

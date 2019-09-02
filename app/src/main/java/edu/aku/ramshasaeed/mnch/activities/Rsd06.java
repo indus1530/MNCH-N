@@ -23,6 +23,7 @@ import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 public class Rsd06 extends AppCompatActivity {
     //Routine Service Delivery
     ActivityRsd06Binding bi;
+    String rm;
 
 
     @Override
@@ -30,7 +31,8 @@ public class Rsd06 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd06);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.routineone));
+        rm = getIntent().getStringExtra("rm");
+        this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
         //EventsCall();
 
     }

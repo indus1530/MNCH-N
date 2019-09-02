@@ -107,9 +107,13 @@
             android:name=".activities.Qoc7"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
         <activity android:name=".activities.LoginActivity" />
+
         <activity android:name=".activities.MainActivity" />
+
         <activity android:name=".activities.EndingActivity" />
+
     </application>
 
 </manifest>

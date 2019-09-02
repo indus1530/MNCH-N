@@ -1,5 +1,6 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,14 +24,15 @@ import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 public class Rsd01 extends AppCompatActivity {
     //Routine Service Delivery
     ActivityRsd01Binding bi;
-
+    String rm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd01);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.routineone));
+        rm = getIntent().getStringExtra("rm");
+        this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
         //EventsCall();
 
     }
@@ -260,7 +262,9 @@ public class Rsd01 extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-                MainApp.endActivity(this, this, RsdMain.class, true, RSDInfoActivity.fc);
+//                MainApp.endActivity(this, this, RsdMain.class, true, RSDInfoActivity.fc);
+                finish();
+                startActivity(new Intent(this, RsdMain.class).putExtra("complete", true).putExtra("rm", rm).putExtra(MainApp.FORM_SUB_TYPE, "f1"));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -269,7 +273,9 @@ public class Rsd01 extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+//        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+        finish();
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false).putExtra("rm", rm));
 
     }
 

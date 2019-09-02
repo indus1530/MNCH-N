@@ -1,5 +1,6 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,6 @@ import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
-import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsd02Binding;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
@@ -23,6 +23,7 @@ import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 public class Rsd02 extends AppCompatActivity {
     //Routine Service Delivery
     ActivityRsd02Binding bi;
+    String rm;
 
 
     @Override
@@ -30,7 +31,8 @@ public class Rsd02 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd02);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.routineone));
+        rm = getIntent().getStringExtra("rm");
+        this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
         //EventsCall();
 
 
@@ -64,7 +66,9 @@ public class Rsd02 extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
-                MainApp.endActivity(this, this, RsdMain.class, true, RSDInfoActivity.fc);
+//                MainApp.endActivity(this, this, RsdMain.class, true, RSDInfoActivity.fc);
+                finish();
+                startActivity(new Intent(this, RsdMain.class).putExtra("rm", rm));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -73,7 +77,8 @@ public class Rsd02 extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+        finish();
+        startActivity(new Intent(this, EndingActivity.class).putExtra("rm", rm));
 
     }
 

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -32,10 +31,8 @@ public class EndingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_ending);
         bi.setCallback(this);
-
         Boolean check = getIntent().getExtras().getBoolean("complete");
 
         if (check) {
@@ -108,10 +105,7 @@ public class EndingActivity extends AppCompatActivity {
     private boolean formValidation() {
         Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
-        if (!validatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusa, getString(R.string.istatus))) {
-            return false;
-        }
-/*
+        return validatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusa, getString(R.string.istatus));/*
 
         if (istatus88.isChecked()) {
 
@@ -126,7 +120,6 @@ public class EndingActivity extends AppCompatActivity {
 */
 
 
-        return true;
     }
 
 

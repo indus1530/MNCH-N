@@ -7,16 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import java.util.concurrent.ExecutionException;
-
 import edu.aku.ramshasaeed.mnch.R;
-import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
-import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.databinding.RsdMainBinding;
-
-import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class RsdMain extends AppCompatActivity {
 
@@ -24,15 +18,23 @@ public class RsdMain extends AppCompatActivity {
 
     public static Forms fc;
     private String type;
-
+    String rm;
+    private String formsubtype;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.rsd_main);
         bi.setCallback(this);
+        rm = getIntent().getStringExtra("rm");
         type = getIntent().getStringExtra(MainApp.FORM_TYPE);
-        this.setTitle("DHIS Data-Validation Tools for Decision Making");
+        formsubtype = getIntent().getStringExtra(MainApp.FORM_SUB_TYPE);
+        this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
+
+
+        if (MainApp.FORM_SUB_TYPE.equals("f1")) {
+            bi.form01.setEnabled(false);
+        }
 
     }
 
@@ -106,9 +108,9 @@ public class RsdMain extends AppCompatActivity {
     }
 
 
-    public void BtnContinue() {
+    /*public void BtnContinue() {
 
-        /*if (formValidation()) {*/
+     *//*if (formValidation()) {*//*
         SaveDraft();
 
         if (UpdateDB()) {
@@ -119,15 +121,15 @@ public class RsdMain extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
 
-    public void BtnEnd() {
+    /*public void BtnEnd() {
         MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
-    }
+    }*/
 
 
-    private boolean UpdateDB() {
+    /*private boolean UpdateDB() {
 
         try {
 
@@ -142,13 +144,13 @@ public class RsdMain extends AppCompatActivity {
 
         return false;
 
-    }
+    }*/
 
 
-    private void SaveDraft() {
+    /*private void SaveDraft() {
 
         fc.setFormSubType(MainApp.FORM_SUB_TYPE);
-    }
+    }*/
 
 
 
@@ -157,27 +159,27 @@ public class RsdMain extends AppCompatActivity {
         if (!MainApp.userName.equals("0000")) {
             switch (id) {
                 case R.id.form01:
-                    oF = new Intent(RsdMain.this, Rsd01.class);
+                    oF = new Intent(RsdMain.this, Rsd01.class).putExtra("rm", rm);
                     MainApp.FORM_SUB_TYPE = "f1";
                     break;
                 case R.id.form02:
-                    oF = new Intent(RsdMain.this, Rsd02.class);
+                    oF = new Intent(RsdMain.this, Rsd02.class).putExtra("rm", rm);
                     MainApp.FORM_SUB_TYPE = "f2";
                     break;
                 case R.id.form03:
-                    oF = new Intent(RsdMain.this, Rsd03.class);
+                    oF = new Intent(RsdMain.this, Rsd03.class).putExtra("rm", rm);
                     MainApp.FORM_SUB_TYPE = "f3";
                     break;
                 case R.id.form04:
-                    oF = new Intent(RsdMain.this, Rsd04.class);
+                    oF = new Intent(RsdMain.this, Rsd04.class).putExtra("rm", rm);
                     MainApp.FORM_SUB_TYPE = "f4";
                     break;
                 case R.id.form05:
-                    oF = new Intent(RsdMain.this, Rsd05.class);
+                    oF = new Intent(RsdMain.this, Rsd05.class).putExtra("rm", rm);
                     MainApp.FORM_SUB_TYPE = "f5";
                     break;
                 case R.id.form06:
-                    oF = new Intent(RsdMain.this, Rsd06.class);
+                    oF = new Intent(RsdMain.this, Rsd06.class).putExtra("rm", rm);
                     MainApp.FORM_SUB_TYPE = "f6";
                     break;/*
                 case R.id.form07:
