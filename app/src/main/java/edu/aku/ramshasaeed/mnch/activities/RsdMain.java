@@ -36,6 +36,7 @@ public class RsdMain extends AppCompatActivity {
             bi.form01.setEnabled(false);
         }
 
+
     }
 
 
@@ -108,25 +109,28 @@ public class RsdMain extends AppCompatActivity {
     }
 
 
-    /*public void BtnContinue() {
+    public void BtnContinue() {
 
-     *//*if (formValidation()) {*//*
-        SaveDraft();
-
-        if (UpdateDB()) {
-
+        if (!bi.form01.isEnabled()
+                && !bi.form02.isEnabled()
+                && !bi.form03.isEnabled()
+                && !bi.form04.isEnabled()
+                && !bi.form05.isEnabled()
+                && !bi.form06.isEnabled()) {
+            this.setVisible(true);
             finish();
-            MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
-
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true).putExtra("rm", rm));
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sections still in Pending!", Toast.LENGTH_SHORT).show();
         }
-    }*/
+    }
 
 
-    /*public void BtnEnd() {
-        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
-    }*/
+    public void BtnEnd() {
+//        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+        finish();
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false).putExtra("rm", rm));
+    }
 
 
     /*private boolean UpdateDB() {
