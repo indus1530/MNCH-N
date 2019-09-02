@@ -27,7 +27,8 @@
     <string name="meetingtime">Please Select Meeting Date and Time</string>
     <string name="hf_tehsil">Tehsil</string>
     <string name="hf_uc">Union Council</string>
-    <string name="hf_uen">Facility Name</string>
+    <string name="hf_uen_private">Private Facility Name</string>
+    <string name="hf_uen_public">Public Facility Name</string>
     <string name="hf_consent">Is Consent form Signed</string>
     <string name="check">Check</string>
     <string name="yes">Yes</string>
@@ -51,22 +52,133 @@
     <string name="error_field_required">This field is required</string>
     <string name="error_incorrect_password">This password is incorrect</string>
 
-    <string name="rshint01"> Maternal Health Register </string>
-    <string name="rs01"> Number of ANC – 1 visit </string>
-    <string name="rs02"> Number of ANC Revisits (2/3/4 or more) </string>
-    <string name="rs03"> ANC-1 women with Hb 10 g/dl </string>
-    <string name="rs04"> Number of PNC-1 visits </string>
-    <string name="rs05"> Number of PNC-2 visits </string>
+
+    <string name="rshint01"> Maternal Health Register (both PHC &amp; SHC) </string>
+    <string name="rs01"> ANC – 1 visit </string>
+    <string name="rs02"> ANC Revisits ( 2, 3, 4 or more) </string>
+    <string name="rs03"> ANC - 1 women with Hb &lt; 10g/dl </string>
+    <string name="rs04"> PNC - 1 visits </string>
+    <string name="rs05"> PNC Revisits (2, 3, 4 or more) </string>
+
+    <string name="rshint02"> Secondary Healthcare Facilities - Ob/Gyn OPD register </string>
+    <string name="rs07"> New Cases OB/GYN </string>
+    <string name="rs08"> Referred Cases Attended (OB/GYN) </string>
+
+    <string name="rshint03"> Obstetric Register (both PHC &amp; SHC) </string>
+    <string name="rs09"> Normal Vaginal Delivery </string>
+    <string name="rs10"> Assisted Vaginal Deliveries </string>
+    <string name="rs11"> Cesarean Sections </string>
+    <string name="rs12"> Postpartum Hemorrhage </string>
+    <string name="rs13"> Pre-Eclampsia/ Eclampsia </string>
+    <string name="rs14"> Prolonged Obstructed Labors </string>
+    <string name="rs15"> Puerperal Sepsis </string>
+    <string name="rs16"> Rupture Uterus </string>
+    <string name="rs17"> Maternal Mortality </string>
+    <string name="rs18"> Live births in the facility </string>
+    <string name="rs19"> Live births with LBW ( &lt; 2.5kg ) </string>
+    <string name="rs20"> Stillbirths in the facility </string>
+    <string name="rs41"> IUDs (Intra Uterine Death) in the facility </string>
+    <string name="rs21"> Newborns with birth asphyxia </string>
+    <string name="rs22"> Newborn successfully resuscitated </string>
+    <string name="rs23"> Women provided misoprostol after delivery </string>
+    <string name="rs24"> Newborns to whom chlorhexadine gel is applied to umbilical stumps </string>
+    <string name="rs25"> Pre-term births </string>
+    <string name="rs26"> Birth trauma </string>
+    <string name="rs29"> Neonatal deaths (0 to 28 days) </string>
+    <string name="rs42"> Suspected Neonatal Tetanus </string>
+
+    <string name="rshint04"> OPD register-PHC (Pediatrics OPD register for SHC) </string>
+    <string name="rs33"> Diarrhea / Dysentery cases &lt;5 years (OPD)</string>
+    <string name="rs30"> Number of Pneumonia cases &lt;5 years (OPD) </string>
+    <string name="rs44"> Number of ARI cases &lt;5 years (OPD) </string>
+    <string name="rs37"> Total Peads OPD (1 &#8211; 11 months) </string>
+    <string name="rs38"> Total Peads OPD (12 &#8211; 59 months) </string>
+    <string name="rs39"> Follow up cases Peads </string>
+    <string name="rs40"> Referred Cases attended (Pediatrics) </string>
+
+    <string name="rshint05"> Indoor Register (SHC) </string>
+    <string name="rs34"> Diarrhea / Dysentery cases &lt;5 years (Indoor) </string>
+    <string name="rs31"> Pneumonia cases &lt;5 years (Indoor) </string>
+    <string name="rs27"> Infant deaths (1 &#8211; 11 months) </string>
+    <string name="rs28"> Child deaths (1 to 4 years) </string>
+    <string name="rs35"> Deaths due to Diarrhea / Dysentery among  &lt;5 years (Indoor) </string>
+    <string name="rs32"> Deaths due to Pneumonia cases &lt;5 years (Indoor) </string>
+
+    <string name="rshint06"> EPI Health Register (both PHC &amp; SHC) </string>
+    <string name="rs06"> Pregnant Women given TT-2 vaccination </string>
+    <string name="rs47"> Children &lt;12 months received 3rd dosage of Pentavalent Vaccine </string>
+    <string name="rs48"> Children &lt;12 months received 1st dosage of Measles Vaccine </string>
 
 
+    <!--23-Aug-19
+        <string name="rshint01"> Maternal Health Register (both PHC &amp; SHC) </string>
+        <string name="rs01"> Number of ANC – 1 visit </string>
+        <string name="rs02"> Number of ANC Revisits ( 2, 3, 4 or more) </string>
+        <string name="rs03"> ANC-1 women with Hb &lt; 10g/dl </string>
+        <string name="rs04"> Number of PNC-1 visits </string>
+        <string name="rs05"> Number of PNC Revisits (2, 3, 4 or more) </string>
+
+        <string name="rshint02"> Secondary Healthcare Facilities - Ob/Gyn OPD register </string>
+        <string name="rs07"> Total New Cases OB/GYN </string>
+        <string name="rs08"> Referred Cases attended (OB/GYN) </string>
+
+        <string name="rshint03"> Obstetric Register (both PHC &amp; SHC) </string>
+        <string name="rs09"> Normal Vaginal Delivery </string>
+        <string name="rs10"> Assisted Vaginal Deliveries </string>
+        <string name="rs11"> Cesarean Sections </string>
+        <string name="rs12"> Postpartum Hemorrhage </string>
+        <string name="rs13"> Pre-Eclampsia/ Eclampsia </string>
+        <string name="rs14"> Prolonged Obstructed Labors </string>
+        <string name="rs15"> Puerperal Sepsis </string>
+        <string name="rs16"> Rupture Uterus </string>
+        <string name="rs17"> Maternal Mortality </string>
+        <string name="rs18"> Number of live births in the facility </string>
+        <string name="rs19"> Number of live births with LBW ( &lt; 2.5kg ) </string>
+        <string name="rs20"> Number of stillbirths in the facility </string>
+        <string name="rs41"> Number of IUDs (Intra Uterine Death) in the facility </string>
+        <string name="rs21"> Number of newborns with birth asphyxia </string>
+        <string name="rs22"> Number of newborn successfully resuscitated </string>
+        <string name="rs23"> Number of women provided misoprostol after delivery </string>
+        <string name="rs24"> Number of newborns to whom chlorhexadine gel is applied to umbilical stumps </string>
+        <string name="rs25"> Prematurity (no. of pre-term births) </string>
+        <string name="rs26"> Birth trauma </string>
+        <string name="rs29"> Number of neonatal deaths (28 days) </string>
+        <string name="rs42"> Suspected Neonatal Tetanus </string>
+
+        <string name="rshint04"> OPD register-PHC (Pediatrics OPD register for SHC) </string>
+        <string name="rs33"> Number of Diarrhea cases &lt;5 years (OPD)</string>
+        <string name="rs43"> Number of Dysentery cases &lt;5 years (OPD)</string>
+        <string name="rs30"> Number of Pneumonia cases &lt;5 years (OPD) </string>
+        <string name="rs44"> Number of ARI cases &lt;5 years (OPD) </string>
+        <string name="rs37"> Total Peads OPD (1 &#8211; 11 months) </string>
+        <string name="rs38"> Total Peads OPD (12 &#8211; 59 months) </string>
+        <string name="rs39"> Follow up cases Peads </string>
+        <string name="rs40"> Referred Cases attended (Pediatrics) </string>
+
+        <string name="rshint05"> Indoor Register (SHC) </string>
+        <string name="rs34"> Number of Diarrhea cases &lt;5 years (Indoor) </string>
+        <string name="rs31"> Number of Pneumonia cases &lt;5 years (Indoor) </string>
+        <string name="rs45"> Number of Dysentery cases &lt;5 years (Indoor) </string>
+        <string name="rs27"> Number of Infant deaths (1 &#8211; 11 months) </string>
+        <string name="rs28"> Number of child deaths (1 to 4 years) </string>
+        <string name="rs35"> Deaths due to Diarrhea among  &lt;5 years (Indoor) </string>
+        <string name="rs46"> Deaths due to Dysentery among  &lt;5 years (Indoor) </string>
+        <string name="rs32"> Deaths due to Pneumonia cases &lt;5 years (Indoor) </string>
+
+        <string name="rshint06"> EPI Health Register (both PHC &amp; SHC) </string>
+        <string name="rs06"> Pregnant Women given TT-2 vaccination </string>
+        <string name="rs47"> Children &lt;12 months received 3rd Pentavalent Vaccine </string>
+        <string name="rs48"> Children &lt;12 months received 1st Measles Vaccine </string>
+    -->
+
+
+    <!--06Aug19
     <string name="rshint02"> EPI Health Register </string>
     <string name="rs06"> Women given TT-2 vaccination </string>
-
 
     <string name="rshint03"> SHC - Ob/Gyn OPD register </string>
     <string name="rs07"> Total New Cases OB/GYN </string>
     <string name="rs08"> Referred Cases attended (OB/GYN) </string>
-
 
     <string name="rshint04"> Obstetric Register </string>
     <string name="rs09"> Normal Vaginal Delivery </string>
@@ -89,20 +201,17 @@
     <string name="rs26"> Birth trauma </string>
     <string name="rs29"> Number of neonatal deaths (28 days) </string>
 
-
     <string name="rshint05"> Point where maternal services are provided </string>
-    <!--<string name="rshint05"> Daily Bed Statement Register (For RHC only)</string>-->
+    &lt;!&ndash;<string name="rshint05"> Daily Bed Statement Register (For RHC only)</string>&ndash;&gt;
     <string name="rs36"> Number of ultrasounds for ANC </string>
-
 
     <string name="rshint06"> OPD register-PHC (Pediatrics OPD register for SHC) </string>
     <string name="rs30"> Number of Pneumonia cases/ ARI &lt;5 years (OPD) </string>
     <string name="rs33"> Number of Diarrhea cases &lt;5 years (OPD)</string>
-    <string name="rs37"> Total General OPD (1-11months) </string>
-    <string name="rs38"> Total General OPD (1-4 years) </string>
-    <string name="rs39"> Follow up cases (Child Health 0-5yr) </string>
+    <string name="rs37"> Total General OPD (1 &#8211; 11months) </string>
+    <string name="rs38"> Total General OPD (1 &#8211; 4 years) </string>
+    <string name="rs39"> Follow up cases (Child Health 0 &#8211; 5yr) </string>
     <string name="rs40"> Referred Cases attended (Pediatrics) </string>
-
 
     <string name="rshint07"> Indoor Register (SHC) </string>
     <string name="rs27"> Number of Infant deaths (1 -11 months) </string>
@@ -111,7 +220,7 @@
     <string name="rs35"> Deaths due to Diarrhea among  &lt; 5 years (Indoor) </string>
     <string name="rs31"> Number of Pneumonia cases/ARI &lt; 5 years (Indoor) </string>
     <string name="rs32"> Deaths due to Pneumonia cases/ ARI &lt; 5 years (Indoor) </string>
-
+    -->
 
     <string name="rra"> Remarks / Reasons / Action Points </string>
     <string name="rsrem"> Remarks </string>
@@ -478,5 +587,7 @@
     <string name="s03">Source: \t Review Medical Records</string>
     <string name="s02r03">Direct Observation on Clients \n\t OR \n\t Review Medical Records</string>
     <string name="inr">If No (Reasons)</string>
+    <string name="hftype">Health Facility Type ?</string>
+    <string name="rm">Reporting Month</string>
 
 </resources>

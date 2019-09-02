@@ -1,5 +1,6 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,12 +23,15 @@ import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
 public class DHMT_MonitoringActivity extends AppCompatActivity {
 ActivityDhmtMonitoringBinding bi;
+    String rm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this,R.layout.activity_dhmt_monitoring);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.routinethree));
+        Intent getrm = getIntent();
+        rm = getrm.getExtras().getString("rm");
+        this.setTitle(getString(R.string.routinethree) + "(" + rm + ")");
 
     }
 

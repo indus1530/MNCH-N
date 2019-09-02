@@ -5,13 +5,11 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.Serializable;
 
-import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.data.AppDatabase;
 
 @Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS)
@@ -30,6 +28,7 @@ public class Forms implements Serializable {
     private String uuid = "";
     private String formType = "";
     private String formDate = ""; // Date
+    private String formSubType = "";
 /*    private String district = "";
     private String tehsil = "";
     private String ucs = "";
@@ -38,7 +37,13 @@ public class Forms implements Serializable {
     private String istatus = ""; // Interview Status
     private String istatus96x = ""; // Interview Status
     private String shfa = "";     // Health Facility Assesment Section
-    private String srsd = "";     // Routine Service Delivery Section
+    private String srsd1 = "";     // Routine Service Delivery Section
+    private String srsd2 = "";     // Routine Service Delivery Section
+    private String srsd3 = "";     // Routine Service Delivery Section
+    private String srsd4 = "";     // Routine Service Delivery Section
+    private String srsd5 = "";     // Routine Service Delivery Section
+    private String srsd6 = "";     // Routine Service Delivery Section
+    private String srsd7 = "";     // Routine Service Delivery Section
     private String sdhmt = "";     // DHMT monitoring
     private String sqoc1 = "";     // Quality of Care One
     private String sqoc2 = "";     // Quality of Care Two
@@ -68,11 +73,18 @@ public class Forms implements Serializable {
         this.uuid = forms.uuid;
         this.formDate = forms.formDate;
         this.formType = forms.formType;
+        this.formSubType = forms.formSubType;
         this.username = forms.username;
         this.istatus = forms.istatus;
         this.istatus96x = forms.istatus96x;
         this.shfa = forms.shfa;
-        this.srsd = forms.srsd;
+        this.srsd1 = forms.srsd1;
+        this.srsd2 = forms.srsd2;
+        this.srsd3 = forms.srsd3;
+        this.srsd4 = forms.srsd4;
+        this.srsd5 = forms.srsd5;
+        this.srsd6 = forms.srsd6;
+        this.srsd7 = forms.srsd7;
         this.sdhmt = forms.sdhmt;
         this.sqoc1 = forms.sqoc1;
         this.sqoc2 = forms.sqoc2;
@@ -132,6 +144,14 @@ public class Forms implements Serializable {
         this.formType = formType;
     }
 
+    public String getFormSubType() {
+        return formSubType;
+    }
+
+    public void setFormSubType(String formSubType) {
+        this.formSubType = formSubType;
+    }
+
     public String getFormDate() {
         return formDate;
     }
@@ -172,12 +192,60 @@ public class Forms implements Serializable {
         this.shfa = shfa;
     }
 
-    public String getSrsd() {
-        return srsd;
+    public String getSrsd1() {
+        return srsd1;
     }
 
-    public void setSrsd(String srsd) {
-        this.srsd = srsd;
+    public void setSrsd1(String srsd1) {
+        this.srsd1 = srsd1;
+    }
+
+    public String getSrsd2() {
+        return srsd2;
+    }
+
+    public void setSrsd2(String srsd2) {
+        this.srsd2 = srsd2;
+    }
+
+    public String getSrsd3() {
+        return srsd3;
+    }
+
+    public void setSrsd3(String srsd3) {
+        this.srsd3 = srsd3;
+    }
+
+    public String getSrsd4() {
+        return srsd4;
+    }
+
+    public void setSrsd4(String srsd4) {
+        this.srsd4 = srsd4;
+    }
+
+    public String getSrsd5() {
+        return srsd5;
+    }
+
+    public void setSrsd5(String srsd5) {
+        this.srsd5 = srsd5;
+    }
+
+    public String getSrsd6() {
+        return srsd6;
+    }
+
+    public void setSrsd6(String srsd6) {
+        this.srsd6 = srsd6;
+    }
+
+    public String getSrsd7() {
+        return srsd7;
+    }
+
+    public void setSrsd7(String srsd7) {
+        this.srsd7 = srsd7;
     }
 
 
@@ -367,6 +435,7 @@ public class Forms implements Serializable {
         json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put("formSubType", this.formSubType == null ? JSONObject.NULL : this.formSubType);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put("istatus96x", this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
@@ -384,8 +453,26 @@ public class Forms implements Serializable {
         if (!this.shfa.equals("")) {
             json.put("shfa", this.shfa.equals("") ? JSONObject.NULL : new JSONObject(this.shfa));
         }
-        if (!this.srsd.equals("")) {
-            json.put("srsd", this.srsd.equals("") ? JSONObject.NULL : new JSONObject(this.srsd));
+        if (!this.srsd1.equals("")) {
+            json.put("srsd1", this.srsd1.equals("") ? JSONObject.NULL : new JSONObject(this.srsd1));
+        }
+        if (!this.srsd2.equals("")) {
+            json.put("srsd2", this.srsd2.equals("") ? JSONObject.NULL : new JSONObject(this.srsd2));
+        }
+        if (!this.srsd3.equals("")) {
+            json.put("srsd3", this.srsd3.equals("") ? JSONObject.NULL : new JSONObject(this.srsd3));
+        }
+        if (!this.srsd4.equals("")) {
+            json.put("srsd4", this.srsd4.equals("") ? JSONObject.NULL : new JSONObject(this.srsd4));
+        }
+        if (!this.srsd5.equals("")) {
+            json.put("srsd5", this.srsd5.equals("") ? JSONObject.NULL : new JSONObject(this.srsd5));
+        }
+        if (!this.srsd6.equals("")) {
+            json.put("srsd6", this.srsd6.equals("") ? JSONObject.NULL : new JSONObject(this.srsd6));
+        }
+        if (!this.srsd7.equals("")) {
+            json.put("srsd7", this.srsd7.equals("") ? JSONObject.NULL : new JSONObject(this.srsd7));
         }
         if (!this.sdhmt.equals("")) {
             json.put("sdhmt", this.sdhmt.equals("") ? JSONObject.NULL : new JSONObject(this.sdhmt));

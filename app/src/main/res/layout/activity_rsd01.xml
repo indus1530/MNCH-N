@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activities.RSDActivity">
+    tools:context=".activities.Rsd01">
 
     <data>
 
@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.RSDActivity" />
+            type="edu.aku.ramshasaeed.mnch.activities.Rsd01" />
     </data>
 
     <ScrollView
@@ -341,7 +341,7 @@
             <!--SECTION 01 ENDS HERE-->
 
 
-            <!--SECTION 02 STARTS HERE-->
+            <!--SECTION 02 STARTS HERE
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint02" />
@@ -357,7 +357,7 @@
                     android:paddingRight="5dp">
 
 
-                    <!--RS06 STARTS HERE-->
+                    RS06 STARTS HERE
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -406,15 +406,15 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS06 ENDS HERE-->
+                    RS06 ENDS HERE
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-            <!--SECTION 02 ENDS HERE-->
+            SECTION 02 ENDS HERE-->
 
 
-            <!--SECTION 03 STARTS HERE-->
+            <!--SECTION 03 STARTS HERE
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint03" />
@@ -430,7 +430,7 @@
                     android:paddingRight="5dp">
 
 
-                    <!--RS07 STARTS HERE-->
+                    RS07 STARTS HERE
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -479,10 +479,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS07 ENDS HERE-->
+                    RS07 ENDS HERE
 
 
-                    <!--RS08 STARTS HERE-->
+                    RS08 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -539,16 +539,16 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS08 ENDS HERE-->
+                    RS08 ENDS HERE
 
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-            <!--SECTION 03 ENDS HERE-->
+            SECTION 03 ENDS HERE-->
 
 
-            <!--SECTION 04 STARTS HERE-->
+            <!--SECTION 04 STARTS HERE
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint04" />
@@ -563,7 +563,7 @@
                     style="@style/linerlayout_view"
                     android:paddingRight="5dp">
 
-                    <!--RS09 STARTS HERE-->
+                    RS09 STARTS HERE
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -612,10 +612,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS09 ENDS HERE-->
+                    RS09 ENDS HERE
 
 
-                    <!--RS10 STARTS HERE-->
+                    RS10 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -672,10 +672,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS10 ENDS HERE-->
+                    RS10 ENDS HERE
 
 
-                    <!--RS11 STARTS HERE-->
+                    RS11 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -732,10 +732,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS11 ENDS HERE-->
+                    RS11 ENDS HERE
 
 
-                    <!--RS12 STARTS HERE-->
+                    RS12 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -792,10 +792,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS12 ENDS HERE-->
+                    RS12 ENDS HERE
 
 
-                    <!--RS13 STARTS HERE-->
+                    RS13 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -852,10 +852,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS13 ENDS HERE-->
+                    RS13 ENDS HERE
 
 
-                    <!--RS14 STARTS HERE-->
+                    RS14 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -912,10 +912,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS14 ENDS HERE-->
+                    RS14 ENDS HERE
 
 
-                    <!--RS15 STARTS HERE-->
+                    RS15 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -972,10 +972,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS15 ENDS HERE-->
+                    RS15 ENDS HERE
 
 
-                    <!--RS16 STARTS HERE-->
+                    RS16 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1032,10 +1032,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS16 ENDS HERE-->
+                    RS16 ENDS HERE
 
 
-                    <!--RS17 STARTS HERE-->
+                    RS17 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1092,10 +1092,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS17 ENDS HERE-->
+                    RS17 ENDS HERE
 
 
-                    <!--RS18 STARTS HERE-->
+                    RS18 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1152,10 +1152,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS18 ENDS HERE-->
+                    RS18 ENDS HERE
 
 
-                    <!--RS19 STARTS HERE-->
+                    RS19 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1212,10 +1212,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS19 ENDS HERE-->
+                    RS19 ENDS HERE
 
 
-                    <!--RS20 STARTS HERE-->
+                    RS20 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1272,10 +1272,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS20 ENDS HERE-->
+                    RS20 ENDS HERE
 
 
-                    <!--RS21 STARTS HERE-->
+                    RS21 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1332,10 +1332,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS21 ENDS HERE-->
+                    RS21 ENDS HERE
 
 
-                    <!--RS22 STARTS HERE-->
+                    RS22 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1401,10 +1401,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS22 ENDS HERE-->
+                    RS22 ENDS HERE
 
 
-                    <!--RS23 STARTS HERE-->
+                    RS23 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1461,10 +1461,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS23 ENDS HERE-->
+                    RS23 ENDS HERE
 
 
-                    <!--RS24 STARTS HERE-->
+                    RS24 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1521,10 +1521,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS24 ENDS HERE-->
+                    RS24 ENDS HERE
 
 
-                    <!--RS25 STARTS HERE-->
+                    RS25 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1581,10 +1581,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS25 ENDS HERE-->
+                    RS25 ENDS HERE
 
 
-                    <!--RS26 STARTS HERE-->
+                    RS26 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1641,10 +1641,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS26 ENDS HERE-->
+                    RS26 ENDS HERE
 
 
-                    <!--RS29 STARTS HERE-->
+                    RS29 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1701,15 +1701,15 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS29 ENDS HERE-->
+                    RS29 ENDS HERE
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-            <!--SECTION 04 ENDS HERE-->
+            SECTION 04 ENDS HERE-->
 
 
-            <!--SECTION 05 STARTS HERE-->
+            <!--SECTION 05 STARTS HERE
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint05" />
@@ -1724,7 +1724,7 @@
                     style="@style/linerlayout_view"
                     android:paddingRight="5dp">
 
-                    <!--RS36 STARTS HERE-->
+                    RS36 STARTS HERE
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1773,15 +1773,15 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS36 ENDS HERE-->
+                    RS36 ENDS HERE
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-            <!--SECTION 05 ENDS HERE-->
+            SECTION 05 ENDS HERE-->
 
 
-            <!--SECTION 06 STARTS HERE-->
+            <!--SECTION 06 STARTS HERE
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint06" />
@@ -1797,7 +1797,7 @@
                     android:paddingRight="5dp">
 
 
-                    <!--RS30 STARTS HERE-->
+                    RS30 STARTS HERE
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1846,10 +1846,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS30 ENDS HERE-->
+                    RS30 ENDS HERE
 
 
-                    <!--RS33 STARTS HERE-->
+                    RS33 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1906,10 +1906,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS33 ENDS HERE-->
+                    RS33 ENDS HERE
 
 
-                    <!--RS37 STARTS HERE-->
+                    RS37 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -1966,10 +1966,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS37 ENDS HERE-->
+                    RS37 ENDS HERE
 
 
-                    <!--RS38 STARTS HERE-->
+                    RS38 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2026,10 +2026,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS38 ENDS HERE-->
+                    RS38 ENDS HERE
 
 
-                    <!--RS39 STARTS HERE-->
+                    RS39 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2095,10 +2095,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS39 ENDS HERE-->
+                    RS39 ENDS HERE
 
 
-                    <!--RS40 STARTS HERE-->
+                    RS40 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2164,15 +2164,15 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS40 ENDS HERE-->
+                    RS40 ENDS HERE
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-            <!--SECTION 06 ENDS HERE-->
+            SECTION 06 ENDS HERE-->
 
 
-            <!--SECTION 07 STARTS HERE-->
+            <!--SECTION 07 STARTS HERE
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rshint07" />
@@ -2188,7 +2188,7 @@
                     android:paddingRight="5dp">
 
 
-                    <!--RS27 STARTS HERE-->
+                    RS27 STARTS HERE
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -2236,9 +2236,9 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS27 ENDS HERE-->
+                    RS27 ENDS HERE
 
-                    <!--RS28 STARTS HERE-->
+                    RS28 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2295,10 +2295,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS28 ENDS HERE-->
+                    RS28 ENDS HERE
 
 
-                    <!--RS34 STARTS HERE-->
+                    RS34 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2364,10 +2364,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS34 ENDS HERE-->
+                    RS34 ENDS HERE
 
 
-                    <!--RS35 STARTS HERE-->
+                    RS35 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2433,10 +2433,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS35 ENDS HERE-->
+                    RS35 ENDS HERE
 
 
-                    <!--RS31 STARTS HERE-->
+                    RS31 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2503,10 +2503,10 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS31 ENDS HERE-->
+                    RS31 ENDS HERE
 
 
-                    <!--RS32 STARTS HERE-->
+                    RS32 STARTS HERE
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -2572,15 +2572,15 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                    <!--RS32 ENDS HERE-->
+                    RS32 ENDS HERE
 
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
-            <!--SECTION 07 ENDS HERE-->
+            SECTION 07 ENDS HERE-->
 
 
-            <TextView
+            <!--<TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/rsrem" />
 
@@ -2594,10 +2594,10 @@
                     style="@style/linerlayout_view"
                     android:paddingRight="5dp">
 
-                    <!--  <TextView
+                    &lt;!&ndash;  <TextView
                           style="@style/textViewstartAlignGravity"
                           android:layout_width="match_parent"
-                          android:text="@string/rsrem" />-->
+                          android:text="@string/rsrem" />&ndash;&gt;
 
                     <EditText
                         android:id="@+id/rsrem"
@@ -2616,7 +2616,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>-->
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
@@ -2637,7 +2637,8 @@
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/endForm"
                     android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/btn_Continue"

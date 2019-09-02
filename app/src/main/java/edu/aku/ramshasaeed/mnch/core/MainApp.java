@@ -39,16 +39,23 @@ import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 public class MainApp extends Application {
 
     public static final String AppName = "uen_qoc"; // Must be without space
-    //    public static final String _IP = "10.1.42.30"; // linux server
-    public static final String _IP = "vcoe1.aku.edu"; // .Net server
-    //                public static final String _IP = "f38158";// .TEST server
-//        public static final String _IP = "43.245.131.159"; // PHP server
-//    public static final String _IP = "f49461"; // Test PHP server
+    //  public static final String _IP = "10.1.42.30"; // linux server
+
+    /*VCOE1 LIVE SERVER*/
+    /*public static final String _IP = "vcoe1.aku.edu"; // .Net server
     public static final Integer _PORT = 8080; // Port - with colon (:)
-    //    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/uen_mnch/api/";
-//    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_mnch/api/";
-    public static final String _HOST_URL = "https://" + MainApp._IP + "/uen_qoc/api/";// .VOC server
-    //            public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/";// .TEST server
+    public static final String _HOST_URL = "https://" + MainApp._IP + "/uen_qoc/api/"; // .VOC server*/
+
+    /*F38158 TEST SERVER*/
+    public static final String _IP = "f38158";// .TEST server
+    public static final Integer _PORT = 80; // Port - with colon (:)
+    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/"; // .TEST server
+
+    //  public static final String _IP = "43.245.131.159"; // PHP server
+//  public static final String _IP = "f49461"; // Test PHP server
+    //  public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/uen_mnch/api/";
+//  public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_mnch/api/";
+//    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/";// .TEST server
     public static final String _UPDATE_URL = "https://" + MainApp._IP + "/uen_qoc/app/";
 
     public static final Integer MONTHS_LIMIT = 11;
@@ -93,9 +100,11 @@ public class MainApp extends Application {
     public static String wName;
     public static String DeviceURL = "devices.php";
     public static String RSD = "RSD";
+    public static String RSDMain = "RSDMain";
     public static String QOC = "QOC";
     public static String DHMT = "DHMT";
     public static String FORM_TYPE = "formType";
+    public static String FORM_SUB_TYPE = "formSubType";
 
 
     protected static LocationManager locationManager;

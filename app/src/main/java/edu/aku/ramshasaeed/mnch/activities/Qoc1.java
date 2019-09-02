@@ -25,13 +25,15 @@ import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
     ActivityQoc1Binding bi;
+    String rm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc1);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.routinetwo));
+        rm = getIntent().getStringExtra("rm");
+        this.setTitle(getString(R.string.routinetwo) + "(" + rm + ")");
         events_call();
 
     }
