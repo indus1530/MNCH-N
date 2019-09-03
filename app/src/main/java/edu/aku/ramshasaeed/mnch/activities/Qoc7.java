@@ -144,7 +144,7 @@ public class Qoc7 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
         qoc7.put("qg07Ap", bi.qg07Ap.getText().toString().trim().length() > 0 ? bi.qg07Ap.getText().toString() : "0");
 
-        fc.setSqoc7(String.valueOf(qoc7));
+        fc.setsG(String.valueOf(qoc7));
 
     }
 

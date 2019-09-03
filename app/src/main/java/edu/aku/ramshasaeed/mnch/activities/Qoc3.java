@@ -105,7 +105,7 @@ public class Qoc3 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
         qoc3.put("qc03Ap", bi.qc03Ap.getText().toString().trim().length() > 0 ? bi.qc03Ap.getText().toString() : "0");
 
-        fc.setSqoc3(String.valueOf(qoc3));
+        fc.setsC(String.valueOf(qoc3));
 
     }
 

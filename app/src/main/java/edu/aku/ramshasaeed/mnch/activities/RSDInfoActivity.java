@@ -15,7 +15,6 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -390,17 +389,22 @@ public class RSDInfoActivity extends AppCompatActivity {
         fc.setFormDate(new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date().getTime()));
         fc.setDeviceID(MainApp.deviceId);
         fc.setReportingMonth(bi.reportMonth.getSelectedItem().toString());
+        fc.setDistrictCode(districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
 
         setGPS(fc); // Set GPS
 
-        JSONObject f01 = new JSONObject();
-
-//        f01.put("reporting_month", bi.reportMonth.getSelectedItem());
-        f01.put("district_code", districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
-
         if (!type.equals(MainApp.DHMT)) {
-            f01.put("tehsil_code", bi.pvt.isChecked() ? tehsilCode.get(bi.hfTehsil.getSelectedItemPosition()) : "");
-            f01.put("uc_code", bi.pvt.isChecked() ? ucCode.get(bi.hfUc.getSelectedItemPosition()) : "");
+            fc.setFacilityType(bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
+            fc.setTehsilCode(bi.pvt.isChecked() ? tehsilCode.get(bi.hfTehsil.getSelectedItemPosition()) : "");
+            fc.setUcCode(bi.pvt.isChecked() ? ucCode.get(bi.hfUc.getSelectedItemPosition()) : "");
+
+            if (bi.pub.isChecked()) {
+                fc.setFacilityCode(hfCode.get(bi.hfNamePublic.getSelectedItemPosition()));
+            } else {
+                fc.setFacilityCode(bi.hfName.getText().toString());
+            }
+        }
+    }
 
             /*if (type.equals(MainApp.RSD)) {
                 f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
@@ -413,13 +417,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                 f01.put("hf_name", bi.hfName.getText().toString());
             }*/
 
-            f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
 
-            if (bi.pub.isChecked()) {
-                f01.put("hf_code", hfCode.get(bi.hfNamePublic.getSelectedItemPosition()));
-            } else {
-                f01.put("hf_name", bi.hfName.getText().toString());
-            }
 //            FacilityProvider fp = facilityMap.get(bi.hfFacilityProvider.getSelectedItem().toString());
 //            f01.put("hf_dhis", fp.getHf_dhis());
 //            f01.put("hf_district_code", fp.getHf_district_code());
@@ -429,17 +427,12 @@ public class RSDInfoActivity extends AppCompatActivity {
 //            f01.put("hf_name_govt", fp.getHf_name_govt());
 //            f01.put("hf_uen_code", fp.getHf_uen_code());
 
-        }
-
         /*f01.put("hf_mdate", bi.hfMdate.getText().toString());
         f01.put("hf_mtime", bi.hfMtime.getText().toString());*/
 
         /*f01.put("rs_consent", bi.hfConsenta.isChecked() ? "1"
                 : bi.hfConsentb.isChecked() ? "2"
                 : "0");*/
-
-        fc.setSinfo(String.valueOf(f01));
-    }
 
     public void setGPS(Forms fc) {
         SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);

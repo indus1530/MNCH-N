@@ -131,7 +131,7 @@ ActivityDhmtMonitoringBinding bi;
 
         dhmt.put("dhmtSum", bi.dhmtSum.getText().toString().trim().length() > 0 ? bi.dhmtSum.getText().toString() : "0");
 
-        fc.setSdhmt(String.valueOf(dhmt));
+        fc.setsA(String.valueOf(dhmt));
 
     }
 

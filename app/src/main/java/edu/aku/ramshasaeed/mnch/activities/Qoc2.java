@@ -96,7 +96,7 @@ public class Qoc2 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
         qoc2.put("qb02Ap", bi.qb02Ap.getText().toString().trim().length() > 0 ? bi.qb02Ap.getText().toString() : "0");
 
-        fc.setSqoc2(String.valueOf(qoc2));
+        fc.setsB(String.valueOf(qoc2));
 
     }
 

@@ -367,7 +367,7 @@ public class Rsd01 extends AppCompatActivity {
         f01.put("rs04", bi.rs0499.isChecked() ? "Mi" : bi.rs04.getText().toString());
         f01.put("rs05", bi.rs0599.isChecked() ? "Mi" : bi.rs05.getText().toString());
 
-        fc.setSrsd1(String.valueOf(f01));
+        fc.setsA(String.valueOf(f01));
 
     }
 

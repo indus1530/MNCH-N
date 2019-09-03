@@ -264,7 +264,7 @@ public class Rsd07 extends AppCompatActivity {
 
         f01.put("rsrem", bi.rsrem.getText().toString());
 
-        fc.setSrsd7(String.valueOf(f01));
+        fc.setsG(String.valueOf(f01));
 
     }
 

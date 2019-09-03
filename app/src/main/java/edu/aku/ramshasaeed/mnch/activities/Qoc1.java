@@ -150,7 +150,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
         qoc1.put("qa01Ap", bi.qa01AP.getText().toString().trim().length() > 0 ? bi.qa01AP.getText().toString() : "0");
 
-        fc.setSqoc1(String.valueOf(qoc1));
+        fc.setsA(String.valueOf(qoc1));
 
     }
 

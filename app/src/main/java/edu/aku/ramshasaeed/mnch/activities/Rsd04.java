@@ -202,7 +202,7 @@ public class Rsd04 extends AppCompatActivity {
         f01.put("rs39", bi.rs3999.isChecked() ? "Mi" : bi.rs39.getText().toString());
         f01.put("rs40", bi.rs4099.isChecked() ? "Mi" : bi.rs40.getText().toString());
 
-        fc.setSrsd4(String.valueOf(f01));
+        fc.setsD(String.valueOf(f01));
 
     }
 
