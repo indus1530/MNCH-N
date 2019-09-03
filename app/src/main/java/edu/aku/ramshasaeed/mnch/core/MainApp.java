@@ -28,6 +28,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import edu.aku.ramshasaeed.mnch.appVersion.VersionAppContract;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
@@ -104,7 +105,8 @@ public class MainApp extends Application {
     public static String QOC = "QOC";
     public static String DHMT = "DHMT";
     public static String FORM_TYPE = "formType";
-    public static String FORM_SUB_TYPE = "formSubType";
+    public static List<String> FORM_SUB_TYPE;
+    public static String MONTH = "month";
 
 
     protected static LocationManager locationManager;

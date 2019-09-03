@@ -37,8 +37,8 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = '' AND formType = :formType")
     List<Forms> getUnSyncedForms(String formType);
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE formSubType = :formSubType AND reportingMonth = :month")
-    List<Forms> getSubforms(String formSubType, String month);
+    /*@Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE formSubType = :formSubType AND reportingMonth = :month")
+    List<Forms> getSubforms(String formSubType, String month);*/
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE formType = :formType")
     List<Forms> getForms(String formType);
@@ -58,7 +58,7 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_TEHSIL + " where district_code =:district_code")
     List<Tehsil> getTehsil(String district_code);
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = '0' AND istatus = '3' AND formType =:formType AND formSubType =:formSubType")
-    List<Forms> getPendingForms(String formType, String formSubType);
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = '0' AND istatus = '3' AND formType =:formType")
+    List<Forms> getPendingForms(String formType);
 
 }

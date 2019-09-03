@@ -13,7 +13,6 @@ import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
-import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsd01Binding;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
@@ -264,7 +263,7 @@ public class Rsd01 extends AppCompatActivity {
                 Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
 //                MainApp.endActivity(this, this, RsdMain.class, true, RSDInfoActivity.fc);
                 finish();
-                startActivity(new Intent(this, RsdMain.class).putExtra("complete", true).putExtra("rm", rm).putExtra(MainApp.FORM_SUB_TYPE, "f1"));
+                startActivity(new Intent(this, RsdMain.class).putExtra("complete", true).putExtra("rm", rm));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -356,8 +355,6 @@ public class Rsd01 extends AppCompatActivity {
 
 
     private void SaveDraft() throws JSONException {
-
-        fc.setFormSubType(MainApp.FORM_SUB_TYPE);
 
         JSONObject f01 = new JSONObject();
 

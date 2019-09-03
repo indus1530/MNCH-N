@@ -9,17 +9,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
-import edu.aku.ramshasaeed.mnch.data.DAO.GetFncDAO;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.databinding.RsdMainBinding;
-import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
-
-import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class RsdMain extends AppCompatActivity {
 
@@ -29,7 +23,6 @@ public class RsdMain extends AppCompatActivity {
     public static Forms fc;
     private String type;
     String rm;
-    private String formsubtype;
     Collection formExists;
     String[] formTypes = {"f1", "f2", "f3", "f4", "f5", "f6"};
 
@@ -40,11 +33,11 @@ public class RsdMain extends AppCompatActivity {
         bi.setCallback(this);
         rm = getIntent().getStringExtra("rm");
         type = getIntent().getStringExtra(MainApp.FORM_TYPE);
-        formsubtype = getIntent().getStringExtra(MainApp.FORM_SUB_TYPE);
         this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
 
 
-        try {
+
+        /*try {
             formExists = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getSubforms").execute(formsubtype, rm).get();
 
             List<Forms> allForms = new ArrayList<>(formExists);
@@ -60,12 +53,28 @@ public class RsdMain extends AppCompatActivity {
             e.printStackTrace();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }*/
+
+        MainApp.FORM_SUB_TYPE = new ArrayList();
+
+        if (MainApp.FORM_SUB_TYPE.contains("f1")) {
+            bi.form01.setEnabled(false);
         }
-
-
-//        if (MainApp.FORM_SUB_TYPE.equals("f1")) {
-//            bi.form01.setEnabled(false);
-//        }
+        if (MainApp.FORM_SUB_TYPE.contains("f2")) {
+            bi.form02.setEnabled(false);
+        }
+        if (MainApp.FORM_SUB_TYPE.contains("f3")) {
+            bi.form03.setEnabled(false);
+        }
+        if (MainApp.FORM_SUB_TYPE.contains("f4")) {
+            bi.form04.setEnabled(false);
+        }
+        if (MainApp.FORM_SUB_TYPE.contains("f5")) {
+            bi.form05.setEnabled(false);
+        }
+        if (MainApp.FORM_SUB_TYPE.contains("f6")) {
+            bi.form06.setEnabled(false);
+        }
 
 
     }
@@ -142,12 +151,12 @@ public class RsdMain extends AppCompatActivity {
 
     public void BtnContinue() {
 
-        if (!bi.form01.isEnabled()
-                && !bi.form02.isEnabled()
-                && !bi.form03.isEnabled()
-                && !bi.form04.isEnabled()
-                && !bi.form05.isEnabled()
-                && !bi.form06.isEnabled()) {
+        if (bi.form01.isEnabled()
+                && bi.form02.isEnabled()
+                && bi.form03.isEnabled()
+                && bi.form04.isEnabled()
+                && bi.form05.isEnabled()
+                && bi.form06.isEnabled()) {
             this.setVisible(true);
             finish();
             startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true).putExtra("rm", rm));
@@ -194,33 +203,32 @@ public class RsdMain extends AppCompatActivity {
             switch (id) {
                 case R.id.form01:
                     oF = new Intent(RsdMain.this, Rsd01.class).putExtra("rm", rm);
-                    MainApp.FORM_SUB_TYPE = "f1";
+                    MainApp.FORM_SUB_TYPE.add("f1");
                     break;
                 case R.id.form02:
                     oF = new Intent(RsdMain.this, Rsd02.class).putExtra("rm", rm);
-                    MainApp.FORM_SUB_TYPE = "f2";
+                    MainApp.FORM_SUB_TYPE.add("f2");
                     break;
                 case R.id.form03:
                     oF = new Intent(RsdMain.this, Rsd03.class).putExtra("rm", rm);
-                    MainApp.FORM_SUB_TYPE = "f3";
+                    MainApp.FORM_SUB_TYPE.add("f3");
                     break;
                 case R.id.form04:
                     oF = new Intent(RsdMain.this, Rsd04.class).putExtra("rm", rm);
-                    MainApp.FORM_SUB_TYPE = "f4";
+                    MainApp.FORM_SUB_TYPE.add("f4");
                     break;
                 case R.id.form05:
                     oF = new Intent(RsdMain.this, Rsd05.class).putExtra("rm", rm);
-                    MainApp.FORM_SUB_TYPE = "f5";
+                    MainApp.FORM_SUB_TYPE.add("f5");
                     break;
                 case R.id.form06:
                     oF = new Intent(RsdMain.this, Rsd06.class).putExtra("rm", rm);
-                    MainApp.FORM_SUB_TYPE = "f6";
+                    MainApp.FORM_SUB_TYPE.add("f6");
                     break;/*
                 case R.id.form07:
                     oF = new Intent(RsdMain.this, Rsd07.class);
                     MainApp.formSubtype = "f7";
                     break;*/
-
             }
             startActivity(oF);
         } else {

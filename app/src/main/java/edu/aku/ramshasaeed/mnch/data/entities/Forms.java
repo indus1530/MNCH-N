@@ -25,10 +25,8 @@ public class Forms implements Serializable {
 
     @ColumnInfo
     private String uid = "";
-    private String uuid = "";
     private String formType = "";
     private String formDate = ""; // Date
-    private String formSubType = "";
     private String reportingMonth = "";
     private String facilityType = "";
     private String districtCode = "";
@@ -68,10 +66,8 @@ public class Forms implements Serializable {
     public Forms(Forms forms) {
 
         this.uid = forms.uid;
-        this.uuid = forms.uuid;
         this.formDate = forms.formDate;
         this.formType = forms.formType;
-        this.formSubType = forms.formSubType;
         this.reportingMonth = forms.reportingMonth;
         this.facilityType = forms.facilityType;
         this.districtCode = forms.districtCode;
@@ -131,28 +127,12 @@ public class Forms implements Serializable {
         this.uid = uid;
     }
 
-    public String getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
-    }
-
     public String getFormType() {
         return formType;
     }
 
     public void setFormType(String formType) {
         this.formType = formType;
-    }
-
-    public String getFormSubType() {
-        return formSubType;
-    }
-
-    public void setFormSubType(String formSubType) {
-        this.formSubType = formSubType;
     }
 
     public String getFacilityType() {
@@ -387,10 +367,8 @@ public class Forms implements Serializable {
         json.put("projectName", this._projectName);
         json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
         json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
-        json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
-        json.put("formSubType", this.formSubType == null ? JSONObject.NULL : this.formSubType);
         json.put("reportingMonth", this.reportingMonth == null ? JSONObject.NULL : this.reportingMonth);
         json.put("facilityType", this.facilityType == null ? JSONObject.NULL : this.facilityType);
         json.put("districtCode", this.districtCode == null ? JSONObject.NULL : this.districtCode);

@@ -297,28 +297,6 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         }
 
-
-        /*ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add(mon);
-        arrayList.add(DateUtils.getMonthsBack("MMM-yy", -1));
-        arrayList.add(DateUtils.getMonthsBack("MMM-yy", -2));
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayList);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        bi.reportMonth.setAdapter(arrayAdapter);
-        bi.reportMonth.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String tutorialsName = parent.getItemAtPosition(position).toString();
-                setTitle(type.equals(MainApp.RSD) ? "DHIS Data-Validation Tools for Decision Making (" + bi.reportMonth.getSelectedItem() + ")"
-                        : type.equals(MainApp.DHMT) ? "Performance Evaluation of District Team Meetings (" + bi.reportMonth.getSelectedItem() + ")"
-                        : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility (" + bi.reportMonth.getSelectedItem() + ")" : " " );
-                Toast.makeText(parent.getContext(), "Selected: " + tutorialsName, Toast.LENGTH_LONG).show();
-            }
-            @Override
-            public void onNothingSelected(AdapterView <?> parent) {
-            }
-        });*/
-
         reportingMonth = new ArrayList<>();
         reportingMonth.add("....");
         reportingMonth.add(mon.toUpperCase());
