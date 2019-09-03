@@ -174,4 +174,8 @@
     </style>
     <!--Button View End-->
 
+    <style name="MyTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>

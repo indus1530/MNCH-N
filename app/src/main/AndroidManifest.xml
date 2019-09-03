@@ -114,6 +114,8 @@
 
         <activity android:name=".activities.EndingActivity" />
 
+        <activity android:name=".Pending.SurveyPendingActivity" />
+
     </application>
 
 </manifest>

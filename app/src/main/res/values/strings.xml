@@ -22,6 +22,9 @@
     <string name="endForm">End Form</string>
     <string name="numberhint">Number</string>
 
+    <string name="default_p">#</string>
+    <string name="default_guest_name">Name</string>
+
 
     <string name="hf_district">District</string>
     <string name="meetingtime">Please Select Meeting Date and Time</string>
@@ -39,6 +42,7 @@
     <string name="istatus">Interview Results</string>
     <string name="istatusa">Complete</string>
     <string name="istatusb">Incomplete</string>
+    <string name="istatusc">Designate person isn\'t available</string>
 
 
     <string name="date"> Date </string>

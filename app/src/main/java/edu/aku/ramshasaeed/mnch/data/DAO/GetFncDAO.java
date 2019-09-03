@@ -58,4 +58,7 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_TEHSIL + " where district_code =:district_code")
     List<Tehsil> getTehsil(String district_code);
 
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = '0' AND istatus = '3' AND formType =:formType AND formSubType =:formSubType")
+    List<Forms> getPendingForms(String formType, String formSubType);
+
 }
