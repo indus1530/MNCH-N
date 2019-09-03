@@ -21,7 +21,6 @@
         android:roundIcon="@mipmap/uen_logo2_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Rsd08"></activity>
         <activity
             android:name=".activities.DHMT_MonitoringActivity"
             android:screenOrientation="portrait"

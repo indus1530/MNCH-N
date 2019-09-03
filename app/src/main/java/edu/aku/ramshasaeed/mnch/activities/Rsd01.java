@@ -261,7 +261,7 @@ public class Rsd01 extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting Ending Section", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
 //                MainApp.endActivity(this, this, RsdMain.class, true, RSDInfoActivity.fc);
                 finish();
                 startActivity(new Intent(this, RsdMain.class).putExtra("complete", true).putExtra("rm", rm).putExtra(MainApp.FORM_SUB_TYPE, "f1"));
