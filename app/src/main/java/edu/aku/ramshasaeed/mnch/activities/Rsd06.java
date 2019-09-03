@@ -67,7 +67,6 @@ public class Rsd06 extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
-                finish();
                 MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
 
             } else {
@@ -131,10 +130,5 @@ public class Rsd06 extends AppCompatActivity {
         fc.setSF(String.valueOf(f01));
 
     }
-
-/*    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }*/
 
 }

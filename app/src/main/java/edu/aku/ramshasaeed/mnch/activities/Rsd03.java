@@ -269,9 +269,4 @@ public class Rsd03 extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
-
 }
