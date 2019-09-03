@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 import edu.aku.ramshasaeed.mnch.R;
@@ -55,25 +54,26 @@ public class RsdMain extends AppCompatActivity {
             e.printStackTrace();
         }*/
 
-        MainApp.FORM_SUB_TYPE = new ArrayList();
 
-        if (MainApp.FORM_SUB_TYPE.contains("f1")) {
-            bi.form01.setEnabled(false);
-        }
-        if (MainApp.FORM_SUB_TYPE.contains("f2")) {
-            bi.form02.setEnabled(false);
-        }
-        if (MainApp.FORM_SUB_TYPE.contains("f3")) {
-            bi.form03.setEnabled(false);
-        }
-        if (MainApp.FORM_SUB_TYPE.contains("f4")) {
-            bi.form04.setEnabled(false);
-        }
-        if (MainApp.FORM_SUB_TYPE.contains("f5")) {
-            bi.form05.setEnabled(false);
-        }
-        if (MainApp.FORM_SUB_TYPE.contains("f6")) {
-            bi.form06.setEnabled(false);
+        for (String item : MainApp.FORM_SUB_TYPE) {
+            if (item.contains("f1")) {
+                bi.form01.setEnabled(false);
+            }
+            if (item.contains("f2")) {
+                bi.form02.setEnabled(false);
+            }
+            if (item.contains("f3")) {
+                bi.form03.setEnabled(false);
+            }
+            if (item.contains("f4")) {
+                bi.form04.setEnabled(false);
+            }
+            if (item.contains("f5")) {
+                bi.form05.setEnabled(false);
+            }
+            if (item.contains("f6")) {
+                bi.form06.setEnabled(false);
+            }
         }
 
 
@@ -159,7 +159,7 @@ public class RsdMain extends AppCompatActivity {
                 && bi.form06.isEnabled()) {
             this.setVisible(true);
             finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true).putExtra("rm", rm));
+            MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
         } else {
             Toast.makeText(this, "Sections still in Pending!", Toast.LENGTH_SHORT).show();
         }
@@ -167,9 +167,9 @@ public class RsdMain extends AppCompatActivity {
 
 
     public void BtnEnd() {
-//        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
         finish();
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false).putExtra("rm", rm));
+        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+
     }
 
 

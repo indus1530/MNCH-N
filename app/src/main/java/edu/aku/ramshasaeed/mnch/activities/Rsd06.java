@@ -1,5 +1,6 @@
 package edu.aku.ramshasaeed.mnch.activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -67,7 +68,8 @@ public class Rsd06 extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
-                MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
+                finish();
+                startActivity(new Intent(this, RsdMain.class).putExtra("complete", true).putExtra("rm", rm));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

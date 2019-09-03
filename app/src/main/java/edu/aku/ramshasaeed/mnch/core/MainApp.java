@@ -26,6 +26,7 @@ import org.json.JSONObject;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -146,39 +147,39 @@ public class MainApp extends Application {
 
     }
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
+    public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
+        String message = "";
 
-        deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
+        if (complete)
+            message = "Do you want to Finish?";
+        else
+            message = "Do you want to Exit?";
 
-
-        // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
-        // Requires Additional permission for 5.0 -- android.hardware.location.gps
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        locationManager.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER,
-                MINIMUM_TIME_BETWEEN_UPDATES,
-                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
-                new GPSLocationListener() // Implement this class from code
-
-        );
-
-
-//        Initialize Dead Member List
-//        deadMembers = new ArrayList<String>();
-
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+        alertDialogBuilder
+                .setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                                int id) {
+                                activity.finish();
+                                Intent end_intent = new Intent(context, EndActivityClass);
+                                end_intent.putExtra("complete", complete);
+                                end_intent.putExtra("typeFlag", objectData.getClass().equals(Forms.class));
+                                end_intent.putExtra("fc_data", (Serializable) objectData);
+                                context.startActivity(end_intent);
+                            }
+                        });
+        alertDialogBuilder.setNegativeButton("No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
     }
 
     protected boolean isBetterLocation(Location location, Location currentBestLocation) {
@@ -231,40 +232,42 @@ public class MainApp extends Application {
         return provider1.equals(provider2);
     }
 
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-    public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
-        String message = "";
+        deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
 
-        if(complete)
-            message = "Do you want to Finish?";
-        else
-            message = "Do you want to Exit?";
 
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
-        alertDialogBuilder
-                .setMessage(message)
-                .setCancelable(false)
-                .setPositiveButton("Yes",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,
-                                                int id) {
-                                activity.finish();
-                                Intent end_intent = new Intent(context, EndActivityClass);
-                                end_intent.putExtra("complete", complete);
-                                end_intent.putExtra("typeFlag", objectData.getClass().equals(Forms.class));
-                                end_intent.putExtra("fc_data", (Serializable) objectData);
-                                context.startActivity(end_intent);
-                            }
-                        });
-        alertDialogBuilder.setNegativeButton("No",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
+        // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
+        // Requires Additional permission for 5.0 -- android.hardware.location.gps
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        locationManager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                MINIMUM_TIME_BETWEEN_UPDATES,
+                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
+                new GPSLocationListener() // Implement this class from code
+
+        );
+
+
+        FORM_SUB_TYPE = new ArrayList<>();
+
+
+//        Initialize Dead Member List
+//        deadMembers = new ArrayList<String>();
+
     }
 
 
