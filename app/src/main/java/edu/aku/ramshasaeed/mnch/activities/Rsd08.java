@@ -128,13 +128,8 @@ public class Rsd08 extends AppCompatActivity {
 
         //f01.put("rsrem", bi.rsrem.getText().toString());
 
-        fc.setSrsd1(String.valueOf(f01));
+        fc.setSA(String.valueOf(f01));
 
-    }
-
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
 }

@@ -102,7 +102,7 @@ public class Qoc4 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         qoc4.put("qd04Ap", bi.qd04Ap.getText().toString().trim().length() > 0 ? bi.qd04Ap.getText().toString() : "0");
 
 
-        fc.setsD(String.valueOf(qoc4));
+        fc.setSD(String.valueOf(qoc4));
 
     }
 

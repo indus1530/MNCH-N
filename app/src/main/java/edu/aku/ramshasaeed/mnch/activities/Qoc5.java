@@ -97,7 +97,7 @@ public class Qoc5 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
         qoc5.put("qe05Ap", bi.qe05Ap.getText().toString().trim().length() > 0 ? bi.qe05Ap.getText().toString() : "0");
 
-        fc.setsE(String.valueOf(qoc5));
+        fc.setSE(String.valueOf(qoc5));
 
     }
 

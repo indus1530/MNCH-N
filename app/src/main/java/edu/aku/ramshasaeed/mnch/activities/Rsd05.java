@@ -316,7 +316,7 @@ public class Rsd05 extends AppCompatActivity {
         f01.put("rs35", bi.rs3599.isChecked() ? "Mi" : bi.rs35.getText().toString());
         f01.put("rs32", bi.rs3299.isChecked() ? "Mi" : bi.rs32.getText().toString());
 
-        fc.setsE(String.valueOf(f01));
+        fc.setSE(String.valueOf(f01));
 
     }
 

@@ -227,59 +227,59 @@ public class Forms implements Serializable {
         this.istatus96x = istatus96x;
     }
 
-    public String getsA() {
+    public String getSA() {
         return sA;
     }
 
-    public void setsA(String sA) {
+    public void setSA(String sA) {
         this.sA = sA;
     }
 
-    public String getsB() {
+    public String getSB() {
         return sB;
     }
 
-    public void setsB(String sB) {
+    public void setSB(String sB) {
         this.sB = sB;
     }
 
-    public String getsC() {
+    public String getSC() {
         return sC;
     }
 
-    public void setsC(String sC) {
+    public void setSC(String sC) {
         this.sC = sC;
     }
 
-    public String getsD() {
+    public String getSD() {
         return sD;
     }
 
-    public void setsD(String sD) {
+    public void setSD(String sD) {
         this.sD = sD;
     }
 
-    public String getsE() {
+    public String getSE() {
         return sE;
     }
 
-    public void setsE(String sE) {
+    public void setSE(String sE) {
         this.sE = sE;
     }
 
-    public String getsF() {
+    public String getSF() {
         return sF;
     }
 
-    public void setsF(String sF) {
+    public void setSF(String sF) {
         this.sF = sF;
     }
 
-    public String getsG() {
+    public String getSG() {
         return sG;
     }
 
-    public void setsG(String sG) {
+    public void setSG(String sG) {
         this.sG = sG;
     }
 

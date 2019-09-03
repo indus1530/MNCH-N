@@ -76,10 +76,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Rsd07"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
-        <activity
             android:name=".activities.Qoc1"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
