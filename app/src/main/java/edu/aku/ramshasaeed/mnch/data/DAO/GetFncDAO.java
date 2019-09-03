@@ -37,6 +37,9 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = '' AND formType = :formType")
     List<Forms> getUnSyncedForms(String formType);
 
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE formSubType = :formSubType AND reportingMonth = :month")
+    List<Forms> getSubforms(String formSubType, String month);
+
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE formType = :formType")
     List<Forms> getForms(String formType);
 

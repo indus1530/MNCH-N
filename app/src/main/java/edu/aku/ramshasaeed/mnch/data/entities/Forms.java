@@ -29,10 +29,13 @@ public class Forms implements Serializable {
     private String formType = "";
     private String formDate = ""; // Date
     private String formSubType = "";
-/*    private String district = "";
-    private String tehsil = "";
-    private String ucs = "";
-    private String uen = ""; */
+    private String reportingMonth = "";
+
+
+    /*    private String district = "";
+        private String tehsil = "";
+        private String ucs = "";
+        private String uen = ""; */
     private String username = ""; // Interviewer
     private String istatus = ""; // Interview Status
     private String istatus96x = ""; // Interview Status
@@ -74,6 +77,7 @@ public class Forms implements Serializable {
         this.formDate = forms.formDate;
         this.formType = forms.formType;
         this.formSubType = forms.formSubType;
+        this.reportingMonth = forms.reportingMonth;
         this.username = forms.username;
         this.istatus = forms.istatus;
         this.istatus96x = forms.istatus96x;
@@ -111,6 +115,15 @@ public class Forms implements Serializable {
 
     public Forms() {
     }
+
+    public String getReportingMonth() {
+        return reportingMonth;
+    }
+
+    public void setReportingMonth(String reportingMonth) {
+        this.reportingMonth = reportingMonth;
+    }
+
 
     public int getId() {
         return id;
@@ -436,6 +449,7 @@ public class Forms implements Serializable {
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put("formSubType", this.formSubType == null ? JSONObject.NULL : this.formSubType);
+        json.put("reportingMonth", this.reportingMonth == null ? JSONObject.NULL : this.reportingMonth);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put("istatus96x", this.istatus96x == null ? JSONObject.NULL : this.istatus96x);

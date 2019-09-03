@@ -7,19 +7,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
+import edu.aku.ramshasaeed.mnch.data.DAO.GetFncDAO;
 import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.databinding.RsdMainBinding;
+import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
+
+import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 
 public class RsdMain extends AppCompatActivity {
 
+    private static final String TAG = "RsdMain";
     RsdMainBinding bi;
 
     public static Forms fc;
     private String type;
     String rm;
     private String formsubtype;
+    Collection formExists;
+    String[] formTypes = {"f1", "f2", "f3", "f4", "f5", "f6"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +44,28 @@ public class RsdMain extends AppCompatActivity {
         this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
 
 
-        if (MainApp.FORM_SUB_TYPE.equals("f1")) {
-            bi.form01.setEnabled(false);
+        try {
+            formExists = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getSubforms").execute(formsubtype, rm).get();
+
+            List<Forms> allForms = new ArrayList<>(formExists);
+
+            for (int i = 0; i < allForms.size(); i++) {
+                if (allForms.get(i).getFormSubType() == "f1") {
+                    bi.form01.setEnabled(false);
+                } else if (allForms.get(i).getFormSubType() == "f2") {
+                    bi.form02.setEnabled(false);
+                }
+            }
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+
+
+//        if (MainApp.FORM_SUB_TYPE.equals("f1")) {
+//            bi.form01.setEnabled(false);
+//        }
 
 
     }
@@ -155,7 +186,6 @@ public class RsdMain extends AppCompatActivity {
 
         fc.setFormSubType(MainApp.FORM_SUB_TYPE);
     }*/
-
 
 
     private void OpenFormFunc(int id) {

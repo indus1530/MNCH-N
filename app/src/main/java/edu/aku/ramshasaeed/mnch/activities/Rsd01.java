@@ -357,6 +357,8 @@ public class Rsd01 extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
+        fc.setFormSubType(MainApp.FORM_SUB_TYPE);
+
         JSONObject f01 = new JSONObject();
 
         f01.put("rs01", bi.rs0199.isChecked() ? "Mi" : bi.rs01.getText().toString());

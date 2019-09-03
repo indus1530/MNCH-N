@@ -56,6 +56,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
     private String type;
+    String month;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -334,6 +335,8 @@ public class RSDInfoActivity extends AppCompatActivity {
         bi.reportMonth.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                month = bi.reportMonth.getSelectedItem().toString();
                 setTitle(type.equals(MainApp.RSD) ? "DHIS Data-Validation Tools for Decision Making (" + bi.reportMonth.getSelectedItem() + ")"
                         : type.equals(MainApp.DHMT) ? "Performance Evaluation of District Team Meetings (" + bi.reportMonth.getSelectedItem() + ")"
                         : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility (" + bi.reportMonth.getSelectedItem() + ")" : " ");
@@ -386,12 +389,13 @@ public class RSDInfoActivity extends AppCompatActivity {
         fc.setUsername(MainApp.userName);
         fc.setFormDate(new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date().getTime()));
         fc.setDeviceID(MainApp.deviceId);
+        fc.setReportingMonth(bi.reportMonth.getSelectedItem().toString());
 
         setGPS(fc); // Set GPS
 
         JSONObject f01 = new JSONObject();
 
-        f01.put("reporting_month", bi.reportMonth.getSelectedItem());
+//        f01.put("reporting_month", bi.reportMonth.getSelectedItem());
         f01.put("district_code", districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
 
         if (!type.equals(MainApp.DHMT)) {
@@ -476,7 +480,6 @@ public class RSDInfoActivity extends AppCompatActivity {
             if (longID != 0) {
                 fc.setId(longID.intValue());
                 fc.setUid(MainApp.deviceId + fc.getId());
-
                 longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
                 return longID == 1;
 
