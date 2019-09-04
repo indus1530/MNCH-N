@@ -9,14 +9,14 @@ import android.widget.Toast;
 
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
-import edu.aku.ramshasaeed.mnch.data.entities.Forms;
 import edu.aku.ramshasaeed.mnch.databinding.RsdMainBinding;
+
+import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
 public class RsdMain extends AppCompatActivity {
 
     private static final String TAG = "RsdMain";
     RsdMainBinding bi;
-    public static Forms fc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
