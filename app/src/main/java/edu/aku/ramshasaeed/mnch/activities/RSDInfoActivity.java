@@ -129,19 +129,6 @@ public class RSDInfoActivity extends AppCompatActivity {
         });
 
 
-        ///RSD Public & Private
-
-        /*bi.hfConsent.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (bi.hfConsenta.isChecked()) {
-                    bi.btnNext.setVisibility(VISIBLE);
-                } else {
-                    bi.btnNext.setVisibility(GONE);
-                }
-            }
-        });*/
-
         bi.hfMtime.setTimeFormat("HH:mm");
         bi.hfMtime.setIs24HourView(true);
     }
@@ -340,10 +327,7 @@ public class RSDInfoActivity extends AppCompatActivity {
 
             if (fc != null) {
                 finish();
-                String rm = (String) bi.reportMonth.getSelectedItem();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class)
-                        .putExtra("rm", rm));
-
+                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
                 return;
             }
 
@@ -353,11 +337,8 @@ public class RSDInfoActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-
                 finish();
-                String rm = (String) bi.reportMonth.getSelectedItem();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class)
-                        .putExtra("rm", rm));
+                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -374,11 +355,30 @@ public class RSDInfoActivity extends AppCompatActivity {
             return false;
 
         if (type.equals(MainApp.RSD)) {
-            Object getData;
-            if (bi.pub.isChecked())
-                getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPublicForm").execute(mEmail, mPassword).get();
-            else
-                getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPrivateForm").execute(mEmail, mPassword).get();
+            Object getData = null;
+            if (bi.pub.isChecked()) {
+                try {
+                    getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPublicForm")
+                            .execute(bi.reportMonth.getSelectedItem().toString(),
+                                    districtCodes.get(bi.hfDistrict.getSelectedItemPosition()),
+                                    hfCode.get(bi.hfNamePublic.getSelectedItemPosition())).get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                try {
+                    getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPrivateForm")
+                            .execute(bi.reportMonth.getSelectedItem().toString(),
+                                    districtCodes.get(bi.hfDistrict.getSelectedItemPosition()),
+                                    bi.hfName.getText().toString()).get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
 
             if (getData == null) return true;
 

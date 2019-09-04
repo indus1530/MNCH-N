@@ -43,11 +43,11 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_USERS + " where ROW_USERNAME=:username AND ROW_PASSWORD=:password")
     Users login(String username, String password);
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where reportingMonth=:reportingMonth AND ROW_PASSWORD=:password")
-    Forms getPendingPublicForm(String reportingMonth, String password);
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where reportingMonth=:reportingMonth AND facilityType='1' AND districtCode=:districtCode AND facilityCode=:facilityCode")
+    Forms getPendingPublicForm(String reportingMonth, String districtCode, String facilityCode);
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where reportingMonth=:reportingMonth AND ROW_PASSWORD=:password")
-    Forms getPendingPrivateForm(String reportingMonth, String password);
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where reportingMonth=:reportingMonth AND facilityType='2' AND districtCode=:districtCode AND facilityCode=:facilityCode")
+    Forms getPendingPrivateForm(String reportingMonth, String districtCode, String facilityCode);
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_UCs + " where tehsil_code=:tehsil_code")
     List<UCs> getUCs(String tehsil_code);

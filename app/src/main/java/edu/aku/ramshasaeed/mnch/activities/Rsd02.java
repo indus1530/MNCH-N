@@ -9,6 +9,8 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
@@ -21,41 +23,19 @@ import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
 public class Rsd02 extends AppCompatActivity {
-    //Routine Service Delivery
     ActivityRsd02Binding bi;
-    String rm;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd02);
         bi.setCallback(this);
-        rm = getIntent().getStringExtra("rm");
-        this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
-        //EventsCall();
+        this.setTitle(getString(R.string.routineone) + "(" + fc.getReportingMonth() + ")");
 
 
     }
 
-    void EventsCall() {
 
-        /*bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs2297.isChecked()) {
-                    bi.rs2297.setChecked(false);
-                }
-                if (b) {
-                    bi.rs22.setVisibility(View.GONE);
-                    bi.rs22.setText(null);
-                } else {
-                    bi.rs22.setVisibility(View.VISIBLE);
-                }
-            }
-        });*/
-
-    }
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -65,9 +45,8 @@ public class Rsd02 extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-
                 finish();
-                startActivity(new Intent(this, RsdMain.class).putExtra("rm", rm));
+                startActivity(new Intent(this, RsdMain.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -77,7 +56,7 @@ public class Rsd02 extends AppCompatActivity {
 
     public void BtnEnd() {
         finish();
-        startActivity(new Intent(this, EndingActivity.class).putExtra("rm", rm));
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
 
     }
 
@@ -120,10 +99,9 @@ public class Rsd02 extends AppCompatActivity {
 
         JSONObject f01 = new JSONObject();
 
+        f01.put("rs02_formdate", new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date().getTime()));
         f01.put("rs07", bi.rs0799.isChecked() ? "Mi" : bi.rs07.getText().toString());
         f01.put("rs08", bi.rs0899.isChecked() ? "Mi" : bi.rs08.getText().toString());
-
-//        f01.put("rsrem", bi.rsrem.getText().toString());
 
         fc.setSB(String.valueOf(f01));
 

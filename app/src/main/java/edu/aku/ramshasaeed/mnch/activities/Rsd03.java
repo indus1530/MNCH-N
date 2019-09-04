@@ -9,11 +9,12 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
-import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsd03Binding;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
@@ -22,9 +23,7 @@ import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
 public class Rsd03 extends AppCompatActivity {
-    //Routine Service Delivery
     ActivityRsd03Binding bi;
-    String rm;
 
 
     @Override
@@ -32,46 +31,11 @@ public class Rsd03 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_rsd03);
         bi.setCallback(this);
-        rm = getIntent().getStringExtra("rm");
-        this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
-        //EventsCall();
+        this.setTitle(getString(R.string.routineone) + "(" + fc.getReportingMonth() + ")");
 
 
     }
 
-    void EventsCall() {
-
-        /*bi.rs2299.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs2297.isChecked()) {
-                    bi.rs2297.setChecked(false);
-                }
-                if (b) {
-                    bi.rs22.setVisibility(View.GONE);
-                    bi.rs22.setText(null);
-                } else {
-                    bi.rs22.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-        bi.rs2297.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && bi.rs2299.isChecked()) {
-                    bi.rs2299.setChecked(false);
-                }
-                if (b) {
-                    bi.rs22.setVisibility(View.GONE);
-                    bi.rs22.setText(null);
-                } else {
-                    bi.rs22.setVisibility(View.VISIBLE);
-                }
-            }
-        });*/
-
-    }
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -83,7 +47,7 @@ public class Rsd03 extends AppCompatActivity {
             if (UpdateDB()) {
 
                 finish();
-                startActivity(new Intent(this, RsdMain.class).putExtra("rm", rm));
+                startActivity(new Intent(this, RsdMain.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -92,7 +56,8 @@ public class Rsd03 extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+        finish();
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
 
     }
 
@@ -199,12 +164,7 @@ public class Rsd03 extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.rs22, getString(R.string.rs22))) {
                 return false;
             }
-        }/*
-        if (!bi.rs2299.isChecked() && !bi.rs2297.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs22, getString(R.string.rs22))) {
-                return false;
-            }
-        }*/
+        }
         if (!bi.rs2399.isChecked()) {
 
             if (!validatorClass.EmptyTextBox(this, bi.rs23, getString(R.string.rs23))) {
@@ -243,6 +203,7 @@ public class Rsd03 extends AppCompatActivity {
 
         JSONObject f01 = new JSONObject();
 
+        f01.put("rs03_formdate", new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date().getTime()));
         f01.put("rs09", bi.rs0999.isChecked() ? "Mi" : bi.rs09.getText().toString());
         f01.put("rs10", bi.rs1099.isChecked() ? "Mi" : bi.rs10.getText().toString());
         f01.put("rs11", bi.rs1199.isChecked() ? "Mi" : bi.rs11.getText().toString());

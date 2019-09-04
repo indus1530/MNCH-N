@@ -16,34 +16,31 @@ public class RsdMain extends AppCompatActivity {
 
     private static final String TAG = "RsdMain";
     RsdMainBinding bi;
-
     public static Forms fc;
-    String rm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.rsd_main);
         bi.setCallback(this);
-        rm = getIntent().getStringExtra("rm");
-        this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
+        //this.setTitle(getString(R.string.routineone) + "(" + fc.getReportingMonth() + ")");
 
-        if (fc.getSA().equals(""))
+        if (!fc.getSA().equals(""))
             bi.form01.setEnabled(false);
 
-        if (fc.getSB().equals(""))
+        if (!fc.getSB().equals(""))
             bi.form02.setEnabled(false);
 
-        if (fc.getSC().equals(""))
+        if (!fc.getSC().equals(""))
             bi.form03.setEnabled(false);
 
-        if (fc.getSD().equals(""))
+        if (!fc.getSD().equals(""))
             bi.form04.setEnabled(false);
 
-        if (fc.getSE().equals(""))
+        if (!fc.getSE().equals(""))
             bi.form05.setEnabled(false);
 
-        if (fc.getSF().equals(""))
+        if (!fc.getSF().equals(""))
             bi.form06.setEnabled(false);
 
     }
@@ -80,22 +77,22 @@ public class RsdMain extends AppCompatActivity {
         if (!MainApp.userName.equals("0000")) {
             switch (id) {
                 case R.id.form01:
-                    oF = new Intent(RsdMain.this, Rsd01.class).putExtra("rm", rm);
+                    oF = new Intent(RsdMain.this, Rsd01.class);
                     break;
                 case R.id.form02:
-                    oF = new Intent(RsdMain.this, Rsd02.class).putExtra("rm", rm);
+                    oF = new Intent(RsdMain.this, Rsd02.class);
                     break;
                 case R.id.form03:
-                    oF = new Intent(RsdMain.this, Rsd03.class).putExtra("rm", rm);
+                    oF = new Intent(RsdMain.this, Rsd03.class);
                     break;
                 case R.id.form04:
-                    oF = new Intent(RsdMain.this, Rsd04.class).putExtra("rm", rm);
+                    oF = new Intent(RsdMain.this, Rsd04.class);
                     break;
                 case R.id.form05:
-                    oF = new Intent(RsdMain.this, Rsd05.class).putExtra("rm", rm);
+                    oF = new Intent(RsdMain.this, Rsd05.class);
                     break;
                 case R.id.form06:
-                    oF = new Intent(RsdMain.this, Rsd06.class).putExtra("rm", rm);
+                    oF = new Intent(RsdMain.this, Rsd06.class);
                     break;
             }
             finish();
