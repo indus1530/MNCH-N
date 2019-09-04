@@ -21,7 +21,7 @@ public class RsdMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.rsd_main);
         bi.setCallback(this);
-        //this.setTitle(getString(R.string.routineone) + "(" + fc.getReportingMonth() + ")");
+        this.setTitle(getString(R.string.routineone) + "(" + fc.getReportingMonth() + ")");
 
         if (!fc.getSA().equals(""))
             bi.form01.setEnabled(false);
@@ -56,7 +56,6 @@ public class RsdMain extends AppCompatActivity {
                 && !bi.form04.isEnabled()
                 && !bi.form05.isEnabled()
                 && !bi.form06.isEnabled()) {
-            finish();
             startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
         } else {
             Toast.makeText(this, "Sections still in Pending!", Toast.LENGTH_SHORT).show();
@@ -93,7 +92,6 @@ public class RsdMain extends AppCompatActivity {
                     oF = new Intent(RsdMain.this, Rsd06.class);
                     break;
             }
-            finish();
             startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();

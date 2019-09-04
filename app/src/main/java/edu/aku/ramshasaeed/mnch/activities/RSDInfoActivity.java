@@ -386,7 +386,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             }
 
             if (((Forms) getData).getIstatus().equals("1")) {
-                Toast.makeText(this, "Form already filled!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Report of this Facility already filled for this Month", Toast.LENGTH_SHORT).show();
                 return false;
             }
 

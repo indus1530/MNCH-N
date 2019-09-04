@@ -45,7 +45,6 @@ public class Rsd03 extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-
                 finish();
                 startActivity(new Intent(this, RsdMain.class));
 
