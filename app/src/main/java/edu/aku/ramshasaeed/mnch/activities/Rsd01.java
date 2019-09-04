@@ -9,6 +9,8 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
@@ -260,7 +262,7 @@ public class Rsd01 extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
+
 //                MainApp.endActivity(this, this, RsdMain.class, true, RSDInfoActivity.fc);
                 finish();
                 startActivity(new Intent(this, RsdMain.class).putExtra("complete", true).putExtra("rm", rm));
@@ -363,6 +365,7 @@ public class Rsd01 extends AppCompatActivity {
         f01.put("rs03", bi.rs0399.isChecked() ? "Mi" : bi.rs03.getText().toString());
         f01.put("rs04", bi.rs0499.isChecked() ? "Mi" : bi.rs04.getText().toString());
         f01.put("rs05", bi.rs0599.isChecked() ? "Mi" : bi.rs05.getText().toString());
+        f01.put("rs01_formdate", new SimpleDateFormat("dd-MM-yyyy HH:mm").format(new Date().getTime()));
 
         fc.setSA(String.valueOf(f01));
 

@@ -36,6 +36,7 @@ import edu.aku.ramshasaeed.mnch.data.entities.Tehsil;
 import edu.aku.ramshasaeed.mnch.data.entities.UCs;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsdinfoBinding;
 import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
+import edu.aku.ramshasaeed.mnch.get.db.GetIndDBData;
 import edu.aku.ramshasaeed.mnch.utils.DateUtils;
 import edu.aku.ramshasaeed.mnch.validation.ClearClass;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
@@ -56,6 +57,8 @@ public class RSDInfoActivity extends AppCompatActivity {
     private static final String TAG = RSDInfoActivity.class.getName();
     private String type;
     String month;
+
+    Forms getForms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -334,6 +337,16 @@ public class RSDInfoActivity extends AppCompatActivity {
     public void BtnContinue() {
 
         if (formValidation()) {
+
+            if (fc != null) {
+                finish();
+                String rm = (String) bi.reportMonth.getSelectedItem();
+                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class)
+                        .putExtra("rm", rm));
+
+                return;
+            }
+
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -343,7 +356,8 @@ public class RSDInfoActivity extends AppCompatActivity {
 
                 finish();
                 String rm = (String) bi.reportMonth.getSelectedItem();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class).putExtra("rm", rm));
+                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class)
+                        .putExtra("rm", rm));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -356,7 +370,29 @@ public class RSDInfoActivity extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-        return validatorClass.EmptyCheckingContainer(this, bi.llrsdInfo);
+        if (!validatorClass.EmptyCheckingContainer(this, bi.llrsdInfo))
+            return false;
+
+        if (type.equals(MainApp.RSD)) {
+            Object getData;
+            if (bi.pub.isChecked())
+                getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPublicForm").execute(mEmail, mPassword).get();
+            else
+                getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPrivateForm").execute(mEmail, mPassword).get();
+
+            if (getData == null) return true;
+
+            if (((Forms) getData).getIstatus().equals("1")) {
+                Toast.makeText(this, "Form already filled!!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            fc = (Forms) getData;
+
+        }
+
+        return true;
+
     }
 
     private void SaveDraft() throws JSONException {
@@ -385,34 +421,6 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         setGPS(fc); // Set GPS
     }
-
-            /*if (type.equals(MainApp.RSD)) {
-                f01.put("facility_type", bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
-                if (bi.pub.isChecked()) {
-                    f01.put("hf_code", hfCode.get(bi.hfNamePublic.getSelectedItemPosition()));
-                } else {
-                    f01.put("hf_name", bi.hfName.getText().toString());
-                }
-            } else {
-                f01.put("hf_name", bi.hfName.getText().toString());
-            }*/
-
-
-//            FacilityProvider fp = facilityMap.get(bi.hfFacilityProvider.getSelectedItem().toString());
-//            f01.put("hf_dhis", fp.getHf_dhis());
-//            f01.put("hf_district_code", fp.getHf_district_code());
-//            f01.put("hf_tehsil", fp.getHf_tehsil());
-//            f01.put("hf_uc", fp.getHf_uc());
-//            f01.put("hf_name", fp.getHf_name());
-//            f01.put("hf_name_govt", fp.getHf_name_govt());
-//            f01.put("hf_uen_code", fp.getHf_uen_code());
-
-        /*f01.put("hf_mdate", bi.hfMdate.getText().toString());
-        f01.put("hf_mtime", bi.hfMtime.getText().toString());*/
-
-        /*f01.put("rs_consent", bi.hfConsenta.isChecked() ? "1"
-                : bi.hfConsentb.isChecked() ? "2"
-                : "0");*/
 
     public void setGPS(Forms fc) {
         SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);

@@ -111,7 +111,7 @@ public class Rsd04 extends AppCompatActivity {
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "DATA SAVED", Toast.LENGTH_SHORT).show();
+
                 finish();
                 startActivity(new Intent(this, RsdMain.class).putExtra("rm", rm));
 
