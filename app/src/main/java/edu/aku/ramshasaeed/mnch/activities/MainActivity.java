@@ -200,8 +200,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
             }
         } else if (id == R.id.nav_pending) {
-            Intent dbmanager = new Intent(getApplicationContext(), SurveyPendingActivity.class);
-            startActivity(dbmanager);
+            Intent i = new Intent(getApplicationContext(), SurveyPendingActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_opendb) {
             if (MainApp.admin) {
                 Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);

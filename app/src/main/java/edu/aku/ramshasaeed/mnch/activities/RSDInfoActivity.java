@@ -69,6 +69,8 @@ public class RSDInfoActivity extends AppCompatActivity {
                 : type.equals(MainApp.DHMT) ? "Performance Evaluation of District Team Meetings"
                 : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility" : "");
 
+        //MainApp.FORM_SUB_TYPE.clear();
+
         tempVisible(this);
 
         if (type.equals(MainApp.DHMT)) {

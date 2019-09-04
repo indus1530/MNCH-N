@@ -13,7 +13,6 @@ import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
-import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsd06Binding;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
@@ -79,7 +78,8 @@ public class Rsd06 extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+        finish();
+        startActivity(new Intent(this, RsdMain.class).putExtra("complete", false).putExtra("rm", rm));
 
     }
 

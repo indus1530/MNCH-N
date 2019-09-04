@@ -151,13 +151,12 @@ public class RsdMain extends AppCompatActivity {
 
     public void BtnContinue() {
 
-        if (bi.form01.isEnabled()
-                && bi.form02.isEnabled()
-                && bi.form03.isEnabled()
-                && bi.form04.isEnabled()
-                && bi.form05.isEnabled()
-                && bi.form06.isEnabled()) {
-            this.setVisible(true);
+        if (!bi.form01.isEnabled()
+                && !bi.form02.isEnabled()
+                && !bi.form03.isEnabled()
+                && !bi.form04.isEnabled()
+                && !bi.form05.isEnabled()
+                && !bi.form06.isEnabled()) {
             finish();
             MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
         } else {
