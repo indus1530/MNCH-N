@@ -380,7 +380,10 @@ public class RSDInfoActivity extends AppCompatActivity {
                 }
             }
 
-            if (getData == null) return true;
+            if (getData == null) {
+                fc = null;
+                return true;
+            }
 
             if (((Forms) getData).getIstatus().equals("1")) {
                 Toast.makeText(this, "Form already filled!!", Toast.LENGTH_SHORT).show();
