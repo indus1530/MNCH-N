@@ -14,8 +14,6 @@ import edu.aku.ramshasaeed.mnch.databinding.RsdMainBinding;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 
 public class RsdMain extends AppCompatActivity {
-
-    private static final String TAG = "RsdMain";
     RsdMainBinding bi;
 
     @Override
