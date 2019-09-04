@@ -69,7 +69,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                 : type.equals(MainApp.DHMT) ? "Performance Evaluation of District Team Meetings"
                 : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility" : "");
 
-        //MainApp.FORM_SUB_TYPE.clear();
+        MainApp.FORM_SUB_TYPE.clear();
 
         tempVisible(this);
 
@@ -371,8 +371,6 @@ public class RSDInfoActivity extends AppCompatActivity {
         fc.setReportingMonth(bi.reportMonth.getSelectedItem().toString());
         fc.setDistrictCode(districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
 
-        setGPS(fc); // Set GPS
-
         if (!type.equals(MainApp.DHMT)) {
             fc.setFacilityType(bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
             fc.setTehsilCode(bi.pvt.isChecked() ? tehsilCode.get(bi.hfTehsil.getSelectedItemPosition()) : "");
@@ -384,6 +382,8 @@ public class RSDInfoActivity extends AppCompatActivity {
                 fc.setFacilityCode(bi.hfName.getText().toString());
             }
         }
+
+        setGPS(fc); // Set GPS
     }
 
             /*if (type.equals(MainApp.RSD)) {

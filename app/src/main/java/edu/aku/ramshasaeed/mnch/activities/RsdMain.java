@@ -35,7 +35,6 @@ public class RsdMain extends AppCompatActivity {
         this.setTitle(getString(R.string.routineone) + "(" + rm + ")");
 
 
-
         /*try {
             formExists = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getSubforms").execute(formsubtype, rm).get();
 
@@ -158,7 +157,7 @@ public class RsdMain extends AppCompatActivity {
                 && !bi.form05.isEnabled()
                 && !bi.form06.isEnabled()) {
             finish();
-            MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
         } else {
             Toast.makeText(this, "Sections still in Pending!", Toast.LENGTH_SHORT).show();
         }
@@ -167,7 +166,7 @@ public class RsdMain extends AppCompatActivity {
 
     public void BtnEnd() {
         finish();
-        MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
 
     }
 
