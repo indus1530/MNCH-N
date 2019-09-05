@@ -30,7 +30,7 @@ public class Qoc4 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc4);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.routinetwo));
+        this.setTitle(getString(R.string.routinetwo) + "(" + fc.getReportingMonth() + ")");
         events_call();
     }
 

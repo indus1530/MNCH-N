@@ -25,15 +25,13 @@ import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
 public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
     ActivityQoc1Binding bi;
-    String rm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc1);
         bi.setCallback(this);
-        rm = getIntent().getStringExtra("rm");
-        this.setTitle(getString(R.string.routinetwo) + "(" + rm + ")");
+        this.setTitle(getString(R.string.routinetwo) + "(" + fc.getReportingMonth() + ")");
         events_call();
 
     }
@@ -47,7 +45,7 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                Toast.makeText(this, "Starting Next Section", Toast.LENGTH_SHORT).show();
+                finish();
                 MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
 
             } else {
@@ -273,11 +271,6 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         bi.qa0115a.setOnCheckedChangeListener(this);
         bi.qa0116a.setOnCheckedChangeListener(this);
 
-    }
-
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
 }

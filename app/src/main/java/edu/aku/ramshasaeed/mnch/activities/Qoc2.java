@@ -30,7 +30,7 @@ public class Qoc2 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_qoc2);
         bi.setCallback(this);
-        this.setTitle(getString(R.string.routinetwo));
+        this.setTitle(getString(R.string.routinetwo) + "(" + fc.getReportingMonth() + ")");
         events_call();
     }
 
@@ -100,10 +100,7 @@ public class Qoc2 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
     }
 
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
+
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -135,4 +132,12 @@ public class Qoc2 extends AppCompatActivity implements RadioGroup.OnCheckedChang
         bi.qb0202a.setOnCheckedChangeListener(this);
         bi.qb0203a.setOnCheckedChangeListener(this);
     }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
+
+
 }
