@@ -40,7 +40,6 @@ ActivityDhmtMonitoringBinding bi;
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                finish();
                 MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
 
             } else {

@@ -45,7 +45,6 @@ public class Qoc1 extends AppCompatActivity implements RadioGroup.OnCheckedChang
                 e.printStackTrace();
             }
             if (UpdateDB()) {
-                finish();
                 MainApp.endActivity(this, this, Qoc2.class, true, RSDInfoActivity.fc);
 
             } else {
