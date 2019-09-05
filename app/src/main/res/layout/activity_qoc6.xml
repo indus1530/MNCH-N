@@ -623,7 +623,7 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection"
                     android:textColor="@color/white"
-                    android:background="@android:color/holo_green_light"
+                    android:background="#1ed61e"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
