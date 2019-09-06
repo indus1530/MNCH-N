@@ -64,8 +64,16 @@ public class RsdMain extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        finish();
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        if (bi.form01.isEnabled()
+                || bi.form02.isEnabled()
+                || bi.form03.isEnabled()
+                || bi.form04.isEnabled()
+                || bi.form05.isEnabled()
+                || bi.form06.isEnabled()) {
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        } else {
+            Toast.makeText(this, "You have filled all sections \nYou are Good to GO GREEN!", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
