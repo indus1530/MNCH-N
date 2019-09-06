@@ -48,7 +48,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import edu.aku.ramshasaeed.mnch.Pending.SurveyPendingActivity;
 import edu.aku.ramshasaeed.mnch.R;
 import edu.aku.ramshasaeed.mnch.appVersion.VersionAppContract;
 import edu.aku.ramshasaeed.mnch.core.CONSTANTS;
@@ -199,9 +198,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             } else {
                 Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
             }
-        } else if (id == R.id.nav_pending) {
-            Intent i = new Intent(getApplicationContext(), SurveyPendingActivity.class);
-            startActivity(i);
         } else if (id == R.id.nav_opendb) {
             if (MainApp.admin) {
                 Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
