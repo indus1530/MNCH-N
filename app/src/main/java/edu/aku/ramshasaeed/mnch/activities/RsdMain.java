@@ -56,7 +56,8 @@ public class RsdMain extends AppCompatActivity {
                 && !bi.form04.isEnabled()
                 && !bi.form05.isEnabled()
                 && !bi.form06.isEnabled()) {
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+            //startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+            MainApp.endActivity(this, this, EndingActivity.class, true, RSDInfoActivity.fc);
         } else {
             Toast.makeText(this, "Sections still in Pending!", Toast.LENGTH_SHORT).show();
         }
@@ -70,9 +71,10 @@ public class RsdMain extends AppCompatActivity {
                 || bi.form04.isEnabled()
                 || bi.form05.isEnabled()
                 || bi.form06.isEnabled()) {
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+            //startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+            MainApp.endActivity(this, this, EndingActivity.class, false, RSDInfoActivity.fc);
         } else {
-            Toast.makeText(this, "You have filled all sections \nYou are Good to GO GREEN!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "ALL SECTIONS FILLED \n Good to GO GREEN!", Toast.LENGTH_SHORT).show();
         }
 
     }
