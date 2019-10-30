@@ -56,7 +56,6 @@ public class RSDInfoActivity extends AppCompatActivity {
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
     private String type;
-    String month;
 
     Forms getForms;
 
@@ -305,7 +304,6 @@ public class RSDInfoActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                month = bi.reportMonth.getSelectedItem().toString();
                 setTitle(type.equals(MainApp.RSD) ? "DHIS Data-Validation Tools for Decision Making (" + bi.reportMonth.getSelectedItem() + ")"
                         : type.equals(MainApp.DHMT) ? "Performance Evaluation of District Team Meetings (" + bi.reportMonth.getSelectedItem() + ")"
                         : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility (" + bi.reportMonth.getSelectedItem() + ")" : " ");
