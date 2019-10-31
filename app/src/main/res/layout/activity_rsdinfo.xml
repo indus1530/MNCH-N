@@ -41,6 +41,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:padding="3dp"
+                    android:layout_marginEnd="3sp"
+                    android:gravity="center"
+                    android:textAlignment="viewStart"
                     android:text="@string/rm" />
 
                 <Spinner
@@ -49,9 +52,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:padding="3dp"
+                    android:layout_marginStart="3sp"
                     android:popupBackground="#d6d6d6"
                     android:prompt="@string/rm"
-                    android:spinnerMode="dialog" />
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
 
             </LinearLayout>
 
@@ -60,30 +65,43 @@
                 android:id="@+id/llrsdInfo01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:animateLayoutChanges="true"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textAlignment="viewStart"
                     android:text="@string/hftype" />
 
                 <RadioGroup
                     android:id="@+id/rGpp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
 
                     <RadioButton
                         android:id="@+id/pub"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Public" />
 
                     <RadioButton
                         android:id="@+id/pvt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Private" />
 
                 </RadioGroup>
