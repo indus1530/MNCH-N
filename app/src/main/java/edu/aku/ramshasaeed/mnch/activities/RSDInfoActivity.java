@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -53,7 +54,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     private Map<String, String> FacilityProvider;
     public static Forms fc;
     private static final String TAG = RSDInfoActivity.class.getName();
-    private String hftype;
+    private String hf_type;
     private String type;
 
     Forms getForms;
@@ -74,17 +75,38 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         tempVisible(this);
 
+        bi.rGpp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.pub.getId()) {
+                    hf_type = "1";
+                    ClearClass.ClearAllFields(bi.llrsdInfo01, null);
+                    ClearClass.ClearAllFields(bi.llrsdInfo02, null);
+                    ClearClass.ClearAllFields(bi.llrsdInfo04, null);
+                    bi.llrsdInfo01.setVisibility(VISIBLE);
+                    bi.llrsdInfo02.setVisibility(VISIBLE);
+                    bi.llrsdInfo04.setVisibility(VISIBLE);
+                } else if (checkedId == bi.pvt.getId()) {
+                    hf_type = "2";
+                    ClearClass.ClearAllFields(bi.llrsdInfo01, null);
+                    ClearClass.ClearAllFields(bi.llrsdInfo02, null);
+                    ClearClass.ClearAllFields(bi.llrsdInfo04, null);
+                    bi.llrsdInfo01.setVisibility(VISIBLE);
+                    bi.llrsdInfo02.setVisibility(VISIBLE);
+                    bi.llrsdInfo04.setVisibility(VISIBLE);
+                }
+            }
+        });
+
         if (type.equals(MainApp.DHMT)) {
             ClearClass.ClearAllFields(bi.llrsdInfo02, null);
             ClearClass.ClearAllFields(bi.llrsdInfo03, null);
             ClearClass.ClearAllFields(bi.llrsdInfo04, null);
+            bi.llrsdInfo01.setVisibility(VISIBLE);
             bi.llrsdInfo02.setVisibility(GONE);
             bi.llrsdInfo03.setVisibility(GONE);
             bi.llrsdInfo04.setVisibility(GONE);
-        } else {
-            bi.llrsdInfo02.setVisibility(VISIBLE);
-            bi.llrsdInfo03.setVisibility(VISIBLE);
-            bi.llrsdInfo04.setVisibility(VISIBLE);
         }
 
 
@@ -185,9 +207,15 @@ public class RSDInfoActivity extends AppCompatActivity {
                     Collection<FacilityProvider> hfp;
                     try {
                         hfp =
+                                /*(Collection<FacilityProvider>)
+                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
+                                                .execute(tehsilName.get(position)).get();*/
+
+
                                 (Collection<FacilityProvider>)
                                         new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
-                                                .execute(tehsilName.get(position), bi.pub.isChecked() ? hftype = "1" : bi.pvt.isChecked() ? hftype = "2" : "0").get();
+                                                .execute(tehsilName.get(position), hf_type).get();
+
                         if (hfp.size() != 0) {
                             for (FacilityProvider fp : hfp) {
                                 hfName.add(fp.getHf_name());
@@ -239,6 +267,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                 ClearClass.ClearAllFields(bi.llrsdInfo02, null);
                 ClearClass.ClearAllFields(bi.llrsdInfo03, null);
                 ClearClass.ClearAllFields(bi.llrsdInfo04, null);
+
             }
 
             @Override

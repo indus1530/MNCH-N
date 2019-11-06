@@ -62,76 +62,6 @@
 
 
             <LinearLayout
-                android:id="@+id/llrsdInfo01"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/hf_district" />
-
-                <Spinner
-                    android:id="@+id/hf_district"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="15dp"
-                    android:popupBackground="#d6d6d6"
-                    android:prompt="@string/hf_district"
-                    android:spinnerMode="dialog" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:id="@+id/llrsdInfo02"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
-                android:orientation="vertical">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/hf_tehsil" />
-
-                <Spinner
-                    android:id="@+id/hf_tehsil"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="15dp"
-                    android:popupBackground="#d6d6d6"
-                    android:prompt="@string/hf_tehsil"
-                    android:spinnerMode="dialog" />
-
-                <!--<TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/hf_uc" />
-
-                <Spinner
-                    android:id="@+id/hf_uc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="15dp"
-                    android:hint="@string/hf_uc"
-                    android:popupBackground="#d6d6d6"
-                    android:spinnerMode="dialog" />-->
-
-            </LinearLayout>
-
-
-            <LinearLayout
                 android:id="@+id/llrsdInfo03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,6 +109,80 @@
             </LinearLayout>
 
 
+            <LinearLayout
+                android:id="@+id/llrsdInfo01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_district" />
+
+                <Spinner
+                    android:id="@+id/hf_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:popupBackground="#d6d6d6"
+                    android:prompt="@string/hf_district"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llrsdInfo02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_tehsil" />
+
+                <Spinner
+                    android:id="@+id/hf_tehsil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:popupBackground="#d6d6d6"
+                    android:prompt="@string/hf_tehsil"
+                    android:spinnerMode="dialog" />
+
+                <!--<TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/hf_uc" />
+
+                <Spinner
+                    android:id="@+id/hf_uc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:hint="@string/hf_uc"
+                    android:popupBackground="#d6d6d6"
+                    android:spinnerMode="dialog" />-->
+
+            </LinearLayout>
+
+
             <!--<LinearLayout
                 android:id="@+id/llpvt"
                 android:layout_width="match_parent"
@@ -211,7 +215,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:animateLayoutChanges="true"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="gone">
 
 
                 <TextView
