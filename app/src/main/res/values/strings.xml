@@ -31,7 +31,7 @@
     <string name="hf_tehsil">Tehsil</string>
     <string name="hf_uc">Union Council</string>
     <string name="hf_uen_private">Private Facility Name</string>
-    <string name="hf_uen_public">Public Facility Name</string>
+    <string name="hfname"> Facility Name </string>
     <string name="hf_consent">Is Consent form Signed</string>
     <string name="check">Check</string>
     <string name="yes">Yes</string>

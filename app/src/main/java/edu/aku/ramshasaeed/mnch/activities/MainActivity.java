@@ -427,8 +427,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     new GetAllData(mContext, "appversion", MainApp._UPDATE_URL + CONSTANTS.URL_UPDATE_APP).execute();
                     Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "Tehsils", MainApp._HOST_URL + CONSTANTS.URL_TEHSILS).execute();
-                    Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();
+                    /*Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
                 }
             });
 

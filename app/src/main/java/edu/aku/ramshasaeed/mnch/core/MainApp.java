@@ -48,6 +48,16 @@ public class MainApp extends Application {
     public static final Integer _PORT = 8080; // Port - with colon (:)
     public static final String _HOST_URL = "https://" + MainApp._IP + "/uen_qoc/api/"; // .VOC server*/
 
+    /*VCOE1 LIVE SERVER*/
+    /*public static final String _IP = "vcoe1.aku.edu"; // .Net server
+    public static final Integer _PORT = 8080; // Port - with colon (:)
+    public static final String _HOST_URL = "https://" + MainApp._IP + "/uen_qoc/api/"; // .VOC server*/
+
+    /*F38158 TEST SERVER Sync*/
+    /*public static final String _IP = "f38158";// .TEST server
+    public static final Integer _PORT = 80; // Port - with colon (:)
+    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/"; // .TEST server*/
+
     /*F38158 TEST SERVER*/
     public static final String _IP = "f38158";// .TEST server
     public static final Integer _PORT = 80; // Port - with colon (:)

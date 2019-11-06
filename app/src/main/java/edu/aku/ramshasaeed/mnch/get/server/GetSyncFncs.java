@@ -74,6 +74,7 @@ public abstract class GetSyncFncs {
         } catch (Exception e) {
         }
     }
+
     public static void syncUCs(JSONArray clusterList) {
 
         new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUcs");
@@ -93,6 +94,7 @@ public abstract class GetSyncFncs {
         } catch (Exception e) {
         }
     }
+
     public static void syncFacilityProvider(JSONArray dataList) {
 
         new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteFacilityProvider");

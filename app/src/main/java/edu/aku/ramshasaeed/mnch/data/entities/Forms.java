@@ -28,12 +28,11 @@ public class Forms implements Serializable {
     private String formType = "";
     private String formDate = ""; // Date
     private String reportingMonth = "";
-    private String facilityType = "";
     private String districtCode = "";
-    private String facilityCode = "";
     private String tehsilCode = "";
-    private String ucCode = "";
-
+    private String facilityType = "";
+    private String facilityCode = "";
+    private String facilityName = "";
 
     /*    private String district = "";
         private String tehsil = "";
@@ -69,11 +68,10 @@ public class Forms implements Serializable {
         this.formDate = forms.formDate;
         this.formType = forms.formType;
         this.reportingMonth = forms.reportingMonth;
-        this.facilityType = forms.facilityType;
         this.districtCode = forms.districtCode;
-        this.facilityCode = forms.facilityCode;
         this.tehsilCode = forms.tehsilCode;
-        this.ucCode = forms.ucCode;
+        this.facilityType = forms.facilityType;
+        this.facilityCode = forms.facilityCode;
         this.username = forms.username;
         this.istatus = forms.istatus;
         this.istatus96x = forms.istatus96x;
@@ -135,28 +133,12 @@ public class Forms implements Serializable {
         this.formType = formType;
     }
 
-    public String getFacilityType() {
-        return facilityType;
-    }
-
-    public void setFacilityType(String facilityType) {
-        this.facilityType = facilityType;
-    }
-
     public String getDistrictCode() {
         return districtCode;
     }
 
     public void setDistrictCode(String districtCode) {
         this.districtCode = districtCode;
-    }
-
-    public String getFacilityCode() {
-        return facilityCode;
-    }
-
-    public void setFacilityCode(String facilityCode) {
-        this.facilityCode = facilityCode;
     }
 
     public String getTehsilCode() {
@@ -167,12 +149,28 @@ public class Forms implements Serializable {
         this.tehsilCode = tehsilCode;
     }
 
-    public String getUcCode() {
-        return ucCode;
+    public String getFacilityType() {
+        return facilityType;
     }
 
-    public void setUcCode(String ucCode) {
-        this.ucCode = ucCode;
+    public void setFacilityType(String facilityType) {
+        this.facilityType = facilityType;
+    }
+
+    public String getFacilityCode() {
+        return facilityCode;
+    }
+
+    public void setFacilityCode(String facilityCode) {
+        this.facilityCode = facilityCode;
+    }
+
+    public String getFacilityName() {
+        return facilityName;
+    }
+
+    public void setFacilityName(String facilityName) {
+        this.facilityName = facilityName;
     }
 
     public String getFormDate() {
@@ -370,11 +368,11 @@ public class Forms implements Serializable {
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put("reportingMonth", this.reportingMonth == null ? JSONObject.NULL : this.reportingMonth);
-        json.put("facilityType", this.facilityType == null ? JSONObject.NULL : this.facilityType);
         json.put("districtCode", this.districtCode == null ? JSONObject.NULL : this.districtCode);
-        json.put("facilityCode", this.facilityCode == null ? JSONObject.NULL : this.facilityCode);
         json.put("tehsilCode", this.tehsilCode == null ? JSONObject.NULL : this.tehsilCode);
-        json.put("ucCode", this.ucCode == null ? JSONObject.NULL : this.ucCode);
+        json.put("facilityType", this.facilityType == null ? JSONObject.NULL : this.facilityType);
+        json.put("facilityCode", this.facilityCode == null ? JSONObject.NULL : this.facilityCode);
+        json.put("facilityName", this.facilityName == null ? JSONObject.NULL : this.facilityName);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put("istatus96x", this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
