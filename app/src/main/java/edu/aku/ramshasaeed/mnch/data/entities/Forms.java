@@ -30,6 +30,7 @@ public class Forms implements Serializable {
     private String reportingMonth = "";
     private String districtCode = "";
     private String tehsilCode = "";
+    private String tehsilName = "";
     private String facilityType = "";
     private String facilityCode = "";
     private String facilityName = "";
@@ -70,8 +71,10 @@ public class Forms implements Serializable {
         this.reportingMonth = forms.reportingMonth;
         this.districtCode = forms.districtCode;
         this.tehsilCode = forms.tehsilCode;
+        this.tehsilName = forms.tehsilName;
         this.facilityType = forms.facilityType;
         this.facilityCode = forms.facilityCode;
+        this.facilityName = forms.facilityName;
         this.username = forms.username;
         this.istatus = forms.istatus;
         this.istatus96x = forms.istatus96x;
@@ -147,6 +150,14 @@ public class Forms implements Serializable {
 
     public void setTehsilCode(String tehsilCode) {
         this.tehsilCode = tehsilCode;
+    }
+
+    public String getTehsilName() {
+        return tehsilName;
+    }
+
+    public void setTehsilName(String tehsilName) {
+        this.tehsilName = tehsilName;
     }
 
     public String getFacilityType() {
@@ -370,6 +381,7 @@ public class Forms implements Serializable {
         json.put("reportingMonth", this.reportingMonth == null ? JSONObject.NULL : this.reportingMonth);
         json.put("districtCode", this.districtCode == null ? JSONObject.NULL : this.districtCode);
         json.put("tehsilCode", this.tehsilCode == null ? JSONObject.NULL : this.tehsilCode);
+        json.put("tehsilName", this.tehsilName == null ? JSONObject.NULL : this.tehsilName);
         json.put("facilityType", this.facilityType == null ? JSONObject.NULL : this.facilityType);
         json.put("facilityCode", this.facilityCode == null ? JSONObject.NULL : this.facilityCode);
         json.put("facilityName", this.facilityName == null ? JSONObject.NULL : this.facilityName);

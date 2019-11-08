@@ -158,33 +158,33 @@ public class RSDInfoActivity extends AppCompatActivity {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     if (position == 0) return;
 
-                        tehsilName = new ArrayList<>();
-                        tehsilCode = new ArrayList<>();
-                        tehsilCode.add("....");
-                        tehsilName.add("....");
+                    tehsilName = new ArrayList<>();
+                    tehsilCode = new ArrayList<>();
+                    tehsilName.add("....");
+                    tehsilCode.add("....");
 
-                        Collection<Tehsil> tehsils;
-                        try {
-                            tehsils =
-                                    (Collection<Tehsil>)
-                                            new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTehsil")
-                                                    .execute(districtCodes.get(position)).get();
+                    Collection<Tehsil> tehsils;
+                    try {
+                        tehsils =
+                                (Collection<Tehsil>)
+                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTehsil")
+                                                .execute(districtCodes.get(position)).get();
 
-                            if (tehsils.size() != 0) {
-                                for (Tehsil fp : tehsils) {
-                                    tehsilName.add(fp.getTehsil_name());
-                                    tehsilCode.add(fp.getTehsil_code());
-                                }
+                        if (tehsils.size() != 0) {
+                            for (Tehsil fp : tehsils) {
+                                tehsilName.add(fp.getTehsil_name());
+                                tehsilCode.add(fp.getTehsil_code());
                             }
-
-                            bi.hfTehsil.setAdapter(new ArrayAdapter<>(context,
-                                    android.R.layout.simple_spinner_dropdown_item, tehsilName));
-
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        } catch (ExecutionException e) {
-                            e.printStackTrace();
                         }
+
+                        bi.hfTehsil.setAdapter(new ArrayAdapter<>(context,
+                                android.R.layout.simple_spinner_dropdown_item, tehsilName));
+
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    }
 
                 }
 
@@ -371,7 +371,7 @@ public class RSDInfoActivity extends AppCompatActivity {
         fc.setDistrictCode(districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
 
         if (!type.equals(MainApp.DHMT)) {
-            fc.setTehsilCode(tehsilCode.get(bi.hfTehsil.getSelectedItemPosition()));
+            fc.setTehsilName(tehsilName.get(bi.hfTehsil.getSelectedItemPosition()));
             fc.setFacilityType(bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
             fc.setFacilityCode(hfCode.get(bi.hfname.getSelectedItemPosition()));
             fc.setFacilityName(bi.hfname.getSelectedItem().toString());
