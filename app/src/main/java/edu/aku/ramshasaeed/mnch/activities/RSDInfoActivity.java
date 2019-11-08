@@ -72,6 +72,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                 : type.equals(MainApp.QOC) ? "Key Quality Indicator Tool for Health Facility" : "");
 
         MainApp.FORM_SUB_TYPE.clear();
+        fc = null;
 
         tempVisible(this);
 
@@ -315,7 +316,18 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         if (type.equals(MainApp.RSD)) {
             Object getData = null;
-            if (bi.pub.isChecked()) {
+
+            try {
+                getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingFormo")
+                        .execute(bi.reportMonth.getSelectedItem().toString(),
+                                hfCode.get(bi.hfname.getSelectedItemPosition())).get();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            /*if (bi.pub.isChecked()) {
                 try {
                     getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPublicForm")
                             .execute(bi.reportMonth.getSelectedItem().toString(),
@@ -338,7 +350,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }
+            }*/
 
             if (getData == null) {
                 fc = null;
