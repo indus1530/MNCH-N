@@ -371,7 +371,7 @@ public class RSDInfoActivity extends AppCompatActivity {
         fc.setDistrictCode(districtCodes.get(bi.hfDistrict.getSelectedItemPosition()));
 
         if (!type.equals(MainApp.DHMT)) {
-            fc.setTehsilName(tehsilName.get(bi.hfTehsil.getSelectedItemPosition()));
+            fc.setTehsilCode(tehsilCode.get(bi.hfTehsil.getSelectedItemPosition()));
             fc.setFacilityType(bi.pub.isChecked() ? "1" : bi.pvt.isChecked() ? "2" : "0");
             fc.setFacilityCode(hfCode.get(bi.hfname.getSelectedItemPosition()));
             fc.setFacilityName(bi.hfname.getSelectedItem().toString());
