@@ -221,16 +221,11 @@
                                 android:id="@+id/rsrem"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_marginBottom="1dp"
-                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                                 android:hint="@string/rsrem"
                                 android:inputType="textMultiLine"
-                                android:lines="8"
-                                android:maxLines="8"
-                                android:minLines="6"
-                                android:scrollbars="vertical" />
+                                android:lines="8" />
 
                         </LinearLayout>
 
