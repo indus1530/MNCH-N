@@ -58,7 +58,7 @@ public interface GetFncDAO {
     /*@Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER + " where hf_district_code =:hf_district_code")
     List<FacilityProvider> getFacilityProvider(String hf_district_code);*/
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER + " where hf_tehsil =:hf_tehsil  AND hf_type =:hf_type")
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER + " where hf_tehsil LIKE :hf_tehsil  AND hf_type =:hf_type")
     List<FacilityProvider> getFacilityProvider(String hf_tehsil, String hf_type);
 
     /*@Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FACILITY_PROVIDER + " where hf_tehsil =:hf_tehsil")
