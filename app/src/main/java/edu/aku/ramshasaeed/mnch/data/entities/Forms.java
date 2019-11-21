@@ -28,10 +28,20 @@ public class Forms implements Serializable {
     private String formType = "";
     private String formDate = ""; // Date
     private String reportingMonth = "";
+
+    @ColumnInfo(name = "district_code")
     private String districtCode = "";
+
+    @ColumnInfo(name = "tehsil_code")
     private String tehsilCode = "";
+
+    @ColumnInfo(name = "hf_type")
     private String facilityType = "";
+
+    @ColumnInfo(name = "hf_code")
     private String facilityCode = "";
+
+    @ColumnInfo(name = "hf_name")
     private String facilityName = "";
 
     /*    private String district = "";
@@ -60,6 +70,7 @@ public class Forms implements Serializable {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
+
 
     @Ignore
     public Forms(Forms forms) {
@@ -369,11 +380,11 @@ public class Forms implements Serializable {
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put("reportingMonth", this.reportingMonth == null ? JSONObject.NULL : this.reportingMonth);
-        json.put("districtCode", this.districtCode == null ? JSONObject.NULL : this.districtCode);
-        json.put("tehsilCode", this.tehsilCode == null ? JSONObject.NULL : this.tehsilCode);
-        json.put("facilityType", this.facilityType == null ? JSONObject.NULL : this.facilityType);
-        json.put("facilityCode", this.facilityCode == null ? JSONObject.NULL : this.facilityCode);
-        json.put("facilityName", this.facilityName == null ? JSONObject.NULL : this.facilityName);
+        json.put("district_code", this.districtCode == null ? JSONObject.NULL : this.districtCode);
+        json.put("tehsil_code", this.tehsilCode == null ? JSONObject.NULL : this.tehsilCode);
+        json.put("hf_type", this.facilityType == null ? JSONObject.NULL : this.facilityType);
+        json.put("hf_code", this.facilityCode == null ? JSONObject.NULL : this.facilityCode);
+        json.put("hf_name", this.facilityName == null ? JSONObject.NULL : this.facilityName);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put("istatus96x", this.istatus96x == null ? JSONObject.NULL : this.istatus96x);

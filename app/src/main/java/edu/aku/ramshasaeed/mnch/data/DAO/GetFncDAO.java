@@ -49,8 +49,8 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where reportingMonth=:reportingMonth AND facilityType='2' AND districtCode=:districtCode AND facilityCode=:facilityCode")
     Forms getPendingPrivateForm(String reportingMonth, String districtCode, String facilityCode);*/
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where reportingMonth=:reportingMonth AND facilityCode=:facilityCode")
-    Forms getPendingFormo(String reportingMonth, String facilityCode);
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where reportingMonth=:reportingMonth AND hf_code=:hf_code")
+    Forms getPendingFormo(String reportingMonth, String hf_code);
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_UCs + " where tehsil_code=:tehsil_code")
     List<UCs> getUCs(String tehsil_code);

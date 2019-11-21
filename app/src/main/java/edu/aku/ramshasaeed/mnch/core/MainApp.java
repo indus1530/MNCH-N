@@ -45,29 +45,14 @@ public class MainApp extends Application {
 
     /*VCOE1 LIVE SERVER*/
     /*public static final String _IP = "vcoe1.aku.edu"; // .Net server
-    public static final Integer _PORT = 8080; // Port - with colon (:)
     public static final String _HOST_URL = "https://" + MainApp._IP + "/uen_qoc/api/"; // .VOC server*/
 
-    /*VCOE1 LIVE SERVER*/
-    /*public static final String _IP = "vcoe1.aku.edu"; // .Net server
-    public static final Integer _PORT = 8080; // Port - with colon (:)
-    public static final String _HOST_URL = "https://" + MainApp._IP + "/uen_qoc/api/"; // .VOC server*/
-
-    /*F38158 TEST SERVER Sync*/
+    /*F38158 TEST SERVER*/
     public static final String _IP = "f38158";// .TEST server
     public static final Integer _PORT = 80; // Port - with colon (:)
     public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/"; // .TEST server
 
-    /*F38158 TEST SERVER*/
-    /*public static final String _IP = "f38158";// .TEST server
-    public static final Integer _PORT = 80; // Port - with colon (:)
-    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/"; // .TEST server*/
 
-    //  public static final String _IP = "43.245.131.159"; // PHP server
-//  public static final String _IP = "f49461"; // Test PHP server
-    //  public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/uen_mnch/api/";
-//  public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_mnch/api/";
-//    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/";// .TEST server
     public static final String _UPDATE_URL = "https://" + MainApp._IP + "/uen_qoc/app/";
 
     public static final Integer MONTHS_LIMIT = 11;
