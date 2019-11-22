@@ -215,7 +215,7 @@ public class RSDInfoActivity extends AppCompatActivity {
 
                                 (Collection<FacilityProvider>)
                                         new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
-                                                .execute("%" + tehsilName.get(position) + "%", hf_type).get();
+                                                .execute("%" + tehsilCode.get(position) + "%", hf_type).get();
 
                         if (hfp.size() != 0) {
                             for (FacilityProvider fp : hfp) {
