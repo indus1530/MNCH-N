@@ -16,11 +16,12 @@ public class FacilityProvider {
     private int id;
 
     @ColumnInfo
-    private String hf_type = "";
     private String hf_district_code = "";
     private String hf_tehsil = "";
+    private String hf_type = "";
     private String hf_name = "";
     private String hf_uen_code = "";
+
 
     public FacilityProvider() {
     }
@@ -80,9 +81,9 @@ public class FacilityProvider {
 
 
     public FacilityProvider Sync(JSONObject jsonObjectCls) throws JSONException {
-        this.hf_type = jsonObjectCls.getString("hf_type");
         this.hf_district_code =jsonObjectCls.getString("hf_district_code");
         this.hf_tehsil = jsonObjectCls.getString("tehsil_code");
+        this.hf_type = jsonObjectCls.getString("hf_type");
         this.hf_name = jsonObjectCls.getString("hf_name");
         this.hf_uen_code = jsonObjectCls.getString("hf_uen_code");
         return this;

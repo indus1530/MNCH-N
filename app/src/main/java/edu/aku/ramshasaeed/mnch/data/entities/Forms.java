@@ -25,6 +25,7 @@ public class Forms implements Serializable {
 
     @ColumnInfo
     private String uid = "";
+    private String username = ""; // Interviewer
     private String formType = "";
     private String formDate = ""; // Date
     private String reportingMonth = "";
@@ -44,13 +45,6 @@ public class Forms implements Serializable {
     @ColumnInfo(name = "hf_name")
     private String facilityName = "";
 
-    /*    private String district = "";
-        private String tehsil = "";
-        private String ucs = "";
-        private String uen = ""; */
-    private String username = ""; // Interviewer
-    private String istatus = ""; // Interview Status
-    private String istatus96x = ""; // Interview Status
     private String sA = "";
     private String sB = "";
     private String sC = "";
@@ -70,6 +64,14 @@ public class Forms implements Serializable {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
+    private String istatus = ""; // Interview Status
+    private String istatus96x = ""; // Interview Status
+
+
+    /*    private String district = "";
+        private String tehsil = "";
+        private String ucs = "";
+        private String uen = ""; */
 
 
     @Ignore

@@ -20,14 +20,22 @@ import edu.aku.ramshasaeed.mnch.data.entities.Users;
 
 public abstract class AppDatabase extends RoomDatabase {
 
-    /*@VisibleForTesting
-    public static final String DATABASE_NAME = "wfppishincr.db";
     // Alter table for Database Update
-    static final Migration MIGRATION_v2_v3 = new Migration(2, 3) {
+    /*static final Migration MIGRATION_v1_v2 = new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
             database.execSQL("ALTER TABLE forms "
-                    + " ADD COLUMN last_update TEXT");
+                    + " ADD COLUMN reportingMonth TEXT");
+            database.execSQL("ALTER TABLE forms "
+                    + " ADD COLUMN district_code TEXT");
+            database.execSQL("ALTER TABLE forms "
+                    + " ADD COLUMN tehsil_code TEXT");
+            database.execSQL("ALTER TABLE forms "
+                    + " ADD COLUMN hf_type TEXT");
+            database.execSQL("ALTER TABLE forms "
+                    + " ADD COLUMN hf_code TEXT");
+            database.execSQL("ALTER TABLE forms "
+                    + " ADD COLUMN hf_name TEXT");
         }
     };*/
 
@@ -38,7 +46,7 @@ public abstract class AppDatabase extends RoomDatabase {
             synchronized (AppDatabase.class) {
                 if (sInstance == null) {
                     sInstance = Room.databaseBuilder(context, AppDatabase.class, Sub_DBConnection.DATABASE_NAME)
-//                            .addMigrations(MIGRATION_v1_v2, MIGRATION_v2_v3)
+                            //.addMigrations(MIGRATION_v1_v2)
                             .setJournalMode(JournalMode.TRUNCATE)
                             .build();
                 }

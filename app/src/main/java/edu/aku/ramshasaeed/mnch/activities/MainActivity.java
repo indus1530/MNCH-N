@@ -214,6 +214,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void startingActivities(int flag) {
+        MainApp.FORM_TYPE = null;
         if (loadTagDialog()) return;
         if (settingVersion()) return;
 
