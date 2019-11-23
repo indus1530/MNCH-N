@@ -50,42 +50,57 @@
             style="@style/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="11dp"
 
             android:layout_marginTop="@null"
-            android:layout_marginRight="15dp">
+            android:layout_marginRight="11dp">
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:outlineAmbientShadowColor="@color/black"
                 android:stretchColumns="1">
 
                 <TableRow android:elevation="2dp">
 
                     <TextView
                         android:background="@color/colorSecondary"
-                        android:gravity="start"
-                        android:paddingStart="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
                         android:text="FORM ID"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorSecondary"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="FORM TYPE"
+                        android:textAlignment="center"
                         android:textColor="@color/white" />
 
                     <TextView
                         android:background="@color/colorSecondary"
-                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
                         android:text="FORM STATUS"
+                        android:textAlignment="center"
                         android:textColor="@color/white" />
 
                     <TextView
                         android:background="@color/colorSecondary"
-                        android:gravity="end"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:paddingTop="3dp"
-                        android:paddingEnd="5dp"
                         android:paddingBottom="3dp"
                         android:text="SYNC STATUS"
+                        android:textAlignment="center"
                         android:textColor="@color/white" />
                 </TableRow>
 
@@ -94,25 +109,38 @@
 
                     <TextView
                         android:id="@+id/form_id"
-                        android:gravity="start"
-                        android:paddingStart="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
+                        android:textAlignment="center"
                         android:text="1\n2\n3" />
 
                     <TextView
-                        android:id="@+id/complete_status"
-                        android:gravity="center"
+                        android:id="@+id/form_type"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
+                        android:text="RSD\nQOC \nDHMT"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/complete_status"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:textAlignment="center"
                         android:text="Complete\nIncomplete \nComplete" />
 
                     <TextView
                         android:id="@+id/sync_status"
-                        android:gravity="end"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:paddingTop="3dp"
-                        android:paddingEnd="5dp"
                         android:paddingBottom="3dp"
+                        android:textAlignment="center"
                         android:text="Not Synced\nSynced\nNot Synced" />
 
                 </TableRow>

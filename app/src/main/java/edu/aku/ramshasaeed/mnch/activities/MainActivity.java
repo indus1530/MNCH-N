@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             e.printStackTrace();
         }
 
-        String formID = "", completestatus = "", syncedStatus = "";
+        String formID = "", completestatus = "", syncedStatus = "", formType = "";
         if (todaysForms.size() > 0) {
 
             String iStatus;
@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     iStatus = "\tN/A";
                 }
                 formID = formID + "\n" + fc.getId();
+                formType = formType + "\n" + fc.getFormType();
                 completestatus = completestatus + "\n" + iStatus;
                 syncedStatus = syncedStatus + "\n" + (fc.getSynced() == null || fc.getSynced().equals("") ? "Not Synced" : "Synced");
 
@@ -141,6 +142,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 //        Setting Text in  UI
         bi.appbarmain.contentmain.formId.setText(formID);
+        bi.appbarmain.contentmain.formType.setText(formType);
         bi.appbarmain.contentmain.completeStatus.setText(completestatus);
         bi.appbarmain.contentmain.syncStatus.setText(syncedStatus);
 
