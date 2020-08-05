@@ -1,7 +1,5 @@
 package edu.aku.ramshasaeed.mnch.JSON;
 
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -10,10 +8,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import androidx.cardview.widget.CardView;
+
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;

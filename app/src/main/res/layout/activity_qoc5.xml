@@ -36,7 +36,7 @@
                 android:text="@string/qe05"/>
 
             <!--qe0501-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -166,10 +166,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qe0502-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -299,10 +299,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qe0503-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -432,10 +432,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qe05Ap-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -453,11 +453,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine" />
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->

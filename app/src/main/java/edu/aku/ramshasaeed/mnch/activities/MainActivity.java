@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.databinding.DataBindingUtil;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -19,14 +18,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
@@ -35,6 +26,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -68,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     SharedPreferences.Editor editor;
     SharedPreferences sharedPref;
     AlertDialog.Builder builder;
-    private String rSumText = "";
     String m_Text = "", preVer = "", newVer = "";
     String DirectoryName;
     private boolean updata = false;
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
             if (networkInfo != null && networkInfo.isConnected()) {
-                new syncData(this).execute();
+                new SyncData(this).execute();
             } else {
                 Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
             }
@@ -330,9 +330,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Collection rsdcollection = null;
                 try {
                     rsdcollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.RSD).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
+                } catch (ExecutionException | InterruptedException e) {
                     e.printStackTrace();
                 }
                 new SyncAllData(
@@ -347,9 +345,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Collection qoccollection = null;
                 try {
                     qoccollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.QOC).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
+                } catch (ExecutionException | InterruptedException e) {
                     e.printStackTrace();
                 }
                 new SyncAllData(
@@ -364,9 +360,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Collection dhmtcollection = null;
                 try {
                     dhmtcollection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.DHMT).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
+                } catch (ExecutionException | InterruptedException e) {
                     e.printStackTrace();
                 }
                 new SyncAllData(
@@ -392,11 +386,141 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    public class syncData extends AsyncTask<String, String, String> {
+    private boolean loadTagDialog() {
+
+        sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+        editor = sharedPref.edit();
+        if (!sharedPref.contains("tagName") && sharedPref.getString("tagName", null) == null) {
+
+            builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("ENTER DEVICE TAG-ID");
+            /*ImageView img = new ImageView(getApplicationContext());
+            img.setPadding(0, 15, 0, 15);
+            builder.setCustomTitle(img);*/
+
+            final EditText input = new EditText(MainActivity.this);
+            input.setInputType(InputType.TYPE_CLASS_TEXT);
+            builder.setView(input);
+
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    m_Text = input.getText().toString();
+                    if (!m_Text.equals("")) {
+                        editor.putString("tagName", m_Text);
+                        editor.apply();
+                        dialog.dismiss();
+
+                    }
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+
+            builder.show();
+
+            return true;
+        }
+        return false;
+    }
+
+    boolean settingVersion() {
+        sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
+        editorDownload = sharedPrefDownload.edit();
+
+        BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
+
+                    DownloadManager.Query query = new DownloadManager.Query();
+                    query.setFilterById(sharedPrefDownload.getLong("refID", 0));
+
+                    downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                    Cursor cursor = downloadManager.query(query);
+                    if (cursor.moveToFirst()) {
+                        int colIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
+                        if (DownloadManager.STATUS_SUCCESSFUL == cursor.getInt(colIndex)) {
+
+                            editorDownload.putBoolean("flag", true);
+                            editorDownload.apply();
+
+                            Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
+                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + "  Downloaded.");
+
+                            ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+                            List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
+                            if (taskInfo.get(0).topActivity.getClassName().equals(MainActivity.class.getName())) {
+//                                InstallNewApp(newVer, preVer);
+                                showDialog(newVer, preVer);
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        versionAppContract = new Gson().fromJson(getSharedPreferences("main", Context.MODE_PRIVATE).getString("appVersion", ""), VersionAppContract.class);
+        if (versionAppContract != null) {
+
+            if (versionAppContract.getVersioncode() != null) {
+                preVer = MainApp.versionName + "." + MainApp.versionCode;
+                newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
+
+                if (MainApp.versionCode < Integer.parseInt(versionAppContract.getVersioncode())) {
+                    bi.appbarmain.contentmain.lblAppVersion.setVisibility(View.VISIBLE);
+
+                    String fileName = AppDatabase.Sub_DBConnection.DATABASE_NAME.replace(".db", "-New-Apps");
+                    file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionAppContract.getPathname());
+
+                    if (file.exists()) {
+                        bi.appbarmain.contentmain.lblAppVersion.setText("MNCH New Version " + newVer + "  Downloaded.");
+                        showDialog(newVer, preVer);
+                    } else {
+                        NetworkInfo networkInfo = ((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
+                        if (networkInfo != null && networkInfo.isConnected()) {
+
+                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + " Downloading..");
+                            downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                            Uri uri = Uri.parse(MainApp._UPDATE_URL + versionAppContract.getPathname());
+                            DownloadManager.Request request = new DownloadManager.Request(uri);
+                            request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
+                                    .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                                    .setTitle("Downloading MNCH App new App ver." + newVer);
+                            refID = downloadManager.enqueue(request);
+
+                            editorDownload.putLong("refID", refID);
+                            editorDownload.putBoolean("flag", false);
+                            editorDownload.commit();
+
+                        } else {
+                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + "  Available..\n(Can't download.. Internet connectivity issue!!)");
+                        }
+                    }
+
+                    return true;
+
+                } else {
+                    bi.appbarmain.contentmain.lblAppVersion.setVisibility(View.GONE);
+                    bi.appbarmain.contentmain.lblAppVersion.setText(null);
+                }
+            }
+        }
+
+        registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+
+        return false;
+    }
+
+    public class SyncData extends AsyncTask<String, String, String> {
 
         private Context mContext;
 
-        public syncData(Context mContext) {
+        public SyncData(Context mContext) {
             this.mContext = mContext;
         }
 
@@ -454,137 +578,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }, 1200);
         }
     }
-
-    private boolean loadTagDialog() {
-
-        sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
-        editor = sharedPref.edit();
-        if (!sharedPref.contains("tagName") && sharedPref.getString("tagName", null) == null) {
-
-            builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("ENTER DEVICE TAG-ID");
-            /*ImageView img = new ImageView(getApplicationContext());
-            img.setPadding(0, 15, 0, 15);
-            builder.setCustomTitle(img);*/
-
-            final EditText input = new EditText(MainActivity.this);
-            input.setInputType(InputType.TYPE_CLASS_TEXT);
-            builder.setView(input);
-
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    m_Text = input.getText().toString();
-                    if (!m_Text.equals("")) {
-                        editor.putString("tagName", m_Text);
-                        editor.commit();
-                        dialog.dismiss();
-
-                    }
-                }
-            });
-            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            });
-
-            builder.show();
-
-            return true;
-        }
-        return false;
-    }
-
-    boolean settingVersion() {
-        sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
-        editorDownload = sharedPrefDownload.edit();
-
-        BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
-
-                    DownloadManager.Query query = new DownloadManager.Query();
-                    query.setFilterById(sharedPrefDownload.getLong("refID", 0));
-
-                    downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                    Cursor cursor = downloadManager.query(query);
-                    if (cursor.moveToFirst()) {
-                        int colIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
-                        if (DownloadManager.STATUS_SUCCESSFUL == cursor.getInt(colIndex)) {
-
-                            editorDownload.putBoolean("flag", true);
-                            editorDownload.commit();
-
-                            Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
-                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + "  Downloaded.");
-
-                            ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
-                            List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
-                            if (taskInfo.get(0).topActivity.getClassName().equals(MainActivity.class.getName())) {
-//                                InstallNewApp(newVer, preVer);
-                                showDialog(newVer, preVer);
-                            }
-                        }
-                    }
-                }
-            }
-        };
-
-        versionAppContract = new Gson().fromJson(getSharedPreferences("main", Context.MODE_PRIVATE).getString("appVersion", ""), VersionAppContract.class);
-        if (versionAppContract != null) {
-
-            if (versionAppContract.getVersioncode() != null) {
-                preVer = MainApp.versionName + "." + MainApp.versionCode;
-                newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
-
-                if (MainApp.versionCode < Integer.valueOf(versionAppContract.getVersioncode())) {
-                    bi.appbarmain.contentmain.lblAppVersion.setVisibility(View.VISIBLE);
-
-                    String fileName = AppDatabase.Sub_DBConnection.DATABASE_NAME.replace(".db", "-New-Apps");
-                    file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionAppContract.getPathname());
-
-                    if (file.exists()) {
-                        bi.appbarmain.contentmain.lblAppVersion.setText("MNCH New Version " + newVer + "  Downloaded.");
-                        showDialog(newVer, preVer);
-                    } else {
-                        NetworkInfo networkInfo = ((ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
-                        if (networkInfo != null && networkInfo.isConnected()) {
-
-                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + " Downloading..");
-                            downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                            Uri uri = Uri.parse(MainApp._UPDATE_URL + versionAppContract.getPathname());
-                            DownloadManager.Request request = new DownloadManager.Request(uri);
-                            request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
-                                    .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                    .setTitle("Downloading MNCH App new App ver." + newVer);
-                            refID = downloadManager.enqueue(request);
-
-                            editorDownload.putLong("refID", refID);
-                            editorDownload.putBoolean("flag", false);
-                            editorDownload.commit();
-
-                        } else {
-                            bi.appbarmain.contentmain.lblAppVersion.setText("MNCH App New Version " + newVer + "  Available..\n(Can't download.. Internet connectivity issue!!)");
-                        }
-                    }
-
-                    return true;
-
-                } else {
-                    bi.appbarmain.contentmain.lblAppVersion.setVisibility(View.GONE);
-                    bi.appbarmain.contentmain.lblAppVersion.setText(null);
-                }
-            }
-        }
-
-        registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
-
-        return false;
-    }
-
 
     void showDialog(String newVer, String preVer) {
         FragmentManager ft = getSupportFragmentManager();

@@ -36,7 +36,7 @@
                 android:text="@string/dh01" />
 
             <!--01-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="@null"
@@ -92,7 +92,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--002-->
@@ -102,7 +102,7 @@
                 android:text="@string/dh02" />
 
             <!--02-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="@null"
@@ -158,7 +158,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!--003-->
             <TextView
                 style="@style/textViewCenterGravity"
@@ -166,7 +166,7 @@
                 android:text="@string/dh03" />
 
             <!--03-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="@null"
@@ -222,7 +222,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--004-->
@@ -232,7 +232,7 @@
                 android:text="@string/dh04" />
 
             <!--04-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="@null"
@@ -288,7 +288,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--005-->
@@ -298,7 +298,7 @@
                 android:text="@string/dh05" />
 
             <!--05-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="@null"
@@ -354,7 +354,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--006-->
@@ -364,7 +364,7 @@
                 android:text="@string/dh06" />
 
             <!--06-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="@null"
@@ -420,7 +420,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--007-->
@@ -430,7 +430,7 @@
                 android:text="@string/dh07" />
 
             <!--07-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="@null"
@@ -486,14 +486,14 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <TextView
                 style="@style/textViewCenterGravity"
                 android:text="@string/adsummary" />
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 style="@style/cardView"
                 android:layout_marginLeft="3dp"
                 android:layout_marginTop="@null"
@@ -525,7 +525,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->

@@ -33,7 +33,7 @@
                 android:text="@string/qg07"/>
 
             <!--qg0701-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -163,10 +163,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0702-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -296,10 +296,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0703-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -429,10 +429,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0704-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -562,10 +562,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0705-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -695,10 +695,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0706-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -828,10 +828,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0707-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -961,10 +961,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0708-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -1094,10 +1094,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0709-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -1227,10 +1227,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0710-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -1360,10 +1360,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0711-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -1493,10 +1493,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0712-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -1626,10 +1626,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0713-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -1759,10 +1759,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0714-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -1892,10 +1892,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg0715-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -2025,10 +2025,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--qg07Ap-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <androidx.cardview.widget.CardView style="@style/cardView">
 
                 <LinearLayout style="@style/linerlayout_view">
 
@@ -2046,11 +2046,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="3"
-                        android:inputType="textMultiLine"/>
+                        android:inputType="textMultiLine" />
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
