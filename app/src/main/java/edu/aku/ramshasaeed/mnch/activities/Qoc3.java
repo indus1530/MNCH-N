@@ -13,7 +13,7 @@ import org.json.JSONObject;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
-import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
+import edu.aku.ramshasaeed.mnch.RMOperations.CrudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityQoc3Binding;
@@ -60,7 +60,7 @@ public class Qoc3 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
         try {
 
-            Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+            Long longID = new CrudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
         } catch (InterruptedException e) {

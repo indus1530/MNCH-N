@@ -2,7 +2,6 @@ package edu.aku.ramshasaeed.mnch.RMOperations;
 
 import android.os.AsyncTask;
 
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -12,12 +11,14 @@ import edu.aku.ramshasaeed.mnch.data.AppDatabase;
  * Created by openm on 19-Jul-18.
  */
 
-public class syncOperations extends AsyncTask<String, Void, Long> {
+public class CrudOperations extends AsyncTask<String, Void, Long> {
 
     AppDatabase db;
+    Object forms;
 
-    public syncOperations(AppDatabase db) {
+    public CrudOperations(AppDatabase db, Object forms) {
         this.db = db;
+        this.forms = forms;
     }
 
     @Override
@@ -36,8 +37,8 @@ public class syncOperations extends AsyncTask<String, Void, Long> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(fnNames[2])) {
 
-                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName())
-                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db))));
+                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), forms.getClass())
+                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db), forms)));
 
                             break;
                         }
@@ -56,7 +57,6 @@ public class syncOperations extends AsyncTask<String, Void, Long> {
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
-
 
         return longID;
     }

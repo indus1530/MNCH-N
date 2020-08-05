@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
-import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
+import edu.aku.ramshasaeed.mnch.RMOperations.CrudOperations;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityRsd03Binding;
 import edu.aku.ramshasaeed.mnch.validation.validatorClass;
@@ -65,7 +65,7 @@ public class Rsd03 extends AppCompatActivity {
 
         try {
 
-            Long longID = new crudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+            Long longID = new CrudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
         } catch (InterruptedException e) {

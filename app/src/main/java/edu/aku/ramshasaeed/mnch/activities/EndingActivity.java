@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.ramshasaeed.mnch.R;
-import edu.aku.ramshasaeed.mnch.RMOperations.crudOperations;
+import edu.aku.ramshasaeed.mnch.RMOperations.CrudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityEndingBinding;
@@ -91,7 +91,7 @@ public class EndingActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         try {
-            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+            Long longID = new CrudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
         } catch (InterruptedException e) {
