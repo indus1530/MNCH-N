@@ -39,7 +39,6 @@ import edu.aku.ramshasaeed.mnch.get.db.GetAllDBData;
 import edu.aku.ramshasaeed.mnch.get.db.GetIndDBData;
 import edu.aku.ramshasaeed.mnch.utils.DateUtils;
 import edu.aku.ramshasaeed.mnch.validation.ClearClass;
-import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -312,7 +311,7 @@ public class RSDInfoActivity extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-        if (!validatorClass.EmptyCheckingContainer(this, bi.llrsdInfo))
+        if (!Validator.emptyCheckingContainer(this, bi.llrsdInfo))
             return false;
 
         if (type.equals(MainApp.RSD)) {

@@ -7,6 +7,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -17,7 +19,6 @@ import edu.aku.ramshasaeed.mnch.RMOperations.CrudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityQoc5Binding;
-import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
@@ -63,9 +64,7 @@ public class Qoc5 extends AppCompatActivity implements RadioGroup.OnCheckedChang
             Long longID = new CrudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
@@ -75,8 +74,7 @@ public class Qoc5 extends AppCompatActivity implements RadioGroup.OnCheckedChang
 
 
     public boolean formValidation() {
-
-        return validatorClass.EmptyCheckingContainer(this, bi.llqoc5);
+        return Validator.emptyCheckingContainer(this, bi.llqoc5);
     }
 
     private void SaveDraft() throws JSONException {
@@ -109,19 +107,19 @@ public class Qoc5 extends AppCompatActivity implements RadioGroup.OnCheckedChang
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-        if (!bi.qe0501ab.isChecked()){
+        if (!bi.qe0501ab.isChecked()) {
             bi.qe0501b.setEnabled(false);
         } else {
             bi.qe0501b.setEnabled(true);
         }
 
-        if (!bi.qe0502ab.isChecked()){
+        if (!bi.qe0502ab.isChecked()) {
             bi.qe0502b.setEnabled(false);
         } else {
             bi.qe0502b.setEnabled(true);
         }
 
-        if (!bi.qe0503ab.isChecked()){
+        if (!bi.qe0503ab.isChecked()) {
             bi.qe0503b.setEnabled(false);
         } else {
             bi.qe0503b.setEnabled(true);

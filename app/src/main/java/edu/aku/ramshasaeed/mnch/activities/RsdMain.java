@@ -24,28 +24,6 @@ public class RsdMain extends AppCompatActivity {
         bi.setCallback(this);
         this.setTitle(getString(R.string.routineone) + "(" + fc.getReportingMonth() + ")");
 
-
-        /*for (String item : MainApp.FORM_SUB_TYPE) {
-            if (item.contains("f1")) {
-                bi.form01.setEnabled(false);
-            }
-            if (item.contains("f2")) {
-                bi.form02.setEnabled(false);
-            }
-            if (item.contains("f3")) {
-                bi.form03.setEnabled(false);
-            }
-            if (item.contains("f4")) {
-                bi.form04.setEnabled(false);
-            }
-            if (item.contains("f5")) {
-                bi.form05.setEnabled(false);
-            }
-            if (item.contains("f6")) {
-                bi.form06.setEnabled(false);
-            }
-        }*/
-
         if (!fc.getSA().equals(""))
             bi.form01.setEnabled(false);
 

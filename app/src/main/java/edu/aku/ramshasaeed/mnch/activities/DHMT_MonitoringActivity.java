@@ -6,6 +6,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -16,7 +18,6 @@ import edu.aku.ramshasaeed.mnch.RMOperations.CrudOperations;
 import edu.aku.ramshasaeed.mnch.core.MainApp;
 import edu.aku.ramshasaeed.mnch.data.DAO.FormsDAO;
 import edu.aku.ramshasaeed.mnch.databinding.ActivityDhmtMonitoringBinding;
-import edu.aku.ramshasaeed.mnch.validation.validatorClass;
 
 import static edu.aku.ramshasaeed.mnch.activities.LoginActivity.db;
 import static edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity.fc;
@@ -61,9 +62,7 @@ ActivityDhmtMonitoringBinding bi;
             Long longID = new CrudOperations(db, RSDInfoActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
@@ -72,31 +71,7 @@ ActivityDhmtMonitoringBinding bi;
     }
 
     public boolean formValidation() {
-
-            /*if (!validatorClass.EmptyRadioButton(this, bi.dh01,bi.dh01a, getString(R.string.dh01))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.dh02,bi.dh02a, getString(R.string.dh02))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.dh03,bi.dh03a, getString(R.string.dh03))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.dh04,bi.dh04a, getString(R.string.dh04))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.dh05,bi.dh05a, getString(R.string.dh05))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.dh06,bi.dh06a, getString(R.string.dh06))) {
-                return false;
-            }
-
-        return true;*/
-
-
-        return validatorClass.EmptyCheckingContainer(this, bi.lldhmt);
-
+        return Validator.emptyCheckingContainer(this, bi.lldhmt);
     }
 
 
