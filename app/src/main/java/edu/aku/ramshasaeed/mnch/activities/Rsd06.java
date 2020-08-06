@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -36,7 +38,6 @@ public class Rsd06 extends AppCompatActivity {
 
     }
 
-
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -53,7 +54,6 @@ public class Rsd06 extends AppCompatActivity {
             }
         }
     }
-
 
     public void BtnEnd() {
         finish();
@@ -77,23 +77,8 @@ public class Rsd06 extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-
-        if (!bi.rs0699.isChecked()) {
-            return validatorClass.EmptyTextBox(this, bi.rs06, getString(R.string.rs06));
-        }
-
-        if (!bi.rs4799.isChecked()) {
-            return validatorClass.EmptyTextBox(this, bi.rs47, getString(R.string.rs47));
-        }
-
-        if (!bi.rs4899.isChecked()) {
-            return validatorClass.EmptyTextBox(this, bi.rs48, getString(R.string.rs48));
-        }
-
-        return validatorClass.EmptyTextBox(this, bi.rsrem, getString(R.string.rsrem));
-
+        return Validator.emptyCheckingContainer(this, bi.llrsd06);
     }
-
 
     private void SaveDraft() throws JSONException {
 

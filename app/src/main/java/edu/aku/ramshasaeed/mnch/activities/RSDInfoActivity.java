@@ -282,7 +282,6 @@ public class RSDInfoActivity extends AppCompatActivity {
 
     }
 
-
     public void BtnContinue() {
 
         if (formValidation()) {

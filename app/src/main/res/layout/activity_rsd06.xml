@@ -19,6 +19,7 @@
         android:background="@color/dullWhile">
 
         <LinearLayout
+            android:id="@+id/llrsd06"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -76,10 +77,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0699.checked ?  "":rs06.getText.toString }'
+                                android:text='@{rs0699.checked ?  "":rs06.getText().toString() }'
                                 android:visibility='@{rs0699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0699"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -127,10 +129,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs4799.checked ?  "":rs47.getText.toString }'
+                                android:text='@{rs4799.checked ?  "":rs47.getText().toString() }'
                                 android:visibility='@{rs4799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs4799"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -178,10 +181,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs4899.checked ?  "":rs48.getText.toString }'
+                                android:text='@{rs4899.checked ?  "":rs48.getText().toString() }'
                                 android:visibility='@{rs4899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs4899"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
