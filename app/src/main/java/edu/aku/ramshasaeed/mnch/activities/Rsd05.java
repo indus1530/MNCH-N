@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -36,7 +38,6 @@ public class Rsd05 extends AppCompatActivity {
 
 
     }
-
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -77,48 +78,8 @@ public class Rsd05 extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-
-
-        if (!bi.rs3499.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs34, getString(R.string.rs34))) {
-                return false;
-            }
-        }
-        if (!bi.rs3199.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs31, getString(R.string.rs31))) {
-                return false;
-            }
-        }
-        if (!bi.rs2799.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs27, getString(R.string.rs27))) {
-                return false;
-            }
-        }
-        if (!bi.rs2899.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs28, getString(R.string.rs28))) {
-                return false;
-            }
-        }
-        if (!bi.rs3599.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs35, getString(R.string.rs35))) {
-                return false;
-            }
-        }
-        if (!bi.rs3299.isChecked()) {
-
-            return validatorClass.EmptyTextBox(this, bi.rs32, getString(R.string.rs32));
-        }
-
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.llrsd05);
     }
-
 
     private void SaveDraft() throws JSONException {
 
