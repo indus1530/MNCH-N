@@ -19,6 +19,7 @@
         android:background="@color/dullWhile">
 
         <LinearLayout
+            android:id="@+id/llrsd01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -81,6 +82,7 @@
                                 android:visibility='@{rs0199.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0199"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -140,6 +142,7 @@
                                 android:visibility='@{rs0299.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0299"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -200,6 +203,7 @@
                                 android:visibility='@{rs0399.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0399"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -260,6 +264,7 @@
                                 android:visibility='@{rs0499.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0499"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -320,6 +325,7 @@
                                 android:visibility='@{rs0599.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0599"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

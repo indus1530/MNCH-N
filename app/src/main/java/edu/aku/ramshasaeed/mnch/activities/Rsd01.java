@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -79,40 +81,7 @@ public class Rsd01 extends AppCompatActivity {
 
 
     public boolean formValidation() {
-
-        if (!bi.rs0199.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs01, getString(R.string.rs01))) {
-                return false;
-            }
-        }
-
-        if (!bi.rs0299.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs02, getString(R.string.rs02))) {
-                return false;
-            }
-        }
-
-
-        if (!bi.rs0399.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs03, getString(R.string.rs03))) {
-                return false;
-            }
-        }
-
-        if (!bi.rs0499.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs04, getString(R.string.rs04))) {
-                return false;
-            }
-        }
-
-        if (!bi.rs0599.isChecked()) {
-
-            return validatorClass.EmptyTextBox(this, bi.rs05, getString(R.string.rs05));
-        }
-
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.llrsd01);
     }
 
 
