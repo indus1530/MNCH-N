@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -36,7 +38,6 @@ public class Rsd03 extends AppCompatActivity {
 
 
     }
-
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -77,125 +78,8 @@ public class Rsd03 extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-
-        if (!bi.rs0999.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs09, getString(R.string.rs09))) {
-                return false;
-            }
-        }
-        if (!bi.rs1099.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs10, getString(R.string.rs10))) {
-                return false;
-            }
-        }
-        if (!bi.rs1199.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs11, getString(R.string.rs11))) {
-                return false;
-            }
-        }
-        if (!bi.rs1299.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs12, getString(R.string.rs12))) {
-                return false;
-            }
-        }
-        if (!bi.rs1399.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs13, getString(R.string.rs13))) {
-                return false;
-            }
-        }
-        if (!bi.rs1499.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs14, getString(R.string.rs14))) {
-                return false;
-            }
-        }
-        if (!bi.rs1599.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs15, getString(R.string.rs15))) {
-                return false;
-            }
-        }
-        if (!bi.rs1699.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs16, getString(R.string.rs16))) {
-                return false;
-            }
-        }
-        if (!bi.rs1799.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs17, getString(R.string.rs17))) {
-                return false;
-            }
-        }
-        if (!bi.rs1899.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs18, getString(R.string.rs18))) {
-                return false;
-            }
-        }
-        if (!bi.rs1999.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs19, getString(R.string.rs19))) {
-                return false;
-            }
-        }
-        if (!bi.rs2099.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs20, getString(R.string.rs20))) {
-                return false;
-            }
-        }
-        if (!bi.rs2199.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs21, getString(R.string.rs21))) {
-                return false;
-            }
-        }
-        if (!bi.rs2299.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs22, getString(R.string.rs22))) {
-                return false;
-            }
-        }
-        if (!bi.rs2399.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs23, getString(R.string.rs23))) {
-                return false;
-            }
-        }
-        if (!bi.rs2499.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs24, getString(R.string.rs24))) {
-                return false;
-            }
-        }
-        if (!bi.rs2599.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs25, getString(R.string.rs25))) {
-                return false;
-            }
-        }
-        if (!bi.rs2699.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs26, getString(R.string.rs26))) {
-                return false;
-            }
-        }
-        if (!bi.rs2999.isChecked()) {
-
-            return validatorClass.EmptyTextBox(this, bi.rs29, getString(R.string.rs29));
-        }
-
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.llrsd03);
     }
-
 
     private void SaveDraft() throws JSONException {
 

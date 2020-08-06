@@ -19,6 +19,7 @@
         android:background="@color/dullWhile">
 
         <LinearLayout
+            android:id="@+id/llrsd03"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -75,10 +76,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs0999.checked ?  "":rs09.getText.toString }'
+                                android:text='@{rs0999.checked ?  "":rs09.getText().toString() }'
                                 android:visibility='@{rs0999.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0999"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -135,10 +137,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1099.checked ?  "":rs10.getText.toString }'
+                                android:text='@{rs1099.checked ?  "":rs10.getText().toString() }'
                                 android:visibility='@{rs1099.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1099"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -195,10 +198,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1199.checked ?  "":rs11.getText.toString }'
+                                android:text='@{rs1199.checked ?  "":rs11.getText().toString() }'
                                 android:visibility='@{rs1199.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1199"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -255,10 +259,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1299.checked ?  "":rs12.getText.toString }'
+                                android:text='@{rs1299.checked ?  "":rs12.getText().toString() }'
                                 android:visibility='@{rs1299.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1299"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -315,10 +320,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1399.checked ?  "":rs13.getText.toString }'
+                                android:text='@{rs1399.checked ?  "":rs13.getText().toString() }'
                                 android:visibility='@{rs1399.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1399"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -375,10 +381,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1499.checked ?  "":rs14.getText.toString }'
+                                android:text='@{rs1499.checked ?  "":rs14.getText().toString() }'
                                 android:visibility='@{rs1499.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1499"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -435,7 +442,7 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1599.checked ?  "":rs15.getText.toString }'
+                                android:text='@{rs1599.checked ?  "":rs15.getText().toString() }'
                                 android:visibility='@{rs1599.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
@@ -495,10 +502,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1699.checked ?  "":rs16.getText.toString }'
+                                android:text='@{rs1699.checked ?  "":rs16.getText().toString() }'
                                 android:visibility='@{rs1699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1699"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -555,10 +563,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1799.checked ?  "":rs17.getText.toString }'
+                                android:text='@{rs1799.checked ?  "":rs17.getText().toString() }'
                                 android:visibility='@{rs1799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1799"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -615,10 +624,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1899.checked ?  "":rs18.getText.toString }'
+                                android:text='@{rs1899.checked ?  "":rs18.getText().toString() }'
                                 android:visibility='@{rs1899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1899"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -675,10 +685,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs1999.checked ?  "":rs19.getText.toString }'
+                                android:text='@{rs1999.checked ?  "":rs19.getText().toString() }'
                                 android:visibility='@{rs1999.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs1999"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -735,10 +746,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2099.checked ?  "" : rs20.getText.toString }'
+                                android:text='@{rs2099.checked ?  "" : rs20.getText().toString() }'
                                 android:visibility='@{rs2099.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs2099"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -795,10 +807,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs4199.checked ?  "" : rs41.getText.toString }'
+                                android:text='@{rs4199.checked ?  "" : rs41.getText().toString() }'
                                 android:visibility='@{rs4199.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs4199"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -855,10 +868,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2199.checked ?  "":rs21.getText.toString }'
+                                android:text='@{rs2199.checked ?  "":rs21.getText().toString() }'
                                 android:visibility='@{rs2199.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs2199"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -915,10 +929,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2299.checked ?  "":rs22.getText.toString }'
+                                android:text='@{rs2299.checked ?  "":rs22.getText().toString() }'
                                 android:visibility='@{rs2299.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs2299"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -986,10 +1001,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2399.checked ?  "":rs23.getText.toString }'
+                                android:text='@{rs2399.checked ?  "":rs23.getText().toString() }'
                                 android:visibility='@{rs2399.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs2399"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1046,10 +1062,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2499.checked ?  "":rs24.getText.toString }'
+                                android:text='@{rs2499.checked ?  "":rs24.getText().toString() }'
                                 android:visibility='@{rs2499.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs2499"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1106,10 +1123,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2599.checked ?  "":rs25.getText.toString }'
+                                android:text='@{rs2599.checked ?  "":rs25.getText().toString() }'
                                 android:visibility='@{rs2599.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs2599"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1166,10 +1184,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2699.checked ?  "":rs26.getText.toString }'
+                                android:text='@{rs2699.checked ?  "":rs26.getText().toString() }'
                                 android:visibility='@{rs2699.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs2699"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1226,10 +1245,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs2999.checked ?  "":rs29.getText.toString }'
+                                android:text='@{rs2999.checked ?  "":rs29.getText().toString() }'
                                 android:visibility='@{rs2999.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs2999"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1286,10 +1306,11 @@
                                 android:hint="@string/numberhint"
                                 android:inputType="number"
                                 android:maxLength="4"
-                                android:text='@{rs4299.checked ?  "":rs42.getText.toString }'
+                                android:text='@{rs4299.checked ?  "":rs42.getText().toString() }'
                                 android:visibility='@{rs4299.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs4299"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
