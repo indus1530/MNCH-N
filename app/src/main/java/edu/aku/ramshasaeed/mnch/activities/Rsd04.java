@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -35,8 +37,6 @@ public class Rsd04 extends AppCompatActivity {
         this.setTitle(getString(R.string.routineone) + "(" + fc.getReportingMonth() + ")");
 
     }
-
-
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -77,53 +77,8 @@ public class Rsd04 extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-
-        if (!bi.rs3399.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs33, getString(R.string.rs33))) {
-                return false;
-            }
-        }
-        if (!bi.rs3099.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs30, getString(R.string.rs30))) {
-                return false;
-            }
-        }
-        if (!bi.rs4499.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs44, getString(R.string.rs44))) {
-                return false;
-            }
-        }
-        if (!bi.rs3799.isChecked()) {
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs37, getString(R.string.rs37))) {
-                return false;
-            }
-        }
-        if (!bi.rs3899.isChecked()) {
-
-
-            if (!validatorClass.EmptyTextBox(this, bi.rs38, getString(R.string.rs38))) {
-                return false;
-            }
-        }
-        if (!bi.rs3999.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.rs39, getString(R.string.rs39))) {
-                return false;
-            }
-        }
-        if (!bi.rs4099.isChecked()) {
-
-            return validatorClass.EmptyTextBox(this, bi.rs40, getString(R.string.rs40));
-        }
-
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.llrsd04);
     }
-
 
     private void SaveDraft() throws JSONException {
 
