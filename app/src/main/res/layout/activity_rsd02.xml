@@ -19,6 +19,7 @@
         android:background="@color/dullWhile">
 
         <LinearLayout
+            android:id="@+id/llrsd02"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
@@ -80,6 +81,7 @@
                                 android:visibility='@{rs0799.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0799"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -140,6 +142,7 @@
                                 android:visibility='@{rs0899.checked ? View.GONE : View.VISIBLE }' />
 
                             <CheckBox
+                                android:tag="-1"
                                 android:id="@+id/rs0899"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
