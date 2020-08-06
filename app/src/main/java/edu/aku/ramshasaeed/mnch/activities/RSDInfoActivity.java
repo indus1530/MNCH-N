@@ -15,6 +15,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Validator;
+
 import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
@@ -321,36 +323,9 @@ public class RSDInfoActivity extends AppCompatActivity {
                 getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingFormo")
                         .execute(bi.reportMonth.getSelectedItem().toString(),
                                 hfCode.get(bi.hfname.getSelectedItemPosition())).get();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
+            } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
             }
-
-            /*if (bi.pub.isChecked()) {
-                try {
-                    getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPublicForm")
-                            .execute(bi.reportMonth.getSelectedItem().toString(),
-                                    districtCodes.get(bi.hfDistrict.getSelectedItemPosition()),
-                                    hfCode.get(bi.hfname.getSelectedItemPosition())).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                try {
-                    getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPrivateForm")
-                            .execute(bi.reportMonth.getSelectedItem().toString(),
-                                    districtCodes.get(bi.hfDistrict.getSelectedItemPosition()),
-                                    hfCode.get(bi.hfname.getSelectedItemPosition())).get();
-                    //bi.hfName.getText().toString()).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }*/
 
             if (getData == null) {
                 fc = null;
