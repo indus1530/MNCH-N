@@ -104,7 +104,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0101aa.checked ?  "" : qa0101b.getText.toString }'/>
+                            android:text='@{qa0101aa.checked ?  "" : qa0101b.getText().toString() }'/>
 
                     </LinearLayout>
 
@@ -123,7 +123,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0101aa.checked || qa0101ab.checked || qa0101a97.checked?  "" : qa0101c.getText.toString }'/>
+                        android:text='@{qa0101aa.checked || qa0101ab.checked || qa0101a97.checked?  "" : qa0101c.getText().toString() }'/>
 
                 </LinearLayout>
 
@@ -235,7 +235,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0101aa.checked ?  "" : qa0101b.getText.toString }'/>
+                            android:text='@{qa0101aa.checked ?  "" : qa0101b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -255,7 +255,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0101aa.checked || qa0101ab.checked || qa0101a97.checked?  "" : qa0101c.getText.toString }'/>
+                        android:text='@{qa0101aa.checked || qa0101ab.checked || qa0101a97.checked?  "" : qa0101c.getText().toString() }'/>
 -->
                 </LinearLayout>
 
@@ -368,7 +368,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0102aa.checked ?  "" : qa0102b.getText.toString }'/>
+                            android:text='@{qa0102aa.checked ?  "" : qa0102b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -388,7 +388,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0102aa.checked || qa0102ab.checked || qa0102a97.checked?  "" : qa0102c.getText.toString }'/>
+                        android:text='@{qa0102aa.checked || qa0102ab.checked || qa0102a97.checked?  "" : qa0102c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -501,7 +501,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0103aa.checked ?  "" : qa0103b.getText.toString }'/>
+                            android:text='@{qa0103aa.checked ?  "" : qa0103b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -521,7 +521,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0103aa.checked || qa0103ab.checked || qa0103a97.checked?  "" : qa0103c.getText.toString }'/>
+                        android:text='@{qa0103aa.checked || qa0103ab.checked || qa0103a97.checked?  "" : qa0103c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -634,7 +634,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0104aa.checked ?  "" : qa0104b.getText.toString }'/>
+                            android:text='@{qa0104aa.checked ?  "" : qa0104b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -654,7 +654,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0104aa.checked || qa0104ab.checked || qa0104a97.checked?  "" : qa0104c.getText.toString }'/>
+                        android:text='@{qa0104aa.checked || qa0104ab.checked || qa0104a97.checked?  "" : qa0104c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -767,7 +767,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0105aa.checked ?  "" : qa0105b.getText.toString }'/>
+                            android:text='@{qa0105aa.checked ?  "" : qa0105b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -787,7 +787,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0105aa.checked || qa0105ab.checked || qa0105a97.checked?  "" : qa0105c.getText.toString }'/>
+                        android:text='@{qa0105aa.checked || qa0105ab.checked || qa0105a97.checked?  "" : qa0105c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -900,7 +900,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0106aa.checked ?  "" : qa0106b.getText.toString }'/>
+                            android:text='@{qa0106aa.checked ?  "" : qa0106b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -920,7 +920,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0106aa.checked || qa0106ab.checked || qa0106a97.checked?  "" : qa0106c.getText.toString }'/>
+                        android:text='@{qa0106aa.checked || qa0106ab.checked || qa0106a97.checked?  "" : qa0106c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1033,7 +1033,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0107aa.checked ?  "" : qa0107b.getText.toString }'/>
+                            android:text='@{qa0107aa.checked ?  "" : qa0107b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -1053,7 +1053,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0107aa.checked || qa0107ab.checked || qa0107a97.checked?  "" : qa0107c.getText.toString }'/>
+                        android:text='@{qa0107aa.checked || qa0107ab.checked || qa0107a97.checked?  "" : qa0107c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1166,7 +1166,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0108aa.checked ?  "" : qa0108b.getText.toString }'/>
+                            android:text='@{qa0108aa.checked ?  "" : qa0108b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -1186,7 +1186,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0108aa.checked || qa0108ab.checked || qa0108a97.checked?  "" : qa0108c.getText.toString }'/>
+                        android:text='@{qa0108aa.checked || qa0108ab.checked || qa0108a97.checked?  "" : qa0108c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1299,7 +1299,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0109aa.checked ?  "" : qa0109b.getText.toString }'/>
+                            android:text='@{qa0109aa.checked ?  "" : qa0109b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -1319,7 +1319,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0109aa.checked || qa0109ab.checked || qa0109a97.checked?  "" : qa0109c.getText.toString }'/>
+                        android:text='@{qa0109aa.checked || qa0109ab.checked || qa0109a97.checked?  "" : qa0109c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1432,7 +1432,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0110aa.checked ?  "" : qa0110b.getText.toString }'/>
+                            android:text='@{qa0110aa.checked ?  "" : qa0110b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -1452,7 +1452,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0110aa.checked || qa0110ab.checked || qa0110a97.checked?  "" : qa0110c.getText.toString }'/>
+                        android:text='@{qa0110aa.checked || qa0110ab.checked || qa0110a97.checked?  "" : qa0110c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1565,7 +1565,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0111aa.checked ?  "" : qa0111b.getText.toString }'/>
+                            android:text='@{qa0111aa.checked ?  "" : qa0111b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -1585,7 +1585,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0111aa.checked || qa0111ab.checked || qa0111a97.checked?  "" : qa0111c.getText.toString }'/>
+                        android:text='@{qa0111aa.checked || qa0111ab.checked || qa0111a97.checked?  "" : qa0111c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1698,7 +1698,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0112aa.checked ?  "" : qa0112b.getText.toString }'/>
+                            android:text='@{qa0112aa.checked ?  "" : qa0112b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -1718,7 +1718,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0112aa.checked || qa0112ab.checked || qa0112a97.checked?  "" : qa0112c.getText.toString }'/>
+                        android:text='@{qa0112aa.checked || qa0112ab.checked || qa0112a97.checked?  "" : qa0112c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1831,7 +1831,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0113aa.checked ?  "" : qa0113b.getText.toString }'/>
+                            android:text='@{qa0113aa.checked ?  "" : qa0113b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -1851,7 +1851,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0113aa.checked || qa0113ab.checked || qa0113a97.checked?  "" : qa0113c.getText.toString }'/>
+                        android:text='@{qa0113aa.checked || qa0113ab.checked || qa0113a97.checked?  "" : qa0113c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -1964,7 +1964,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0114aa.checked ?  "" : qa0114b.getText.toString }'/>
+                            android:text='@{qa0114aa.checked ?  "" : qa0114b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -1984,7 +1984,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0114aa.checked || qa0114ab.checked || qa0114a97.checked?  "" : qa0114c.getText.toString }'/>
+                        android:text='@{qa0114aa.checked || qa0114ab.checked || qa0114a97.checked?  "" : qa0114c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -2097,7 +2097,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0115aa.checked ?  "" : qa0115b.getText.toString }'/>
+                            android:text='@{qa0115aa.checked ?  "" : qa0115b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -2117,7 +2117,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0115aa.checked || qa0115ab.checked || qa0115a97.checked?  "" : qa0115c.getText.toString }'/>
+                        android:text='@{qa0115aa.checked || qa0115ab.checked || qa0115a97.checked?  "" : qa0115c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
@@ -2230,7 +2230,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:text='@{qa0116aa.checked ?  "" : qa0116b.getText.toString }'/>
+                            android:text='@{qa0116aa.checked ?  "" : qa0116b.getText().toString() }'/>
 
                     </LinearLayout>
 <!--
@@ -2250,7 +2250,7 @@
                         android:layout_height="wrap_content"
                         android:lines="3"
                         android:inputType="textMultiLine"
-                        android:text='@{qa0116aa.checked || qa0116ab.checked || qa0116a97.checked?  "" : qa0116c.getText.toString }'/>
+                        android:text='@{qa0116aa.checked || qa0116ab.checked || qa0116a97.checked?  "" : qa0116c.getText().toString() }'/>
 -->
 
                 </LinearLayout>
