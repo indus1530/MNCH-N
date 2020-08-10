@@ -40,12 +40,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.13'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation "im.dino:dbinspector:3.4.1@aar"
+    implementation "im.dino:dbinspector:4.0.0"
 
     //Ali library
     implementation 'com.github.AliAzaz:Edittext-Library:2.0.0'
